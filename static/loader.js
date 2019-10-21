@@ -178,13 +178,13 @@
         '<h2>I am <span>KHUSHI,</span></h2>' +
         '<p>Your trusted friend for all things sexual health.</p>' +
         '<div class="iraImage">' +
-        '<img src="https://developmet.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
+        '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
         '</div>' +
         '</div>' +
         '</div>';
     window.rightpanel = '<div class="rightPage" id="rightpanel">'+
                             '<section class="jubi-sec_closeview sonar" id="jubi-secCloseview">'+
-                                '<img src="https://developmet.jubi.ai/usaidWeb/images/khusi.png" id="jubi-closeImage" class="img-responsive">'+
+                                '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" id="jubi-closeImage" class="img-responsive">'+
                             '</section>'+
                             '<div id="jubiAsideFullopenview">'+
                                 '<section class="jubichatbot" id="jubichatbot" style="display: none;"></section>'+
@@ -204,7 +204,7 @@
             '</div>'+
             '<div class="headerRightContent">'+
                 '<div class="closeBotImg" id="closeBotImg">'+
-                    '<img src="https://developmet.jubi.ai/usaidWeb/images/close.png" class="img-responsive">'+
+                    '<img src="https://development.jubi.ai/usaidWeb/images/close.png" class="img-responsive">'+
                 '</div>'+
             '</div>'+
         '</section>' +
@@ -253,7 +253,7 @@
         '<section class="artMenu">' +
         '<section class="secMenucontent-widget" id="secMenucontent-widget" >' +
         '<section class="sec_dropdown">' +
-        '<div class="closeBtn"><img src="https://developmet.jubi.ai/usaidWeb/images/close_icon.png"></i></div>' +
+        '<div class="closeBtn"><img src="https://development.jubi.ai/usaidWeb/images/close_icon.png"></i></div>' +
         '<h3>Menu</h3>' +
         '<ul>' +
         '<li class="jubi-menu-val" onclick="window.askBot(\'Start Over\')"><p>Start Over</p></li>' +
@@ -264,9 +264,9 @@
         '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel Conversation\')"><p>Cancel Conversation</p></li>' +
         '</ul>' +
         '</section>' +
-        '<div class="trianglearrow"><img src="https://developmet.jubi.ai/usaidWeb/images/triangledown.png" class="img-responsive"></div>' +
+        '<div class="trianglearrow"><img src="https://development.jubi.ai/usaidWeb/images/triangledown.png" class="img-responsive"></div>' +
         '</section>' +
-        '<div class="iconMenu"><img src="https://developmet.jubi.ai/usaidWeb/images/menu.png"></div>' +
+        '<div class="iconMenu"><img src="https://development.jubi.ai/usaidWeb/images/menu.png"></div>' +
         '</section>' +
 
 
@@ -296,7 +296,7 @@
         '<div class="datasendButtons">' +
         '<div class="sendIcon" id="button-send">' +
         '<button id="jubi-bottomClick" type="submit" onclick="return false;">' +
-        '<img src="https://developmet.jubi.ai/usaidWeb/images/send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
+        '<img src="https://development.jubi.ai/usaidWeb/images/send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
         '<img src="https://parramato.com/bot-view/images/iconRed_send.png" id="jubi-redSend" class="img-responsive" style="display: none;">' +
         '</button>' +
 
@@ -339,7 +339,7 @@
         '<section class="pm-sec_show_option_on_start" id="pm-sec_show_option_on_start" style="display:block">' +
         '<div class="chatProceed" id="chatProceed">' +
         '<div class="chatProceed-botimg">' +
-        '<img src="https://developmet.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
+        '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
         '</div>' +
         '<p>Welcome back! Let us begin...</p>' +
         '<ul>' +
