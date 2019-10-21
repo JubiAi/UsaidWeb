@@ -29,7 +29,7 @@
  require("parramato").Server({
     root:"https://khushi.jubi.ai",
     socketLocalPath: '/socket',
-    httpPort: 8192 || process.argv.slice(2);,
+    httpPort: 8192 || process.argv.slice(2),
     cluster:true,
     redis:{
         host : '127.0.0.1',
