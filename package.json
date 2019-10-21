@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "parramato": "^1.0.4",
+    "parramato": "^1.0.7",
     "replaceall": "^0.1.6",
     "request": "^2.88.0",
     "sort-by": "^1.2.0",
