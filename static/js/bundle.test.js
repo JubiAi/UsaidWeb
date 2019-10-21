@@ -327,7 +327,8 @@
             let backendUrl = 'https://parramato.com'
             let backendPath = '/socket'
 
-            let middlewareUrl = 'https://development.jubi.ai/usaidWeb'
+            // let middlewareUrl = 'https://development.jubi.ai/usaidWeb'
+            let middlewareUrl = 'https://khushi.jubi.ai/'
             let middlewarePath = '/socket/socket.io'
             let middlewareWebsocket = true
             let middlewareSecurity = false
