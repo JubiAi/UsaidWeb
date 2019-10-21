@@ -3,13 +3,13 @@ var request = require('request')
 module.exports = function (data, text) {
    	let obj = {
       	method: 'POST',
-    	url: 'http://localhost:8191/sendNotification',
+    	url: 'http://localhost:8192/sendNotification',
        	json: {
 	    	text: text,
 		    type: "text",
 		    sender: data.sender,
 		    language: "en",
-		    projectId: 'srh_dev_184276895194'
+		    projectId: 'usaidWeb_353553876735'
 		}
    	}
    	return runRequest(obj)
