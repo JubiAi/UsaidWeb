@@ -150,7 +150,7 @@
             "sendIcon": "https://parramato.com/bot-view/images/icon_send.png", 
             "sendIconActive": "https://parramato.com/bot-view/images/iconRed_send.png", 
             "loaderBotChat": "https://parramato.com/bot-view/images/response-loading.gif", 
-            "userIcon": "https:///images/rightuser.png", 
+            "userIcon": "https://development.jubi.ai/usaidWeb/images/rightuser.png", 
             "botIcon": "https://development.jubi.ai/usaidWeb/images/botIcon.png", 
             "logoIcon": "https://parramato.com/bot-view/images/logo-icon.png", 
             "voiceIcon": "https://parramato.com/bot-view/images/voice.png", 
