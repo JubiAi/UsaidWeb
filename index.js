@@ -36,7 +36,7 @@
     adapterPath:"/adapter",
     adapterDirectory:__dirname+"/adapter",
     projectId:"usaidWeb_353553876735",
-    dashbotKey:"",
+    dashbotKey:"WHluqB2BNnpQaPR1KHkPbLPKHRGTNgt5Cyn3ZgEb",
     directMultiplier:1,
     fallbackMultiplier:0.8,
     passphraseMiddleware:"YGUYGgyjgblgUGIYGIGkwhbiuashbo98u9283hr9h24rqIYGI932kbidbiadsYE",
