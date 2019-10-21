@@ -1,5 +1,6 @@
  require("parramato").Server({
     root:"https://development.jubi.ai",
+    socketDomain: "wss://development.jubi.ai",
     socketLocalPath: '/usaidWeb/socket',
     httpPort: 8192,
     cluster:false,
@@ -8,7 +9,7 @@
     adapterPath:"/adapter",
     adapterDirectory:__dirname+"/adapter",
     projectId:"usaidWeb_353553876735",
-    // dashbotKey:"VxtYPVW6168LIiXwqpIku9wE",
+    dashbotKey:"",
     directMultiplier:1,
     fallbackMultiplier:0.8,
     passphraseMiddleware:"YGUYGgyjgblgUGIYGIGkwhbiuashbo98u9283hr9h24rqIYGI932kbidbiadsYE",
