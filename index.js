@@ -1,6 +1,5 @@
  require("parramato").Server({
     root:"https://development.jubi.ai",
-    socketDomain: "wss://development.jubi.ai",
     socketLocalPath: '/usaidWeb/socket',
     httpPort: 8192,
     cluster:false,
