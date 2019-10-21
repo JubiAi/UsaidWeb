@@ -29,8 +29,12 @@
  require("parramato").Server({
     root:"https://khushi.jubi.ai",
     socketLocalPath: '/socket',
-    httpPort: 8192,
-    cluster:false,
+    httpPort: 8192 || process.argv.slice(2);,
+    cluster:true,
+    redis:{
+        host : '127.0.0.1',
+        port : 6379
+    },
     dbUri:'mongodb+srv://usaid:bTN2uss5bXXfNUQk@proddb-sy1qy.mongodb.net/usaid?retryWrites=true&w=majority',
     staticDirectory:__dirname+"/static",
     adapterPath:"/adapter",
