@@ -129,7 +129,7 @@
         responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
         nluComponent: "https://unpkg.com/compromise@latest/builds/compromise.min.js",
         bundle: "https://parramato.com/bot-view/usaidWeb_353553876735/dev/js/bundle.js",
-        jubiEvents: "https://developmet.jubi.ai/usaidWeb/js/jubievents.js"
+        jubiEvents: "https://development.jubi.ai/usaidWeb/js/jubievents.js"
     });
     window.directMultiplier = 1;
     window.fallbackMultiplier = 0.8;
@@ -138,7 +138,7 @@
     window.speechLanguageCodeBackend = "en-US"
     window.jubiUrl = 'https://parramato.com/bot-view/usaidWeb_353553876735/dev/';
     window.jubiModal = {
-        url: 'wss://developmet.jubi.ai/usaidWeb/',
+        url: 'wss://development.jubi.ai/usaidWeb/',
         path: '/socket',
         static: {
             url: window.jubiUrl,
@@ -151,7 +151,7 @@
             "sendIconActive": "https://parramato.com/bot-view/images/iconRed_send.png", 
             "loaderBotChat": "https://parramato.com/bot-view/images/response-loading.gif", 
             "userIcon": "https:///images/rightuser.png", 
-            "botIcon": "https://developmet.jubi.ai/usaidWeb/images/botIcon.png", 
+            "botIcon": "https://development.jubi.ai/usaidWeb/images/botIcon.png", 
             "logoIcon": "https://parramato.com/bot-view/images/logo-icon.png", 
             "voiceIcon": "https://parramato.com/bot-view/images/voice.png", 
             "closeWebView": "https://parramato.com/bot-view/images/closeWebView.png", 
