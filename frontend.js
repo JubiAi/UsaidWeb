@@ -1,7 +1,7 @@
-require("bot-middleware-jubi").createFrontend({
-    root:"https://development.jubi.ai/usaid",
+require("parramato").createFrontend({
+    root:"https://development.jubi.ai/usaidWeb",
     staticDirectory:__dirname+"/static",
-    projectId:"srh_dev_184276895194",
+    projectId:"usaidWeb_353553876735",
     passphraseMiddleware:"YGUYGgyjgblgUGIYGIGkwhbiuashbo98u9283hr9h24rqIYGI932kbidbiadsYE",
     firebaseWebConfig:{
         apiKey: "AIzaSyAAqVdFN_8wbXK4W_YLZj2q6rF-ZrO9xKQ",
