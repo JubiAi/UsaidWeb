@@ -129,7 +129,7 @@
         responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
         nluComponent: "https://unpkg.com/compromise@latest/builds/compromise.min.js",
         // bundle: "https://parramato.com/bot-view/usaidWeb_353553876735/dev/js/bundle.js",
-        bundle: "https://development.jubi.ai/usaidWeb/js.bundle.js",
+        bundle: "https://development.jubi.ai/usaidWeb/js/bundle.js",
         jubiEvents: "https://development.jubi.ai/usaidWeb/js/jubievents.js"
     });
     window.directMultiplier = 1;
