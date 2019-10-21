@@ -327,7 +327,7 @@
             let backendUrl = 'https://parramato.com'
             let backendPath = '/socket'
 
-            let middlewareUrl = 'https://khushi.jubi.ai'
+            let middlewareUrl = 'https://developmet.jubi.ai/usaidWeb'
             let middlewarePath = '/socket/socket.io'
             let middlewareWebsocket = true
             let middlewareSecurity = false
@@ -355,7 +355,7 @@
             let speechGenderBackend = 'FEMALE'
             let speechLanguageCodeBackend = 'en-US'
 
-            let projectId = 'srh_dev_184276895194'
+            let projectId = 'usaidWeb_353553876735'
             let attachmentUrl = 'https://parramato.com/bot-view/images/attachment.png'
             let integrityPassPhrase = 'hbu8b23478gbuy2bcfy2cbcihsdcgUGUYUuy2bcfy2cbcihsdcYBEBIW'
             let localSavePassPhrase = '8rhfuahiuHFIJUHAFIWEHFOw98ehfu9HFjhE234jbhJHbjhbfjebkfewfewjhEUHFUIsrh_dev_184276895194'
