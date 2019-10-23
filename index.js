@@ -26,7 +26,9 @@
 //     //TO DO AFTER INITIALIZATION
 // })
 
- require("parramato").Server({
+console.log(process.argv)
+
+require("parramato").Server({
     root:"https://khushi.jubi.ai",
     socketLocalPath: '/socket',
     httpPort: process.argv[1],
