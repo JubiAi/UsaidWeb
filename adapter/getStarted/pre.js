@@ -56,7 +56,7 @@ module.exports={
 				data.stage = "conAge"
 			}
 			else if(data.tags.accepted == true && data.tags.rejected == false){
-				delete data.tags.accepted
+				// delete data.tags.accepted
 				data.reply={
 					type : "button",
 					text : "Great! Btw everything we discuss here is absolutely private. Take a look at your privacy policy and terms of service below to know more. |break|To agree please click on “I agree” below.",
