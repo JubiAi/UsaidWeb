@@ -152,12 +152,12 @@ module.exports={
 	                next : {
 	                    data : [
 	                        {
-	                            data : 'its very effective',
-	                            text : 'Its very effective'
+	                            data : 'cool!',
+	                            text : 'Cool!'
 	                        },
 	                        {
-	                            data : 'there is high risk',
-	                            text : 'There is High risk'
+	                            data : 'learn abt STIs🤒',
+	                            text : 'Learn abt STIs🤒'
 	                        }
 	                    ]
 	                }                
