@@ -21,6 +21,9 @@ module.exports={
 				data.tags.accepted = false
 				data.stage = "disclaimer"
 			}
+			console.log("+++++++++++++")
+            console.log(data.tags)
+            console.log("+++++++++++++")
 			return resolve(data)
 		})
 	},

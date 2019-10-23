@@ -81,7 +81,7 @@ module.exports={
 				}
 				delete data.stage
 			}
-				resolve(data)
+		resolve(data)
 		})
 	}
 }
