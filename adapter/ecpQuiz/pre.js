@@ -103,12 +103,12 @@ module.exports={
 	                next : {
 	                    data : [
 	                        {
-	                            data : 'its very effective',
-	                            text : 'Its very effective'
+	                            data : 'go to main menu',
+	                            text : 'Go to Main Menu'
 	                        },
 	                        {
-	                            data : 'there is high risk',
-	                            text : 'There is High risk'
+	                            data : 'talk to a counsellor ☎',
+	                            text : 'Talk to a counsellor ☎'
 	                        }
 	                    ]
 	                }                
