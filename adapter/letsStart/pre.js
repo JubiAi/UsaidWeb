@@ -1,4 +1,6 @@
 var relationship = "https://bot.jubi.ai/usaid/images/relationship.jpg"
+var sendExternalMessage = require('../../external.js')
+var request = require('request')
 
 module.exports={
 
@@ -27,101 +29,111 @@ module.exports={
     },
 
     carousalTwo: (data) => {
-        return new Promise((resolve, reject) => {
-            if(data.tags.userSays == "Main menu" || data.tags.userSays == "go to the main menu" || data.tags.userSays == "main menu" || data.tags.userSays == "Go to the main menu"){
-                data.reply = {
-                    type: 'generic',
-                    text: 'Pick a Topic from Below',
-                    next: {
-                        data: [
-                            {
-                                image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
-                                title: "Condoms: Your best friends?",
-                                text : "Learn more about the all-rounder contraceptive.",
-                                buttons: [
-                                    {   
-                                        type: "text",
-                                        text: "Select",
-                                        data: "condomStart"
-                                    }
-                                ]
-                            },
-                            {
-                                image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
-                                title: "Had unprotected sex last night? ",
-                                text : "Know what to do now.",
-                                buttons: [
-                                    {   
-                                        type: "text",
-                                        text: "Select",
-                                        data: "ecpStart"
-                                    }
-                                ]
-                            },
-                            {
-                                image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
-                                title: "How does my body work?",
-                                text : "Your body is a wonderland. Learn more about it.",
-                                buttons: [
-                                    {
-                                        type: "text",
-                                        text: "Select",
-                                        data: "bodyStart"
-                                    }
-                                ]
-                            }
-                        ]
+        return new Promise(async(resolve, reject) => {
+            if(data.tags.accepted == true && data.tags.rejected == false){
+                if(data.tags.userSays == "Main menu" || data.tags.userSays == "go to the main menu" || data.tags.userSays == "main menu" || data.tags.userSays == "Go to the main menu"){
+                    data.reply = {
+                        type: 'generic',
+                        text: 'Pick a Topic from Below',
+                        next: {
+                            data: [
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
+                                    title: "Condoms: Your best friends?",
+                                    text : "Learn more about the all-rounder contraceptive.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "condomStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
+                                    title: "Had unprotected sex last night? ",
+                                    text : "Know what to do now.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "ecpStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
+                                    title: "How does my body work?",
+                                    text : "Your body is a wonderland. Learn more about it.",
+                                    buttons: [
+                                        {
+                                            type: "text",
+                                            text: "Select",
+                                            data: "bodyStart"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     }
+                return resolve(data)
                 }
+                else {
+                    data.reply = {
+                        type: 'generic',
+                        text: "All done 😊 Pick a topic from below to learn more! |break|Throughout your journey, you can always access Cancel, Restart and other buttons from the menu on your bottom left.",
+                        next: {
+                            data: [
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
+                                    title: "Condoms: Your best friends?",
+                                    text : "Learn more about the all-rounder contraceptive.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "condomStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
+                                    title: "Had unprotected sex last night? ",
+                                    text : "Know what to do now.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "ecpStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
+                                    title: "How does my body work?",
+                                    text : "Your body is a wonderland. Learn more about it.",
+                                    buttons: [
+                                        {
+                                            type: "text",
+                                            text: "Select",
+                                            data: "bodyStart"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                    return resolve(data)
+                }    
+            }
+            else{
+                delete data.tags.rejected
+                delete data.tags.accepted
+                await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://khushi.jubi.ai/usaid/termsOfService.html')
+                data.stage = "conAge"
                 return resolve(data)
             }
-            else {
-                data.reply = {
-                    type: 'generic',
-                    text: "All done 😊 Pick a topic from below to learn more! |break|Throughout your journey, you can always access Cancel, Restart and other buttons from the menu on your bottom left.",
-                    next: {
-                        data: [
-                            {
-                                image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
-                                title: "Condoms: Your best friends?",
-                                text : "Learn more about the all-rounder contraceptive.",
-                                buttons: [
-                                    {   
-                                        type: "text",
-                                        text: "Select",
-                                        data: "condomStart"
-                                    }
-                                ]
-                            },
-                            {
-                                image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
-                                title: "Had unprotected sex last night? ",
-                                text : "Know what to do now.",
-                                buttons: [
-                                    {   
-                                        type: "text",
-                                        text: "Select",
-                                        data: "ecpStart"
-                                    }
-                                ]
-                            },
-                            {
-                                image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
-                                title: "How does my body work?",
-                                text : "Your body is a wonderland. Learn more about it.",
-                                buttons: [
-                                    {
-                                        type: "text",
-                                        text: "Select",
-                                        data: "bodyStart"
-                                    }
-                                ]
-                            }
-                        ]
-                    }
-                }
-                return resolve(data)
-            }
+            
         })
     },
 

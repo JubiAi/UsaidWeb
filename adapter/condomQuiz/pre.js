@@ -10,7 +10,7 @@ module.exports={
 				console.log("++++++false++++++++")
 				data.reply ={
 	                type: "quickReply",
-	                text: "Incorrect! Condoms are made for one-time use only. |break|After each session, a fresh one must be used |break|Can condoms make a man infertile, weak or impotent?",
+	                text: "Incorrect! Condoms are made for one-time use only. |break|After each session, a fresh one must be used |break|Next! |break|Can condoms make a man infertile, weak or impotent?",
 	                next : {
 	                    data : [
 	                        {
@@ -29,7 +29,7 @@ module.exports={
 			else if(data.tags.answer == true){
 				data.reply ={
 	                type: "quickReply",
-	                text: "So, condoms are made for one-time use only. |break|After each session, a fresh one must be used |break|Can condoms make a man infertile, weak or impotent?",
+	                text: "So, condoms are made for one-time use only. |break|After each session, a fresh one must be used |break|Next! |break|Can condoms make a man infertile, weak or impotent?",
 	                next : {
 	                    data : [
 	                        {
@@ -56,7 +56,7 @@ module.exports={
 			if(data.tags.answer == false){
 				data.reply ={
 	                type: "quickReply",
-	                text: "Actually, that’s a myth. |break|Condoms do not have any such effects on men. |break|Women on birth control (pills, etc) don’t need to use condoms.",
+	                text: "Actually, that’s a myth. |break|Condoms do not have any such effects on men. |break|Moving on. |break|Women on birth control (pills, etc) don’t need to use condoms.",
 	                next : {
 	                    data : [
 	                        {
@@ -75,7 +75,7 @@ module.exports={
 			else if(data.tags.answer == true){
 				data.reply ={
 	                type: "quickReply",
-	                text: "Correct! |break|Condoms do not have any such effects on men. |break|This is just a myth. |break|Women on birth control (pills, etc) don’t need to use condoms.",
+	                text: "Correct! |break|Condoms do not have any such effects on men. |break|This is just a myth. |break|Moving on. |break|Women on birth control (pills, etc) don’t need to use condoms.",
 	                next : {
 	                    data : [
 	                        {

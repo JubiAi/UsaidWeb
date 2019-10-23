@@ -6,12 +6,12 @@ module.exports={
 	q1 : (data) =>{
 		return new Promise( async function(resolve,reject){
 			if(data.data.toLowerCase() == "that should be okay"){
-				await sendExternalMessage(data, 'Incorrect! Condoms are made for one-time use only. |break|After each session, a fresh one must be used')
-				// data.tags.answer = false
+				// await sendExternalMessage(data, 'Incorrect! Condoms are made for one-time use only. |break|After each session, a fresh one must be used')
+				data.tags.answer = false
 			}
 			else if(data.data.toLowerCase() == "no, that wont work"){
-				await sendExternalMessage(data, 'So, condoms are made for one-time use only. |break|After each session, a fresh one must be used')
-				// data.tags.answer = true
+				// await sendExternalMessage(data, 'So, condoms are made for one-time use only. |break|After each session, a fresh one must be used')
+				data.tags.answer = true
 			}
 			else {
 				reject(data)
@@ -24,12 +24,12 @@ module.exports={
 	q2 : (data) =>{
 		return new Promise( async function(resolve,reject){
 			if(data.data.toLowerCase() == "yes. thats true"){
-				await sendExternalMessage(data, 'Actually, that’s a myth. |break|Condoms do not have any such effects on men.')
-				// data.tags.answer = false
+				// await sendExternalMessage(data, 'Actually, that’s a myth. |break|Condoms do not have any such effects on men.')
+				data.tags.answer = false
 			}
 			else if(data.data.toLowerCase() == "no, thats a myth"){
-				await sendExternalMessage(data, 'Correct! |break|Condoms do not have any such effects on men. |break|This is just a myth.')
-				// data.tags.answer = true
+				// await sendExternalMessage(data, 'Correct! |break|Condoms do not have any such effects on men. |break|This is just a myth.')
+				data.tags.answer = true
 			}
 			else {
 				reject(data)
