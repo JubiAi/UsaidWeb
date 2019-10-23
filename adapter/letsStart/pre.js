@@ -30,6 +30,9 @@ module.exports={
 
     carousalTwo: (data) => {
         return new Promise(async(resolve, reject) => {
+            console.log("+++++++++++++")
+            console.log(data.tags)
+            console.log("+++++++++++++")
             if(data.tags.accepted == true && data.tags.rejected == false){
                 if(data.tags.userSays == "Main menu" || data.tags.userSays == "go to the main menu" || data.tags.userSays == "main menu" || data.tags.userSays == "Go to the main menu"){
                     data.reply = {
