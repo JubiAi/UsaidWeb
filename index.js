@@ -26,12 +26,10 @@
 //     //TO DO AFTER INITIALIZATION
 // })
 
-console.log(process.argv)
-
 require("parramato").Server({
     root:"https://khushi.jubi.ai",
     socketLocalPath: '/socket',
-    httpPort: process.argv[1],
+    httpPort: process.argv[2],
     cluster:true,
     redis:{
         host : '127.0.0.1',
