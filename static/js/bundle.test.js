@@ -358,7 +358,6 @@
     let attachmentUrl='https://parramato.com/bot-view/images/attachment.png'
     let integrityPassPhrase='hbu8b23478gbuy2bcfy2cbcihsdcgUGUYUuy2bcfy2cbcihsdcYBEBIW'
     let localSavePassPhrase='8rhfuahiuHFIJUHAFIWEHFOw98ehfu9HFjhE234jbhJHbjhbfjebkfewfewjhEUHFUIusaidWeb_353553876735'
-    
 
             //------CODE------
             //------end------
