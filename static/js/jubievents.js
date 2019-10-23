@@ -20,9 +20,19 @@ $(document).ready(function(){
     $('body').on('click','#pm-data',function(){
         $('#secMenucontent-widget').hide();
     })
+
+    let firstClick = false;
     $('#jubi-secCloseview').click(function(){
         $('#jubiAsideFullopenview').fadeIn(500);
         $('#jubi-secCloseview').hide();
+        if (!firstClick) {
+            setTimeout(function () {
+              if (window.jubiStartEvent) {
+                window.jubiStartEvent();
+                firstClick = true;
+              }
+            }, 300);
+          }
     })
     $('#closeBotImg').click(function(){
         $('#jubiAsideFullopenview').fadeOut(500);

@@ -174,6 +174,7 @@
     window.passphraseMiddleware = "YGUYGgyjgblgUGIYGIGkwhbiuashbo98u9283hr9h24rqIYGI932kbidbiadsYE"
     window.voiceEnable = true;
     window.chatPersistence = true;
+    window.runOnJubiStartEvent = true;
     window.mainpage = '<section class="sec_main" id="jubisecmain" style="display: none;">'+
                         
                     '</section>';
