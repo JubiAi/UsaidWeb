@@ -56,7 +56,7 @@ module.exports={
 			if(data.tags.answer == false){
 				data.reply ={
 	                type: "quickReply",
-	                text: "Actually, that’s a myth. |break|Condoms do not have any such effects on men. |break|Moving on. |break|Women on birth control (pills, etc) don’t need to use condoms.",
+	                text: "Actually, that’s a myth. |break|Condoms do not have any such effects on men. |break|Moving on. |break|Women on birth control (Pills, Injectables, Patches and others) don’t need to use condoms.",
 	                next : {
 	                    data : [
 	                        {
