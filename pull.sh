@@ -5,5 +5,5 @@
 # pm2 logs
 
 git pull origin master
-sudo pm2 restart usaid
-sudo pm2 logs usaid
+sudo pm2 restart usaidWeb
+sudo pm2 logs usaidWeb
