@@ -227,7 +227,7 @@
                 '<div id="jubi-muteVoice">' +
                 '<img src="https://parramato.com/bot-view/images/mute.png">' +
                 '</div>' +
-                '</aside>' +
+                '</aside>'+
             '</div>'+
         '</section>' +
 
@@ -292,7 +292,7 @@
         '</section>' +
         '<div class="iconMenu"><img src="https://development.jubi.ai/usaidWeb/images/menu.png"></div>' +
         // '<div class="iconMenu"><img src="https://khushi.jubi.ai/images/menu.png"></div>' +
-        '</section>' +
+        '</section>'  +
 
 
         '<div class="voice-buttons" id="voice-buttons">' +
