@@ -240,7 +240,7 @@
     // '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">'+
     "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
-    '<div id="jubi-unmuteVoice" style = "display:block !important"><p>test</p>' +
+    '<div id="jubi-unmuteVoice">' +
     '<img src="https://parramato.com/bot-view/images/unmute.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
