@@ -130,8 +130,8 @@
       "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
     owlTheme:
       "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
-    pmTheme: "https://development.jubi.ai/usaidWeb/theme.css"
-    // pmTheme: "https://khushi.jubi.ai/theme.css"
+    // pmTheme: "https://development.jubi.ai/usaidWeb/theme.css"
+    pmTheme: "https://khushi.jubi.ai/theme.css"
   });
   loadJs({
     crypt:
@@ -149,8 +149,8 @@
     bundle:
       "https://parramato.com/bot-view/usaidWeb_353553876735/dev/js/bundle.js",
     // bundle: "https://khushi.jubi.ai/js/bundle.test.js",
-    jubiEvents: "https://development.jubi.ai/usaidWeb/js/jubievents.js"
-    // jubiEvents: "https://khushi.jubi.ai/js/jubievents.js"
+    // jubiEvents: "https://development.jubi.ai/usaidWeb/js/jubievents.js"
+    jubiEvents: "https://khushi.jubi.ai/js/jubievents.js"
   });
   window.directMultiplier = 1;
   window.fallbackMultiplier = 0.8;
@@ -159,8 +159,8 @@
   window.speechLanguageCodeBackend = "en-US";
   window.jubiUrl = "https://parramato.com/bot-view/usaidWeb_353553876735/dev/";
   window.jubiModal = {
-    url: "wss://development.jubi.ai/usaidWeb",
-    // url: 'wss://khushi.jubi.ai',
+    // url: "wss://development.jubi.ai/usaidWeb",
+    url: 'wss://khushi.jubi.ai',
     path: "/socket",
     static: {
       url: window.jubiUrl,
@@ -173,10 +173,10 @@
           "https://parramato.com/bot-view/images/iconRed_send.png",
         loaderBotChat:
           "https://parramato.com/bot-view/images/response-loading.gif",
-        userIcon: "https://development.jubi.ai/usaidWeb/images/rightuser.png",
-        // "userIcon": "https://khushi.jubi.ai/images/rightuser.png",
-        botIcon: "https://development.jubi.ai/usaidWeb/images/botIcon.png",
-        // "botIcon": "https://khushi.jubi.ai/images/botIcon.png",
+        // userIcon: "https://development.jubi.ai/usaidWeb/images/rightuser.png",
+        "userIcon": "https://khushi.jubi.ai/images/rightuser.png",
+        // botIcon: "https://development.jubi.ai/usaidWeb/images/botIcon.png",
+        "botIcon": "https://khushi.jubi.ai/images/botIcon.png",
         logoIcon: "https://parramato.com/bot-view/images/logo-icon.png",
         voiceIcon: "https://parramato.com/bot-view/images/voice.png",
         closeWebView: "https://parramato.com/bot-view/images/closeWebView.png",
@@ -207,16 +207,16 @@
     "<h2>I am <span>KHUSHI,</span></h2>" +
     "<p>Your trusted friend for all things sexual health.</p>" +
     '<div class="iraImage">' +
-    '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
-    // '<img src="https://khushi.jubi.ai/images/khusi.png" class="img-responsive">' +
+    // '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
+    '<img src="https://khushi.jubi.ai/images/khusi.png" class="img-responsive">' +
     "</div>" +
     "</div>" +
     "</div>";
   window.rightpanel =
     '<div class="rightPage" id="rightpanel">' +
     '<section class="jubi-sec_closeview sonar" id="jubi-secCloseview">' +
-    '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" id="jubi-closeImage" class="img-responsive">' +
-    // '<img src="https://khushi.jubi.ai/images/khusi.png" id="jubi-closeImage" class="img-responsive">'+
+    // '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" id="jubi-closeImage" class="img-responsive">' +
+    '<img src="https://khushi.jubi.ai/images/khusi.png" id="jubi-closeImage" class="img-responsive">'+
     "</section>" +
     '<div id="jubiAsideFullopenview">' +
     '<section class="jubichatbot" id="jubichatbot" style="display: none;"></section>' +
@@ -236,8 +236,8 @@
     "</div>" +
     '<div class="headerRightContent">' +
     '<div class="closeBotImg" id="closeBotImg">' +
-    '<img src="https://development.jubi.ai/usaidWeb/images/close.png" class="img-responsive">' +
-    // '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">'+
+    // '<img src="https://development.jubi.ai/usaidWeb/images/close.png" class="img-responsive">' +
+    '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">'+
     "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
     '<div id="jubi-unmuteVoice">' +
@@ -290,8 +290,8 @@
     '<section class="artMenu">' +
     '<section class="secMenucontent-widget" id="secMenucontent-widget" >' +
     '<section class="sec_dropdown">' +
-    '<div class="closeBtn"><img src="https://development.jubi.ai/usaidWeb/images/close_icon.png"></i></div>' +
-    // '<div class="closeBtn"><img src="https://khushi.jubi.ai/images/close_icon.png"></i></div>' +
+    // '<div class="closeBtn"><img src="https://development.jubi.ai/usaidWeb/images/close_icon.png"></i></div>' +
+    '<div class="closeBtn"><img src="https://khushi.jubi.ai/images/close_icon.png"></i></div>' +
     "<h3>Menu</h3>" +
     "<ul>" +
     '<li class="jubi-menu-val" onclick="window.askBot(\'Start Over\')"><p>Start Over</p></li>' +
@@ -302,11 +302,11 @@
     '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel Conversation\')"><p>Cancel Conversation</p></li>' +
     "</ul>" +
     "</section>" +
-    '<div class="trianglearrow"><img src="https://development.jubi.ai/usaidWeb/images/triangledown.png" class="img-responsive"></div>' +
-    // '<div class="trianglearrow"><img src="https://khushi.jubi.ai/images/triangledown.png" class="img-responsive"></div>' +
+    // '<div class="trianglearrow"><img src="https://development.jubi.ai/usaidWeb/images/triangledown.png" class="img-responsive"></div>' +
+    '<div class="trianglearrow"><img src="https://khushi.jubi.ai/images/triangledown.png" class="img-responsive"></div>' +
     "</section>" +
-    '<div class="iconMenu"><img src="https://development.jubi.ai/usaidWeb/images/menu.png"></div>' +
-    // '<div class="iconMenu"><img src="https://khushi.jubi.ai/images/menu.png"></div>' +
+    // '<div class="iconMenu"><img src="https://development.jubi.ai/usaidWeb/images/menu.png"></div>' +
+    '<div class="iconMenu"><img src="https://khushi.jubi.ai/images/menu.png"></div>' +
     "</section>" +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voicePulse" id="button-stop-ws">' +
@@ -324,8 +324,8 @@
     '<div class="datasendButtons">' +
     '<div class="sendIcon" id="button-send">' +
     '<button id="jubi-bottomClick" type="submit" onclick="return false;">' +
-    '<img src="https://development.jubi.ai/usaidWeb/images/send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
-    // '<img src="https://khushi.jubi.ai/images/send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
+    // '<img src="https://development.jubi.ai/usaidWeb/images/send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
+    '<img src="https://khushi.jubi.ai/images/send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
     '<img src="https://parramato.com/bot-view/images/iconRed_send.png" id="jubi-redSend" class="img-responsive" style="display: none;">' +
     "</button>" +
     "</div>" +
@@ -366,8 +366,8 @@
     '<section class="pm-sec_show_option_on_start" id="pm-sec_show_option_on_start" style="display:block">' +
     '<div class="chatProceed" id="chatProceed">' +
     '<div class="chatProceed-botimg">' +
-    '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
-    // '<img src="https://khushi.jubi.ai/images/khusi.png" class="img-responsive">' +
+    // '<img src="https://development.jubi.ai/usaidWeb/images/khusi.png" class="img-responsive">' +
+    '<img src="https://khushi.jubi.ai/images/khusi.png" class="img-responsive">' +
     "</div>" +
     "<p>Welcome back! Let us begin...</p>" +
     "<ul>" +
