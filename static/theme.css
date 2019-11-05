@@ -1400,7 +1400,7 @@ border-top: 0px solid #f5f5f5; padding: 2px 14px 2px 0;}
   #jubi-chat-loader-app .pm-sec_openview { height: 100% !important; }
   #jubi-chat-loader-app .pm-secCloseMsg { bottom: 79px; }
   #jubi-chat-loader-app .closeBotImg{margin-top: 6px;}
-  #jubi-chat-loader-app .jubi-muteUnmuteVoice{margin-top: 4px !important;margin-right: 5px;float: right !important;}
+  #jubi-chat-loader-app .jubi-muteUnmuteVoice{margin-top: 4px !important;margin-right: 5px;float: right !important;top: 0;}
   #jubi-chat-loader-app .pm-sec_chatbody{padding: 50px 10px 45px;}
 } 
 /* @media (max-width: 380px){
