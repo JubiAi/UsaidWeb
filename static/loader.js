@@ -244,7 +244,7 @@
     '<img src="https://khushi.jubi.ai/images/unmute.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
-    '<img src="./images/mute.png">' +
+    '<img src="https://khushi.jubi.ai/images/images/mute.png">' +
     "</div>" +
     "</aside>" +
     "</div>" +

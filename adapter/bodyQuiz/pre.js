@@ -148,7 +148,7 @@ module.exports={
 			if(data.tags.answer == false){
 				data.reply ={
 	                type: "quickReply",
-	                text: "Frankly speaking, this method can be risky. |break|That\'s because even the pre-ejaculate (the clear fluid that comes out of the penis when it is hard) can contain sperm. |break|Perfect! ${image::https://development.jubi.ai/usaid/images/perfect.jpg}I think you now know the ins and outs of getting pregnant very well 😉.",
+	                text: "Frankly speaking, this method can be risky. |break|That\'s because even the pre-ejaculate (the clear fluid that comes out of the penis when it is hard) can contain sperm. |break|Perfect! ${image::https://khushi.jubi.ai/images/perfect.jpg}I think you now know the ins and outs of getting pregnant very well 😉.",
 	                next : {
 	                    data : [
 	                        {
@@ -167,7 +167,7 @@ module.exports={
 			else if(data.tags.answer == true){
 				data.reply ={
 	                type: "quickReply",
-	                text: "That\'s right. |break|Because the pre-ejaculate (the clear fluid that comes out of the penis when it is hard) can contain sperm, this method is high risk. |break|Perfect! ${image::https://development.jubi.ai/usaid/images/perfect.jpg}I think you now know the ins and outs of getting pregnant very well 😉.",
+	                text: "That\'s right. |break|Because the pre-ejaculate (the clear fluid that comes out of the penis when it is hard) can contain sperm, this method is high risk. |break|Perfect! ${image::https://khushi.jubi.ai/images/perfect.jpg}I think you now know the ins and outs of getting pregnant very well 😉.",
 	                next : {
 	                    data : [
 	                        {

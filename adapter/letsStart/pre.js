@@ -1,4 +1,4 @@
-var relationship = "https://bot.jubi.ai/usaid/images/relationship.jpg"
+var relationship = "https://khushi.jubi.ai/images/relationship.jpg"
 var sendExternalMessage = require('../../external.js')
 var request = require('request')
 
@@ -41,7 +41,7 @@ module.exports={
                         next: {
                             data: [
                                 {
-                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
+                                    image: 'https://khushi.jubi.ai/images/condom_carousal.jpg',
                                     title: "Condoms: Your best friends?",
                                     text : "Learn more about the all-rounder contraceptive.",
                                     buttons: [
@@ -53,7 +53,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
+                                    image: 'https://khushi.jubi.ai/images/ecp_carousal.jpg',
                                     title: "Had unprotected sex last night? ",
                                     text : "Know what to do now.",
                                     buttons: [
@@ -65,7 +65,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
+                                    image: 'https://khushi.jubi.ai/images/body_carousal.jpg',
                                     title: "How does my body work?",
                                     text : "Your body is a wonderland. Learn more about it.",
                                     buttons: [
@@ -88,7 +88,7 @@ module.exports={
                         next: {
                             data: [
                                 {
-                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
+                                    image: 'https://khushi.jubi.ai/images/condom_carousal.jpg',
                                     title: "Condoms: Your best friends?",
                                     text : "Learn more about the all-rounder contraceptive.",
                                     buttons: [
@@ -100,7 +100,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
+                                    image: 'https://khushi.jubi.ai/images/ecp_carousal.jpg',
                                     title: "Had unprotected sex last night? ",
                                     text : "Know what to do now.",
                                     buttons: [
@@ -112,7 +112,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
+                                    image: 'https://khushi.jubi.ai/images/body_carousal.jpg',
                                     title: "How does my body work?",
                                     text : "Your body is a wonderland. Learn more about it.",
                                     buttons: [
