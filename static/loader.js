@@ -241,7 +241,7 @@
     "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
     '<div id="jubi-unmuteVoice">' +
-    '<img src="./images/unmute.png">' +
+    '<img src="https://khushi.jubi.ai/images/unmute.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
     '<img src="./images/mute.png">' +
