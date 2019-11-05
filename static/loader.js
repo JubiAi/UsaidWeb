@@ -218,6 +218,16 @@
                     '<img src="https://development.jubi.ai/usaidWeb/images/close.png" class="img-responsive">'+
                     // '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">'+
                 '</div>'+
+
+
+                '<aside class="jubi-muteUnmuteVoice">' +
+                '<div id="jubi-unmuteVoice">' +
+                '<img src="https://parramato.com/bot-view/images/unmute.png">' +
+                '</div>' +
+                '<div id="jubi-muteVoice">' +
+                '<img src="https://parramato.com/bot-view/images/mute.png">' +
+                '</div>' +
+                '</aside>' +
             '</div>'+
         '</section>' +
 
@@ -283,16 +293,6 @@
         '<div class="iconMenu"><img src="https://development.jubi.ai/usaidWeb/images/menu.png"></div>' +
         // '<div class="iconMenu"><img src="https://khushi.jubi.ai/images/menu.png"></div>' +
         '</section>' +
-
-
-        '<aside class="jubi-muteUnmuteVoice">' +
-        '<div id="jubi-unmuteVoice">' +
-        '<img src="https://parramato.com/bot-view/images/unmute.png">' +
-        '</div>' +
-        '<div id="jubi-muteVoice">' +
-        '<img src="https://parramato.com/bot-view/images/mute.png">' +
-        '</div>' +
-        '</aside>' +
 
 
         '<div class="voice-buttons" id="voice-buttons">' +
