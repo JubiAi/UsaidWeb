@@ -241,10 +241,10 @@
     "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
     '<div id="jubi-unmuteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/unmute.png">' +
+    '<img src="./images/unmute.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/mute.png">' +
+    '<img src="./images/mute.png">' +
     "</div>" +
     "</aside>" +
     "</div>" +
