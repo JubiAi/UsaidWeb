@@ -38,24 +38,24 @@ $(document).ready(function(){
         $('#jubiAsideFullopenview').fadeOut(500);
         $('#jubi-secCloseview').fadeIn(1000);
     })
-    $('body').on('input','#jubi-answerBottom',function(){
-        let userInput = document.getElementById('jubi-answerBottom').value;
-        userInput = userInput.trim();
-        if(userInput==""){
-            console.log("show send icon")
-            $('#button-send').hide()
-            $('#button-play-ws').show()
-        }
-        else if(userInput!=""){
-            $('#button-send').show()
-            $('#button-play-ws').hide()
-            console.log("show voice icon")
-        }
-        else{
-            console.log("show send icon")
-            $('#button-send').hide()
-            $('#button-play-ws').show()
-        }
-    })
+    // $('body').on('input','#jubi-answerBottom',function(){
+    //     let userInput = document.getElementById('jubi-answerBottom').value;
+    //     userInput = userInput.trim();
+    //     if(userInput==""){
+    //         console.log("show send icon")
+    //         $('#button-send').hide()
+    //         $('#button-play-ws').show()
+    //     }
+    //     else if(userInput!=""){
+    //         $('#button-send').show()
+    //         $('#button-play-ws').hide()
+    //         console.log("show voice icon")
+    //     }
+    //     else{
+    //         console.log("show send icon")
+    //         $('#button-send').hide()
+    //         $('#button-play-ws').show()
+    //     }
+    // })
 
 })
