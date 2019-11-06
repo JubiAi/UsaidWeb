@@ -15,7 +15,7 @@ module.exports={
 				})
 				data.reply={
 					type : "quickReply",
-					text : "Select from one of the below closest match or re-enter the city name",
+					text : "Select from one of the below closest match",
 					next : {
 						data : arr
 					}

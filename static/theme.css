@@ -665,6 +665,7 @@ overflow: hidden; background: #fff; }
   text-align: center;
   max-width: 25px;
   padding: 4px 0 0 5px;
+  line-height: 1.1;
 }
 #jubi-chat-loader-app .iconMenu img {
   width: 16px;
