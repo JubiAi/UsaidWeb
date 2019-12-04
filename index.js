@@ -27,7 +27,7 @@
 })
 
 // require("parramato").Server({
-//     root:"https://khushi.jubi.ai",
+//     root:"https://development.jubi.ai/usaid",
 //     socketLocalPath: '/socket',
 //     httpPort: process.argv[2],
 //     cluster:true,
