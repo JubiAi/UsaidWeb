@@ -7,7 +7,7 @@
     staticDirectory:__dirname+"/static",
     adapterPath:"/adapter",
     adapterDirectory:__dirname+"/adapter",
-    projectId:"usaidWeb_353553876735",
+    projectId:"Alpha Version_586886576888",
     dashbotKey:"",
     directMultiplier:1,
     fallbackMultiplier:0.8,

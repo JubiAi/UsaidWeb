@@ -1,4 +1,4 @@
-var relationship = "https://khushi.jubi.ai/images/relationship.jpg"
+var relationship = "https://development.jubi.ai/usaid/images/relationship.jpg"
 var sendExternalMessage = require('../../external.js')
 var request = require('request')
 
@@ -129,7 +129,7 @@ module.exports={
             else if (data.tags.overfifteen == false){
                 delete data.tags.rejected
                 delete data.tags.accepted
-                await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://khushi.jubi.ai/usaid/termsOfService.html')
+                await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaid/usaid/termsOfService.html')
                 data.stage = "conAge"
                 return resolve(data)
             }
