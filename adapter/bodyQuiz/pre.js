@@ -176,7 +176,7 @@ module.exports={
 	                        },
 	                        {
 	                            data : 'learn abt STIs🤒',
-	                            text : 'Learn abt STIs🤒'
+	                            text : 'Learn about STIs🤒'
 	                        }
 	                    ]
 	                }                 

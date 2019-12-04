@@ -30,18 +30,15 @@ module.exports={
 
     carousalTwo: (data) => {
         return new Promise(async(resolve, reject) => {
-            console.log("+++++++++++++")
-            console.log(data.tags)
-            console.log("+++++++++++++")
             if(data.tags.accepted == true && data.tags.rejected == false){
-                if(data.tags.userSays == "Main menu" || data.tags.userSays == "go to the main menu" || data.tags.userSays == "main menu" || data.tags.userSays == "Go to the main menu"){
+                if(data.tags.userSays == "Main menu" || data.tags.userSays == "go to the main menu" || data.tags.userSays == "main menu" || data.tags.userSays == "Go to the main menu" || data.tags.userSays == "talk to a counsellor..."){
                     data.reply = {
                         type: 'generic',
                         text: 'Pick a Topic from Below',
                         next: {
                             data: [
                                 {
-                                    image: 'https://khushi.jubi.ai/images/condom_carousal.jpg',
+                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
                                     title: "Condoms: Your best friends?",
                                     text : "Learn more about the all-rounder contraceptive.",
                                     buttons: [
@@ -53,7 +50,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://khushi.jubi.ai/images/ecp_carousal.jpg',
+                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
                                     title: "Had unprotected sex last night? ",
                                     text : "Know what to do now.",
                                     buttons: [
@@ -65,7 +62,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://khushi.jubi.ai/images/body_carousal.jpg',
+                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
                                     title: "How does my body work?",
                                     text : "Your body is a wonderland. Learn more about it.",
                                     buttons: [
@@ -88,7 +85,7 @@ module.exports={
                         next: {
                             data: [
                                 {
-                                    image: 'https://khushi.jubi.ai/images/condom_carousal.jpg',
+                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
                                     title: "Condoms: Your best friends?",
                                     text : "Learn more about the all-rounder contraceptive.",
                                     buttons: [
@@ -100,7 +97,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://khushi.jubi.ai/images/ecp_carousal.jpg',
+                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
                                     title: "Had unprotected sex last night? ",
                                     text : "Know what to do now.",
                                     buttons: [
@@ -112,7 +109,7 @@ module.exports={
                                     ]
                                 },
                                 {
-                                    image: 'https://khushi.jubi.ai/images/body_carousal.jpg',
+                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
                                     title: "How does my body work?",
                                     text : "Your body is a wonderland. Learn more about it.",
                                     buttons: [
@@ -129,18 +126,115 @@ module.exports={
                     return resolve(data)
                 }    
             }
-            else{
+            else if (data.tags.overfifteen == false){
                 delete data.tags.rejected
                 delete data.tags.accepted
                 await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://khushi.jubi.ai/usaid/termsOfService.html')
                 data.stage = "conAge"
                 return resolve(data)
             }
-            
+            else if(data.tags.overfifteen == true){
+                if(data.tags.userSays == "Main menu" || data.tags.userSays == "go to the main menu" || data.tags.userSays == "main menu" || data.tags.userSays == "Go to the main menu" || data.tags.userSays == "talk to a counsellor..."){
+                    data.reply = {
+                        type: 'generic',
+                        text: 'Pick a Topic from Below',
+                        next: {
+                            data: [
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
+                                    title: "Condoms: Your best friends?",
+                                    text : "Learn more about the all-rounder contraceptive.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "condomStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
+                                    title: "Had unprotected sex last night? ",
+                                    text : "Know what to do now.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "ecpStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
+                                    title: "How does my body work?",
+                                    text : "Your body is a wonderland. Learn more about it.",
+                                    buttons: [
+                                        {
+                                            type: "text",
+                                            text: "Select",
+                                            data: "bodyStart"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                return resolve(data)
+                }
+                else {
+                    data.reply = {
+                        type: 'generic',
+                        text: "All done 😊 Pick a topic from below to learn more! |break|Throughout your journey, you can always access Cancel, Restart and other buttons from the menu on your bottom left.",
+                        next: {
+                            data: [
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/condom_carousal.jpg',
+                                    title: "Condoms: Your best friends?",
+                                    text : "Learn more about the all-rounder contraceptive.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "condomStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/ecp_carousal.jpg',
+                                    title: "Had unprotected sex last night? ",
+                                    text : "Know what to do now.",
+                                    buttons: [
+                                        {   
+                                            type: "text",
+                                            text: "Select",
+                                            data: "ecpStart"
+                                        }
+                                    ]
+                                },
+                                {
+                                    image: 'https://bot.jubi.ai/usaid/images/body_carousal.jpg',
+                                    title: "How does my body work?",
+                                    text : "Your body is a wonderland. Learn more about it.",
+                                    buttons: [
+                                        {
+                                            type: "text",
+                                            text: "Select",
+                                            data: "bodyStart"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                    return resolve(data)
+                }
+            }
         })
     },
 
     talkToAgent : (data) => {
+        console.log("+_+_+_+_+_+_+_+_+_+_")
+        console.log(data.tags.userSays == "talk to a counsellor ☎")
         return new Promise(function(resolve){
             if(data.tags.userSays.toLowerCase() == "talk to a counsellor"){
                 data.reply ={
@@ -212,6 +306,7 @@ module.exports={
                 }
                 return resolve (data)
             }
+
             else if(data.tags.userSays == "🤙 a counsellor"){
                 data.reply ={                                                                                   //changes done
                     type: "quickReply",
@@ -228,7 +323,8 @@ module.exports={
                 return resolve (data)
             }
 
-            else if(data.tags.userSays == "Talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor..."){
+            else if(data.tags.userSays.toLowerCase() == "Talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor..."){
+                console.log("-------------")
                 data.reply ={                                                                                   //changes done
                     type: "button",
                     text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>',
@@ -243,6 +339,7 @@ module.exports={
                 }
                 return resolve (data)
             }
+
             else if(data.tags.userSays == "call a counsellor📞"){
                 data.reply ={
                     type: "button",
@@ -263,6 +360,7 @@ module.exports={
                 }
                 return resolve (data)
             }
+
             else if(data.tags.userSays == "Speak to a counsellor"){
                 data.reply ={                                                                                   //changes done
                     type: "text",
