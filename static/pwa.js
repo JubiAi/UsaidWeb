@@ -77,7 +77,7 @@
             socketId:window.socketId,
             firebaseToken:firebaseToken
         }
-        await fetch('https://development.jubi.ai/usaid/subscribeForPush', {
+        await fetch('https://development.jubi.ai/usaidWeb/subscribeForPush', {
             method: "POST",
             body: JSON.stringify(data),
             headers: {

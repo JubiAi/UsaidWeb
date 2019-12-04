@@ -52,7 +52,7 @@ module.exports={
 		return new Promise(async function(resolve,reject){
 			if(data.tags.rejected == true && data.tags.accepted == false){
 				delete data.tags.rejected
-				await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaid/termsOfService.html')
+				await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaidWeb/termsOfService.html')
 				data.stage = "conAge"
 			}
 			else if(data.tags.accepted == true && data.tags.rejected == false){
@@ -64,12 +64,12 @@ module.exports={
 	                    data : [
 	                    	{
 	                            type: "url",
-                                data: "https://development.jubi.ai/usaid/policyPrivacy.html",
+                                data: "https://development.jubi.ai/usaidWeb/policyPrivacy.html",
                                 text: "Privacy Policy"
 	                        },
 	                        {
 	                            type: "url",
-                                data: "https://development.jubi.ai/usaid/termsOfService.html",
+                                data: "https://development.jubi.ai/usaidWeb/termsOfService.html",
                                 text: "Terms of Service"
 	                        },
 	                        {

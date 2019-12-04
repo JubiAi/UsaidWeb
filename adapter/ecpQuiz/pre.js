@@ -93,7 +93,7 @@ module.exports = {
 			if (data.tags.answer == false) {
 				data.reply = {
 					type: "quickReply",
-					text: "That\'s a myth, You see, as per research, individuals between the age of 13 to 16 years can use them safely. |break|Looks like our journey with ECPs have come to an end${image::https://development.jubi.ai/usaid/images/wow.jpg} You are now well informed about all things Emergency Contraceptive Pill. |break|Want to learn more? Pick another topic or you can get in touch with a counsellor.",
+					text: "That\'s a myth, You see, as per research, individuals between the age of 13 to 16 years can use them safely. |break|Looks like our journey with ECPs have come to an end${image::https://development.jubi.ai/usaidWeb/images/wow.jpg} You are now well informed about all things Emergency Contraceptive Pill. |break|Want to learn more? Pick another topic or you can get in touch with a counsellor.",
 					next: {
 						data: [{
 								data: 'go to main menu',
@@ -110,7 +110,7 @@ module.exports = {
 			} else if (data.tags.answer == true) {
 				data.reply = {
 					type: "quickReply",
-					text: "You are right, As per research, individuals between the age of 13 to 16 years can use them safely. |break|Looks like our journey with ECPs have come to an end${image::https://development.jubi.ai/usaid/images/wow.jpg} You are now well informed about all things Emergency Contraceptive Pill. |break|Want to learn more? Pick another topic or you can get in touch with a counsellor.",
+					text: "You are right, As per research, individuals between the age of 13 to 16 years can use them safely. |break|Looks like our journey with ECPs have come to an end${image::https://development.jubi.ai/usaidWeb/images/wow.jpg} You are now well informed about all things Emergency Contraceptive Pill. |break|Want to learn more? Pick another topic or you can get in touch with a counsellor.",
 					next: {
 						data: [{
 								data: 'go to main menu',

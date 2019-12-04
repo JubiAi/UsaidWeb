@@ -25,7 +25,7 @@
             console.log("Push Recieved...");
             self.registration.showNotification(data.title, {
                 body: data.text,
-                icon: "https://development.jubi.ai/usaid/icon.png"
+                icon: "https://development.jubi.ai/usaidWeb/icon.png"
             });
         });
 
