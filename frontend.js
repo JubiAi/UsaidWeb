@@ -1,7 +1,7 @@
 require("parramato").createFrontend({
     root:"https://development.jubi.ai/usaidWeb",
     staticDirectory:__dirname+"/static",
-    projectId:"usaidWeb_353553876735",
+    projectId:"Alpha Version_586886576888",
     passphraseMiddleware:"YGUYGgyjgblgUGIYGIGkwhbiuashbo98u9283hr9h24rqIYGI932kbidbiadsYE",
     firebaseWebConfig:{
         apiKey: "AIzaSyAAqVdFN_8wbXK4W_YLZj2q6rF-ZrO9xKQ",

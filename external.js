@@ -9,7 +9,7 @@ module.exports = function (data, text) {
 		    type: "text",
 		    sender: data.sender,
 		    language: "en",
-		    projectId: 'usaidWeb_353553876735'
+		    projectId: 'Alpha Version_586886576888'
 		}
    	}
    	return runRequest(obj)
