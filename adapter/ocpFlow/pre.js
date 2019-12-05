@@ -50,7 +50,7 @@ module.exports = {
 			} else if (model.tags.answer1 == true) {
 				model.reply = {
 					type: "quickReply",
-					text: "Correct! Oral contraceptive pills (OCPs) are temporary forms of birth control. Once a woman stops taking the pill, within 1 to 3 months her fertility returns.",
+					text: "Correct! Oral contraceptive pills (OCPs) are temporary forms of birth control. Once a woman stops taking the pill, within 1 to 3 months her fertility returns.|break|Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
 					next: {
 						data: [{
 								data: 'A myth',
@@ -70,6 +70,97 @@ module.exports = {
 		})
 	},
 
+	q3: (model) => {
+		return new Promise(function (resolve) {
+			console.log('========================================================')
+			console.log(model.tags.answer1)
+			if (model.tags.answer2 == false) {
+				console.log("++++++false++++++++")
+				model.reply = {
+					type: "quickReply",
+					text: "Oh! That’s actually a myth.Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be bornwith birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
+					next: {
+						data: [{
+								data: 'A myth',
+								text: 'A myth'
+							},
+							{
+								data: 'This is true',
+								text: 'This is true'
+							}
+						]
+					}
+				}
+				//delete model.tags.answer1
+			} else if (model.tags.answer2 == true) {
+				model.reply = {
+					type: "quickReply",
+					text: "True!Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be born with birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
+					next: {
+						data: [{
+								data: 'Not true',
+								text: 'Not true'
+							},
+							{
+								data: 'true',
+								text: 'True'
+							}
+						]
+					}
+				}
+				//delete model.tags.answer1
+			}
+			console.log(data.reply)
+			return resolve(data)
+		})
+	},
+
+
+
+	q4: (model) => {
+		return new Promise(function (resolve) {
+			console.log('========================================================')
+			console.log(model.tags.answer3)
+			if (model.tags.answer3 == false) {
+				console.log("++++++false++++++++")
+				model.reply = {
+					type: "quickReply",
+					text: "Uh-oh, Wrong answer! Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely. Done! I’m sure you’ve learnt something new.To learn more click on the button below. You can also type in your query in the text box below!",
+					next: {
+						data: [{
+								data: 'Main Topics',
+								text: 'Main Topics'
+							},
+							{
+								data: 'Call helpline',
+								text: 'Call helpline'
+							}
+						]
+					}
+				}
+				//delete model.tags.answer1
+			} else if (model.tags.answer3 == true) {
+				model.reply = {
+					type: "quickReply",
+					text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.",
+					next: {
+						data: [{
+								data: 'Main Topics',
+								text: 'Main Topics'
+							},
+							{
+								data: 'Call helpline',
+								text: 'Call helpline'
+							}
+						]
+					}
+				}
+				//delete model.tags.answer1
+			}
+			console.log(data.reply)
+			return resolve(data)
+		})
+	},
 
 
 

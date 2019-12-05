@@ -146,6 +146,7 @@
   window.jubiUrl = "https://parramato.com/bot-view/Alpha Version_586886576888/dev/";
   window.jubiModal = {
     // url: "wss://development.jubi.ai/usaidWeb",
+    //********** */
     url: 'wss://development.jubi.ai/usaid',
     path: "/socket",
     static: {
