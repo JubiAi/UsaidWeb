@@ -3,13 +3,26 @@
         function o(i, f) {
             if (!n[i]) {
                 if (!e[i]) {
-                    var c = "function" == typeof require && require; if (!f && c) return c(i, !0); if (u) return u(i, !0); var a = new Error("Cannot find module '" + i + "'"); throw a.code = "MODULE_NOT_FOUND", a;
-                } var p = n[i] = { exports: {} }; e[i][0].call(p.exports, function (r) {
-                    var n = e[i][1][r]; return o(n || r);
+                    var c = "function" == typeof require && require;
+                    if (!f && c) return c(i, !0);
+                    if (u) return u(i, !0);
+                    var a = new Error("Cannot find module '" + i + "'");
+                    throw a.code = "MODULE_NOT_FOUND", a;
+                }
+                var p = n[i] = {
+                    exports: {}
+                };
+                e[i][0].call(p.exports, function (r) {
+                    var n = e[i][1][r];
+                    return o(n || r);
                 }, p, p.exports, r, e, n, t);
-            } return n[i].exports;
-        } for (var u = "function" == typeof require && require, i = 0; i < t.length; i++) o(t[i]); return o;
-    } return r;
+            }
+            return n[i].exports;
+        }
+        for (var u = "function" == typeof require && require, i = 0; i < t.length; i++) o(t[i]);
+        return o;
+    }
+    return r;
 })()({
     1: [function (require, module, exports) {
         // shim for using process in browser
@@ -26,6 +39,7 @@
         function defaultSetTimout() {
             throw new Error('setTimeout has not been defined');
         }
+
         function defaultClearTimeout() {
             throw new Error('clearTimeout has not been defined');
         }
@@ -49,6 +63,7 @@
                 cachedClearTimeout = defaultClearTimeout;
             }
         })();
+
         function runTimeout(fun) {
             if (cachedSetTimeout === setTimeout) {
                 //normal enviroments in sane situations
@@ -72,6 +87,7 @@
                 }
             }
         }
+
         function runClearTimeout(marker) {
             if (cachedClearTimeout === clearTimeout) {
                 //normal enviroments in sane situations
@@ -168,7 +184,7 @@
         process.version = ''; // empty string to avoid regexp issues
         process.versions = {};
 
-        function noop() { }
+        function noop() {}
 
         process.on = noop;
         process.addListener = noop;
@@ -197,7 +213,8 @@
         process.umask = function () {
             return 0;
         };
-    }, {}], 2: [function (require, module, exports) {
+    }, {}],
+    2: [function (require, module, exports) {
         (function () {
             //require
             // let BayesClassifier = require('bayes-classifier')
@@ -226,6 +243,7 @@
                 userAgent: navigator.userAgent,
                 url: window.location.href
             };
+
             function getTime() {
                 let d = new Date();
                 let hours = d.getHours();
@@ -240,7 +258,11 @@
                 if (hours < 10) {
                     hours = '0' + hours;
                 }
-                return { hours: hours, minutes: minutes, ampm: ampm };
+                return {
+                    hours: hours,
+                    minutes: minutes,
+                    ampm: ampm
+                };
             }
 
             function utmExtractor(sender) {
@@ -289,13 +311,17 @@
                 let CryptoJSAesJson = {
                     parse: function (jsonStr) {
                         let j = JSON.parse(jsonStr);
-                        let cipherParams = CryptoJS.lib.CipherParams.create({ ciphertext: CryptoJS.enc.Base64.parse(j.ct) });
+                        let cipherParams = CryptoJS.lib.CipherParams.create({
+                            ciphertext: CryptoJS.enc.Base64.parse(j.ct)
+                        });
                         if (j.iv) cipherParams.iv = CryptoJS.enc.Hex.parse(j.iv);
                         if (j.s) cipherParams.salt = CryptoJS.enc.Hex.parse(j.s);
                         return cipherParams;
                     },
                     stringify: function (cipherParams) {
-                        let j = { ct: cipherParams.ciphertext.toString(CryptoJS.enc.Base64) };
+                        let j = {
+                            ct: cipherParams.ciphertext.toString(CryptoJS.enc.Base64)
+                        };
                         if (cipherParams.iv) j.iv = cipherParams.iv.toString();
                         if (cipherParams.salt) j.s = cipherParams.salt.toString();
                         return JSON.stringify(j);
@@ -304,60 +330,76 @@
 
                 return {
                     decrypt: function (data) {
-                        return JSON.parse(CryptoJS.AES.decrypt(data, pass, { format: CryptoJSAesJson }).toString(CryptoJS.enc.Utf8));
+                        return JSON.parse(CryptoJS.AES.decrypt(data, pass, {
+                            format: CryptoJSAesJson
+                        }).toString(CryptoJS.enc.Utf8));
                     },
                     encrypt: function (data) {
-                        return CryptoJS.AES.encrypt(JSON.stringify(data), pass, { format: CryptoJSAesJson }).toString();
+                        return CryptoJS.AES.encrypt(JSON.stringify(data), pass, {
+                            format: CryptoJSAesJson
+                        }).toString();
                     }
                 };
             };
             //------start------
             //------CODE------
 
-    let passphrase = 'b0477b8a-6471-3e5d-909c-8cd5c7bf9faf';
-    let passphraseTransit = 'dsajghdksa7fg8ow7eg32o874gf873gf8v7w8cyv387egf8ygsygyugjhgfdkuyuyuktfkuygwuyyugsdYGUYGgyjgblgUGIYGIGYE';
-    let intents={"ct":"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","iv":"013a4b37e3856ef1551107b054ced9a1","s":"3facf5aac45c0e82"};
-    let entities={"ct":"y64/MB/EN7KrxwE86xyVkFWnajUauPjfsris2ogX7hpDh8t+PTLnqFT1r+lDW7JWlIyFLXWaDY6yIObAzxSNuiUinqaJdr/x8ZAGp5rE/i4/Q0knJMDlgJIcSmxLegSz0dG0rLwdfjXBULGFPKp7l1xmXF10NGylKFWeBKgBDBp23g2VdjvdYS7IeAQlxMNtUumougdYzQ9emkERiSQWmihYoobtP+tRuK+Bt8a86InuNIAeRIy3QIdskjCRgqesAFutM3HLm0c+X6omz6PJjpuP6h0BVASITTpOiiBjuoTP6UgNmPteLWBb0dVzjUEy","iv":"80d2d28916526b7a96d9a92d94dbd3a5","s":"aab08c5acd297878"};
-    let flows={"ct":"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","iv":"53d1ae18d585d6986eec4d813b70f7b3","s":"5fb7066ea97a0fdc"};
+            let passphrase = 'b0477b8a-6471-3e5d-909c-8cd5c7bf9faf';
+            let passphraseTransit = 'dsajghdksa7fg8ow7eg32o874gf873gf8v7w8cyv387egf8ygsygyugjhgfdkuyuyuktfkuygwuyyugsdYGUYGgyjgblgUGIYGIGYE';
+            let intents = {
+                "ct": "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",
+                "iv": "013a4b37e3856ef1551107b054ced9a1",
+                "s": "3facf5aac45c0e82"
+            };
+            let entities = {
+                "ct": "y64/MB/EN7KrxwE86xyVkFWnajUauPjfsris2ogX7hpDh8t+PTLnqFT1r+lDW7JWlIyFLXWaDY6yIObAzxSNuiUinqaJdr/x8ZAGp5rE/i4/Q0knJMDlgJIcSmxLegSz0dG0rLwdfjXBULGFPKp7l1xmXF10NGylKFWeBKgBDBp23g2VdjvdYS7IeAQlxMNtUumougdYzQ9emkERiSQWmihYoobtP+tRuK+Bt8a86InuNIAeRIy3QIdskjCRgqesAFutM3HLm0c+X6omz6PJjpuP6h0BVASITTpOiiBjuoTP6UgNmPteLWBb0dVzjUEy",
+                "iv": "80d2d28916526b7a96d9a92d94dbd3a5",
+                "s": "aab08c5acd297878"
+            };
+            let flows = {
+                "ct": "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",
+                "iv": "53d1ae18d585d6986eec4d813b70f7b3",
+                "s": "5fb7066ea97a0fdc"
+            };
 
-    let checkUrl='https://parramato.com/check';
-    let modal=window.jubiModal;
+            let checkUrl = 'https://parramato.com/check';
+            let modal = window.jubiModal;
 
-    let backendUrl='https://parramato.com'
-    let backendPath='/socket'
-    
-    let middlewareUrl = 'https://development.jubi.ai/usaid'
-    let middlewarePath = '/socket'
-    let middlewareWebsocket = true
-    let middlewareSecurity = false
+            let backendUrl = 'https://parramato.com'
+            let backendPath = '/socket'
 
-    let uploadUrl = 'https://parramato.com'
-    let uploadPath = '/upload/socket'
+            let middlewareUrl = 'https://development.jubi.ai/usaid'
+            let middlewarePath = '/socket'
+            let middlewareWebsocket = true
+            let middlewareSecurity = false
 
-    let humanUrl = 'https://parramato.com'
-    let humanPath = '/human/socket'
+            let uploadUrl = 'https://parramato.com'
+            let uploadPath = '/upload/socket'
 
-    let voiceUrl = 'https://parramato.com'
-    let voicePath = '/voice/socket'
+            let humanUrl = 'https://parramato.com'
+            let humanPath = '/human/socket'
 
-    let directMultiplier=1
-    let fallbackMultiplier = 0.8
+            let voiceUrl = 'https://parramato.com'
+            let voicePath = '/voice/socket'
 
-    let timeoutSeconds= 1200
+            let directMultiplier = 1
+            let fallbackMultiplier = 0.8
+
+            let timeoutSeconds = 1200
 
 
-    let strictlyFlow=true;
-    let humanAssistSwitch=false;
-    let voiceEnabled=true;
-    let cookie=false;
+            let strictlyFlow = true;
+            let humanAssistSwitch = false;
+            let voiceEnabled = true;
+            let cookie = false;
 
-    let speechGenderBackend='FEMALE'
-    let speechLanguageCodeBackend='en-IN'
+            let speechGenderBackend = 'FEMALE'
+            let speechLanguageCodeBackend = 'en-IN'
 
-    let projectId='Alpha Version_586886576888'
-    let attachmentUrl='https://parramato.com/bot-view/images/attachment.png'
-    let integrityPassPhrase='hbu8b23478gbuy2bcfy2cbcihsdcgUGUYUuy2bcfy2cbcihsdcYBEBIW'
-    let localSavePassPhrase='8rhfuahiuHFIJUHAFIWEHFOw98ehfu9HFjhE234jbhJHbjhbfjebkfewfewjhEUHFUIAlpha Version_586886576888'
+            let projectId = 'Alpha Version_586886576888'
+            let attachmentUrl = 'https://parramato.com/bot-view/images/attachment.png'
+            let integrityPassPhrase = 'hbu8b23478gbuy2bcfy2cbcihsdcgUGUYUuy2bcfy2cbcihsdcYBEBIW'
+            let localSavePassPhrase = '8rhfuahiuHFIJUHAFIWEHFOw98ehfu9HFjhE234jbhJHbjhbfjebkfewfewjhEUHFUIAlpha Version_586886576888'
 
             //------CODE------
             //------end------
@@ -383,6 +425,8 @@
             let user = {};
 
             let webId = get("id");
+            console.log(webId)
+
             if (webId) {
                 webId = webId + "-" + IDGenerator(8);
                 utmExtractor(webId);
@@ -394,6 +438,7 @@
             let decorateBotResponse;
             let lastTimestamp;
             let updateWebId;
+
             function clearAllLocalStorageData() {
                 if (window.localStorage) {
                     window.localStorage.setItem(localSavePassPhrase, undefined);
@@ -403,11 +448,13 @@
                     window.localStorage.setItem("webId_" + localSavePassPhrase, undefined);
                 }
             }
+
             function setLocalStorageData(key, value) {
                 if (window.localStorage) {
                     window.localStorage.setItem(key, value);
                 }
             }
+
             function getLocalStorageData(key) {
                 return window.localStorage ? window.localStorage.getItem(key) : undefined;
             }
@@ -449,7 +496,7 @@
                             if (webIdData && webIdData.id) {
                                 webId = webIdData.id;
                             }
-                        } catch (e) { }
+                        } catch (e) {}
                     }
                 }
                 if (!webId) {
@@ -494,7 +541,10 @@
                         //onFunction();
                     });
                 } catch (e) {
-                    socketHuman = { on: () => { }, emit: () => { } };
+                    socketHuman = {
+                        on: () => {},
+                        emit: () => {}
+                    };
                 }
 
                 try {
@@ -503,7 +553,10 @@
                         path: uploadPath
                     });
                 } catch (e) {
-                    socketUpload = { on: () => { }, emit: () => { } };
+                    socketUpload = {
+                        on: () => {},
+                        emit: () => {}
+                    };
                 }
 
                 try {
@@ -513,7 +566,10 @@
                     });
                 } catch (e) {
 
-                    socketVoice = { on: () => { }, emit: () => { } };
+                    socketVoice = {
+                        on: () => {},
+                        emit: () => {}
+                    };
                 }
 
                 try {
@@ -539,8 +595,14 @@
                         onFunction();
                     });
                 } catch (e) {
-                    socketBackend = { on: () => { }, emit: () => { } };
-                    socketMiddleware = { on: () => { }, emit: () => { } };
+                    socketBackend = {
+                        on: () => {},
+                        emit: () => {}
+                    };
+                    socketMiddleware = {
+                        on: () => {},
+                        emit: () => {}
+                    };
                 }
             })();
 
@@ -563,6 +625,7 @@
                 $("#offlinebx").hide();
                 // console.log("ON:::")
             }
+
             function offFunction() {
                 if (document.getElementById("offlinebx")) {
                     $("#offlinebx").show();
@@ -620,8 +683,12 @@
                         }
                         // // console.log("EVENT "+event.type)
                         // // console.log({data:event,webId:webId,requestId:uid})
-                        socketBackend.emit("web-event-register", crypterTransit.encrypt(JSON.stringify({ data: event, webId: webId, requestId: uid })));
-                        socketBackend.on("web-event-register-" + webId + "-" + uid, () => { });
+                        socketBackend.emit("web-event-register", crypterTransit.encrypt(JSON.stringify({
+                            data: event,
+                            webId: webId,
+                            requestId: uid
+                        })));
+                        socketBackend.on("web-event-register-" + webId + "-" + uid, () => {});
                     }
                 });
             }
@@ -632,8 +699,12 @@
                         let uid = IDGenerator(20);
                         // console.log("EVENT ERROR "+event.type)
                         // console.log({data:event,webId:webId,requestId:uid})
-                        socketBackend.emit("web-event-register-error", crypterTransit.encrypt(JSON.stringify({ data: event, webId: webId, requestId: uid })));
-                        socketBackend.on("web-event-register-error-" + webId + "-" + uid, () => { });
+                        socketBackend.emit("web-event-register-error", crypterTransit.encrypt(JSON.stringify({
+                            data: event,
+                            webId: webId,
+                            requestId: uid
+                        })));
+                        socketBackend.on("web-event-register-error-" + webId + "-" + uid, () => {});
                     }
                 });
             }
@@ -684,10 +755,12 @@
                 if (typeof response == "string") {
                     response = JSON.parse(response);
                 }
+
                 function replaceTags(text) {
                     let match = /\${[a-zA-Z0-9_]*}/g.exec(text);
                     return text.replace(match, '');
                 }
+
                 function findMatch(str) {
                     let match = /\${(image|file|audio|video)::[^(${|})]+}/g.exec(str);
                     if (match && match.length > 0) {
@@ -696,6 +769,7 @@
                         return undefined;
                     }
                 }
+
                 function transformMediaOrText(text, i) {
                     if (findMatch(text)) {
                         let match = text.replace('${', '').replace('}', '').split('::');
@@ -753,7 +827,11 @@
                             case 'button':
                                 let sameButton = false;
                                 for (let i = 0; i < response.next.data.length; i++) {
-                                    options.push({ type: response.next.data[i].type, text: response.next.data[i].text, data: response.next.data[i].data });
+                                    options.push({
+                                        type: response.next.data[i].type,
+                                        text: response.next.data[i].text,
+                                        data: response.next.data[i].data
+                                    });
                                     if (currentButtonContext[response.next.data[i].text.toLowerCase().trim()]) {
                                         sameButton = true;
                                         currentButtonContext = {};
@@ -773,7 +851,11 @@
                                 break;
                             case 'quickReply':
                                 for (let i = 0; i < response.next.data.length; i++) {
-                                    options.push({ type: response.next.data[i].type, text: response.next.data[i].text, data: response.next.data[i].data });
+                                    options.push({
+                                        type: response.next.data[i].type,
+                                        text: response.next.data[i].text,
+                                        data: response.next.data[i].data
+                                    });
                                 }
                                 resolve({
                                     botMessage: botMessage,
@@ -835,7 +917,7 @@
                         if (middlewareSecurity) {
                             data = JSON.parse(crypterMiddleware.decrypt(data));
                         }
-                    } catch (e) { }
+                    } catch (e) {}
                     if (typeof data == "string") {
                         data = JSON.parse(data);
                     }
@@ -874,7 +956,9 @@
                 function pre(requestedStage) {
                     return new Promise(function (resolve, reject) {
                         if (!online) {
-                            return reject({ status: "offline" });
+                            return reject({
+                                status: "offline"
+                            });
                         }
                         let uid = IDGenerator(20);
                         requestedStage.webId = webId;
@@ -894,7 +978,7 @@
                                 if (middlewareSecurity) {
                                     receivedModel = JSON.parse(crypterMiddleware.decrypt(receivedModel));
                                 }
-                            } catch (e) { }
+                            } catch (e) {}
                             if (typeof receivedModel == "string") {
                                 receivedModel = JSON.parse(receivedModel);
                             }
@@ -1030,14 +1114,16 @@
                                 if (encryptedLastTimestamp) {
                                     try {
                                         lastTimestamp = JSON.parse(crypterLocal.decrypt(encryptedLastTimestamp)).lastTimestamp;
-                                    } catch (e) { }
+                                    } catch (e) {}
                                 }
                             }
                             if (lastTimestamp + parseInt(timeoutSeconds || 1200) * 1000 < new Date().getTime()) {
                                 invalidate();
                             }
                             lastTimestamp = new Date().getTime();
-                            setLocalStorageData("t_" + localSavePassPhrase, crypterLocal.encrypt(JSON.stringify({ lastTimestamp: lastTimestamp })));
+                            setLocalStorageData("t_" + localSavePassPhrase, crypterLocal.encrypt(JSON.stringify({
+                                lastTimestamp: lastTimestamp
+                            })));
 
                             let timestampstart = new Date().getTime();
                             let engineOut = await runEngine(text);
@@ -1115,6 +1201,7 @@
                         });
                     }
                 };
+
                 function replaceTagsFromStage(stage) {
                     if (Array.isArray(stage.text)) {
                         for (let index in stage.text) {
@@ -1172,9 +1259,12 @@
                             }
                             if (user.previousOptions && user.previousQuery) {
                                 let output = {
-                                    intents: {}, entities: {}, top: []
+                                    intents: {},
+                                    entities: {},
+                                    top: []
                                     //entity extraction
-                                }; for (let option of user.previousOptions) {
+                                };
+                                for (let option of user.previousOptions) {
                                     // let entityData=replaceAllEntities(option.query,output);
                                     // let textReplaced = entityData.text
                                     // // console.log("MATCH::::::::::::")
@@ -1258,7 +1348,12 @@
                             }
                             // // console.log(tags)
                             let timestamp4 = new Date().getTime();
-                            let flowManagerData = await processFlowManager({ query: text, intents: nluProcessedModel.intents, topIntents: nluProcessedModel.top, validation: validatedModel });
+                            let flowManagerData = await processFlowManager({
+                                query: text,
+                                intents: nluProcessedModel.intents,
+                                topIntents: nluProcessedModel.top,
+                                validation: validatedModel
+                            });
                             let stageModel = flowManagerData.response;
                             let status = flowManagerData.status;
                             let timestamp5 = new Date().getTime();
@@ -1294,7 +1389,11 @@
                                 });
                                 // // console.log(e)
                             });
-                            return resolve({ stage: stageModel, nlu: nluProcessedModel, status: status });
+                            return resolve({
+                                stage: stageModel,
+                                nlu: nluProcessedModel,
+                                status: status
+                            });
                         } catch (e) {
                             if (!online) {
                                 invalidate(async () => {
@@ -1319,10 +1418,21 @@
                     function saveInformation(type, validatedModel, prevStage, stageModel, nluProcessedModel, text) {
                         return new Promise((resolve, reject) => {
                             if (!online) {
-                                return reject({ status: "offline" });
+                                return reject({
+                                    status: "offline"
+                                });
                             }
                             let uid = IDGenerator(20);
-                            let input = { type: type, validation: validatedModel, prevStage: prevStage, webId: webId, nlu: nluProcessedModel, text: text, stage: stageModel, requestId: uid };
+                            let input = {
+                                type: type,
+                                validation: validatedModel,
+                                prevStage: prevStage,
+                                webId: webId,
+                                nlu: nluProcessedModel,
+                                text: text,
+                                stage: stageModel,
+                                requestId: uid
+                            };
                             if (middlewareSecurity) {
                                 socketMiddleware.emit("web-save", crypterMiddleware.encrypt(JSON.stringify(input)));
                             } else {
@@ -1373,7 +1483,9 @@
                     function opinionFromLR(data) {
                         return new Promise(async function (resolve, reject) {
                             if (!online) {
-                                return reject({ status: "offline" });
+                                return reject({
+                                    status: "offline"
+                                });
                             }
                             let uid = IDGenerator(20);
                             let requestData = {
@@ -1400,6 +1512,7 @@
                             });
                         });
                     }
+
                     function replaceAllEntities(text, output) {
                         //entity extraction
                         let entitiesDetected = [];
@@ -1413,7 +1526,11 @@
                                     // if(textToken==token&&token.trim()!=""&&textToken.trim()!=""){
                                     if ((text.startsWith(token + " ") || text.endsWith(" " + token) || text.trim() == token || text && text.includes(" " + token + " ")) && token.trim() != "") {
                                         if (entitiesDetected.length == 0) {
-                                            entitiesDetected.push({ token: token, synonymGroup: value, entity: label });
+                                            entitiesDetected.push({
+                                                token: token,
+                                                synonymGroup: value,
+                                                entity: label
+                                            });
                                             flag = true;
                                         }
                                         for (let index in entitiesDetected) {
@@ -1421,12 +1538,20 @@
                                                 flag = true;
                                                 break;
                                             } else if (token && token.includes(entitiesDetected[index].token)) {
-                                                entitiesDetected.push({ token: token, synonymGroup: value, entity: label });
+                                                entitiesDetected.push({
+                                                    token: token,
+                                                    synonymGroup: value,
+                                                    entity: label
+                                                });
                                                 entitiesToBeDeletedIndices.push(index);
                                                 flag = true;
                                                 break;
                                             } else {
-                                                entitiesDetected.push({ token: token, synonymGroup: value, entity: label });
+                                                entitiesDetected.push({
+                                                    token: token,
+                                                    synonymGroup: value,
+                                                    entity: label
+                                                });
                                                 flag = true;
                                             }
                                         }
@@ -1449,14 +1574,22 @@
                         for (let element of filteredEntities) {
                             text = text.replaceAll(element.token, element.entity);
                         }
-                        return { output: output, text: text };
+                        return {
+                            output: output,
+                            text: text
+                        };
                     }
+
                     function processNlu(text) {
                         return new Promise(async function (resolve, reject) {
                             try {
 
                                 //output variable
-                                let output = { intents: {}, entities: {}, top: [] };
+                                let output = {
+                                    intents: {},
+                                    entities: {},
+                                    top: []
+                                };
 
                                 let entityData = replaceAllEntities(text, output);
                                 text = entityData.text;
@@ -1561,14 +1694,20 @@
                                     try {
                                         //train bm25 on shrinked data
                                         let engine = bm25();
-                                        engine.defineConfig({ fldWeights: { text: 1 } });
+                                        engine.defineConfig({
+                                            fldWeights: {
+                                                text: 1
+                                            }
+                                        });
                                         engine.definePrepTasks([nlp.string.lowerCase, nlp.string.removeExtraSpaces, nlp.string.tokenize0, nlp.tokens.propagateNegations, nlp.tokens.stem]);
                                         for (let label in shrinkedIndexedData) {
                                             if (shrinkedIndexedData[label].length > 0) {
                                                 let text = shrinkedIndexedData[label].reduce((text, value) => {
                                                     return text + " " + value;
                                                 });
-                                                engine.addDoc({ text: text }, label);
+                                                engine.addDoc({
+                                                    text: text
+                                                }, label);
                                             }
                                         }
                                         engine.consolidate(4);
@@ -1661,6 +1800,7 @@
                             }
                         });
                     }
+
                     function processValidator(text, user, entities) {
                         let validator = {
                             wordList: wordList,
@@ -1678,10 +1818,17 @@
                                 }
 
                                 if (expectation && expectation.type) {
-                                    let runFunc = validator[expectation.type].bind({ entities: entities, expectation: expectation, user: user });
+                                    let runFunc = validator[expectation.type].bind({
+                                        entities: entities,
+                                        expectation: expectation,
+                                        user: user
+                                    });
                                     resolve((await runFunc(text)));
                                 } else if (post && post.url) {
-                                    let runFunc = validator["post"].bind({ entities: entities, post: post });
+                                    let runFunc = validator["post"].bind({
+                                        entities: entities,
+                                        post: post
+                                    });
                                     resolve((await runFunc(text)));
                                 } else {
                                     resolve({
@@ -1706,7 +1853,9 @@
                             return new Promise(function (resolve, reject) {
                                 try {
                                     if (!online) {
-                                        return reject({ status: "offline" });
+                                        return reject({
+                                            status: "offline"
+                                        });
                                     }
                                     let model = {};
                                     let uid = IDGenerator(20);
@@ -1725,7 +1874,7 @@
                                             if (middlewareSecurity) {
                                                 receivedModel = JSON.parse(crypterMiddleware.decrypt(receivedModel));
                                             }
-                                        } catch (e) { }
+                                        } catch (e) {}
                                         if (typeof receivedModel == "string") {
                                             receivedModel = JSON.parse(receivedModel);
                                         }
@@ -1753,6 +1902,7 @@
                                 }
                             });
                         }
+
                         function wordList(input) {
                             let entities = this.entities;
                             let expectation = this.expectation;
@@ -1801,6 +1951,7 @@
                                 }
                             });
                         }
+
                         function regex(inp) {
                             let entities = this.entities;
                             let expectation = this.expectation;
@@ -1835,6 +1986,7 @@
                             });
                         }
                     }
+
                     function processFlowManager(data) {
                         return new Promise(async function (resolve, reject) {
                             try {
@@ -1918,7 +2070,10 @@
                                     status.final = "nextFallback";
                                     status.previousStage = "";
                                 }
-                                return resolve({ response: await decideResponse(flow, data, status), status: status });
+                                return resolve({
+                                    response: await decideResponse(flow, data, status),
+                                    status: status
+                                });
                             } catch (e) {
                                 triggerEventError({
                                     senderId: webId,
@@ -2248,9 +2403,13 @@
                                                     user.stages[0].next.data.push({
                                                         title: capFirstLetter(element.query.trim()),
                                                         text: reply,
-                                                        buttons: [{ data: element.query, text: "Read More" }]
+                                                        buttons: [{
+                                                            data: element.query,
+                                                            text: "Read More"
+                                                        }]
                                                     });
                                                 }
+
                                                 function capFirstLetter(textSent) {
                                                     try {
                                                         return textSent.charAt(0).toUpperCase() + textSent.slice(1);
@@ -2281,7 +2440,10 @@
                                                 user.stages[0].next.data.push({
                                                     title: "Not relevant",
                                                     text: "Did not match my query",
-                                                    buttons: [{ data: "not relevant", text: "Select" }]
+                                                    buttons: [{
+                                                        data: "not relevant",
+                                                        text: "Select"
+                                                    }]
                                                 });
                                             }
                                             user.stuckCount = 0;
@@ -2387,7 +2549,7 @@
                         if (middlewareSecurity) {
                             data = JSON.parse(crypterMiddleware.decrypt(data));
                         }
-                    } catch (e) { }
+                    } catch (e) {}
                     if (typeof data == "string") {
                         data = JSON.parse(data);
                     }
@@ -2404,7 +2566,7 @@
                         if (middlewareSecurity) {
                             data = JSON.parse(crypterMiddleware.decrypt(data));
                         }
-                    } catch (e) { }
+                    } catch (e) {}
                     if (typeof data == "string") {
                         data = JSON.parse(data);
                     }
@@ -2425,6 +2587,7 @@
                     let target = this;
                     return target.split(search).join(replacement);
                 };
+
                 function htmlInjectionPrevent(msg) {
                     if (msg) {
                         return msg.toString().replaceAll(/</g, "&lt;").replaceAll(/>/g, "&gt;");
@@ -2469,7 +2632,9 @@
                                         setTimeout(() => {
                                             try {
                                                 console.log("called ");
-                                                $("#pm-data").animate({ scrollTop: $("#pm-buttonlock").height() }, '1000000');
+                                                $("#pm-data").animate({
+                                                    scrollTop: $("#pm-buttonlock").height()
+                                                }, '1000000');
                                                 scrollUp();
                                             } catch (e) {
                                                 console.log(e);
@@ -2516,7 +2681,7 @@
                                                 readyState = true;
                                                 updateWebId(webId);
                                             }
-                                            invalidate(() => { }, true);
+                                            invalidate(() => {}, true);
                                             clearAllLocalStorageData();
                                             chatArray = [];
                                             document.getElementById('pm-permission-view').style.display = "none";
@@ -2603,7 +2768,7 @@
                     } else {
                         document.getElementById('jubi-muteVoice').style.display = "none";
                     }
-                } catch (e) { }
+                } catch (e) {}
 
                 $("body").on('click', '#jubi-unmuteVoice', function (e) {
                     document.getElementById('jubi-unmuteVoice').style.display = "none";
@@ -2718,7 +2883,9 @@
                     return new Promise((resolve, reject) => {
                         try {
                             if (!online) {
-                                return reject({ status: "offline" });
+                                return reject({
+                                    status: "offline"
+                                });
                             }
                             if (recognizer) {
                                 recognizer.stop();
@@ -2726,7 +2893,9 @@
                                 return resolve();
                             } else if (globalStream) {
                                 streamStreaming = false;
-                                socketVoice.emit('web-speech-to-text-stop', crypterTransit.encrypt({ webId: webId }));
+                                socketVoice.emit('web-speech-to-text-stop', crypterTransit.encrypt({
+                                    webId: webId
+                                }));
                                 let track = globalStream.getTracks()[0];
                                 track.stop();
                                 if (input) {
@@ -2745,7 +2914,9 @@
                                     return resolve();
                                 }
                             } else {
-                                socketVoice.emit('web-speech-to-text-stop', crypterTransit.encrypt({ webId: webId }));
+                                socketVoice.emit('web-speech-to-text-stop', crypterTransit.encrypt({
+                                    webId: webId
+                                }));
                                 hideStop();
                                 return resolve();
                             }
@@ -2913,8 +3084,11 @@
                         let left = e.inputBuffer.getChannelData(0);
                         let left16 = downsampleBuffer(left, 44100, 16000);
                         if (online) {
-                            socketVoice.emit('web-speech-to-text-binary-data', { c: left16 });
+                            socketVoice.emit('web-speech-to-text-binary-data', {
+                                c: left16
+                            });
                         }
+
                         function downsampleBuffer(buffer, sampleRate, outSampleRate) {
                             if (outSampleRate == sampleRate) {
                                 return buffer;
@@ -2945,15 +3119,21 @@
                     }
                     window.onbeforeunload = function () {
                         if (streamStreaming && online) {
-                            socketVoice.emit('web-speech-to-text-stop', crypterTransit.encrypt({ webId: webId }));
+                            socketVoice.emit('web-speech-to-text-stop', crypterTransit.encrypt({
+                                webId: webId
+                            }));
                         }
                     };
                     return new Promise(async (resolve, reject) => {
                         try {
                             if (!online) {
-                                return reject({ status: "offline" });
+                                return reject({
+                                    status: "offline"
+                                });
                             }
-                            socketVoice.emit('web-speech-to-text-start', crypterTransit.encrypt({ webId: webId })); //init socket Google Speech Connection
+                            socketVoice.emit('web-speech-to-text-start', crypterTransit.encrypt({
+                                webId: webId
+                            })); //init socket Google Speech Connection
                             streamStreaming = true;
                             AudioContext = window.AudioContext || window.webkitAudioContext;
                             context = new AudioContext();
@@ -3127,7 +3307,9 @@
 
                     return new Promise((resolve, reject) => {
                         if (!online) {
-                            return reject({ status: "offline" });
+                            return reject({
+                                status: "offline"
+                            });
                         }
                         let uid = IDGenerator(20);
                         let requestData = {
@@ -3145,6 +3327,7 @@
                             data = crypterTransit.decrypt(data);
                             playVoiceFromAPI(data);
                         });
+
                         function playVoiceFromAPI(speech) {
                             // speech = JSON.parse(crypterTransit.decrypt(speech))
                             if (speech.error) {
@@ -3183,7 +3366,9 @@
                 }
 
                 function scrollUp() {
-                    $("#pm-data").animate({ scrollTop: $("#pm-buttonlock").height() }, '1000000');
+                    $("#pm-data").animate({
+                        scrollTop: $("#pm-buttonlock").height()
+                    }, '1000000');
 
                     if ($("#pm-buttonlock").height() > $("#pm-data").height() && $("#pm-buttonlock").height() > 0) {
                         $("#pm-data").css("display", "block");
@@ -3331,6 +3516,7 @@
                     }
                     msgIndex++;
                 }
+
                 function waitForAwhile(time) {
                     return new Promise((resolve, reject) => {
                         setTimeout(() => {
@@ -3338,6 +3524,7 @@
                         }, time);
                     });
                 }
+
                 function prepareUserInput(questionType, options) {
                     if (questionType == 'option') {
                         let str = optionStart();
@@ -3370,16 +3557,21 @@
                         return str;
                     }
                 }
+
                 function pushToChatStart(str) {
                     $(".pm-bxChat").append(str);
                 }
+
                 function pushToChat(str) {
                     $("#pm-bxloadgif").remove();
                     $(".pm-bxChat").append(str);
                     chatArray.push(str);
                     setLocalStorageData(localSavePassPhrase, crypterLocal.encrypt(JSON.stringify(chatArray)));
-                    setLocalStorageData("webId_" + localSavePassPhrase, crypterLocal.encrypt(JSON.stringify({ id: webId })));
+                    setLocalStorageData("webId_" + localSavePassPhrase, crypterLocal.encrypt(JSON.stringify({
+                        id: webId
+                    })));
                 }
+
                 function pushToView(str) {
                     $("#pm-mainSec").append(str);
                 }
@@ -3389,15 +3581,18 @@
                         text: answer
                     };
                 }
+
                 function genericStart() {
                     return '<div class="pm-owlsliderbx"><div class="slider-inner pm-slider-inner"><div  class="owl-carousel owl-theme">';
                 }
+
                 function replaceAll(str, find, replace) {
                     if (typeof str == "string") {
                         return str.replace(new RegExp(find, 'g'), replace);
                     }
                     return str;
                 }
+
                 function buildGeneric(data) {
                     let html = '';
                     if (data && data.length > 0 && data[0].buttons && data[0].buttons.length > 0) {
@@ -3434,52 +3629,63 @@
                     }
                     return html;
                 }
+
                 function genericEnd() {
                     return '</div></div></div>';
                 }
+
                 function prepareChatBotReply(msg) {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible;'>" + "<div class='pm-leftInput' >" + "<p>" + msg.replaceAll("|br|", "<br/>") + "</p>" + '<div class="jubi-msgReplyTime ">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareChatBotFirstReply(msg) {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible;'>" + "<div class='pm-leftUserimg'>" + "<img src='" + modal.static.images.botIcon + "' class='img-responsive'>" + "</div>" + "<div class='pm-leftInput' >" + "<div class='pm-arrowLeftchat pm-arrow-left'></div>" + "<p>" + msg.replaceAll("|br|", "<br/>") + "</p>" + '<div class="jubi-msgReplyTime jubi-left_msgReplyTime">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareFirstFileReply(msg) {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible; '>" + "<div class='pm-leftUserimg'>" + "<img src='" + modal.static.images.botIcon + "' class='img-responsive'>" + "</div>" + "<div class='pm-leftInput'>" + "<div class='pm-arrowLeftchat pm-arrow-left'></div>" + "<div class='pm-postImg'>" + "<a href='" + msg + "' target='_blank'><img src='" + attachmentUrl + "'  class='img-responsive'/></a>" + "</div>" + '<div class="jubi-msgReplyTime">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareFileReply(msg) {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible;'>" + "<div class='pm-leftInput'>" + "<div class='pm-postImg'>" + "<a href='" + msg + "' target='_blank'><img src='" + attachmentUrl + "'  class='img-responsive'/></a>" + "</div>" + '<div class="jubi-msgReplyTime ">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareChatBotFirstImageReply(msg) {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible; '>" + "<div class='pm-leftUserimg'>" + "<img src='" + modal.static.images.botIcon + "' class='img-responsive'>" + "</div>" + "<div class='pm-leftInput'>" + "<div class='pm-arrowLeftchat pm-arrow-left'></div>" + "<div class='pm-postImg'>" + "<a href='" + msg + "' target='_blank'><img src='" + msg + "'  class='img-responsive'/></a>" + "</div>" + '<div class="jubi-msgReplyTime">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareChatBotImageReply(msg) {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible;'>" + "<div class='pm-leftInput'>" + "<div class='pm-postImg'>" + "<a href='" + msg + "' target='_blank'><img src='" + msg + "'  class='img-responsive'/></a>" + "</div>" + '<div class="jubi-msgReplyTime ">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareFirstVideoReply(msg) {
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible; '>" + "<div class='pm-leftUserimg'>" + "<img src='" + modal.static.images.botIcon + "' class='img-responsive'>" + "</div>" + "<div class='pm-leftInput'>" + "<div class='pm-arrowLeftchat pm-arrow-left'></div>" + ' <iframe   src="' + msg + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' + '<div class="jubi-msgReplyTime ">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareVideoReply(msg) {
                     let d = getTime();
                     return "<div class='pm-bxLeftchat ' style='visibility: visible;'>" + "<div class='pm-leftInput'>" + ' <iframe   src="' + msg + '" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>' + '<div class="jubi-msgReplyTime ">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "</div><div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareChatBotLoader() {
                     $("#pm-bxloadgif").remove();
                     let d = getTime();
                     return "<div id='pm-bxloadgif' class='pm-bxuser_question pm-bxloadgif ' style='visibility: visible;'><div class='pm-leftInputGif'><div class='pm-leftUserimg'><img src='" + modal.static.images.botIcon + "' class='img-responsive'></div><div class='pm-innerloadgif'>" + "<img src='" + modal.static.images.loaderBotChat + "' />" + "</div></div></div>";
                 }
+
                 function prepareChatBotUserLoader() {
                     $("#pm-bxloadgif").remove();
                     return "<div class='pm-bxRightchat'>" + "<div id='pm-Rightbxloadgif' class='pm-bxuser_question pm-Rightbxloadgif'>" + "<div class='pm-leftInputGif'>" +
@@ -3489,9 +3695,11 @@
                         // "<div class='pm-rightUserimg'><img src='./images/user.png'></div>"+
                         "<div class='pm-innerloadgif pm-Rightinnerloadgif'>" + "<img src='" + modal.static.images.loaderBotChat + "' />" + "</div>" + "</div>" + "</div>" + "</div>";
                 }
+
                 function showWebView(url) {
                     return '<div class="showEditIframe" id="iframeView">' + '<div class="closeIframeBtn"><img src="' + modal.static.images.closeWebView + '" class="img-responsive"></div>' + '<iframe src="' + url + '" frameborder="0" -webkit-overflow-scrolling:="" touch;="" allowfullscreen="" style="overflow:hidden;"></iframe>' + '</div>';
                 }
+
                 function showFile(answer) {
 
                     let arr = answer.split(">");
@@ -3508,35 +3716,45 @@
                         return;
                     }
                 }
+
                 function checkForImage(url) {
                     return url.match(/\.(jpeg|jpg|gif|png)$/) != null;
                 }
+
                 function showAnswer(answer) {
                     let d = getTime();
                     return "<div class='pm-bxRightchat' style='visibility: visible;'>" + "<div class='pm-rightInput'>" + "<div class='pm-arrowRightchat pm-arrow-right'></div>" + "<p>" + htmlInjectionPrevent(answer) + "</p>" + '<div class="jubi-msgReplyTime ">' + '<h5>' + d.hours + ':' + d.minutes + d.ampm + '</h5>' + '</div>' + "<div class='clearfix'></div>" + "</div>" + "<div class='pm-rightUserimg'>" + "<img src='" + modal.static.images.userIcon + "' class='img-responsive'>" + "</div>" + "<div class='clearfix'></div>" + "</div>";
                 }
+
                 function showMaleAnswer(answer) {
                     return "<div class='pm-bxRightchat' style='visibility: visible; '>" + "<div class='pm-rightInput'>" + "<div class='pm-arrowRightchat pm-arrow-right'></div>" + "<p>" + htmlInjectionPrevent(answer) + "</p>" + "<div class='pm-pointRightchat'>" + "</div>" + "<div class='clearfix'></div>" + "</div>" + "<div class='pm-rightUserimg'>" + "<img src='" + modal.static.images.userIcon + "' class='img-responsive'>" + "</div>" + "<div class='clearfix'></div>" + "</div>";
                 }
+
                 function showFemaleAnswer(answer) {
 
                     return "<div class='pm-bxRightchat' style='visibility: visible; '>" + "<div class='pm-rightInput'>" + "<div class='pm-arrowRightchat pm-arrow-right'></div>" + "<p>" + htmlInjectionPrevent(answer) + "</p>" + "<div class='pm-pointRightchat'>" + "</div>" + "<div class='clearfix'></div>" + "</div>" + "<div class='pm-rightUserimg'>" + "<img src='" + modal.static.images.userFemaleIcon + "' class='img-responsive'>" + "</div>" + "<div class='clearfix'></div>" + "</div>";
                 }
+
                 function optionStart() {
                     return "<div class='pm-bxCheckOPtion' style='visibility: visible; '>" + "<ul >";
                 }
+
                 function optionPersistStart() {
                     return "<div class='pm-bxCheckOPtionPersist' style='visibility: visible; '>" + "<ul >";
                 }
+
                 function optionEnd() {
                     return "</ul></div>";
                 }
+
                 function showProfileAnswer(answer) {
                     return "<div class='pm-bxRightchat' style='visibility: visible;'>" + "<div class='pm-rightInput'>" + "<div class='pm-arrowRightchat pm-arrow-right'></div>" + "<p>" + htmlInjectionPrevent(answer) + "</p>" + "<div class='pm-pointRightchat'>" + "</div>" + "<div class='clearfix'></div>" + "</div>" + "<div class='pm-rightUserimg'>" + "<img style='border-radius: 100px;' src='" + profile + "' class='img-responsive'>" + "</div>" + "<div class='clearfix'></div>" + "</div>";
                 }
+
                 function prepareTextInputProfileBox() {
                     return "<div class='pm-anwser-div pm-bxRightchat' style='visibility: visible; '>" + "<div class='pm-rightInput'>" + "<div class='pm-arrowRightchat pm-arrow-right'></div>" + "<input class='form-control input-lg answer' data-id='" + msgIndex.toString() + "' autofocus='autofocus' type='text' placeholder='Type and hit enter'>" + "<div class='pm-pointRightchat'>" + "</div>" + "<div class='clearfix'></div>" + "</div>" + "<div class='pm-rightUserimg'>" + "<img style='border-radius: 100px;' src='" + profile + "' class='img-responsive'>" + "</div>" + "<div class='clearfix'></div>" + "</div>";
                 }
+
                 function sendMessage(data, type) {
                     $(".pm-bxCheckOPtion").remove();
                     $(".pm-bxCheckOPtionUrl").remove();
@@ -3555,7 +3773,10 @@
                         scrollUp();
                         setTimeout(_ => {
                             $("#pm-bxloadgif").remove();
-                            $("#pm-bxloadgif").animate({ "opacity": "hide", bottom: "10" }, 300);
+                            $("#pm-bxloadgif").animate({
+                                "opacity": "hide",
+                                bottom: "10"
+                            }, 300);
                         }, 5000);
                     }
 
@@ -3564,6 +3785,7 @@
                         ce.processInput(data.text);
                     }, 100);
                 }
+
                 function slidebx() {
                     let count = 0;
                     $('.owl-carousel').each(function () {
@@ -3943,7 +4165,9 @@
                 $('.pm-bxform').click(function () {
                     $("#pm-secMenucontent").hide();
                 });
-                $(".pm-bxChat").animate({ scrollTop: $(document).height() }, "slow");
+                $(".pm-bxChat").animate({
+                    scrollTop: $(document).height()
+                }, "slow");
                 $(".pm-btnClose").click(function () {
                     $(".pm-secCloseMsg").hide();
                 });
@@ -4031,7 +4255,14 @@
             //Invoking Chain of operations
             init();
         })();
-    }, { "sentence-tokenizer": 8, "string-similarity": 12, "string-tokenizer": 14, "wink-bm25-text-search": 16, "wink-nlp-utils": 61 }], 3: [function (require, module, exports) {
+    }, {
+        "sentence-tokenizer": 8,
+        "string-similarity": 12,
+        "string-tokenizer": 14,
+        "wink-bm25-text-search": 16,
+        "wink-nlp-utils": 61
+    }],
+    3: [function (require, module, exports) {
         /*!
          * array-last <https://github.com/jonschlinkert/array-last>
          *
@@ -4062,7 +4293,10 @@
             }
             return res;
         };
-    }, { "is-number": 4 }], 4: [function (require, module, exports) {
+    }, {
+        "is-number": 4
+    }],
+    4: [function (require, module, exports) {
         /*!
          * is-number <https://github.com/jonschlinkert/is-number>
          *
@@ -4084,7 +4318,8 @@
 
             return num - num + 1 >= 0;
         };
-    }, {}], 5: [function (require, module, exports) {
+    }, {}],
+    5: [function (require, module, exports) {
         'use strict';
 
         // modified from https://github.com/es-shims/es5-shim
@@ -4094,8 +4329,10 @@
         var slice = Array.prototype.slice;
         var isArgs = require('./isArguments');
         var isEnumerable = Object.prototype.propertyIsEnumerable;
-        var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
-        var hasProtoEnumBug = isEnumerable.call(function () { }, 'prototype');
+        var hasDontEnumBug = !isEnumerable.call({
+            toString: null
+        }, 'toString');
+        var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
         var dontEnums = ['toString', 'toLocaleString', 'valueOf', 'hasOwnProperty', 'isPrototypeOf', 'propertyIsEnumerable', 'constructor'];
         var equalsConstructorPrototype = function (o) {
             var ctor = o.constructor;
@@ -4222,7 +4459,10 @@
         };
 
         module.exports = keysShim;
-    }, { "./isArguments": 6 }], 6: [function (require, module, exports) {
+    }, {
+        "./isArguments": 6
+    }],
+    6: [function (require, module, exports) {
         'use strict';
 
         var toStr = Object.prototype.toString;
@@ -4235,7 +4475,8 @@
             }
             return isArgs;
         };
-    }, {}], 7: [function (require, module, exports) {
+    }, {}],
+    7: [function (require, module, exports) {
         'use strict';
 
         module.exports = function (obj) {
@@ -4248,7 +4489,8 @@
 
             return ret;
         };
-    }, {}], 8: [function (require, module, exports) {
+    }, {}],
+    8: [function (require, module, exports) {
         "use strict";
 
         // eslint-disable-next-line no-unused-vars
@@ -4326,7 +4568,10 @@
         };
 
         module.exports = Tokenizer;
-    }, { "debug": 9 }], 9: [function (require, module, exports) {
+    }, {
+        "debug": 9
+    }],
+    9: [function (require, module, exports) {
         (function (process) {
             /* eslint-env browser */
 
@@ -4458,7 +4703,7 @@
                 let r;
                 try {
                     r = exports.storage.getItem('debug');
-                } catch (error) { }
+                } catch (error) {}
                 // Swallow
                 // XXX (@Qix-) should we be logging these?
 
@@ -4495,7 +4740,9 @@
 
             module.exports = require('./common')(exports);
 
-            const { formatters } = module.exports;
+            const {
+                formatters
+            } = module.exports;
 
             /**
              * Map %j to `JSON.stringify()`, since no Web Inspectors do that by default.
@@ -4509,7 +4756,11 @@
                 }
             };
         }).call(this, require('_process'));
-    }, { "./common": 10, "_process": 1 }], 10: [function (require, module, exports) {
+    }, {
+        "./common": 10,
+        "_process": 1
+    }],
+    10: [function (require, module, exports) {
 
         /**
          * This is the common logic for both the Node.js and web browser
@@ -4530,30 +4781,30 @@
             });
 
             /**
-            * Active `debug` instances.
-            */
+             * Active `debug` instances.
+             */
             createDebug.instances = [];
 
             /**
-            * The currently active debug mode names, and names to skip.
-            */
+             * The currently active debug mode names, and names to skip.
+             */
 
             createDebug.names = [];
             createDebug.skips = [];
 
             /**
-            * Map of special "%n" handling functions, for the debug "format" argument.
-            *
-            * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
-            */
+             * Map of special "%n" handling functions, for the debug "format" argument.
+             *
+             * Valid key names are a single, lower or upper-case letter, i.e. "n" and "N".
+             */
             createDebug.formatters = {};
 
             /**
-            * Selects a color for a debug namespace
-            * @param {String} namespace The namespace string for the for the debug instance to be colored
-            * @return {Number|String} An ANSI color code for the given namespace
-            * @api private
-            */
+             * Selects a color for a debug namespace
+             * @param {String} namespace The namespace string for the for the debug instance to be colored
+             * @return {Number|String} An ANSI color code for the given namespace
+             * @api private
+             */
             function selectColor(namespace) {
                 let hash = 0;
 
@@ -4567,12 +4818,12 @@
             createDebug.selectColor = selectColor;
 
             /**
-            * Create a debugger with the given `namespace`.
-            *
-            * @param {String} namespace
-            * @return {Function}
-            * @api public
-            */
+             * Create a debugger with the given `namespace`.
+             *
+             * @param {String} namespace
+             * @return {Function}
+             * @api public
+             */
             function createDebug(namespace) {
                 let prevTime;
 
@@ -4659,12 +4910,12 @@
             }
 
             /**
-            * Enables a debug mode by namespaces. This can include modes
-            * separated by a colon and wildcards.
-            *
-            * @param {String} namespaces
-            * @api public
-            */
+             * Enables a debug mode by namespaces. This can include modes
+             * separated by a colon and wildcards.
+             *
+             * @param {String} namespaces
+             * @api public
+             */
             function enable(namespaces) {
                 createDebug.save(namespaces);
 
@@ -4697,11 +4948,11 @@
             }
 
             /**
-            * Disable debug output.
-            *
-            * @return {String} namespaces
-            * @api public
-            */
+             * Disable debug output.
+             *
+             * @return {String} namespaces
+             * @api public
+             */
             function disable() {
                 const namespaces = [...createDebug.names.map(toNamespace), ...createDebug.skips.map(toNamespace).map(namespace => '-' + namespace)].join(',');
                 createDebug.enable('');
@@ -4709,12 +4960,12 @@
             }
 
             /**
-            * Returns true if the given mode name is enabled, false otherwise.
-            *
-            * @param {String} name
-            * @return {Boolean}
-            * @api public
-            */
+             * Returns true if the given mode name is enabled, false otherwise.
+             *
+             * @param {String} name
+             * @return {Boolean}
+             * @api public
+             */
             function enabled(name) {
                 if (name[name.length - 1] === '*') {
                     return true;
@@ -4739,23 +4990,23 @@
             }
 
             /**
-            * Convert regexp to namespace
-            *
-            * @param {RegExp} regxep
-            * @return {String} namespace
-            * @api private
-            */
+             * Convert regexp to namespace
+             *
+             * @param {RegExp} regxep
+             * @return {String} namespace
+             * @api private
+             */
             function toNamespace(regexp) {
                 return regexp.toString().substring(2, regexp.toString().length - 2).replace(/\.\*\?$/, '*');
             }
 
             /**
-            * Coerce `val`.
-            *
-            * @param {Mixed} val
-            * @return {Mixed}
-            * @api private
-            */
+             * Coerce `val`.
+             *
+             * @param {Mixed} val
+             * @return {Mixed}
+             * @api private
+             */
             function coerce(val) {
                 if (val instanceof Error) {
                     return val.stack || val.message;
@@ -4769,7 +5020,10 @@
         }
 
         module.exports = setup;
-    }, { "ms": 11 }], 11: [function (require, module, exports) {
+    }, {
+        "ms": 11
+    }],
+    11: [function (require, module, exports) {
         /**
          * Helpers.
          */
@@ -4927,7 +5181,8 @@
             var isPlural = msAbs >= n * 1.5;
             return Math.round(ms / n) + ' ' + name + (isPlural ? 's' : '');
         }
-    }, {}], 12: [function (require, module, exports) {
+    }, {}],
+    12: [function (require, module, exports) {
         module.exports = {
             compareTwoStrings,
             findBestMatch
@@ -4956,9 +5211,15 @@
 
         function findBestMatch(mainString, targetStrings) {
             if (!areArgsValid(mainString, targetStrings)) throw new Error('Bad arguments: First argument should be a string, second should be an array of strings');
-            const ratings = targetStrings.map(target => ({ target, rating: compareTwoStrings(mainString, target) }));
+            const ratings = targetStrings.map(target => ({
+                target,
+                rating: compareTwoStrings(mainString, target)
+            }));
             const bestMatch = Array.from(ratings).sort((a, b) => b.rating - a.rating)[0];
-            return { ratings, bestMatch };
+            return {
+                ratings,
+                bestMatch
+            };
         }
 
         function flattenDeep(arr) {
@@ -4983,7 +5244,8 @@
             const pairs = str.toUpperCase().split(' ').map(letterPairs);
             return flattenDeep(pairs);
         }
-    }, {}], 13: [function (require, module, exports) {
+    }, {}],
+    13: [function (require, module, exports) {
         'use strict';
 
         function ToObject(val) {
@@ -5010,7 +5272,8 @@
 
             return to;
         };
-    }, {}], 14: [function (require, module, exports) {
+    }, {}],
+    14: [function (require, module, exports) {
         var _ = {
             keys: require('object-keys'),
             values: require('object-values'),
@@ -5150,6 +5413,7 @@
                 function topMatch(arr) {
                     return _.last(_.compact(arr));
                 }
+
                 function evaluateExpression(tokens) {
                     return new RegExp(tokens.join('|'), 'g');
                 }
@@ -5159,7 +5423,10 @@
                 var r = {};
 
                 walk(function (name, value, tokenIndex, position, rawExec) {
-                    if (postionInfo) value = { value: value, position: position };
+                    if (postionInfo) value = {
+                        value: value,
+                        position: position
+                    };
 
                     if (is(r[name], 'Array')) return r[name].push(value);
                     if (is(r[name], 'String')) return r[name] = [value].concat(r[name] || []).reverse();
@@ -5174,21 +5441,31 @@
                 return simplify(r);
 
                 function simplify(r) {
-                    for (var key in r) if (is(r[key], 'Array') && r[key].length == 1) r[key] = r[key][0];
+                    for (var key in r)
+                        if (is(r[key], 'Array') && r[key].length == 1) r[key] = r[key][0];
 
                     return r;
                 }
             }
 
-            function noop() { }
+            function noop() {}
+
             function is(expression, type) {
                 return Object.prototype.toString.call(expression) == '[object ' + type + ']';
             }
+
             function debug() {
                 if (_debug) console.log.apply(console, arguments);
             }
         };
-    }, { "array-last": 3, "object-assign": 13, "object-keys": 5, "object-values": 7, "uniq": 15 }], 15: [function (require, module, exports) {
+    }, {
+        "array-last": 3,
+        "object-assign": 13,
+        "object-keys": 5,
+        "object-values": 7,
+        "uniq": 15
+    }],
+    15: [function (require, module, exports) {
         "use strict";
 
         function unique_pred(list, compare) {
@@ -5248,7 +5525,8 @@
         }
 
         module.exports = unique;
-    }, {}], 16: [function (require, module, exports) {
+    }, {}],
+    16: [function (require, module, exports) {
         //     wink-bm25-text-search
         //     Fast Full Text Search based on BM25F
         //
@@ -5704,7 +5982,10 @@
                 return JSON.stringify([config, docStats, documents, invertedIdx, currTokenIndex, token2Index,
                     // For future expansion but the import will have to have intelligence to
                     // set the default values and still ensure nothing breaks! Hopefully!!
-                    {}, [], []]);
+                    {},
+                    [],
+                    []
+                ]);
             }; // exportJSON()
 
             // #### Import JSON
@@ -5761,7 +6042,10 @@
         }; // bm25fIMS()
 
         module.exports = bm25fIMS;
-    }, { "wink-helpers": 17 }], 17: [function (require, module, exports) {
+    }, {
+        "wink-helpers": 17
+    }],
+    17: [function (require, module, exports) {
         //     wink-helpers
         //     Low level helper functions for Javascript
         //     array, object, and string.
@@ -5908,7 +6192,9 @@
         // `product( [ [ 9, 8 ], [ 1, 2 ] ] )`
         // will produce `[ [ 9, 1 ], [ 9, 2 ], [ 8, 1 ], [ 8, 2 ] ]`.
         helpers.array.product = function (a) {
-            return a.reduce(productReducer, [[]]);
+            return a.reduce(productReducer, [
+                []
+            ]);
         };
 
         // #### shuffle
@@ -6040,7 +6326,7 @@
          * @param {string[]} classLabels - array containing all the class labels.
          * @return {methods} object conatining set of API methods for tasks like evalutaion,
          * reset and metrics generation.
-        */
+         */
         helpers.validate.cross = function (classLabels) {
             // wink's const for unknown predictions!
             const unknown = 'unknown';
@@ -6067,7 +6353,7 @@
              * labels defined at instance creation time are not touched.
              *
              * @return {undefined} nothing!
-            */
+             */
             var reset = function () {
                 evaluated = false;
                 cm = Object.create(null);
@@ -6099,7 +6385,7 @@
              * @return {boolean} returns true if the evaluation is successful. The evaluation
              * may fail if `truth` or `guess` is not in the array `classLabels` provided at
              * instance creation time; or if guess is equal to `unknown`.
-            */
+             */
             var evaluate = function (truth, guess) {
                 // If prediction failed then return false!
                 if (guess === unknown || !labelsObj[truth] || !labelsObj[guess]) return false;
@@ -6123,7 +6409,7 @@
              * `avgFMeasure` values along with other details such as label-wise values
              * and the confusion matrix. A value of `null` is returned if no evaluate()
              * has been called before.
-            */
+             */
             var metrics = function () {
                 if (!evaluated) return null;
                 // Numerators for every label; they are same for precision & recall both.
@@ -6222,13 +6508,14 @@
          * @example
          * normalize( 'Nestlé' );
          * // -> nestle
-        */
+         */
         helpers.string.normalize = function (str) {
             return str.toLowerCase().normalize('NFD').replace(rgxDiacritical, '');
         }; // normalize()
 
         module.exports = helpers;
-    }, {}], 18: [function (require, module, exports) {
+    }, {}],
+    18: [function (require, module, exports) {
         //     wink-tokenizer
         //     Multilingual tokenizer that automatically tags each token with its type.
         //
@@ -6256,332 +6543,1773 @@
         // Tag - word.
         var word = 'word';
         // Verbs.
-        contractions['can\'t'] = [{ value: 'ca', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['CAN\'T'] = [{ value: 'CA', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Can\'t'] = [{ value: 'Ca', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['can\'t'] = [{
+            value: 'ca',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['CAN\'T'] = [{
+            value: 'CA',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Can\'t'] = [{
+            value: 'Ca',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['Couldn\'t'] = [{ value: 'could', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['COULDN\'T'] = [{ value: 'COULD', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Couldn\'t'] = [{ value: 'Could', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['Couldn\'t'] = [{
+            value: 'could',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['COULDN\'T'] = [{
+            value: 'COULD',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Couldn\'t'] = [{
+            value: 'Could',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['don\'t'] = [{ value: 'do', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['DON\'T'] = [{ value: 'DO', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Don\'t'] = [{ value: 'Do', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['don\'t'] = [{
+            value: 'do',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['DON\'T'] = [{
+            value: 'DO',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Don\'t'] = [{
+            value: 'Do',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['doesn\'t'] = [{ value: 'does', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['DOESN\'T'] = [{ value: 'DOES', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Doesn\'t'] = [{ value: 'Does', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['doesn\'t'] = [{
+            value: 'does',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['DOESN\'T'] = [{
+            value: 'DOES',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Doesn\'t'] = [{
+            value: 'Does',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['didn\'t'] = [{ value: 'did', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['DIDN\'T'] = [{ value: 'DID', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Didn\'t'] = [{ value: 'Did', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['didn\'t'] = [{
+            value: 'did',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['DIDN\'T'] = [{
+            value: 'DID',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Didn\'t'] = [{
+            value: 'Did',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['hadn\'t'] = [{ value: 'had', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['HADN\'T'] = [{ value: 'HAD', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Hadn\'t'] = [{ value: 'Had', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['hadn\'t'] = [{
+            value: 'had',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['HADN\'T'] = [{
+            value: 'HAD',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Hadn\'t'] = [{
+            value: 'Had',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['mayn\'t'] = [{ value: 'may', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['MAYN\'T'] = [{ value: 'MAY', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Mayn\'t'] = [{ value: 'May', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['mayn\'t'] = [{
+            value: 'may',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['MAYN\'T'] = [{
+            value: 'MAY',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Mayn\'t'] = [{
+            value: 'May',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['mightn\'t'] = [{ value: 'might', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['MIGHTN\'T'] = [{ value: 'MIGHT', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Mightn\'t'] = [{ value: 'Might', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['mightn\'t'] = [{
+            value: 'might',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['MIGHTN\'T'] = [{
+            value: 'MIGHT',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Mightn\'t'] = [{
+            value: 'Might',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['mustn\'t'] = [{ value: 'must', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['MUSTN\'T'] = [{ value: 'MUST', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Mustn\'t'] = [{ value: 'Must', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['mustn\'t'] = [{
+            value: 'must',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['MUSTN\'T'] = [{
+            value: 'MUST',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Mustn\'t'] = [{
+            value: 'Must',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['needn\'t'] = [{ value: 'need', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['NEEDN\'T'] = [{ value: 'NEED', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Needn\'t'] = [{ value: 'Need', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['needn\'t'] = [{
+            value: 'need',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['NEEDN\'T'] = [{
+            value: 'NEED',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Needn\'t'] = [{
+            value: 'Need',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['oughtn\'t'] = [{ value: 'ought', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['OUGHTN\'T'] = [{ value: 'OUGHT', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Oughtn\'t'] = [{ value: 'Ought', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['oughtn\'t'] = [{
+            value: 'ought',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['OUGHTN\'T'] = [{
+            value: 'OUGHT',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Oughtn\'t'] = [{
+            value: 'Ought',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['shan\'t'] = [{ value: 'sha', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['SHAN\'T'] = [{ value: 'SHA', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Shan\'t'] = [{ value: 'Sha', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['shan\'t'] = [{
+            value: 'sha',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['SHAN\'T'] = [{
+            value: 'SHA',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Shan\'t'] = [{
+            value: 'Sha',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['shouldn\'t'] = [{ value: 'should', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['SHOULDN\'T'] = [{ value: 'SHOULD', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Shouldn\'t'] = [{ value: 'Should', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['shouldn\'t'] = [{
+            value: 'should',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['SHOULDN\'T'] = [{
+            value: 'SHOULD',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Shouldn\'t'] = [{
+            value: 'Should',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['won\'t'] = [{ value: 'wo', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['WON\'T'] = [{ value: 'WO', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Won\'t'] = [{ value: 'Wo', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['won\'t'] = [{
+            value: 'wo',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['WON\'T'] = [{
+            value: 'WO',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Won\'t'] = [{
+            value: 'Wo',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['wouldn\'t'] = [{ value: 'would', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['WOULDN\'T'] = [{ value: 'WOULD', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Wouldn\'t'] = [{ value: 'Would', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['wouldn\'t'] = [{
+            value: 'would',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['WOULDN\'T'] = [{
+            value: 'WOULD',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Wouldn\'t'] = [{
+            value: 'Would',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['ain\'t'] = [{ value: 'ai', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['AIN\'T'] = [{ value: 'AI', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Ain\'t'] = [{ value: 'Ai', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['ain\'t'] = [{
+            value: 'ai',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['AIN\'T'] = [{
+            value: 'AI',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Ain\'t'] = [{
+            value: 'Ai',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['aren\'t'] = [{ value: 'are', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['AREN\'T'] = [{ value: 'ARE', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Aren\'t'] = [{ value: 'Are', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['aren\'t'] = [{
+            value: 'are',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['AREN\'T'] = [{
+            value: 'ARE',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Aren\'t'] = [{
+            value: 'Are',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['isn\'t'] = [{ value: 'is', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['ISN\'T'] = [{ value: 'IS', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Isn\'t'] = [{ value: 'Is', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['isn\'t'] = [{
+            value: 'is',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['ISN\'T'] = [{
+            value: 'IS',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Isn\'t'] = [{
+            value: 'Is',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['wasn\'t'] = [{ value: 'was', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['WASN\'T'] = [{ value: 'WAS', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Wasn\'t'] = [{ value: 'Was', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['wasn\'t'] = [{
+            value: 'was',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['WASN\'T'] = [{
+            value: 'WAS',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Wasn\'t'] = [{
+            value: 'Was',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['weren\'t'] = [{ value: 'were', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['WEREN\'T'] = [{ value: 'WERE', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Weren\'t'] = [{ value: 'Were', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['weren\'t'] = [{
+            value: 'were',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['WEREN\'T'] = [{
+            value: 'WERE',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Weren\'t'] = [{
+            value: 'Were',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['haven\'t'] = [{ value: 'have', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['HAVEN\'T'] = [{ value: 'HAVE', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Haven\'t'] = [{ value: 'Have', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['haven\'t'] = [{
+            value: 'have',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['HAVEN\'T'] = [{
+            value: 'HAVE',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Haven\'t'] = [{
+            value: 'Have',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['hasn\'t'] = [{ value: 'has', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['HASN\'T'] = [{ value: 'HAS', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Hasn\'t'] = [{ value: 'Has', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['hasn\'t'] = [{
+            value: 'has',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['HASN\'T'] = [{
+            value: 'HAS',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Hasn\'t'] = [{
+            value: 'Has',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
-        contractions['daren\'t'] = [{ value: 'dare', tag: word }, { value: 'n\'t', tag: word }];
-        contractions['DAREN\'T'] = [{ value: 'DARE', tag: word }, { value: 'N\'T', tag: word }];
-        contractions['Daren\'t'] = [{ value: 'Dare', tag: word }, { value: 'n\'t', tag: word }];
+        contractions['daren\'t'] = [{
+            value: 'dare',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
+        contractions['DAREN\'T'] = [{
+            value: 'DARE',
+            tag: word
+        }, {
+            value: 'N\'T',
+            tag: word
+        }];
+        contractions['Daren\'t'] = [{
+            value: 'Dare',
+            tag: word
+        }, {
+            value: 'n\'t',
+            tag: word
+        }];
 
         // Pronouns like I, you, they, we, she, and he.
-        contractions['i\'m'] = [{ value: 'i', tag: word }, { value: '\'m', tag: word }];
-        contractions['I\'M'] = [{ value: 'I', tag: word }, { value: '\'M', tag: word }];
-        contractions['I\'m'] = [{ value: 'I', tag: word }, { value: '\'m', tag: word }];
+        contractions['i\'m'] = [{
+            value: 'i',
+            tag: word
+        }, {
+            value: '\'m',
+            tag: word
+        }];
+        contractions['I\'M'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'M',
+            tag: word
+        }];
+        contractions['I\'m'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'m',
+            tag: word
+        }];
 
-        contractions['i\'ve'] = [{ value: 'i', tag: word }, { value: '\'ve', tag: word }];
-        contractions['I\'VE'] = [{ value: 'I', tag: word }, { value: '\'VE', tag: word }];
-        contractions['I\'ve'] = [{ value: 'I', tag: word }, { value: '\'ve', tag: word }];
+        contractions['i\'ve'] = [{
+            value: 'i',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['I\'VE'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['I\'ve'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['i\'d'] = [{ value: 'i', tag: word }, { value: '\'d', tag: word }];
-        contractions['I\'D'] = [{ value: 'I', tag: word }, { value: '\'D', tag: word }];
-        contractions['I\'d'] = [{ value: 'I', tag: word }, { value: '\'d', tag: word }];
+        contractions['i\'d'] = [{
+            value: 'i',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['I\'D'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['I\'d'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['i\'ll'] = [{ value: 'i', tag: word }, { value: '\'ll', tag: word }];
-        contractions['I\'LL'] = [{ value: 'I', tag: word }, { value: '\'LL', tag: word }];
-        contractions['I\'ll'] = [{ value: 'I', tag: word }, { value: '\'ll', tag: word }];
+        contractions['i\'ll'] = [{
+            value: 'i',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['I\'LL'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['I\'ll'] = [{
+            value: 'I',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['you\'ve'] = [{ value: 'you', tag: word }, { value: '\'ve', tag: word }];
-        contractions['YOU\'VE'] = [{ value: 'YOU', tag: word }, { value: '\'VE', tag: word }];
-        contractions['You\'ve'] = [{ value: 'You', tag: word }, { value: '\'ve', tag: word }];
+        contractions['you\'ve'] = [{
+            value: 'you',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['YOU\'VE'] = [{
+            value: 'YOU',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['You\'ve'] = [{
+            value: 'You',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['you\'d'] = [{ value: 'you', tag: word }, { value: '\'d', tag: word }];
-        contractions['YOU\'D'] = [{ value: 'YOU', tag: word }, { value: '\'D', tag: word }];
-        contractions['You\'d'] = [{ value: 'You', tag: word }, { value: '\'d', tag: word }];
+        contractions['you\'d'] = [{
+            value: 'you',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['YOU\'D'] = [{
+            value: 'YOU',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['You\'d'] = [{
+            value: 'You',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['you\'ll'] = [{ value: 'you', tag: word }, { value: '\'ll', tag: word }];
-        contractions['YOU\'LL'] = [{ value: 'YOU', tag: word }, { value: '\'LL', tag: word }];
-        contractions['You\'ll'] = [{ value: 'You', tag: word }, { value: '\'ll', tag: word }];
+        contractions['you\'ll'] = [{
+            value: 'you',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['YOU\'LL'] = [{
+            value: 'YOU',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['You\'ll'] = [{
+            value: 'You',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
         // they - 've, 'd, 'll, 're
-        contractions['they\'ve'] = [{ value: 'they', tag: word }, { value: '\'ve', tag: word }];
-        contractions['THEY\'VE'] = [{ value: 'THEY', tag: word }, { value: '\'VE', tag: word }];
-        contractions['They\'ve'] = [{ value: 'They', tag: word }, { value: '\'ve', tag: word }];
+        contractions['they\'ve'] = [{
+            value: 'they',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['THEY\'VE'] = [{
+            value: 'THEY',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['They\'ve'] = [{
+            value: 'They',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['they\'d'] = [{ value: 'they', tag: word }, { value: '\'d', tag: word }];
-        contractions['THEY\'D'] = [{ value: 'THEY', tag: word }, { value: '\'D', tag: word }];
-        contractions['They\'d'] = [{ value: 'They', tag: word }, { value: '\'d', tag: word }];
+        contractions['they\'d'] = [{
+            value: 'they',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['THEY\'D'] = [{
+            value: 'THEY',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['They\'d'] = [{
+            value: 'They',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['they\'ll'] = [{ value: 'they', tag: word }, { value: '\'ll', tag: word }];
-        contractions['THEY\'LL'] = [{ value: 'THEY', tag: word }, { value: '\'LL', tag: word }];
-        contractions['They\'ll'] = [{ value: 'They', tag: word }, { value: '\'ll', tag: word }];
+        contractions['they\'ll'] = [{
+            value: 'they',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['THEY\'LL'] = [{
+            value: 'THEY',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['They\'ll'] = [{
+            value: 'They',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['they\'re'] = [{ value: 'they', tag: word }, { value: '\'re', tag: word }];
-        contractions['THEY\'RE'] = [{ value: 'THEY', tag: word }, { value: '\'RE', tag: word }];
-        contractions['They\'re'] = [{ value: 'They', tag: word }, { value: '\'re', tag: word }];
+        contractions['they\'re'] = [{
+            value: 'they',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['THEY\'RE'] = [{
+            value: 'THEY',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['They\'re'] = [{
+            value: 'They',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['we\'ve'] = [{ value: 'we', tag: word }, { value: '\'ve', tag: word }];
-        contractions['WE\'VE'] = [{ value: 'WE', tag: word }, { value: '\'VE', tag: word }];
-        contractions['We\'ve'] = [{ value: 'We', tag: word }, { value: '\'ve', tag: word }];
+        contractions['we\'ve'] = [{
+            value: 'we',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['WE\'VE'] = [{
+            value: 'WE',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['We\'ve'] = [{
+            value: 'We',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['we\'d'] = [{ value: 'we', tag: word }, { value: '\'d', tag: word }];
-        contractions['WE\'D'] = [{ value: 'WE', tag: word }, { value: '\'D', tag: word }];
-        contractions['We\'d'] = [{ value: 'We', tag: word }, { value: '\'d', tag: word }];
+        contractions['we\'d'] = [{
+            value: 'we',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['WE\'D'] = [{
+            value: 'WE',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['We\'d'] = [{
+            value: 'We',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['we\'ll'] = [{ value: 'we', tag: word }, { value: '\'ll', tag: word }];
-        contractions['WE\'LL'] = [{ value: 'WE', tag: word }, { value: '\'LL', tag: word }];
-        contractions['We\'ll'] = [{ value: 'We', tag: word }, { value: '\'ll', tag: word }];
+        contractions['we\'ll'] = [{
+            value: 'we',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['WE\'LL'] = [{
+            value: 'WE',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['We\'ll'] = [{
+            value: 'We',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['we\'re'] = [{ value: 'we', tag: word }, { value: '\'re', tag: word }];
-        contractions['WE\'RE'] = [{ value: 'WE', tag: word }, { value: '\'RE', tag: word }];
-        contractions['We\'re'] = [{ value: 'We', tag: word }, { value: '\'re', tag: word }];
+        contractions['we\'re'] = [{
+            value: 'we',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['WE\'RE'] = [{
+            value: 'WE',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['We\'re'] = [{
+            value: 'We',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['she\'d'] = [{ value: 'she', tag: word }, { value: '\'d', tag: word }];
-        contractions['SHE\'D'] = [{ value: 'SHE', tag: word }, { value: '\'D', tag: word }];
-        contractions['She\'d'] = [{ value: 'She', tag: word }, { value: '\'d', tag: word }];
+        contractions['she\'d'] = [{
+            value: 'she',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['SHE\'D'] = [{
+            value: 'SHE',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['She\'d'] = [{
+            value: 'She',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['she\'ll'] = [{ value: 'she', tag: word }, { value: '\'ll', tag: word }];
-        contractions['SHE\'LL'] = [{ value: 'SHE', tag: word }, { value: '\'LL', tag: word }];
-        contractions['She\'ll'] = [{ value: 'She', tag: word }, { value: '\'ll', tag: word }];
+        contractions['she\'ll'] = [{
+            value: 'she',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['SHE\'LL'] = [{
+            value: 'SHE',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['She\'ll'] = [{
+            value: 'She',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['she\'s'] = [{ value: 'she', tag: word }, { value: '\'s', tag: word }];
-        contractions['SHE\'S'] = [{ value: 'SHE', tag: word }, { value: '\'S', tag: word }];
-        contractions['She\'s'] = [{ value: 'She', tag: word }, { value: '\'s', tag: word }];
+        contractions['she\'s'] = [{
+            value: 'she',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
+        contractions['SHE\'S'] = [{
+            value: 'SHE',
+            tag: word
+        }, {
+            value: '\'S',
+            tag: word
+        }];
+        contractions['She\'s'] = [{
+            value: 'She',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
 
-        contractions['he\'d'] = [{ value: 'he', tag: word }, { value: '\'d', tag: word }];
-        contractions['HE\'D'] = [{ value: 'HE', tag: word }, { value: '\'D', tag: word }];
-        contractions['He\'d'] = [{ value: 'He', tag: word }, { value: '\'d', tag: word }];
+        contractions['he\'d'] = [{
+            value: 'he',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['HE\'D'] = [{
+            value: 'HE',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['He\'d'] = [{
+            value: 'He',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['he\'ll'] = [{ value: 'he', tag: word }, { value: '\'ll', tag: word }];
-        contractions['HE\'LL'] = [{ value: 'HE', tag: word }, { value: '\'LL', tag: word }];
-        contractions['He\'ll'] = [{ value: 'He', tag: word }, { value: '\'ll', tag: word }];
+        contractions['he\'ll'] = [{
+            value: 'he',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['HE\'LL'] = [{
+            value: 'HE',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['He\'ll'] = [{
+            value: 'He',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['he\'s'] = [{ value: 'he', tag: word }, { value: '\'s', tag: word }];
-        contractions['HE\'S'] = [{ value: 'HE', tag: word }, { value: '\'S', tag: word }];
-        contractions['He\'s'] = [{ value: 'He', tag: word }, { value: '\'s', tag: word }];
+        contractions['he\'s'] = [{
+            value: 'he',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
+        contractions['HE\'S'] = [{
+            value: 'HE',
+            tag: word
+        }, {
+            value: '\'S',
+            tag: word
+        }];
+        contractions['He\'s'] = [{
+            value: 'He',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
 
-        contractions['it\'d'] = [{ value: 'it', tag: word }, { value: '\'d', tag: word }];
-        contractions['IT\'D'] = [{ value: 'IT', tag: word }, { value: '\'D', tag: word }];
-        contractions['It\'d'] = [{ value: 'It', tag: word }, { value: '\'d', tag: word }];
+        contractions['it\'d'] = [{
+            value: 'it',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['IT\'D'] = [{
+            value: 'IT',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['It\'d'] = [{
+            value: 'It',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['it\'ll'] = [{ value: 'it', tag: word }, { value: '\'ll', tag: word }];
-        contractions['IT\'LL'] = [{ value: 'IT', tag: word }, { value: '\'LL', tag: word }];
-        contractions['It\'ll'] = [{ value: 'It', tag: word }, { value: '\'ll', tag: word }];
+        contractions['it\'ll'] = [{
+            value: 'it',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['IT\'LL'] = [{
+            value: 'IT',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['It\'ll'] = [{
+            value: 'It',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['it\'s'] = [{ value: 'it', tag: word }, { value: '\'s', tag: word }];
-        contractions['IT\'S'] = [{ value: 'IT', tag: word }, { value: '\'S', tag: word }];
-        contractions['It\'s'] = [{ value: 'It', tag: word }, { value: '\'s', tag: word }];
+        contractions['it\'s'] = [{
+            value: 'it',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
+        contractions['IT\'S'] = [{
+            value: 'IT',
+            tag: word
+        }, {
+            value: '\'S',
+            tag: word
+        }];
+        contractions['It\'s'] = [{
+            value: 'It',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
 
         // Wh Pronouns - what, who, when, where, why, how, there, that
-        contractions['what\'ve'] = [{ value: 'what', tag: word }, { value: '\'ve', tag: word }];
-        contractions['WHAT\'VE'] = [{ value: 'WHAT', tag: word }, { value: '\'VE', tag: word }];
-        contractions['What\'ve'] = [{ value: 'What', tag: word }, { value: '\'ve', tag: word }];
+        contractions['what\'ve'] = [{
+            value: 'what',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['WHAT\'VE'] = [{
+            value: 'WHAT',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['What\'ve'] = [{
+            value: 'What',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['what\'d'] = [{ value: 'what', tag: word }, { value: '\'d', tag: word }];
-        contractions['WHAT\'D'] = [{ value: 'WHAT', tag: word }, { value: '\'D', tag: word }];
-        contractions['What\'d'] = [{ value: 'What', tag: word }, { value: '\'d', tag: word }];
+        contractions['what\'d'] = [{
+            value: 'what',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['WHAT\'D'] = [{
+            value: 'WHAT',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['What\'d'] = [{
+            value: 'What',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['what\'ll'] = [{ value: 'what', tag: word }, { value: '\'ll', tag: word }];
-        contractions['WHAT\'LL'] = [{ value: 'WHAT', tag: word }, { value: '\'LL', tag: word }];
-        contractions['What\'ll'] = [{ value: 'What', tag: word }, { value: '\'ll', tag: word }];
+        contractions['what\'ll'] = [{
+            value: 'what',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['WHAT\'LL'] = [{
+            value: 'WHAT',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['What\'ll'] = [{
+            value: 'What',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['what\'re'] = [{ value: 'what', tag: word }, { value: '\'re', tag: word }];
-        contractions['WHAT\'RE'] = [{ value: 'WHAT', tag: word }, { value: '\'RE', tag: word }];
-        contractions['What\'re'] = [{ value: 'What', tag: word }, { value: '\'re', tag: word }];
+        contractions['what\'re'] = [{
+            value: 'what',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['WHAT\'RE'] = [{
+            value: 'WHAT',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['What\'re'] = [{
+            value: 'What',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['who\'ve'] = [{ value: 'who', tag: word }, { value: '\'ve', tag: word }];
-        contractions['WHO\'VE'] = [{ value: 'WHO', tag: word }, { value: '\'VE', tag: word }];
-        contractions['Who\'ve'] = [{ value: 'Who', tag: word }, { value: '\'ve', tag: word }];
+        contractions['who\'ve'] = [{
+            value: 'who',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['WHO\'VE'] = [{
+            value: 'WHO',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['Who\'ve'] = [{
+            value: 'Who',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['who\'d'] = [{ value: 'who', tag: word }, { value: '\'d', tag: word }];
-        contractions['WHO\'D'] = [{ value: 'WHO', tag: word }, { value: '\'D', tag: word }];
-        contractions['Who\'d'] = [{ value: 'Who', tag: word }, { value: '\'d', tag: word }];
+        contractions['who\'d'] = [{
+            value: 'who',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['WHO\'D'] = [{
+            value: 'WHO',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['Who\'d'] = [{
+            value: 'Who',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['who\'ll'] = [{ value: 'who', tag: word }, { value: '\'ll', tag: word }];
-        contractions['WHO\'LL'] = [{ value: 'WHO', tag: word }, { value: '\'LL', tag: word }];
-        contractions['Who\'ll'] = [{ value: 'Who', tag: word }, { value: '\'ll', tag: word }];
+        contractions['who\'ll'] = [{
+            value: 'who',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['WHO\'LL'] = [{
+            value: 'WHO',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['Who\'ll'] = [{
+            value: 'Who',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['who\'re'] = [{ value: 'who', tag: word }, { value: '\'re', tag: word }];
-        contractions['WHO\'RE'] = [{ value: 'WHO', tag: word }, { value: '\'RE', tag: word }];
-        contractions['Who\'re'] = [{ value: 'Who', tag: word }, { value: '\'re', tag: word }];
+        contractions['who\'re'] = [{
+            value: 'who',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['WHO\'RE'] = [{
+            value: 'WHO',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['Who\'re'] = [{
+            value: 'Who',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['when\'ve'] = [{ value: 'when', tag: word }, { value: '\'ve', tag: word }];
-        contractions['WHEN\'VE'] = [{ value: 'WHEN', tag: word }, { value: '\'VE', tag: word }];
-        contractions['When\'ve'] = [{ value: 'When', tag: word }, { value: '\'ve', tag: word }];
+        contractions['when\'ve'] = [{
+            value: 'when',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['WHEN\'VE'] = [{
+            value: 'WHEN',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['When\'ve'] = [{
+            value: 'When',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['when\'d'] = [{ value: 'when', tag: word }, { value: '\'d', tag: word }];
-        contractions['WHEN\'D'] = [{ value: 'WHEN', tag: word }, { value: '\'D', tag: word }];
-        contractions['When\'d'] = [{ value: 'When', tag: word }, { value: '\'d', tag: word }];
+        contractions['when\'d'] = [{
+            value: 'when',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['WHEN\'D'] = [{
+            value: 'WHEN',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['When\'d'] = [{
+            value: 'When',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['when\'ll'] = [{ value: 'when', tag: word }, { value: '\'ll', tag: word }];
-        contractions['WHEN\'LL'] = [{ value: 'WHEN', tag: word }, { value: '\'LL', tag: word }];
-        contractions['When\'ll'] = [{ value: 'When', tag: word }, { value: '\'ll', tag: word }];
+        contractions['when\'ll'] = [{
+            value: 'when',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['WHEN\'LL'] = [{
+            value: 'WHEN',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['When\'ll'] = [{
+            value: 'When',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['when\'re'] = [{ value: 'when', tag: word }, { value: '\'re', tag: word }];
-        contractions['WHEN\'RE'] = [{ value: 'WHEN', tag: word }, { value: '\'RE', tag: word }];
-        contractions['When\'re'] = [{ value: 'When', tag: word }, { value: '\'re', tag: word }];
+        contractions['when\'re'] = [{
+            value: 'when',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['WHEN\'RE'] = [{
+            value: 'WHEN',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['When\'re'] = [{
+            value: 'When',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['where\'ve'] = [{ value: 'where', tag: word }, { value: '\'ve', tag: word }];
-        contractions['WHERE\'VE'] = [{ value: 'WHERE', tag: word }, { value: '\'VE', tag: word }];
-        contractions['Where\'ve'] = [{ value: 'Where', tag: word }, { value: '\'ve', tag: word }];
+        contractions['where\'ve'] = [{
+            value: 'where',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['WHERE\'VE'] = [{
+            value: 'WHERE',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['Where\'ve'] = [{
+            value: 'Where',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['where\'d'] = [{ value: 'where', tag: word }, { value: '\'d', tag: word }];
-        contractions['WHERE\'D'] = [{ value: 'WHERE', tag: word }, { value: '\'D', tag: word }];
-        contractions['Where\'d'] = [{ value: 'Where', tag: word }, { value: '\'d', tag: word }];
+        contractions['where\'d'] = [{
+            value: 'where',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['WHERE\'D'] = [{
+            value: 'WHERE',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['Where\'d'] = [{
+            value: 'Where',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['where\'ll'] = [{ value: 'where', tag: word }, { value: '\'ll', tag: word }];
-        contractions['WHERE\'LL'] = [{ value: 'WHERE', tag: word }, { value: '\'LL', tag: word }];
-        contractions['Where\'ll'] = [{ value: 'Where', tag: word }, { value: '\'ll', tag: word }];
+        contractions['where\'ll'] = [{
+            value: 'where',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['WHERE\'LL'] = [{
+            value: 'WHERE',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['Where\'ll'] = [{
+            value: 'Where',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['where\'re'] = [{ value: 'where', tag: word }, { value: '\'re', tag: word }];
-        contractions['WHERE\'RE'] = [{ value: 'WHERE', tag: word }, { value: '\'RE', tag: word }];
-        contractions['Where\'re'] = [{ value: 'Where', tag: word }, { value: '\'re', tag: word }];
+        contractions['where\'re'] = [{
+            value: 'where',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['WHERE\'RE'] = [{
+            value: 'WHERE',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['Where\'re'] = [{
+            value: 'Where',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['why\'ve'] = [{ value: 'why', tag: word }, { value: '\'ve', tag: word }];
-        contractions['WHY\'VE'] = [{ value: 'WHY', tag: word }, { value: '\'VE', tag: word }];
-        contractions['Why\'ve'] = [{ value: 'Why', tag: word }, { value: '\'ve', tag: word }];
+        contractions['why\'ve'] = [{
+            value: 'why',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['WHY\'VE'] = [{
+            value: 'WHY',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['Why\'ve'] = [{
+            value: 'Why',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['why\'d'] = [{ value: 'why', tag: word }, { value: '\'d', tag: word }];
-        contractions['WHY\'D'] = [{ value: 'WHY', tag: word }, { value: '\'D', tag: word }];
-        contractions['Why\'d'] = [{ value: 'Why', tag: word }, { value: '\'d', tag: word }];
+        contractions['why\'d'] = [{
+            value: 'why',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['WHY\'D'] = [{
+            value: 'WHY',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['Why\'d'] = [{
+            value: 'Why',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['why\'ll'] = [{ value: 'why', tag: word }, { value: '\'ll', tag: word }];
-        contractions['WHY\'LL'] = [{ value: 'WHY', tag: word }, { value: '\'LL', tag: word }];
-        contractions['Why\'ll'] = [{ value: 'Why', tag: word }, { value: '\'ll', tag: word }];
+        contractions['why\'ll'] = [{
+            value: 'why',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['WHY\'LL'] = [{
+            value: 'WHY',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['Why\'ll'] = [{
+            value: 'Why',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['why\'re'] = [{ value: 'why', tag: word }, { value: '\'re', tag: word }];
-        contractions['WHY\'RE'] = [{ value: 'WHY', tag: word }, { value: '\'RE', tag: word }];
-        contractions['Why\'re'] = [{ value: 'Why', tag: word }, { value: '\'re', tag: word }];
+        contractions['why\'re'] = [{
+            value: 'why',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['WHY\'RE'] = [{
+            value: 'WHY',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['Why\'re'] = [{
+            value: 'Why',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['how\'ve'] = [{ value: 'how', tag: word }, { value: '\'ve', tag: word }];
-        contractions['HOW\'VE'] = [{ value: 'HOW', tag: word }, { value: '\'VE', tag: word }];
-        contractions['How\'ve'] = [{ value: 'How', tag: word }, { value: '\'ve', tag: word }];
+        contractions['how\'ve'] = [{
+            value: 'how',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['HOW\'VE'] = [{
+            value: 'HOW',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['How\'ve'] = [{
+            value: 'How',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['how\'d'] = [{ value: 'how', tag: word }, { value: '\'d', tag: word }];
-        contractions['HOW\'D'] = [{ value: 'HOW', tag: word }, { value: '\'D', tag: word }];
-        contractions['How\'d'] = [{ value: 'How', tag: word }, { value: '\'d', tag: word }];
+        contractions['how\'d'] = [{
+            value: 'how',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['HOW\'D'] = [{
+            value: 'HOW',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['How\'d'] = [{
+            value: 'How',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['how\'ll'] = [{ value: 'how', tag: word }, { value: '\'ll', tag: word }];
-        contractions['HOW\'LL'] = [{ value: 'HOW', tag: word }, { value: '\'LL', tag: word }];
-        contractions['How\'ll'] = [{ value: 'How', tag: word }, { value: '\'ll', tag: word }];
+        contractions['how\'ll'] = [{
+            value: 'how',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['HOW\'LL'] = [{
+            value: 'HOW',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['How\'ll'] = [{
+            value: 'How',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['how\'re'] = [{ value: 'how', tag: word }, { value: '\'re', tag: word }];
-        contractions['HOW\'RE'] = [{ value: 'HOW', tag: word }, { value: '\'RE', tag: word }];
-        contractions['How\'re'] = [{ value: 'How', tag: word }, { value: '\'re', tag: word }];
+        contractions['how\'re'] = [{
+            value: 'how',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['HOW\'RE'] = [{
+            value: 'HOW',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['How\'re'] = [{
+            value: 'How',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['there\'ve'] = [{ value: 'there', tag: word }, { value: '\'ve', tag: word }];
-        contractions['THERE\'VE'] = [{ value: 'THERE', tag: word }, { value: '\'VE', tag: word }];
-        contractions['There\'ve'] = [{ value: 'There', tag: word }, { value: '\'ve', tag: word }];
+        contractions['there\'ve'] = [{
+            value: 'there',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['THERE\'VE'] = [{
+            value: 'THERE',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['There\'ve'] = [{
+            value: 'There',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['there\'d'] = [{ value: 'there', tag: word }, { value: '\'d', tag: word }];
-        contractions['THERE\'D'] = [{ value: 'THERE', tag: word }, { value: '\'D', tag: word }];
-        contractions['There\'d'] = [{ value: 'There', tag: word }, { value: '\'d', tag: word }];
+        contractions['there\'d'] = [{
+            value: 'there',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['THERE\'D'] = [{
+            value: 'THERE',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['There\'d'] = [{
+            value: 'There',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['there\'ll'] = [{ value: 'there', tag: word }, { value: '\'ll', tag: word }];
-        contractions['THERE\'LL'] = [{ value: 'THERE', tag: word }, { value: '\'LL', tag: word }];
-        contractions['There\'ll'] = [{ value: 'There', tag: word }, { value: '\'ll', tag: word }];
+        contractions['there\'ll'] = [{
+            value: 'there',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['THERE\'LL'] = [{
+            value: 'THERE',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['There\'ll'] = [{
+            value: 'There',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['there\'re'] = [{ value: 'there', tag: word }, { value: '\'re', tag: word }];
-        contractions['THERE\'RE'] = [{ value: 'THERE', tag: word }, { value: '\'RE', tag: word }];
-        contractions['There\'re'] = [{ value: 'There', tag: word }, { value: '\'re', tag: word }];
+        contractions['there\'re'] = [{
+            value: 'there',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['THERE\'RE'] = [{
+            value: 'THERE',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['There\'re'] = [{
+            value: 'There',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
-        contractions['that\'ve'] = [{ value: 'that', tag: word }, { value: '\'ve', tag: word }];
-        contractions['THAT\'VE'] = [{ value: 'THAT', tag: word }, { value: '\'VE', tag: word }];
-        contractions['That\'ve'] = [{ value: 'That', tag: word }, { value: '\'ve', tag: word }];
+        contractions['that\'ve'] = [{
+            value: 'that',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
+        contractions['THAT\'VE'] = [{
+            value: 'THAT',
+            tag: word
+        }, {
+            value: '\'VE',
+            tag: word
+        }];
+        contractions['That\'ve'] = [{
+            value: 'That',
+            tag: word
+        }, {
+            value: '\'ve',
+            tag: word
+        }];
 
-        contractions['that\'d'] = [{ value: 'that', tag: word }, { value: '\'d', tag: word }];
-        contractions['THAT\'D'] = [{ value: 'THAT', tag: word }, { value: '\'D', tag: word }];
-        contractions['That\'d'] = [{ value: 'That', tag: word }, { value: '\'d', tag: word }];
+        contractions['that\'d'] = [{
+            value: 'that',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
+        contractions['THAT\'D'] = [{
+            value: 'THAT',
+            tag: word
+        }, {
+            value: '\'D',
+            tag: word
+        }];
+        contractions['That\'d'] = [{
+            value: 'That',
+            tag: word
+        }, {
+            value: '\'d',
+            tag: word
+        }];
 
-        contractions['that\'ll'] = [{ value: 'that', tag: word }, { value: '\'ll', tag: word }];
-        contractions['THAT\'LL'] = [{ value: 'THAT', tag: word }, { value: '\'LL', tag: word }];
-        contractions['That\'ll'] = [{ value: 'That', tag: word }, { value: '\'ll', tag: word }];
+        contractions['that\'ll'] = [{
+            value: 'that',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
+        contractions['THAT\'LL'] = [{
+            value: 'THAT',
+            tag: word
+        }, {
+            value: '\'LL',
+            tag: word
+        }];
+        contractions['That\'ll'] = [{
+            value: 'That',
+            tag: word
+        }, {
+            value: '\'ll',
+            tag: word
+        }];
 
-        contractions['that\'re'] = [{ value: 'that', tag: word }, { value: '\'re', tag: word }];
-        contractions['THAT\'RE'] = [{ value: 'THAT', tag: word }, { value: '\'RE', tag: word }];
-        contractions['That\'re'] = [{ value: 'That', tag: word }, { value: '\'re', tag: word }];
+        contractions['that\'re'] = [{
+            value: 'that',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
+        contractions['THAT\'RE'] = [{
+            value: 'THAT',
+            tag: word
+        }, {
+            value: '\'RE',
+            tag: word
+        }];
+        contractions['That\'re'] = [{
+            value: 'That',
+            tag: word
+        }, {
+            value: '\'re',
+            tag: word
+        }];
 
         // Let us!
-        contractions['let\'s'] = [{ value: 'let', tag: word }, { value: '\'s', tag: word }];
-        contractions['LET\'S'] = [{ value: 'THAT', tag: word }, { value: '\'S', tag: word }];
-        contractions['Let\'s'] = [{ value: 'Let', tag: word }, { value: '\'s', lemma: 'us' }];
+        contractions['let\'s'] = [{
+            value: 'let',
+            tag: word
+        }, {
+            value: '\'s',
+            tag: word
+        }];
+        contractions['LET\'S'] = [{
+            value: 'THAT',
+            tag: word
+        }, {
+            value: '\'S',
+            tag: word
+        }];
+        contractions['Let\'s'] = [{
+            value: 'Let',
+            tag: word
+        }, {
+            value: '\'s',
+            lemma: 'us'
+        }];
 
         module.exports = contractions;
-    }, {}], 19: [function (require, module, exports) {
+    }, {}],
+    19: [function (require, module, exports) {
         //     wink-tokenizer
         //     Multilingual tokenizer that automatically tags each token with its type.
         //
@@ -6647,7 +8375,58 @@
         var rgxPosPlural = /([a-z]+s)(\')$/i;
         // Regexes and their categories; used for tokenizing via match/split. The
         // sequence is *critical* for correct tokenization.
-        var rgxsMaster = [{ regex: rgxQuotedPhrase, category: 'quoted_phrase' }, { regex: rgxURL, category: 'url' }, { regex: rgxEmail, category: 'email' }, { regex: rgxMention, category: 'mention' }, { regex: rgxHashtagL1, category: 'hashtag' }, { regex: rgxHashtagDV, category: 'hashtag' }, { regex: rgxEmoji, category: 'emoji' }, { regex: rgxEmoticon, category: 'emoticon' }, { regex: rgxTime, category: 'time' }, { regex: rgxOrdinalL1, category: 'ordinal' }, { regex: rgxNumberL1, category: 'number' }, { regex: rgxNumberDV, category: 'number' }, { regex: rgxCurrency, category: 'currency' }, { regex: rgxWordL1, category: 'word' }, { regex: rgxWordDV, category: 'word' }, { regex: rgxPunctuation, category: 'punctuation' }, { regex: rgxSymbol, category: 'symbol' }];
+        var rgxsMaster = [{
+            regex: rgxQuotedPhrase,
+            category: 'quoted_phrase'
+        }, {
+            regex: rgxURL,
+            category: 'url'
+        }, {
+            regex: rgxEmail,
+            category: 'email'
+        }, {
+            regex: rgxMention,
+            category: 'mention'
+        }, {
+            regex: rgxHashtagL1,
+            category: 'hashtag'
+        }, {
+            regex: rgxHashtagDV,
+            category: 'hashtag'
+        }, {
+            regex: rgxEmoji,
+            category: 'emoji'
+        }, {
+            regex: rgxEmoticon,
+            category: 'emoticon'
+        }, {
+            regex: rgxTime,
+            category: 'time'
+        }, {
+            regex: rgxOrdinalL1,
+            category: 'ordinal'
+        }, {
+            regex: rgxNumberL1,
+            category: 'number'
+        }, {
+            regex: rgxNumberDV,
+            category: 'number'
+        }, {
+            regex: rgxCurrency,
+            category: 'currency'
+        }, {
+            regex: rgxWordL1,
+            category: 'word'
+        }, {
+            regex: rgxWordDV,
+            category: 'word'
+        }, {
+            regex: rgxPunctuation,
+            category: 'punctuation'
+        }, {
+            regex: rgxSymbol,
+            category: 'symbol'
+        }];
 
         // Used to generate finger print from the tokens.
         // NOTE: this variable is being reset in `defineConfig()`.
@@ -6680,7 +8459,7 @@
          * var tokenizer = require( 'wink-tokenizer' );
          * // Create your instance of wink tokenizer.
          * var myTokenizer = tokenizer();
-        */
+         */
         var tokenizer = function () {
             // Default configuration: most comprehensive tokenization. Make deep copy!
             var rgxs = rgxsMaster.slice(0);
@@ -6701,7 +8480,7 @@
              * @param {object[]} tokens — where the outcome is pushed.
              * @return {object[]} updated tokens according to the `word.`
              * @private
-            */
+             */
             var manageContraction = function (word, tokens) {
                 var ct = contractions[word];
                 var matches;
@@ -6709,14 +8488,29 @@
                     // Try possesive of sigular & plural forms
                     matches = word.match(rgxPosSingular);
                     if (matches) {
-                        tokens.push({ value: matches[1], tag: 'word' });
-                        tokens.push({ value: matches[2], tag: 'word' });
+                        tokens.push({
+                            value: matches[1],
+                            tag: 'word'
+                        });
+                        tokens.push({
+                            value: matches[2],
+                            tag: 'word'
+                        });
                     } else {
                         matches = word.match(rgxPosPlural);
                         if (matches) {
-                            tokens.push({ value: matches[1], tag: 'word' });
-                            tokens.push({ value: matches[2], tag: 'word' });
-                        } else tokens.push({ value: word, tag: 'word' });
+                            tokens.push({
+                                value: matches[1],
+                                tag: 'word'
+                            });
+                            tokens.push({
+                                value: matches[2],
+                                tag: 'word'
+                            });
+                        } else tokens.push({
+                            value: word,
+                            tag: 'word'
+                        });
                     }
                 } else {
                     // Manage via lookup; ensure cloning!
@@ -6739,7 +8533,7 @@
              * @param {object} rgxSplit — object containing the regex and it's category.
              * @return {array} of tokens.
              * @private
-            */
+             */
             var tokenizeTextUnit = function (text, rgxSplit) {
                 // Regex matches go here; note each match is a token and has the same tag
                 // as of regex's category.
@@ -6771,9 +8565,15 @@
                                 tokens = manageContraction(aword, tokens);
                             } else {
                                 // Means there is no contraction.
-                                tokens.push({ value: aword, tag: tag });
+                                tokens.push({
+                                    value: aword,
+                                    tag: tag
+                                });
                             }
-                        } else tokens.push({ value: matches[k], tag: tag });
+                        } else tokens.push({
+                            value: matches[k],
+                            tag: tag
+                        });
                     }
                     k += 1;
                 }
@@ -6793,7 +8593,7 @@
              * @param {object} regexes — object containing the regex and it's category.
              * @return {undefined} nothing!
              * @private
-            */
+             */
             var tokenizeTextRecursively = function (text, regexes) {
                 var sentence = text.trim();
                 var tokens = [];
@@ -6802,7 +8602,10 @@
                 if (!regexes.length) {
                     // No regex left, split on `spaces` and tag every token as **alien**.
                     text.split(rgxSpaces).forEach(function (tkn) {
-                        finalTokens.push({ value: tkn.trim(), tag: 'alien' });
+                        finalTokens.push({
+                            value: tkn.trim(),
+                            tag: 'alien'
+                        });
                     });
                     return;
                 }
@@ -6864,7 +8667,7 @@
              * // Only tokenize words as defined above.
              * var myTokenizer.defineConfig( {} );
              * // -> 0
-            */
+             */
             var defineConfig = function (config) {
                 if (typeof config === 'object' && Object.keys(config).length) {
                     rgxs = rgxsMaster.filter(function (rgx) {
@@ -6925,7 +8728,7 @@
              * //      { value: 'http://winkjs.org/wink-regression-tree/', tag: 'url' },
              * //      { value: 'URL', tag: 'word' },
              * //      { value: '!', tag: 'punctuation' } ]
-            */
+             */
             var tokenize = function (sentence) {
                 finalTokens = [];
                 tokenizeTextRecursively(sentence, rgxs);
@@ -6949,7 +8752,7 @@
              * // under tokenize().
              * myTokenizer.getTokensFP();
              * // -> 'wwww,wwuw!'
-            */
+             */
             var getTokensFP = function () {
                 var fp = [];
                 finalTokens.forEach(function (t) {
@@ -7008,7 +8811,7 @@
              * //      { value: 'are', tag: 'word' },
              * //      { value: 'you', tag: 'word' },
              * //      { value: '?', tag: 'punctuation' } ]
-            */
+             */
 
             var addRegex = function (regex, tag, fingerprintCode) {
                 if (!fingerPrintCodes[tag] && !fingerprintCode) {
@@ -7017,7 +8820,10 @@
                     addTag(tag, fingerprintCode);
                 }
 
-                rgxs.unshift({ regex: regex, category: tag });
+                rgxs.unshift({
+                    regex: regex,
+                    category: tag
+                });
             }; // addRegex()
 
             methods.defineConfig = defineConfig;
@@ -7029,9 +8835,13 @@
         };
 
         module.exports = tokenizer;
-    }, { "./eng-contractions.js": 18 }], 20: [function (require, module, exports) {
+    }, {
+        "./eng-contractions.js": 18
+    }],
+    20: [function (require, module, exports) {
         module.exports = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself", "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself", "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these", "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do", "does", "did", "doing", "would", "should", "could", "ought", "i'm", "you're", "he's", "she's", "it's", "we're", "they're", "i've", "you've", "we've", "they've", "i'd", "you'd", "he'd", "she'd", "we'd", "they'd", "i'll", "you'll", "he'll", "she'll", "we'll", "they'll", "let's", "that's", "who's", "what's", "here's", "there's", "when's", "where's", "why's", "how's", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while", "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before", "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again", "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each", "few", "more", "most", "other", "some", "such", "only", "own", "same", "so", "than", "too", "very"];
-    }, {}], 21: [function (require, module, exports) {
+    }, {}],
+    21: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7101,7 +8911,8 @@
         }; // index()
 
         module.exports = returnIndexer;
-    }, {}], 22: [function (require, module, exports) {
+    }, {}],
+    22: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7193,7 +9004,8 @@
         }; // returnQuotedTextExtractor()
 
         module.exports = returnQuotedTextExtractor;
-    }, {}], 23: [function (require, module, exports) {
+    }, {}],
+    23: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7271,7 +9083,8 @@
         }; // returnWordsFilter()
 
         module.exports = returnWordsFilter;
-    }, {}], 24: [function (require, module, exports) {
+    }, {}],
+    24: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7306,7 +9119,8 @@
             degrees: degrees,
             titles: titles
         };
-    }, {}], 25: [function (require, module, exports) {
+    }, {}],
+    25: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7389,7 +9203,8 @@
 
         // Export rgx.
         module.exports = rgx;
-    }, {}], 26: [function (require, module, exports) {
+    }, {}],
+    26: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7436,7 +9251,10 @@
         }; // amplifyNotElision()
 
         module.exports = amplifyNotElision;
-    }, { "./util_regexes.js": 60 }], 27: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    27: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7508,7 +9326,8 @@
         }; // bong()
 
         module.exports = bong;
-    }, {}], 28: [function (require, module, exports) {
+    }, {}],
+    28: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7579,7 +9398,11 @@
         }; // composeCorpus()
 
         module.exports = composeCorpus;
-    }, { "./helper-return-quoted-text-extractor.js": 22, "wink-helpers": 17 }], 29: [function (require, module, exports) {
+    }, {
+        "./helper-return-quoted-text-extractor.js": 22,
+        "wink-helpers": 17
+    }],
+    29: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7649,7 +9472,8 @@
         }; // edgeNGrams()
 
         module.exports = edgeNGrams;
-    }, {}], 30: [function (require, module, exports) {
+    }, {}],
+    30: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7712,7 +9536,11 @@
         }; // extractPersonsName()
 
         module.exports = extractPersonsName;
-    }, { "./name_cleaner_regexes.js": 24, "./util_regexes.js": 60 }], 31: [function (require, module, exports) {
+    }, {
+        "./name_cleaner_regexes.js": 24,
+        "./util_regexes.js": 60
+    }],
+    31: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7761,7 +9589,11 @@
         }; // extractRunOfCapitalWords()
 
         module.exports = extractRunOfCapitalWords;
-    }, { "./string-trim.js": 49, "./util_regexes.js": 60 }], 32: [function (require, module, exports) {
+    }, {
+        "./string-trim.js": 49,
+        "./util_regexes.js": 60
+    }],
+    32: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7806,7 +9638,8 @@
         }; // lowerCase()
 
         module.exports = lowerCase;
-    }, {}], 33: [function (require, module, exports) {
+    }, {}],
+    33: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7858,7 +9691,8 @@
         }; // marker()
 
         module.exports = marker;
-    }, {}], 34: [function (require, module, exports) {
+    }, {}],
+    34: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -7916,7 +9750,8 @@
         }; // ngram()
 
         module.exports = ngram;
-    }, {}], 35: [function (require, module, exports) {
+    }, {}],
+    35: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8018,7 +9853,10 @@
         }; // phonetize()
 
         module.exports = phonetize;
-    }, { "./phonetize_regexes.js": 25 }], 36: [function (require, module, exports) {
+    }, {
+        "./phonetize_regexes.js": 25
+    }],
+    36: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8066,7 +9904,10 @@
         }; // removeElisions()
 
         module.exports = removeElisions;
-    }, { "./util_regexes.js": 60 }], 37: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    37: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8114,7 +9955,10 @@
         }; // removeExtraSpaces()
 
         module.exports = removeExtraSpaces;
-    }, { "./util_regexes.js": 60 }], 38: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    38: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8163,7 +10007,10 @@
         }; // removeHTMLTags()
 
         module.exports = removeHTMLTags;
-    }, { "./util_regexes.js": 60 }], 39: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    39: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8213,7 +10060,10 @@
         }; // removePunctuations()
 
         module.exports = removePunctuations;
-    }, { "./util_regexes.js": 60 }], 40: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    40: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8263,7 +10113,10 @@
         }; // removeSplChars()
 
         module.exports = removeSplChars;
-    }, { "./util_regexes.js": 60 }], 41: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    41: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8312,7 +10165,10 @@
         }; // retainAlphaNums()
 
         module.exports = retainAlphaNums;
-    }, { "./util_regexes.js": 60 }], 42: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    42: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8434,7 +10290,8 @@
         }; // punkt()
 
         module.exports = punkt;
-    }, {}], 43: [function (require, module, exports) {
+    }, {}],
+    43: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8491,7 +10348,8 @@
         }; // soc()
 
         module.exports = soc;
-    }, {}], 44: [function (require, module, exports) {
+    }, {}],
+    44: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8559,7 +10417,8 @@
         }; // song()
 
         module.exports = song;
-    }, {}], 45: [function (require, module, exports) {
+    }, {}],
+    45: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8587,12 +10446,29 @@
         // Soundex Code for alphabets.
         /* eslint-disable object-property-newline */
         var soundexMap = {
-            A: 0, E: 0, I: 0, O: 0, U: 0, Y: 0,
-            B: 1, F: 1, P: 1, V: 1,
-            C: 2, G: 2, J: 2, K: 2, Q: 2, S: 2, X: 2, Z: 2,
-            D: 3, T: 3,
+            A: 0,
+            E: 0,
+            I: 0,
+            O: 0,
+            U: 0,
+            Y: 0,
+            B: 1,
+            F: 1,
+            P: 1,
+            V: 1,
+            C: 2,
+            G: 2,
+            J: 2,
+            K: 2,
+            Q: 2,
+            S: 2,
+            X: 2,
+            Z: 2,
+            D: 3,
+            T: 3,
             L: 4,
-            M: 5, N: 5,
+            M: 5,
+            N: 5,
             R: 6
         };
 
@@ -8658,7 +10534,8 @@
         }; // soundex()
 
         module.exports = soundex;
-    }, {}], 46: [function (require, module, exports) {
+    }, {}],
+    46: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8706,7 +10583,10 @@
         }; // splitElisions()
 
         module.exports = splitElisions;
-    }, { "./util_regexes.js": 60 }], 47: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    47: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8780,7 +10660,10 @@
         }; // tokenize()
 
         module.exports = tokenize;
-    }, { "wink-tokenizer": 19 }], 48: [function (require, module, exports) {
+    }, {
+        "wink-tokenizer": 19
+    }],
+    48: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8836,7 +10719,12 @@
         }; // tokenize0()
 
         module.exports = tokenize0;
-    }, { "./string-amplify-not-elision.js": 26, "./string-remove-elisions.js": 36, "./util_regexes.js": 60 }], 49: [function (require, module, exports) {
+    }, {
+        "./string-amplify-not-elision.js": 26,
+        "./string-remove-elisions.js": 36,
+        "./util_regexes.js": 60
+    }],
+    49: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8881,7 +10769,8 @@
         }; // trim()
 
         module.exports = trim;
-    }, {}], 50: [function (require, module, exports) {
+    }, {}],
+    50: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8926,7 +10815,8 @@
         }; // upperCase()
 
         module.exports = upperCase;
-    }, {}], 51: [function (require, module, exports) {
+    }, {}],
+    51: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -8981,7 +10871,8 @@
         }; // appendBigrams()
 
         module.exports = appendBigrams;
-    }, {}], 52: [function (require, module, exports) {
+    }, {}],
+    52: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9036,7 +10927,8 @@
         }; // bigrams()
 
         module.exports = bigrams;
-    }, {}], 53: [function (require, module, exports) {
+    }, {}],
+    53: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9111,7 +11003,8 @@
         }; // bow()
 
         module.exports = bow;
-    }, {}], 54: [function (require, module, exports) {
+    }, {}],
+    54: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9157,7 +11050,10 @@
         }; // phonetize()
 
         module.exports = phonetize;
-    }, { "./string-phonetize.js": 35 }], 55: [function (require, module, exports) {
+    }, {
+        "./string-phonetize.js": 35
+    }],
+    55: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9224,7 +11120,10 @@
         }; // propagateNegations()
 
         module.exports = propagateNegations;
-    }, { "./util_regexes.js": 60 }], 56: [function (require, module, exports) {
+    }, {
+        "./util_regexes.js": 60
+    }],
+    56: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9277,7 +11176,11 @@
         }; // removeWords()
 
         module.exports = removeWords;
-    }, { "./dictionaries/stop_words.json": 20, "./helper-return-words-filter.js": 23 }], 57: [function (require, module, exports) {
+    }, {
+        "./dictionaries/stop_words.json": 20,
+        "./helper-return-words-filter.js": 23
+    }],
+    57: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9324,7 +11227,10 @@
         }; // soundex()
 
         module.exports = soundex;
-    }, { "./string-soundex.js": 45 }], 58: [function (require, module, exports) {
+    }, {
+        "./string-soundex.js": 45
+    }],
+    58: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9381,7 +11287,8 @@
         }; // bow()
 
         module.exports = sow;
-    }, {}], 59: [function (require, module, exports) {
+    }, {}],
+    59: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9427,7 +11334,10 @@
         }; // stem()
 
         module.exports = stem;
-    }, { "wink-porter2-stemmer": 62 }], 60: [function (require, module, exports) {
+    }, {
+        "wink-porter2-stemmer": 62
+    }],
+    60: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9531,7 +11441,8 @@
 
         //
         module.exports = rgx;
-    }, {}], 61: [function (require, module, exports) {
+    }, {}],
+    61: [function (require, module, exports) {
         //     wink-nlp-utils
         //     NLP Functions for amplifying negations, managing elisions,
         //     creating ngrams, stems, phonetic codes to tokens and more.
@@ -9669,7 +11580,47 @@
 
         // Export prepare.
         module.exports = prepare;
-    }, { "./helper-return-indexer.js": 21, "./helper-return-quoted-text-extractor.js": 22, "./helper-return-words-filter.js": 23, "./string-amplify-not-elision": 26, "./string-bong.js": 27, "./string-compose-corpus.js": 28, "./string-edge-ngrams.js": 29, "./string-extract-persons-name.js": 30, "./string-extract-run-of-capital-words.js": 31, "./string-lower-case.js": 32, "./string-marker.js": 33, "./string-ngram.js": 34, "./string-phonetize.js": 35, "./string-remove-elisions.js": 36, "./string-remove-extra-spaces.js": 37, "./string-remove-html-tags.js": 38, "./string-remove-punctuations.js": 39, "./string-remove-spl-chars.js": 40, "./string-retain-alpha-nums.js": 41, "./string-sentences.js": 42, "./string-soc.js": 43, "./string-song.js": 44, "./string-soundex.js": 45, "./string-split-elisions.js": 46, "./string-tokenize.js": 47, "./string-tokenize0.js": 48, "./string-trim.js": 49, "./string-upper-case.js": 50, "./tokens-append-bigrams.js": 51, "./tokens-bigrams.js": 52, "./tokens-bow.js": 53, "./tokens-phonetize.js": 54, "./tokens-propagate-negations.js": 55, "./tokens-remove-words.js": 56, "./tokens-soundex.js": 57, "./tokens-sow.js": 58, "./tokens-stem.js": 59, "wink-porter2-stemmer": 62 }], 62: [function (require, module, exports) {
+    }, {
+        "./helper-return-indexer.js": 21,
+        "./helper-return-quoted-text-extractor.js": 22,
+        "./helper-return-words-filter.js": 23,
+        "./string-amplify-not-elision": 26,
+        "./string-bong.js": 27,
+        "./string-compose-corpus.js": 28,
+        "./string-edge-ngrams.js": 29,
+        "./string-extract-persons-name.js": 30,
+        "./string-extract-run-of-capital-words.js": 31,
+        "./string-lower-case.js": 32,
+        "./string-marker.js": 33,
+        "./string-ngram.js": 34,
+        "./string-phonetize.js": 35,
+        "./string-remove-elisions.js": 36,
+        "./string-remove-extra-spaces.js": 37,
+        "./string-remove-html-tags.js": 38,
+        "./string-remove-punctuations.js": 39,
+        "./string-remove-spl-chars.js": 40,
+        "./string-retain-alpha-nums.js": 41,
+        "./string-sentences.js": 42,
+        "./string-soc.js": 43,
+        "./string-song.js": 44,
+        "./string-soundex.js": 45,
+        "./string-split-elisions.js": 46,
+        "./string-tokenize.js": 47,
+        "./string-tokenize0.js": 48,
+        "./string-trim.js": 49,
+        "./string-upper-case.js": 50,
+        "./tokens-append-bigrams.js": 51,
+        "./tokens-bigrams.js": 52,
+        "./tokens-bow.js": 53,
+        "./tokens-phonetize.js": 54,
+        "./tokens-propagate-negations.js": 55,
+        "./tokens-remove-words.js": 56,
+        "./tokens-soundex.js": 57,
+        "./tokens-sow.js": 58,
+        "./tokens-stem.js": 59,
+        "wink-porter2-stemmer": 62
+    }],
+    62: [function (require, module, exports) {
         //     wink-porter2-stemmer
         //     Implementation of Porter Stemmer Algorithm V2 by Dr Martin F Porter
         //
@@ -9715,20 +11666,105 @@
         var rgxSFXstep2 = /(ization|ational|fulness|ousness|iveness|tional|biliti|lessli|entli|ation|alism|aliti|ousli|iviti|fulli|enci|anci|abli|izer|ator|alli|bli|ogi|li)$/;
         var rgxSFXstep2WithReplacements = [
             // Length 7.
-            { rgx: /ational$/, replacement: 'ate' }, { rgx: /ization$/, replacement: 'ize' }, { rgx: /fulness$/, replacement: 'ful' }, { rgx: /ousness$/, replacement: 'ous' }, { rgx: /iveness$/, replacement: 'ive' },
+            {
+                rgx: /ational$/,
+                replacement: 'ate'
+            }, {
+                rgx: /ization$/,
+                replacement: 'ize'
+            }, {
+                rgx: /fulness$/,
+                replacement: 'ful'
+            }, {
+                rgx: /ousness$/,
+                replacement: 'ous'
+            }, {
+                rgx: /iveness$/,
+                replacement: 'ive'
+            },
             // Length 6.
-            { rgx: /tional$/, replacement: 'tion' }, { rgx: /biliti$/, replacement: 'ble' }, { rgx: /lessli$/, replacement: 'less' },
+            {
+                rgx: /tional$/,
+                replacement: 'tion'
+            }, {
+                rgx: /biliti$/,
+                replacement: 'ble'
+            }, {
+                rgx: /lessli$/,
+                replacement: 'less'
+            },
             // Length 5.
-            { rgx: /iviti$/, replacement: 'ive' }, { rgx: /ousli$/, replacement: 'ous' }, { rgx: /ation$/, replacement: 'ate' }, { rgx: /entli$/, replacement: 'ent' }, { rgx: /(.*)(alism|aliti)$/, replacement: '$1al' }, { rgx: /fulli$/, replacement: 'ful' },
+            {
+                rgx: /iviti$/,
+                replacement: 'ive'
+            }, {
+                rgx: /ousli$/,
+                replacement: 'ous'
+            }, {
+                rgx: /ation$/,
+                replacement: 'ate'
+            }, {
+                rgx: /entli$/,
+                replacement: 'ent'
+            }, {
+                rgx: /(.*)(alism|aliti)$/,
+                replacement: '$1al'
+            }, {
+                rgx: /fulli$/,
+                replacement: 'ful'
+            },
             // Length 4.
-            { rgx: /alli$/, replacement: 'al' }, { rgx: /ator$/, replacement: 'ate' }, { rgx: /izer$/, replacement: 'ize' }, { rgx: /enci$/, replacement: 'ence' }, { rgx: /anci$/, replacement: 'ance' }, { rgx: /abli$/, replacement: 'able' },
+            {
+                rgx: /alli$/,
+                replacement: 'al'
+            }, {
+                rgx: /ator$/,
+                replacement: 'ate'
+            }, {
+                rgx: /izer$/,
+                replacement: 'ize'
+            }, {
+                rgx: /enci$/,
+                replacement: 'ence'
+            }, {
+                rgx: /anci$/,
+                replacement: 'ance'
+            }, {
+                rgx: /abli$/,
+                replacement: 'able'
+            },
             // Length 3.
-            { rgx: /bli$/, replacement: 'ble' }, { rgx: /(.*)(l)(ogi)$/, replacement: '$1$2og' },
+            {
+                rgx: /bli$/,
+                replacement: 'ble'
+            }, {
+                rgx: /(.*)(l)(ogi)$/,
+                replacement: '$1$2og'
+            },
             // Length 2.
-            { rgx: /(.*)([cdeghkmnrt])(li)$/, replacement: '$1$2' }];
+            {
+                rgx: /(.*)([cdeghkmnrt])(li)$/,
+                replacement: '$1$2'
+            }
+        ];
         // Definition for Step III suffixes; once again spot the longest one first!
         var rgxSFXstep3 = /(ational|tional|alize|icate|iciti|ative|ical|ness|ful)$/;
-        var rgxSFXstep3WithReplacements = [{ rgx: /ational$/, replacement: 'ate' }, { rgx: /tional$/, replacement: 'tion' }, { rgx: /alize$/, replacement: 'al' }, { rgx: /(.*)(icate|iciti|ical)$/, replacement: '$1ic' }, { rgx: /(ness|ful)$/, replacement: '' }];
+        var rgxSFXstep3WithReplacements = [{
+            rgx: /ational$/,
+            replacement: 'ate'
+        }, {
+            rgx: /tional$/,
+            replacement: 'tion'
+        }, {
+            rgx: /alize$/,
+            replacement: 'al'
+        }, {
+            rgx: /(.*)(icate|iciti|ical)$/,
+            replacement: '$1ic'
+        }, {
+            rgx: /(ness|ful)$/,
+            replacement: ''
+        }];
         // Definition for Step IV suffixes.
         var rgxSFXstep4 = /(ement|ance|ence|able|ible|ment|ant|ent|ism|ate|iti|ous|ive|ize|al|er|ic)$/;
         var rgxSFXstep4Full = /(ement|ance|ence|able|ible|ment|ant|ent|ism|ate|iti|ous|ive|ize|ion|al|er|ic)$/;
@@ -9805,14 +11841,23 @@
             // To detect regions i.e. `R1` and `R2`.
             var rgxRegions = /[aeiouy]+([^aeiouy]{1}.+)/;
             m1 = rgxRegions.exec(s);
-            if (!m1) return { r1: '', r2: '' };
+            if (!m1) return {
+                r1: '',
+                r2: ''
+            };
             m1 = m1[1].slice(1);
             // Handle exceptions here to prevent over stemming.
             m1 = /^(gener|commun|arsen)/.test(s) ? s.replace(/^(gener|commun|arsen)(.*)/, '$2') : m1;
             m2 = rgxRegions.exec(m1);
-            if (!m2) return { r1: m1, r2: '' };
+            if (!m2) return {
+                r1: m1,
+                r2: ''
+            };
             m2 = m2[1].slice(1);
-            return { r1: m1, r2: m2 };
+            return {
+                r1: m1,
+                r2: m2
+            };
         }; // markRegions()
 
         // ### step1a
@@ -9853,10 +11898,10 @@
                 return rgxSFXatORblORiz.test(sd) ? sd + 'e' :
                     // or
                     rgxDouble.test(sd) ? sd.replace(/.$/, '') :
-                        // or
-                        isShort(sd) && rgn.r1 === '' ? sd + 'e' :
-                            // or
-                            sd;
+                    // or
+                    isShort(sd) && rgn.r1 === '' ? sd + 'e' :
+                    // or
+                    sd;
             }
             return s;
         }; // step1b()
@@ -9997,4 +12042,3 @@
         module.exports = stem;
     }, {}]
 }, {}, [2]);
-
