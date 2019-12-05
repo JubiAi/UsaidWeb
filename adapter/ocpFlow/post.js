@@ -7,7 +7,7 @@ var request = require("request");
 module.exports = {
 	ocpintro: model => {
 		return new Promise(function (resolve, reject) {
-			console.log(model.data);
+			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("how to use")) {
 				delete model.stage;
 				return resolve(model);
