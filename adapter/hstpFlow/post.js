@@ -74,11 +74,6 @@ module.exports = {
 		});
 	},
 
-
-
-
-
-
 	ocp: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data);
@@ -142,56 +137,6 @@ module.exports = {
 			delete model.stage
 			resolve(model)
 		})
-	},
-
-
-
-	disclaimer: data => {
-		return new Promise(function (resolve, reject) {
-			console.log(data.data);
-			if (data.data.toLowerCase() == "i agree") {
-				console.log("I agree");
-				delete data.stage;
-			} else {
-				console.log("Disagree");
-				data.tags.rejected = true;
-				data.stage = "disclaimer";
-			}
-			return resolve(data);
-		});
-	},
-
-	ageStage: data => {
-		return new Promise(function (resolve, reject) {
-			if (
-				data.data == "15-24" ||
-				(parseInt(data.data) >= 15 && parseInt(data.data) <= 24)
-			) {
-				console.log("15-24");
-				data.stage = "genderStage";
-			} else if (
-				data.data == "25-34" ||
-				(parseInt(data.data) >= 25 && parseInt(data.data) <= 34)
-			) {
-				console.log("25-34");
-				data.stage = "genderStage";
-			} else if (
-				data.data == "35-44" ||
-				(parseInt(data.data) >= 35 && parseInt(data.data) <= 44)
-			) {
-				console.log("35-44");
-				data.stage = "genderStage";
-			} else if (
-				data.data == "44+" ||
-				(parseInt(data.data) >= 45 && parseInt(data.data) <= 100)
-			) {
-				console.log("44+");
-				data.stage = "genderStage";
-			} else if (parseInt(data.data) > 100) {
-				data.stage = "ageStage";
-			}
-			resolve(data);
-		});
 	},
 
 	city: data => {

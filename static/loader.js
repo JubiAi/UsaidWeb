@@ -145,9 +145,9 @@
   window.speechLanguageCodeBackend = "en-US";
   window.jubiUrl = "https://parramato.com/bot-view/Alpha Version_586886576888/dev/";
   window.jubiModal = {
-    // url: "wss://development.jubi.ai/usaidWeb",
+    url: "wss://development.jubi.ai/usaidWeb",
     //********** */
-    url: 'wss://development.jubi.ai/usaid',
+    //url: 'wss://development.jubi.ai/usaid',
     path: "/socket",
     static: {
       url: window.jubiUrl,
