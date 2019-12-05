@@ -206,8 +206,8 @@ module.exports = {
 								text: 'Helpline'
 							},
 							{
-								data: 'Learn More',
-								text: 'Learn More'
+								data: 'Learn Something More',
+								text: 'Learn Something More'
 							}
 						]
 					}
