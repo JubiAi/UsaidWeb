@@ -5,6 +5,39 @@ var sendExternalMessage = require("../../external.js");
 var request = require("request");
 
 module.exports = {
+
+	sti: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("continue")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
+		});
+	},
+	remove: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("continue")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
+		});
+	},
+
+
+
+
+
+
+
+
 	ocpintro: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
