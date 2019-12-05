@@ -67,7 +67,7 @@ module.exports = {
 			console.log('---------------------------Time-----------------')
 			model.reply = {
 				type: "quickReply",
-				text: 'Did you know that 18-34 is the healthiest and the most fertile period in a woman\'s life? |break|Smart couples ensure that their kids are born during this period because it reduces the riskof complications. |break|Similarly, it’s wise to keep a gap of 3-5 years between your first and second child. |break| ${image::' + model.tags.happyfamily_image + '}',
+				text: 'Did you know that 18-34 is the healthiest and the most fertile period in a woman\'s life? |break|Smart couples ensure that their kids are born during this period because it reduces the riskof complications. |break|Similarly, it’s wise to keep a gap of 3-5 years between your first and second child. |break|${image::' + model.tags.happyfamily_image + '}',
 				next: {
 					data: [{
 							data: 'Is that correct',
@@ -89,8 +89,10 @@ module.exports = {
 			console.log('---------------------------Mother-----------------')
 			model.reply = {
 				type: "quickReply",
-				text: "Yes! This time helps the mother to rest and regain her health while the first child gets all the love and attention he/she requires from mummy. ❤️ |break|'${image::' + model.tags.motherchild_image + '}' Now, how about a myth buster to learn more about HTSP?",
-				next: {
+				text: 'Yes! This time helps the mother to rest and regain her health while the first child gets all the love and attention he/she requires from mummy. ❤️ |break|${image::' + model.tags.motherchild_image + '}'
+				Now,
+				how about a myth buster to learn more about HTSP ? ',
+				next : {
 					data: [{
 							data: "Lets start",
 							text: "Let's start"
