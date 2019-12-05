@@ -5,31 +5,80 @@ var sendExternalMessage = require("../../external.js");
 var request = require("request");
 
 module.exports = {
-	ocpintro: model => {
+	maternity: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data);
-			if (model.data.toLowerCase().includes("how to use")) {
+			if (model.data.toLowerCase().includes("4 weeks")) {
+				model.tags.answer1 = true
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
+				model.tags.answer1 = false
+				delete model.stage;
+				return resolve(model);
+			}
+		});
+	},
+
+	hstp: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data);
+			if (model.data.toLowerCase().includes("htsp")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------Rejectfor hstp -----------");
 				return reject(model);
 			}
 		});
 	},
 
-	use: model => {
+	hstphow: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data);
-			if (model.data.toLowerCase().includes("okay")) {
+			if (model.data.toLowerCase().includes("how")) {
+				model.tags.happyfamily_image = "http://development.jubi.ai/usaidWeb/images/happyfamily.jpg"
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------Rejectfor Use Intro-----------");
+				console.log("-------------Rejectfor hstphow-----------");
 				return reject(model);
 			}
 		});
 	},
+
+	time: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data);
+			if (model.data.toLowerCase().includes("correct")) {
+				model.tags.motherchild_image = "http://development.jubi.ai/usaidWeb/images/motherchild.jpg"
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------Rejectfor hstphow-----------");
+				return reject(model);
+			}
+		});
+	},
+
+	mother: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data);
+			if (model.data.toLowerCase().includes("start")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------Rejectfor hstphow-----------");
+				return reject(model);
+			}
+		});
+	},
+
+
+
+
+
+
 	ocp: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data);
@@ -50,12 +99,12 @@ module.exports = {
 
 	q1: (model) => {
 		return new Promise(async function (resolve, reject) {
-			if (model.data.toLowerCase().includes("myth")) {
+			if (model.data.toLowerCase().includes("correct")) {
 				// await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
-				model.tags.answer1 = false
-			} else if (model.data.toLowerCase().includes("fact")) {
+				model.tags.answern1 = false
+			} else if (model.data.toLowerCase().includes("false")) {
 				// await sendExternalMessage(data, 'You’re right, ECPs don’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies, They do not cause abortion.')
-				model.tags.answer1 = true
+				model.tags.answern1 = true
 			} else {
 				reject(model)
 			}
@@ -65,12 +114,12 @@ module.exports = {
 	},
 	q2: (model) => {
 		return new Promise(async function (resolve, reject) {
-			if (model.data.toLowerCase().includes("myth")) {
+			if (model.data.toLowerCase().includes("not correct")) {
 				// await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
-				model.tags.answer2 = false
-			} else if (model.data.toLowerCase().includes("true")) {
+				model.tags.answern2 = false
+			} else if (model.data.toLowerCase().includes("correct")) {
 				// await sendExternalMessage(data, 'You’re right, ECPs don’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies, They do not cause abortion.')
-				model.tags.answer2 = true
+				model.tags.answern2 = true
 			} else {
 				reject(model)
 			}
@@ -96,6 +145,73 @@ module.exports = {
 	},
 
 
+
+	disclaimer: data => {
+		return new Promise(function (resolve, reject) {
+			console.log(data.data);
+			if (data.data.toLowerCase() == "i agree") {
+				console.log("I agree");
+				delete data.stage;
+			} else {
+				console.log("Disagree");
+				data.tags.rejected = true;
+				data.stage = "disclaimer";
+			}
+			return resolve(data);
+		});
+	},
+
+	ageStage: data => {
+		return new Promise(function (resolve, reject) {
+			if (
+				data.data == "15-24" ||
+				(parseInt(data.data) >= 15 && parseInt(data.data) <= 24)
+			) {
+				console.log("15-24");
+				data.stage = "genderStage";
+			} else if (
+				data.data == "25-34" ||
+				(parseInt(data.data) >= 25 && parseInt(data.data) <= 34)
+			) {
+				console.log("25-34");
+				data.stage = "genderStage";
+			} else if (
+				data.data == "35-44" ||
+				(parseInt(data.data) >= 35 && parseInt(data.data) <= 44)
+			) {
+				console.log("35-44");
+				data.stage = "genderStage";
+			} else if (
+				data.data == "44+" ||
+				(parseInt(data.data) >= 45 && parseInt(data.data) <= 100)
+			) {
+				console.log("44+");
+				data.stage = "genderStage";
+			} else if (parseInt(data.data) > 100) {
+				data.stage = "ageStage";
+			}
+			resolve(data);
+		});
+	},
+
+	city: data => {
+		console.log(data.data);
+		return new Promise(function (resolve, reject) {
+			if (
+				stringSimilarity.findBestMatch(toTitleCase(data.data), cities).bestMatch
+				.rating == 1
+			) {
+				data.tags.cityMatches = undefined;
+				data.tags.city = toTitleCase(data.data);
+				delete data.stage;
+				resolve(data);
+			} else {
+				data.tags.cityMatches = sort(toTitleCase(data.data), cities);
+				resolve(data);
+			}
+		});
+		return data;
+	}
 };
 
 function toTitleCase(str) {
