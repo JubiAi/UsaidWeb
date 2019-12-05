@@ -7,6 +7,7 @@ module.exports = {
 
     carousalOne: (data) => {
         return new Promise((resolve, reject) => {
+            console.log(data)
             data.reply = {
                 type: 'generic',
                 text: "OCP",
