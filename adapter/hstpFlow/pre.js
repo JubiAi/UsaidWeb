@@ -89,10 +89,8 @@ module.exports = {
 			console.log('---------------------------Mother-----------------')
 			model.reply = {
 				type: "quickReply",
-				text: 'Yes! This time helps the mother to rest and regain her health while the first child gets all the love and attention he/she requires from mummy. ❤️ |break|${image::' + model.tags.motherchild_image + '}'
-				Now,
-				how about a myth buster to learn more about HTSP ? ',
-				next : {
+				text: 'Yes! This time helps the mother to rest and regain her health while the first child gets all the love and attention he/she requires from mummy. ❤️ |break|${image::' + model.tags.motherchild_image + '}' + 'Now,how about a myth buster to learn more about HTSP ?',
+				next: {
 					data: [{
 							data: "Lets start",
 							text: "Let's start"
