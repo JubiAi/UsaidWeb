@@ -45,13 +45,8 @@ module.exports = {
 	manage: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
-			if (model.data.toLowerCase().includes("more")) {
-				delete model.stage;
-				return resolve(model);
-			} else {
-				console.log("-------------RejectOcp Intro-----------");
-				return reject(model);
-			}
+			delete model.stage;
+			return resolve(model);
 		});
 	},
 	hiucd: model => {
