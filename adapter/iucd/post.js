@@ -33,9 +33,7 @@ module.exports = {
 	ut: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
-			//if (model.data.toLowerCase().includes("inside"))
-			if (model.data) {
-				console.log(model.data)
+			if (model.data.toLowerCase().includes("inside")) {
 				delete model.stage;
 				return resolve(model);
 			} else {
@@ -47,7 +45,7 @@ module.exports = {
 	manage: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
-			if (model.data.toLowerCase().includes("iucd")) {
+			if (model.data.toLowerCase().includes("more")) {
 				delete model.stage;
 				return resolve(model);
 			} else {
