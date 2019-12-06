@@ -3,7 +3,6 @@ var sendExternalMessage = require("../../external.js");
 var request = require("request");
 
 module.exports = {
-
   remove: model => {
     return new Promise(function (resolve) {
       model.reply = {
@@ -22,6 +21,93 @@ module.exports = {
       return resolve(model);
     });
   },
+
+  ut: model => {
+    return new Promise(function (resolve) {
+      model.reply = {
+        type: "quickReply",
+        text: " So, an IUCD is placed in your uterus by a doctor. There it does its job of preventing pregnancies day in and day out!",
+        next: {
+          data: [{
+            data: "inside my uterus",
+            text: "Inside my uterus! 😨 Does it hurt?"
+          }]
+        }
+      };
+      //delete model.tags.answer1
+
+      console.log(model.reply);
+      return resolve(model);
+    });
+  },
+  manage: model => {
+    return new Promise(function (resolve) {
+      model.reply = {
+        type: "quickReply",
+        text: "It's different for different women. But yes, many do experience pain.|break|But the pain can be managed in a lot of ways!For most women resting for a short while after, helps.",
+        next: {
+          data: [{
+              data: "worried",
+              text: " Still worried? Talk to a counsellor"
+            },
+
+            {
+              data: "Tell me more about IUCD",
+              text: "Tell me more about IUCD’s"
+            }
+          ]
+        }
+      };
+      //delete model.tags.answer1
+
+      console.log(model.reply);
+      return resolve(model);
+    });
+  },
+
+  hiucd: model => {
+    return new Promise(function (resolve) {
+      model.reply = {
+        type: "quickReply",
+        text: "Well IUCD’S come in two forms. Copper and Hormonal IUCD’s. |break|The copper IUCD works by bringing about a chemical change in the uterus. |break|This prevents pregnancy by damaging the sperm and egg before they can meet.",
+        next: {
+          data: [{
+            data: "And what about hormonal IUCD’s",
+            text: "And what about hormonal IUCD’s"
+          }]
+        }
+      };
+      //delete model.tags.answer1
+
+      console.log(model.reply);
+      return resolve(model);
+    });
+  },
+
+  risk: model => {
+    return new Promise(function (resolve) {
+      model.reply = {
+        type: "quickReply",
+        text: "They work by releasing small amounts of hormones that prevent the sperm from fertilizing the egg.",
+        next: {
+          data: [{
+            data: "Are there any risks of using IUCD’s?",
+            text: "Are there any risks of using IUCD’s?"
+          }]
+        }
+      };
+      //delete model.tags.answer1
+
+      console.log(model.reply);
+      return resolve(model);
+    });
+  },
+
+
+
+
+
+
 
 
   ocpintro: data => {

@@ -21,7 +21,7 @@ module.exports = {
 	remove: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
-			if (model.data.toLowerCase().includes("continue")) {
+			if (model.data.toLowerCase().includes("tell me more about how they work")) {
 				delete model.stage;
 				return resolve(model);
 			} else {
@@ -30,6 +30,56 @@ module.exports = {
 			}
 		});
 	},
+	ut: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("inside")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
+		});
+	},
+	manage: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("iucd")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
+		});
+	},
+	hiucd: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("hormonal")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
+		});
+	},
+	risk: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("risks")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
+		});
+	},
+
+
 
 
 
