@@ -78,6 +78,48 @@ module.exports = {
 			}
 		});
 	},
+	q1: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("right")) {
+				model.tags.score1 = 1
+				delete model.stage;
+				return resolve(model);
+			} else {
+				model.tags.score1 = 0
+				delete model.stage;
+				return resolve(model);
+			}
+		});
+	},
+	q2: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("true")) {
+				model.tags.score1 = 1
+				delete model.stage;
+				return resolve(model);
+			} else {
+				model.tags.score1 = 0
+				delete model.stage;
+				return resolve(model);
+			}
+		});
+	},
+	q3: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("agree")) {
+				model.tags.score1 = 1
+				delete model.stage;
+				return resolve(model);
+			} else {
+				model.tags.score1 = 0
+				delete model.stage;
+				return resolve(model);
+			}
+		});
+	},
 
 
 
