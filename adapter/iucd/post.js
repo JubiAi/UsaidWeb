@@ -25,7 +25,7 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
+				console.log("-------------Reject Remove Intro-----------");
 				return reject(model);
 			}
 		});
@@ -37,7 +37,7 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
+				console.log("-------------Reject ut Intro-----------");
 				return reject(model);
 			}
 		});
@@ -50,7 +50,7 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
+				console.log("-------------Reject iucd Intro-----------");
 				return reject(model);
 			}
 		});
@@ -63,7 +63,7 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
+				console.log("-------------Reject Hiucd Intro-----------");
 				return reject(model);
 			}
 		});
@@ -75,7 +75,7 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
+				console.log("-------------Reject Risk Intro-----------");
 				return reject(model);
 			}
 		});
