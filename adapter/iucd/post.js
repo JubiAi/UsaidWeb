@@ -82,7 +82,7 @@ module.exports = {
 	},
 	q1: model => {
 		return new Promise(function (resolve, reject) {
-			console.log(model.data + "----------------------");
+			console.log(model.data + "---------+++++++++++++++++-------------");
 			if (model.data.toLowerCase().includes("right")) {
 				model.tags.score1 = 1
 				delete model.stage;
