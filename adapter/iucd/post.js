@@ -80,10 +80,25 @@ module.exports = {
 			}
 		});
 	},
+
+	qone: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "---------+++++++++++++++++-------------");
+			if (model.data.includes("right")) {
+				model.tags.score1 = 1
+				delete model.stage;
+				return resolve(model);
+			} else {
+				model.tags.score1 = 0
+				delete model.stage;
+				return resolve(model);
+			}
+		});
+	},
 	q1: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "---------+++++++++++++++++-------------");
-			if (model.data.toLowerCase().includes("right")) {
+			if (model.data.includes("right")) {
 				model.tags.score1 = 1
 				delete model.stage;
 				return resolve(model);
