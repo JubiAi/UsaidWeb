@@ -42,13 +42,20 @@ module.exports = {
 			}
 		});
 	},
+
 	manage: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
-			delete model.stage;
-			return resolve(model);
+			if (model.data.toLowerCase().includes("iucd")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				console.log("-------------RejectOcp Intro-----------");
+				return reject(model);
+			}
 		});
 	},
+
 	hiucd: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
