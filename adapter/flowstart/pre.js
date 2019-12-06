@@ -1,5 +1,7 @@
 var relationship = "https://development.jubi.ai/usaidWeb/images/relationship.jpg"
 var flatpills = "http://development.jubi.ai/usaidWeb/images/flatpills.jpg"
+var maternity = "http://development.jubi.ai/usaidWeb/images/maternity.jpg"
+var iucd = "http://development.jubi.ai/usaidWeb/images/maternity.jpg"
 var sendExternalMessage = require('../../external.js')
 var request = require('request')
 
@@ -14,14 +16,33 @@ module.exports = {
                 text: "OCP",
                 next: {
                     data: [{
-                        image: flatpills,
-                        title: "OCP",
-                        buttons: [{
-                            type: "text",
-                            text: "OCP",
-                            data: "ocp"
-                        }]
-                    }]
+                            image: flatpills,
+                            title: "OCP",
+                            buttons: [{
+                                type: "text",
+                                text: "OCP",
+                                data: "ocp"
+                            }]
+                        },
+                        {
+                            image: maternity,
+                            title: "HSTP",
+                            buttons: [{
+                                type: "text",
+                                text: "hstp",
+                                data: "hstp"
+                            }]
+                        },
+                        {
+                            image: iucd,
+                            title: "HSTP",
+                            buttons: [{
+                                type: "text",
+                                text: "iucd",
+                                data: "iucd1"
+                            }]
+                        },
+                    ]
                 }
             }
             return resolve(data)

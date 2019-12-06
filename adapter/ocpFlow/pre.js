@@ -141,11 +141,11 @@ module.exports = {
           text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.",
           next: {
             data: [{
-                data: "Main Topics",
+                data: "startflow",
                 text: "Main Topics"
               },
               {
-                data: "Call helpline",
+                data: "call helpline",
                 text: "Call helpline"
               }
             ]
