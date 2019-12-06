@@ -33,7 +33,9 @@ module.exports = {
 	ut: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
-			if (model.data.toLowerCase().includes("inside")) {
+			//if (model.data.toLowerCase().includes("inside"))
+			if (model.data) {
+				console.log(model.data)
 				delete model.stage;
 				return resolve(model);
 			} else {
