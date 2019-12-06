@@ -4066,6 +4066,30 @@
     float: left;
     height: 45px
     }
+    #jubi-chat-loader-app .jubi-bxinput textarea {
+        background: 0;
+        resize: none;
+        border: 0;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        font-size: 15px;
+        font-weight: 400;
+        text-indent: 0 !important;
+        text-indent: initial !important;
+        max-height: 45px;
+        padding: 12px;
+        border-bottom: 0 solid #ccc;
+        border: 1px solid #ccc;
+        border-radius: 18px;
+        margin-left: 67px;
+        margin-top: -37px;
+        outline: none;
+        float: left;
+        background: #f5f5f5;
+        opacity: 0.6;
+        box-shadow: 0px 2px 4px #c1c1c1;
+    }
 
     #jubi-chat-loader-app .pm-rightUserimg {
         width: 30px;
