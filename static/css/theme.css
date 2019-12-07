@@ -2185,9 +2185,9 @@
 
 #jubi-chat-loader-app .chatProceed ul li a.active,
 #jubi-chat-loader-app .chatProceed ul li a:hover {
-    background: linear-gradient(to right, #f3c400, #f3c400);
+    background: linear-gradient(to right, #0062cc, #0062cc);
     color: #fff;
-    border: 1px solid #f3c400
+    border: 1px solid #0062cc
 }
 
 #jubi-chat-loader-app .chatProceed p {
@@ -2277,7 +2277,7 @@
     font-size: 15px;
     margin-top: 7px;
     padding: 0 10px;
-    color: #fff;
+    color: #fff;  
     margin-bottom: 0
 }
 
@@ -2406,11 +2406,11 @@
     float: right;
     width: 25px;
     height: 25px;
-    background: #f3c400;
+    background: #0062cc;
     padding: 5px 5px 5px 7px;
     border-radius: 50%;
     border: 0;
-    text-align: center;
+    text-align: center;  
     position: relative;
     font-weight: bold;
     color: #fff;
@@ -2507,7 +2507,7 @@
 }
 
 #jubi-chat-loader-app .jubi-sec_newFooter button {
-    display: none;
+    /* display: none; */
 }
 
 #jubi-chat-loader-app .sk-three-bounce .sk-child {
