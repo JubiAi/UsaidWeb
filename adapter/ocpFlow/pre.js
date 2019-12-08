@@ -23,6 +23,31 @@ module.exports = {
     });
   },
 
+  q1: model => {
+    return new Promise(function (resolve) {
+      console.log("========================================================");
+      model.reply = {
+        type: "quickReply",
+        text: "Alright! I will share a few statements and you will have to tell me if it is a myth or a fact. Let’s start.|break|Here’s your first one!|break|OCPs affect women’s fertility (ability to have children)",
+        next: {
+          data: [{
+              data: "This is a myth",
+              text: "This is a myth"
+            },
+            {
+              data: "Its a fact",
+              text: "It's a fact"
+            }
+          ]
+        }
+      };
+      //delete model.tags.answer1
+
+      console.log(model.reply);
+      return resolve(model);
+    });
+  },
+
   q2: model => {
     return new Promise(function (resolve) {
       console.log("========================================================");
