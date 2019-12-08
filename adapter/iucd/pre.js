@@ -7,7 +7,7 @@ module.exports = {
     return new Promise(function (resolve) {
       model.reply = {
         type: "quickReply",
-        text: "Jubi: And the best part about IUCD’s is that you can change your mind about them anytime!A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD’s.",
+        text: "And the best part about IUCD’s is that you can change your mind about them anytime!A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD’s.",
         next: {
           data: [{
             data: "Tell me more about how they work?",
