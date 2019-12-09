@@ -44,7 +44,7 @@ module.exports = {
     return new Promise(function (resolve) {
       model.reply = {
         type: "quickReply",
-        text: "It's different for different women. But yes, many do experience pain.|break|But the pain can be managed in a lot of ways!For most women resting for a short while after, helps.",
+        text: "It's different for different women. But yes, many do experience pain.|break| But the pain can be managed in a lot of ways!For most women resting for a short while after, helps.",
         next: {
           data: [{
               data: "worried",
