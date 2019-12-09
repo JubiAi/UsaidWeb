@@ -247,14 +247,14 @@
     "</p>" +
     "</div>" +
     '<section id="jubi-textInput" class="jubi-sec_newFooter footer-two">' +
-    '<aside class="jubi-muteUnmuteVoice">' +
-    '<div id="jubi-unmuteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/unmute.png">' +
-    "</div>" +
-    '<div id="jubi-muteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/mute.png">' +
-    "</div>" +
-    "</aside>" +
+    // '<aside class="jubi-muteUnmuteVoice">' +
+    // '<div id="jubi-unmuteVoice">' +
+    // '<img src="https://parramato.com/bot-view/images/unmute.png">' +
+    // "</div>" +
+    // '<div id="jubi-muteVoice">' +
+    // '<img src="https://parramato.com/bot-view/images/mute.png">' +
+    // "</div>" +
+    // "</aside>" +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voiceIcon" id="button-play-ws">' +
     '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
@@ -273,7 +273,8 @@
     '<img src="./images/mennu.png" class="img-responsive"></img>' +
     "</div>" +
     '<div class="inputvoice">' +
-    '<img src="./images/voice.png" class="img-responsive"></img>' +
+    // '<img src="./images/voice.png" class="img-responsive"></img>' +
+    '<div class="voice-buttons" id="voice-buttons"><div class="voiceIcon" id="button-play-ws"><img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid"></div><div class="voicePulse" id="button-stop-ws" style="display: none;"><div class="sk-three-bounce"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div><div class="stop-recording">Listening...</div></div></div>' +
     "</div>" +
     '<textarea id="jubi-answerBottom" placeholder="Type a message here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
     "</div>" +
