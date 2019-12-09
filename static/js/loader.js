@@ -247,14 +247,14 @@
     "</p>" +
     "</div>" +
     '<section id="jubi-textInput" class="jubi-sec_newFooter footer-two">' +
-    '<aside class="jubi-muteUnmuteVoice">' +
-    '<div id="jubi-unmuteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/unmute.png">' +
-    "</div>" +
-    '<div id="jubi-muteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/mute.png">' +
-    "</div>" +
-    "</aside>" +
+    // '<aside class="jubi-muteUnmuteVoice">' +
+    // '<div id="jubi-unmuteVoice">' +
+    // '<img src="https://parramato.com/bot-view/images/unmute.png">' +
+    // "</div>" +
+    // '<div id="jubi-muteVoice">' +
+    // '<img src="https://parramato.com/bot-view/images/mute.png">' +
+    // "</div>" +
+    // "</aside>" +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voiceIcon" id="button-play-ws">' +
     '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
