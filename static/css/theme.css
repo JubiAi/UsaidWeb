@@ -1378,6 +1378,13 @@
     cursor: pointer;
 }
 
+#jubi-chat-loader-app .sec_dropdowntop ul li p {
+    margin: 6px 0 4px 10px;
+    COLOR: #4c4c4c;
+    font-weight: 700;
+    font-size: 11px;
+}
+
 #jubi-chat-loader-app .pm-lineTitle {
     margin: 0;
     width: 9px;
