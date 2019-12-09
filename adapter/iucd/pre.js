@@ -222,7 +222,7 @@ module.exports = {
 
 
 
-  concluding: model => {
+  final: model => {
     return new Promise(function (resolve) {
       console.log("========================================================");
       console.log(model.tags.answer3);

@@ -17,7 +17,7 @@ module.exports = {
                 next: {
                     data: [{
                             image: flatpills,
-                            title: "OCP",
+                            title: "One of the most preferred birth control methods out there!",
                             buttons: [{
                                 type: "text",
                                 text: "OCP",
@@ -26,7 +26,7 @@ module.exports = {
                         },
                         {
                             image: maternity,
-                            title: "HSTP",
+                            title: "Planning for the perfect family? Read on!",
                             buttons: [{
                                 type: "text",
                                 text: "hstp",
@@ -35,7 +35,7 @@ module.exports = {
                         },
                         {
                             image: iucd,
-                            title: "IUCD",
+                            title: "Looking for a long term Birth control option? Check out the superstar IUDs",
                             buttons: [{
                                 type: "text",
                                 text: "iucd",
