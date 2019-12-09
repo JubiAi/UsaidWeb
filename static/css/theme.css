@@ -1353,7 +1353,7 @@
     width: 189px;
     margin-bottom: 0!important;
     z-index: 2;
-    display: none;
+    /* display: none; */
     right: 20px;
 }
 
