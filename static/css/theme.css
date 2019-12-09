@@ -3941,7 +3941,7 @@
     }
 
     #jubi-chat-loader-app .pm-sec_newHeader {
-        display: none;
+        display: block;
         position: relative;
         z-index: 9999999;
         height: 65px;
