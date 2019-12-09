@@ -2457,7 +2457,7 @@
 }
 
 #jubi-chat-loader-app .sendIcon {
-    display: none
+    /* display: none */
 }
 
 #jubi-chat-loader-app .voiceIcon {
