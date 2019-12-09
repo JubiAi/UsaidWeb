@@ -243,7 +243,6 @@
     '<div class="closeBotImg" id="closeBotImg"><img src="https://khushi.jubi.ai/images/close.png" class="img-responsive"></div>' +
     "</div></section>" +
     '<section class="pm-sec_chatbody" id="pm-data" >' +
-    '<section class="secMenucontent" id="secMenucontent"><section class="sec_dropdowntop"><ul><li class="jubi-menu-val" onclick="window.askBot(\'Start Over\')"><p>Start Over</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Main menu\')"><p>Main menu</p></li><li class="jubi-menu-val"><p><a href="http://www.buymecondom.com/" target="_blank">Buy Condom</a></p></li><li class="jubi-menu-val" onclick="window.askBot(\'Speak to a counsellor\')"><p>Speak to a counsellor</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Cancel Conversation\')"><p>Cancel Conversation</p></li></ul></section></section>' +
     // "</div></section>" +
     '<div class="pm-bxChatbox pm-bxChat chatWindow" id="pm-buttonlock">' +
     "</div>" +
