@@ -128,10 +128,12 @@ module.exports = {
 			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("agree")) {
 				model.tags.score3 = 1
+				model.tags.total = model.tags.score3 + model.tags.score2 + model.tags.score1
 				delete model.stage;
 				return resolve(model);
 			} else {
 				model.tags.score3 = 0
+				model.tags.total = model.tags.score3 + model.tags.score2 + model.tags.score1
 				delete model.stage;
 				return resolve(model);
 			}

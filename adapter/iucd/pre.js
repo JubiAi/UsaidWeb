@@ -220,26 +220,64 @@ module.exports = {
     });
   },
 
+
+
+  concluding: model => {
+    return new Promise(function (resolve) {
+      console.log("========================================================");
+      console.log(model.tags.answer3);
+      if (model.tags.total == 3) {
+        console.log("++++++false++++++++");
+        model.reply = {
+          type: "quickReply",
+          text: "That's a myth. You see, IUCD’s usage does not affect breast milk adversely. Hence it's completely safe for a breastfeeding mother.Wow! You’ve learned a lot today. For more help with contraceptives, you can get in touch with our counselors.Got a query? you can type it in the text box below.Or you can continue with another topic by clicking on main menu!",
+          next: {
+            data: [{
+                data: "startflow",
+                text: "Main Menu"
+              },
+              {
+                data: "Call helpline",
+                text: "Talk to a IUCD counsellor"
+              }
+            ]
+          }
+        };
+        //delete model.tags.answer1
+      } else if (model.tags.answer3 == true) {
+        model.reply = {
+          type: "quickReply",
+          text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.I’m sure you have learned a lot about IUCDs by now. If you still have questions you can type it in the text box. You can also get in touch with our counselors.Or you can continue with another topic by clicking on main menu!",
+          next: {
+            data: [{
+                data: "startflow",
+                text: "Main Menu"
+              },
+              {
+                data: "Call helpline",
+                text: "Talk to a IUCD counsellor"
+              }
+            ]
+          }
+        };
+        //delete model.tags.answer1
+      }
+      console.log(model.reply);
+      return resolve(model);
+    });
+  },
+
+
+
   q4: model => {
     return new Promise(function (resolve) {
       console.log("========================================================");
       console.log(model.tags.answer3);
-      if (model.tags.answer3 == false) {
+      if (model.tags.total == 3) {
         console.log("++++++false++++++++");
         model.reply = {
           type: "quickReply",
-          text: "Uh-oh, Wrong answer! Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely. Done! I’m sure you’ve learnt something new.To learn more click on the button below. You can also type in your query in the text box below!",
-          next: {
-            data: [{
-                data: "startflow",
-                text: "Main Topics"
-              },
-              {
-                data: "call helpline",
-                text: "Call helpline"
-              }
-            ]
-          }
+          text: "That's a myth. You see, IUCD’s usage does not affect breast milk adversely. Hence it's completely safe for a breastfeeding mother.|break| Wow! You’ve learned a lot today. For more help with contraceptives, you can get in touch with our counselors.Got a query? you can type it in the text box below.",
         };
         //delete model.tags.answer1
       } else if (model.tags.answer3 == true) {
