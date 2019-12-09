@@ -2423,12 +2423,13 @@
     width: 19px;
     display: inline-block;
     float: left;
+    margin: 10px 0 0 10px;
 }
 
 #jubi-chat-loader-app .secMenucontent-widget {
     position: absolute;
     bottom: 50px;
-    left: 0;
+    left: 10px;
     width: 241px;
     margin-bottom: 0!important;
     display: none;
