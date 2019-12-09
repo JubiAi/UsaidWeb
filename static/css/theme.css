@@ -2422,6 +2422,63 @@
     float: left;
 }
 
+#jubi-chat-loader-app .secMenucontent-widget {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 241px;
+    margin-bottom: 0!important;
+    display: none;
+}
+#jubi-chat-loader-app .sec_dropdown {
+    position: relative;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.35);
+    overflow: hidden;
+    background: #fff;
+}
+
+#jubi-chat-loader-app .closeBtn {
+    width: 20px;
+    height: 20px;
+    float: right;
+    margin: 4px 3px 0 0;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#jubi-chat-loader-app .sec_dropdown h3 {
+    text-align: left;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    color: #888;
+    text-transform: uppercase;
+}
+
+#jubi-chat-loader-app .sec_dropdown ul {
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    margin: 0;
+}
+
+#jubi-chat-loader-app .sec_dropdown ul li {
+    text-align: left;
+    border-top: 1px solid #ccc;
+    border-radius: 0;
+    width: 100%;
+    display: inline-block;
+    padding: 0;
+    font-size: 13px;
+    float: left;
+    cursor: pointer;
+}
+
+
 .inputvoice {
     width: 17px;
     display: inline-block;
