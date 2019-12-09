@@ -151,7 +151,9 @@
       "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
     script:
       "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
-    script: "./js/jubievents.js"
+    // script:
+    //   "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
+    jubievents: "./js/jubievents.js"
   });
   window.jubiModal = {
     static: {
