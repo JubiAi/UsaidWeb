@@ -239,7 +239,9 @@
     // "<p>👋 Welcome to the Customer Experience economy. Here. customer delight means everything.</p>" +
     // "</div>" +
     // "</section>" +
-    '<section id="pm-heading" class="pm-sec_newHeader"><div class="headerLeftContent"><div class="pm-titleheader"><div class="headerlogoImg"><h3>I\'m Khushi</h3><span class="pm-headOnline">&nbsp;</span></div></div><p>Your trusted guide for all things sexual health!</p></div><div class="headerRightContent"><aside class="jubi-muteUnmuteVoice"><div id="jubi-unmuteVoice" style="display: block;"><img src="https://khushi.jubi.ai/images/unmute.png"></div><div id="jubi-muteVoice" style="display: none;"><img src="https://khushi.jubi.ai/images/mute.png"></div></aside></div></section>' +
+    '<section id="pm-heading" class="pm-sec_newHeader"><div class="headerLeftContent"><div class="pm-titleheader"><div class="headerlogoImg"><h3>I\'m Khushi</h3><span class="pm-headOnline">&nbsp;</span></div></div><p>Your trusted guide for all things sexual health!</p></div><div class="headerRightContent"><aside class="jubi-muteUnmuteVoice"><div id="jubi-unmuteVoice" style="display: block;"><img src="https://khushi.jubi.ai/images/unmute.png"></div><div id="jubi-muteVoice" style="display: none;"><img src="https://khushi.jubi.ai/images/mute.png"></div></aside>' +
+    '<div class="closeBotImg" id="closeBotImg"><img src="https://khushi.jubi.ai/images/close.png" class="img-responsive"></div>' +
+    "</div></section>" +
     '<section class="pm-sec_chatbody" id="pm-data" >' +
     '<div class="pm-bxChatbox pm-bxChat chatWindow" id="pm-buttonlock">' +
     "</div>" +

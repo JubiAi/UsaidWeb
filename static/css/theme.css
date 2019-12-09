@@ -1334,6 +1334,15 @@
     margin: 0 auto;
 }
 
+#jubi-chat-loader-app .closeBotImg {
+    width: 20px;
+    float: right;
+    display: inline-block;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
 #jubi-chat-loader-app .pm-lineTitle {
     margin: 0;
     width: 9px;
