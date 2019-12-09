@@ -109,7 +109,7 @@ module.exports = {
 			}
 		});
 	},
-	q2: model => {
+	qtwo: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("true")) {
