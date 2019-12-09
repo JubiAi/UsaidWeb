@@ -278,7 +278,7 @@
     '<div class="jubi-bxinput" id="jubi-bxinput">' +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voiceIcon" id="button-play-ws">' +
-    '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
+    '<img src="./images/voice-icon.png" class="img-fluid">' +
     "</div>" +
     '<div class="voicePulse" id="button-stop-ws">' +
     '<div class="sk-three-bounce">' +
