@@ -2432,6 +2432,7 @@
     left: 10px;
     width: 241px;
     margin-bottom: 0!important;
+    z-index: 2;
     display: none;
 }
 
