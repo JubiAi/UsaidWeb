@@ -2461,6 +2461,11 @@
     cursor: pointer;
 }
 
+#jubi-chat-loader-app .closeBtn img {
+    width: 100%;
+    vertical-align: baseline;
+}
+
 #jubi-chat-loader-app .sec_dropdown h3 {
     text-align: left;
     margin: 0;
