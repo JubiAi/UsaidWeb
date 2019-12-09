@@ -227,15 +227,16 @@
   window.templateOpenView =
     '<section class="pm-sec_calliframe" id="pm-secIframe"  style="display:none">' +
     '<section class="pm-sec_scroll2 pm-sec_openview" id="pm-mainSec">' +
-    '<section id="pm-heading" class="pm-sec_newHeader">' +
-    '<div class="jubi-message-header">' +
-    '<h1 id="boldmsg-1-header">Hello,</h1>' +
-    '<h2 id="boldmsg-2-header">Delight</h2>' +
-    "</div>" +
-    '<div id="msgDescribe-header">' +
-    "<p>👋 Welcome to the Customer Experience economy. Here. customer delight means everything.</p>" +
-    "</div>" +
-    "</section>" +
+    // '<section id="pm-heading" class="pm-sec_newHeader">' +
+    // '<div class="jubi-message-header">' +
+    // '<h1 id="boldmsg-1-header">Hello,</h1>' +
+    // '<h2 id="boldmsg-2-header">Delight</h2>' +
+    // "</div>" +
+    // '<div id="msgDescribe-header">' +
+    // "<p>👋 Welcome to the Customer Experience economy. Here. customer delight means everything.</p>" +
+    // "</div>" +
+    // "</section>" +
+    '<section id="pm-heading" class="pm-sec_newHeader"><div class="headerLeftContent"><div class="pm-titleheader"><div class="headerlogoImg"><h3>I\'m Khushi</h3><span class="pm-headOnline">&nbsp;</span></div></div><p>Your trusted guide for all things sexual health!</p></div><div class="headerRightContent"><div class="closeBotImg" id="closeBotImg"><img src="https://khushi.jubi.ai/images/close.png" class="img-responsive"></div><aside class="jubi-muteUnmuteVoice"><div id="jubi-unmuteVoice" style="display: block;"><img src="https://khushi.jubi.ai/images/unmute.png"></div><div id="jubi-muteVoice" style="display: none;"><img src="https://khushi.jubi.ai/images/mute.png"></div></aside></div></section>' +
     '<section class="pm-sec_chatbody" id="pm-data" >' +
     '<div class="pm-bxChatbox pm-bxChat chatWindow" id="pm-buttonlock">' +
     "</div>" +
