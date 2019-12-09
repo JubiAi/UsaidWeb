@@ -150,7 +150,10 @@
     bundle:
       "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
     script:
-      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js"
+      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
+    // script:
+    //   "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
+    jubievents: "./js/jubievents.js"
   });
   window.jubiModal = {
     static: {
@@ -236,7 +239,10 @@
     // "<p>👋 Welcome to the Customer Experience economy. Here. customer delight means everything.</p>" +
     // "</div>" +
     // "</section>" +
-    '<section id="pm-heading" class="pm-sec_newHeader"><div class="headerLeftContent"><div class="pm-titleheader"><div class="headerlogoImg"><h3>I\'m Khushi</h3><span class="pm-headOnline">&nbsp;</span></div></div><p>Your trusted guide for all things sexual health!</p></div><div class="headerRightContent"><aside class="jubi-muteUnmuteVoice"><div id="jubi-unmuteVoice" style="display: block;"><img src="https://khushi.jubi.ai/images/unmute.png"></div><div id="jubi-muteVoice" style="display: none;"><img src="https://khushi.jubi.ai/images/mute.png"></div></aside></div></section>' +
+    '<section id="pm-heading" class="pm-sec_newHeader"><div class="headerLeftContent"><div class="pm-titleheader"><div class="headerlogoImg"><h3>I\'m Khushi</h3><span class="pm-headOnline">&nbsp;</span></div></div><p>Your trusted guide for all things sexual health!</p></div><div class="headerRightContent"><aside class="jubi-muteUnmuteVoice"><div id="jubi-unmuteVoice" style="display: block;"><img src="https://khushi.jubi.ai/images/unmute.png"></div><div id="jubi-muteVoice" style="display: none;"><img src="https://khushi.jubi.ai/images/mute.png"></div></aside>' +
+    '<div class="closeBotImg" id="closeBotImg"><img src="https://khushi.jubi.ai/images/close.png" class="img-responsive"></div>' +
+    '<section class="secMenucontent-widget" id="secMenucontent-widget"><section class="sec_dropdown"><div class="closeBtn"><img src="https://khushi.jubi.ai/images/close_icon.png"></div><h3>Menu</h3><ul><li class="jubi-menu-val" onclick="window.askBot(\'Start Over\')"><p>Start Over</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Main menu\')"><p>Main menu</p></li><li class="jubi-menu-val"><p><a href="http://www.buymecondom.com/" target="_blank">Buy Condom</a></p></li><li class="jubi-menu-val" onclick="window.askBot(\'Speak to a counsellor\')"><p>Speak to a counsellor</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Cancel Conversation\')"><p>Cancel Conversation</p></li></ul></section><div class="trianglearrow"><img src="https://khushi.jubi.ai/images/triangledown.png" class="img-responsive"></div></section>' +
+    "</div></section>" +
     '<section class="pm-sec_chatbody" id="pm-data" >' +
     '<div class="pm-bxChatbox pm-bxChat chatWindow" id="pm-buttonlock">' +
     "</div>" +
@@ -255,9 +261,27 @@
     // '<img src="https://parramato.com/bot-view/images/mute.png">' +
     // "</div>" +
     // "</aside>" +
+    // '<div class="voice-buttons" id="voice-buttons">' +
+    // '<div class="voiceIcon" id="button-play-ws">' +
+    // '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
+    // "</div>" +
+    // '<div class="voicePulse" id="button-stop-ws">' +
+    // '<div class="sk-three-bounce">' +
+    // '<div class="sk-child sk-bounce1"></div>' +
+    // '<div class="sk-child sk-bounce2"></div>' +
+    // '<div class="sk-child sk-bounce3"></div>' +
+    // "</div>" +
+    // '<div class="stop-recording">Listening...</div>' +
+    // "</div>" +
+    // "</div>" +
+    '<div class="inputmenu">' +
+    '<img src="./images/mennu.png" class="img-responsive"></img>' +
+    "</div>" +
+    '<section class="secMenucontent-widget" id="secMenucontent-widget"><section class="sec_dropdown"><div class="closeBtn"><img src="https://khushi.jubi.ai/images/close_icon.png"></div><h3>Menu</h3><ul><li class="jubi-menu-val" onclick="window.askBot(\'Start Over\')"><p>Start Over</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Main menu\')"><p>Main menu</p></li><li class="jubi-menu-val"><p><a href="http://www.buymecondom.com/" target="_blank">Buy Condom</a></p></li><li class="jubi-menu-val" onclick="window.askBot(\'Speak to a counsellor\')"><p>Speak to a counsellor</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Cancel Conversation\')"><p>Cancel Conversation</p></li></ul></section><div class="trianglearrow"><img src="https://khushi.jubi.ai/images/triangledown.png" class="img-responsive"></div></section>' +
+    '<div class="jubi-bxinput" id="jubi-bxinput">' +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voiceIcon" id="button-play-ws">' +
-    '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
+    '<img src="./images/voice.png" class="img-fluid">' +
     "</div>" +
     '<div class="voicePulse" id="button-stop-ws">' +
     '<div class="sk-three-bounce">' +
@@ -267,10 +291,6 @@
     "</div>" +
     '<div class="stop-recording">Listening...</div>' +
     "</div>" +
-    "</div>" +
-    '<div class="jubi-bxinput" id="jubi-bxinput">' +
-    '<div class="inputmenu">' +
-    '<img src="./images/mennu.png" class="img-responsive"></img>' +
     "</div>" +
     // '<div class="inputvoice">' +
     // '<img src="./images/voice.png" class="img-responsive"></img>' +
