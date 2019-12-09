@@ -13,7 +13,7 @@ module.exports = {
             console.log(data + "-----------------")
             data.reply = {
                 type: 'generic',
-                text: "OCP",
+                text: "Main Menu",
                 next: {
                     data: [{
                             image: flatpills,
