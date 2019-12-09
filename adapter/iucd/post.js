@@ -123,7 +123,7 @@ module.exports = {
 			}
 		});
 	},
-	q3: model => {
+	qthree: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("agree")) {
