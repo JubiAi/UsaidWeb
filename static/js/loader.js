@@ -260,6 +260,19 @@
     '<div class="closeBotImg" id="closeBotImg">' +
     '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">' +
     "</div>" +
+    '<div class="dropdown-header">' +
+    "<ul>" +
+    "<li>" +
+    "<p>About Us</p>" +
+    "</li>" +
+    "<li>" +
+    " <p>Learn More</p>" +
+    "</li>" +
+    "<li>" +
+    "<p>Buy Condoms</p>" +
+    "</li>" +
+    "</ul>" +
+    " </div>" +
     "</div></section>" +
     '<section class="pm-sec_chatbody" id="pm-data" >' +
     // "</div></section>" +
@@ -296,7 +309,28 @@
     '<div class="inputmenu">' +
     '<img src="./images/mennu.png" class="img-responsive"></img>' +
     "</div>" +
-    '<section class="secMenucontent-widget" id="secMenucontent-widget"><section class="sec_dropdown"><div class="closeBtn"><img src="https://khushi.jubi.ai/images/close_icon.png"></div><h3>Menu</h3><ul><li class="jubi-menu-val" onclick="window.askBot(\'Start Over\')"><p>Start Over</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Main menu\')"><p>Main menu</p></li><li class="jubi-menu-val"><p><a href="http://www.buymecondom.com/" target="_blank">Buy Condom</a></p></li><li class="jubi-menu-val" onclick="window.askBot(\'Speak to a counsellor\')"><p>Speak to a counsellor</p></li><li class="jubi-menu-val" onclick="window.askBot(\'Cancel Conversation\')"><p>Cancel Conversation</p></li></ul></section><div class="trianglearrow"><img src="https://khushi.jubi.ai/images/triangledown.png" class="img-responsive"></div></section>' +
+    '<section class="secMenucontent-widget" id="secMenucontent-widget">' +
+    '<section class="sec_dropdown">' +
+    '<div class="closeBtn">' +
+    '<img src="https://khushi.jubi.ai/images/close_icon.png">' +
+    "</div>" +
+    "<h3>Menu</h3>" +
+    "<ul>" +
+    '<li class="jubi-menu-val" onclick="window.askBot(\'Restart\')">' +
+    "<p>Restart</p>" +
+    "</li>" +
+    '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel\')">' +
+    "<p>Cancel</p>" +
+    "</li>" +
+    '<li class="jubi-menu-val" onclick="window.askBot(\'Talk to a counsellor\')">' +
+    "<p>Talk to a counsellor</p>" +
+    "</li>" +
+    "</ul>" +
+    "</section>" +
+    '<div class="trianglearrow">' +
+    '<img src="https://khushi.jubi.ai/images/triangledown.png" class="img-responsive">' +
+    "</div>" +
+    "</section>" +
     '<div class="jubi-bxinput" id="jubi-bxinput">' +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voiceIcon" id="button-play-ws">' +
