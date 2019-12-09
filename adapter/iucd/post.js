@@ -141,7 +141,18 @@ module.exports = {
 	},
 
 
-
+	final: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("iucd")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				model.stage = "triggerfinal";
+				return resolve(model);
+			}
+		});
+	},
 
 
 
