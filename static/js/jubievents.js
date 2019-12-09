@@ -16,7 +16,7 @@ $(document).ready(function() {
   $(".pm-sec_chatbody").click(function() {
     $(".secMenucontent-widget").hide();
   });
-  $(".jubi-answerBottom").click(function() {
+  $("#jubi-answerBottom").click(function() {
     $(".secMenucontent-widget").hide();
   });
 });
