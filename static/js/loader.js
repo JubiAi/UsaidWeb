@@ -268,7 +268,7 @@
     '<div class="stop-recording">Listening...</div>' +
     "</div>" +
     "</div>" +
-    '<div class="jubi-bxinput" id="jubi-bxinput" style="display:none;">' +
+    '<div class="jubi-bxinput" id="jubi-bxinput">' +
     '<div class="inputmenu">' +
     '<img src="./images/mennu.png" class="img-responsive"></img>' +
     "</div>" +
