@@ -1,9 +1,9 @@
 $(document).ready(function() {
   $(".inputmenu").click(function() {
-    $("secMenucontent-widget").show();
+    $(".secMenucontent-widget").show();
   });
 
-  //   $("#fred").click(function() {
-  //     $("#rod").hide();
-  //   });
+  $(".closeBtn").click(function() {
+    $(".secMenucontent-widget").hide();
+  });
 });
