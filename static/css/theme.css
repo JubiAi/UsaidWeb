@@ -1365,7 +1365,7 @@
         padding: 0;
         list-style: none;
     }
-
+/* 
 #jubi-chat-loader-app .dropdown-header ul li  {
         text-align: left;
     border-bottom: 1px solid #ccc;
@@ -1376,7 +1376,7 @@
     font-size: 13px;
     margin: 0;
     cursor: pointer;
-    }
+    } */
 
 #jubi-chat-loader-app .dropdown-header ul li p{
         color: #000;
