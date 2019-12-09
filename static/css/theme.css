@@ -2478,6 +2478,13 @@
     cursor: pointer;
 }
 
+#jubi-chat-loader-app .sec_dropdown ul li p {
+    margin: 10px 0 8px 10px;
+    COLOR: #4c4c4c;
+    font-weight: 700;
+    font-size: 13px;
+}
+
 
 .inputvoice {
     width: 17px;
