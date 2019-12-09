@@ -2433,6 +2433,14 @@
     margin-bottom: 0!important;
     display: none;
 }
+
+#jubi-chat-loader-app .trianglearrow {
+    position: absolute;
+    bottom: -13px;
+    left: 6px;
+    width: 21px;
+}
+
 #jubi-chat-loader-app .sec_dropdown {
     position: relative;
     border: 1px solid #ccc;
