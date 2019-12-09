@@ -1490,9 +1490,11 @@
     position: relative;
     top: 0;
     left: 0;
-    background: #fff;
     display: none;
-    text-align: center
+    text-align: center;
+    z-index: 999999;
+    background: #4036a9;
+    min-height: 72px;
 }
 
 #jubi-chat-loader-app .pm-titleheader {
