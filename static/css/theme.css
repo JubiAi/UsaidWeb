@@ -1359,6 +1359,7 @@
     border: 1px solid;
     border-radius: 6px;
     box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.35);
+    display: none;
 }
 
 #jubi-chat-loader-app .dropdown-header ul {
