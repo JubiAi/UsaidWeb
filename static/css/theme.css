@@ -4017,9 +4017,14 @@
     }
 
     #jubi-chat-loader-app .jubi-bxinput {
-        float: left;
+        /* float: left;
         width: 82%;
         padding: 10px 0 0 6px;
+        background: 0; */
+        float: left;
+        width: 82%;
+        padding: 0px 0 0px 6px;
+        margin-top: -20px;
         background: 0;
     }
 
@@ -4074,7 +4079,7 @@
     }
 
     #jubi-chat-loader-app .voiceIcon {
-        width: 73%
+        width: 19%
     }
 
     #jubi-chat-loader-app .voicePulse {
