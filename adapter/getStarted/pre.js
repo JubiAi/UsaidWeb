@@ -1,5 +1,11 @@
 var sendExternalMessage = require('../../external.js')
 var request = require('request')
+var relationship = "https://development.jubi.ai/usaidWeb/images/relationship.jpg"
+var flatpills = "http://development.jubi.ai/usaidWeb/images/flatpills.jpg"
+var maternity = "http://development.jubi.ai/usaidWeb/images/maternity.png"
+var iucd = "http://development.jubi.ai/usaidWeb/images/iucd.jpg"
+var sendExternalMessage = require('../../external.js')
+
 
 module.exports = {
 
