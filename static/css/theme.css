@@ -1469,11 +1469,11 @@
 }
 
 #jubi-chat-loader-app .pm-sec_newHeader p {
-    margin: 9px 0 0 22px;
-    color: #949494;
-    font-size: 19px;
-    font-weight: 600;
-    font-family: serif
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    text-align: left;
 }
 
 #jubi-chat-loader-app .pm-sec_newHeader {
@@ -1490,9 +1490,11 @@
     position: relative;
     top: 0;
     left: 0;
-    background: #fff;
     display: none;
-    text-align: center
+    text-align: center;
+    z-index: 999999;
+    background: #4036a9;
+    min-height: 72px;
 }
 
 #jubi-chat-loader-app .pm-titleheader {
@@ -1502,10 +1504,9 @@
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 {
-    margin: 0 auto;
-    position: relative;
-    width: 122px;
-    display: none
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 img {
