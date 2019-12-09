@@ -1469,10 +1469,11 @@
 }
 
 #jubi-chat-loader-app .pm-sec_newHeader p {
-    margin: 9px 0 0 22px;
-    color: #949494;
-    font-size: 19px;
-    font-weight: 600;
+    color: #fff;
+    font-size: 14px;
+    width: 100%;
+    float: left;
+    text-align: left;
 }
 
 #jubi-chat-loader-app .pm-sec_newHeader {
@@ -1503,7 +1504,9 @@
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 {
-    font-size: 16px;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 img {
