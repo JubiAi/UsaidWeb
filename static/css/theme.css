@@ -2428,9 +2428,9 @@
 
 #jubi-chat-loader-app .secMenucontent-widget {
     position: absolute;
-    bottom: 50px;
-    left: 10px;
-    width: 241px;
+    bottom: 53px;
+    left: 21px;
+    width: 189px;
     margin-bottom: 0!important;
     z-index: 2;
     display: none;
@@ -2467,7 +2467,7 @@
 #jubi-chat-loader-app .sec_dropdown h3 {
     text-align: left;
     margin: 0;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 700;
     padding: 10px;
     color: #888;
@@ -2494,10 +2494,14 @@
 }
 
 #jubi-chat-loader-app .sec_dropdown ul li p {
-    margin: 10px 0 8px 10px;
+    /* margin: 10px 0 8px 10px;
     COLOR: #4c4c4c;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 13px; */
+    margin: 6px 0 4px 10px;
+    COLOR: #4c4c4c;
+    font-weight: 700;
+    font-size: 11px;
 }
 
 
