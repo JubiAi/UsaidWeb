@@ -244,7 +244,7 @@ module.exports = {
           }
         };
         //delete model.tags.answer1
-      } else if (model.tags.answer3 == true) {
+      } else {
         model.reply = {
           type: "quickReply",
           text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.I’m sure you have learned a lot about IUCDs by now. If you still have questions you can type it in the text box. You can also get in touch with our counselors.Or you can continue with another topic by clicking on main menu!",
