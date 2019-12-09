@@ -118,7 +118,7 @@ module.exports = {
       } else if (model.tags.answer2 == true) {
         model.reply = {
           type: "quickReply",
-          text: "True!Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be born with birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
+          text: "True! Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be born with birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
           next: {
             data: [{
                 data: "Not true",
