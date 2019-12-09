@@ -1303,9 +1303,11 @@
     background: #75fe7a;
     border-radius: 50%;
     display: inline-block;
-    right: -3px;
-    top: 11px;
-    position: absolute
+    /* right: -3px; */
+    left: 117px;
+    top: 9px;
+    position: absolute;
+   
 }
 
 #jubi-chat-loader-app .pm-lineTitle {
