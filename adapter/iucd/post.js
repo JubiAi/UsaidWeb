@@ -50,8 +50,8 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------Reject iucd Intro-----------");
-				return reject(model);
+				model.stage = 'helpline';
+				return resolve(model);
 			}
 		});
 	},
@@ -113,11 +113,11 @@ module.exports = {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("true")) {
-				model.tags.score1 = 1
+				model.tags.score2 = 1
 				delete model.stage;
 				return resolve(model);
 			} else {
-				model.tags.score1 = 0
+				model.tags.score2 = 0
 				delete model.stage;
 				return resolve(model);
 			}
@@ -127,11 +127,11 @@ module.exports = {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("agree")) {
-				model.tags.score1 = 1
+				model.tags.score3 = 1
 				delete model.stage;
 				return resolve(model);
 			} else {
-				model.tags.score1 = 0
+				model.tags.score3 = 0
 				delete model.stage;
 				return resolve(model);
 			}
