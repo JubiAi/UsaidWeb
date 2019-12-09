@@ -1504,10 +1504,7 @@
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 {
-    margin: 0 auto;
-    position: relative;
-    width: 122px;
-    display: none
+    font-size: 16px;
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 img {
