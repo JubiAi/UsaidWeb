@@ -1344,6 +1344,10 @@
     /* margin-bottom: 3px; */
 }
 
+    .dropdown-header{width: 100%;
+    display: inline-block;
+    font-size: 15px;
+    }
 
 
 #jubi-chat-loader-app .secMenucontent{
