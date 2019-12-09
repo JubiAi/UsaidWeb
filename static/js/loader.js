@@ -255,18 +255,18 @@
     // '<img src="https://parramato.com/bot-view/images/mute.png">' +
     // "</div>" +
     // "</aside>" +
-    '<div class="voice-buttons" id="voice-buttons">' +
-    '<div class="voiceIcon" id="button-play-ws">' +
-    '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
-    "</div>" +
-    '<div class="voicePulse" id="button-stop-ws">' +
-    '<div class="sk-three-bounce">' +
-    '<div class="sk-child sk-bounce1"></div>' +
-    '<div class="sk-child sk-bounce2"></div>' +
-    '<div class="sk-child sk-bounce3"></div>' +
-    "</div>" +
-    '<div class="stop-recording">Listening...</div>' +
-    "</div>" +
+    // '<div class="voice-buttons" id="voice-buttons">' +
+    // '<div class="voiceIcon" id="button-play-ws">' +
+    // '<img src="https://parramato.com/bot-view/images/voice.png" class="img-fluid">' +
+    // "</div>" +
+    // '<div class="voicePulse" id="button-stop-ws">' +
+    // '<div class="sk-three-bounce">' +
+    // '<div class="sk-child sk-bounce1"></div>' +
+    // '<div class="sk-child sk-bounce2"></div>' +
+    // '<div class="sk-child sk-bounce3"></div>' +
+    // "</div>" +
+    // '<div class="stop-recording">Listening...</div>' +
+    // "</div>" +
     "</div>" +
     '<div class="jubi-bxinput" id="jubi-bxinput" style="display:none;">' +
     '<div class="inputmenu">' +
