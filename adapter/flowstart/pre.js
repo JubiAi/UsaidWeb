@@ -35,7 +35,7 @@ module.exports = {
                         },
                         {
                             image: iucd,
-                            title: "HSTP",
+                            title: "IUCD",
                             buttons: [{
                                 type: "text",
                                 text: "iucd",
