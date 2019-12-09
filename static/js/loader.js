@@ -150,7 +150,9 @@
     bundle:
       "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
     script:
-      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js"
+      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
+    script:
+      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
   });
   window.jubiModal = {
     static: {
