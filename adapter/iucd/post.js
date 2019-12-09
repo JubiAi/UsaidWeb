@@ -13,8 +13,8 @@ module.exports = {
 				delete model.stage;
 				return resolve(model);
 			} else {
-				console.log("-------------RejectOcp Intro-----------");
-				return reject(model);
+				model.stage = 'helpline';
+				return resolve(model);
 			}
 		});
 	},
