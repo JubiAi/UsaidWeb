@@ -4512,14 +4512,20 @@
     #jubi-chat-loader-app .jubi-bxinput textarea {
        width: 380px;
      }
-   }
+}
 
    @media (max-width: 767px){
     #jubi-chat-loader-app .jubi-bxinput textarea {
        width: 630px;
      }
-}
+    }
 
+
+    @media (max-width: 560px){
+     #jubi-chat-loader-app .jubi-bxinput textarea {
+       width: 445px;
+        }
+    }
 
 
 
