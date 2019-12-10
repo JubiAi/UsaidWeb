@@ -4461,15 +4461,24 @@
 @media(max-width:360px) {
     #jubi-chat-loader-app #jubi-unmuteVoice, #jubi-muteVoice
     {
-      margin: 0px 0px 0px -35px;
+      margin: 0px 0px 0px -30px;
+      max-width: 30px;
     }
     #jubi-chat-loader-app .closeBotImg 
     {
       margin-right: 12px;
+      margin-top: -29px;
+      width: 18px;
      }
 
     #jubi-chat-loader-app .jubi-sec_newFooter button 
     {
       margin: 1px 18px 0 0;
     }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+           font-size: 12px;
+         }
+         #jubi-chat-loader-app .pm-titleheader h3 {
+            font-size: 20px;
+                    }
 }
