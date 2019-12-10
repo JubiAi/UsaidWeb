@@ -4485,4 +4485,7 @@
          #jubi-chat-loader-app .pm-titleheader h3 {
             font-size: 20px;
                     }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+                        font-size: 15px;
+                    }
 }
