@@ -262,10 +262,10 @@
     "</div>" +
     '<div class="dropdown-header">' +
     "<ul>" +
-    "<li>" +
+    '<li class="dropdown-list">' +
     "<p>About Us</p>" +
     "</li>" +
-    "<li>" +
+    '<li class="dropdown-list">' +
     " <p>Learn More</p>" +
     "</li>" +
     "<li>" +
