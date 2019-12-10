@@ -87,7 +87,7 @@ module.exports = {
         next: {
           data: [{
             data: "Lets start",
-            text: "Let's start"
+            text: "Let us start"
           }]
         }
       };
@@ -189,7 +189,7 @@ module.exports = {
       } else if (model.tags.answern2 == true) {
         model.reply = {
           type: "quickReply",
-          text: "That’s not correct! Let’s learn. You see, Oral contraceptive pills (OCPs) are only temporary forms of birth control. In about 1 to 3 months of stopping the pills, a woman’s fertility (ability to have kids) returns.|break| All done!Need more information on contraceptives? Contact our helpline by clicking on the button below. You can also directly type in your query in the text box below.",
+          text: "That’s not correct! Let us learn. You see, Oral contraceptive pills (OCPs) are only temporary forms of birth control. In about 1 to 3 months of stopping the pills, a woman’s fertility (ability to have kids) returns.|break| All done!Need more information on contraceptives? Contact our helpline by clicking on the button below. You can also directly type in your query in the text box below.",
           next: {
             data: [{
                 data: "helpline",
