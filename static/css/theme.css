@@ -4352,6 +4352,10 @@
         /* margin: 0; */
         margin: 7px 50px 0 0;
     }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+        font-size: 17px;
+        
+    }
 
 }
 
