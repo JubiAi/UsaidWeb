@@ -95,6 +95,8 @@ module.exports = {
 		})
 	},
 
+
+
 	q4: (model) => {
 		return new Promise(async function (resolve, reject) {
 			if (model.data.toLowerCase().includes("call")) {
@@ -106,6 +108,14 @@ module.exports = {
 				resolve(model)
 			}
 			//delete model.stage
+
+		})
+	},
+	helpline: (model) => {
+		return new Promise(async function (resolve, reject) {
+			if (model.data.toLowerCase().includes("startflow"))
+				model.stage = 'mainmenu'
+			resolve(model)
 
 		})
 	},
