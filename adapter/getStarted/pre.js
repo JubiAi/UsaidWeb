@@ -50,7 +50,7 @@ module.exports = {
 							title: "One of the most preferred birth control methods out there!",
 							buttons: [{
 								type: "text",
-								text: "OCP",
+								text: "SELECT",
 								data: "ocp"
 							}]
 						},
@@ -59,7 +59,7 @@ module.exports = {
 							title: "Planning for the perfect family? Read on!",
 							buttons: [{
 								type: "text",
-								text: "hstp",
+								text: "SELECT",
 								data: "hstp"
 							}]
 						},
@@ -68,7 +68,7 @@ module.exports = {
 							title: "Looking for a long term Birth control option? Check out the superstar IUDs",
 							buttons: [{
 								type: "text",
-								text: "iucd",
+								text: "SELECT",
 								data: "iucd-d"
 							}]
 						},
