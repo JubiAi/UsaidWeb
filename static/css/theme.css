@@ -2073,8 +2073,8 @@
     background-size: 8px;
     float: right;
     opacity: 1;
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     padding: 0 0 0 4px;
     border-radius: 50%;
     background-position: center;
@@ -2090,8 +2090,8 @@
     background-size: 8px;
     float: left;
     opacity: 1;
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     padding: 0 0 0 4px;
     border-radius: 50%;
     background-position: center;
@@ -2155,9 +2155,10 @@
     display: block */
     margin-top: -2px;
     display: block;
-    font-size: 21px;
+    font-size: 30px;
     color: #fff;
     line-height: 1px;
+    margin-right: 0px;
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav button span:hover {
