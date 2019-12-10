@@ -4460,6 +4460,10 @@
     #jubi-chat-loader-app .jubi-sec_newFooter button {
       margin: 1px 34px 0 0;
     }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+        font-size: 15px;
+    }
+
 }
 
 @media(max-width:360px) {
