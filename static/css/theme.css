@@ -3040,7 +3040,8 @@
 #jubi-chat-loader-app .rightPage {
     float: right;
     width: 50%;
-    height: 100vh;
+    /* height: 100vh; */
+    height: 90vh;
     background: #fff
 }
 
@@ -4274,7 +4275,8 @@
     }
 
     #jubi-chat-loader-app .rightPage {
-        width: 100%
+        width: 100%;
+        height: 90vh;
     }
 
     #jubi-chat-loader-app .leftContent h2 {
