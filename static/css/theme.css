@@ -4481,6 +4481,9 @@
     #jubi-chat-loader-app .pm-secCloseMsg {
         bottom: 85px
     }
+    #jubi-chat-loader-app .headerRightContent {
+         margin: 10px 11px 0 0;
+    }
 }
 
 @media(max-width:480px) {
