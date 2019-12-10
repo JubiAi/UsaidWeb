@@ -6,7 +6,7 @@
      httpPort: 8192,
      cluster: false,
      // dbUri: 'mongodb://jubi:jubi@uatmongo.parramato.com:27017/rel',
-     dbUri: "127.0.0.1: 27017",
+     dbUri: "127.0.0.1:27017",
      staticDirectory: __dirname + "/static",
      adapterPath: "/adapter",
      adapterDirectory: __dirname + "/adapter",
