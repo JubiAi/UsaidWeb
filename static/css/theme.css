@@ -3834,6 +3834,9 @@
         float: right;
         margin: 30px 25px 0 0;
     }
+    #jubi-chat-loader-app .jubi-sec_newFooter button {
+         margin: 7px 0px 0 0;
+    }
 }
 
 @media(max-width:1024px) {
