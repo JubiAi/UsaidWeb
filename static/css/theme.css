@@ -599,8 +599,26 @@
 
 #jubi-chat-loader-app .pm-bxslidebtn a,
 #jubi-chat-loader-app .pm-sliderContent p {
-    font-size: 12px
+    font-size: 12px;
+    font-weight: bold;
+    width: 100%;
+    color: #fff;
+    padding: 6px 13px;
+    font-weight: 600;
+    background: #007bff;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: #d7dcdb 0 1px 2px 0;
+    border-radius: 3px;
+    text-decoration: none;
 }
+
+
+#jubi-chat-loader-app .pm-bxslidebtn {
+    text-align: center;
+}
+
+
 
 #jubi-chat-loader-app .pm-sliderContent p {
     min-height: 59px;
@@ -2132,7 +2150,7 @@
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav button span {
-    margin-top: -2px;
+    margin-top: -5px;
     display: block
 }
 
