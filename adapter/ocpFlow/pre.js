@@ -36,7 +36,7 @@ module.exports = {
             },
             {
               data: "Its a fact",
-              text: "It's a fact"
+              text: "It is a fact"
             }
           ]
         }
