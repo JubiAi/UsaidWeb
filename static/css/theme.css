@@ -4590,7 +4590,10 @@
     #jubi-chat-loader-app .jubi-bxinput textarea {
        width: 630px;
      }
+     #jubi-chat-loader-app .pm-sec_openview {
+        height: 90vh;
     }
+}
 
 
     @media (max-width: 560px){
