@@ -145,7 +145,7 @@ module.exports = {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
 			if (model.data.toLowerCase().includes("iucd")) {
-				delete model.stage;
+				model.stage = 'helpline';
 				return resolve(model);
 			} else {
 				model.stage = "triggerfinal";
