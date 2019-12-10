@@ -1625,7 +1625,7 @@
     position: relative;
     top: 0;
     left: 0;
-    display: none;
+    /* display: none; */
     text-align: center;
     z-index: 999999;
     background: #4036a9;
@@ -1838,7 +1838,7 @@
     bottom: 84px;
     left: 0;
     /* top: 80px; */
-    top: 0px;
+    top: 70px;
     right: 0
 }
 
