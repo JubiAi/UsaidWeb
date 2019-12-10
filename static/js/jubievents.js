@@ -19,4 +19,7 @@ $(document).ready(function() {
   $("#jubi-answerBottom").click(function() {
     $(".secMenucontent-widget").hide();
   });
+  $(".closeBotImg").click(function() {
+    $(".dropdown-header").toggle();
+  });
 });
