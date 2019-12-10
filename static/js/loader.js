@@ -271,8 +271,8 @@
     "<li>" +
     '<a href="https://buymecondom.com">' +
     "<p>Buy Condoms</p>" +
-    '</a>' +
-  // "<p>Buy Condoms</p>" +
+    "</a>" +
+    // "<p>Buy Condoms</p>" +
     "</li>" +
     "</ul>" +
     " </div>" +
@@ -325,7 +325,7 @@
     '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel\')">' +
     "<p>Cancel</p>" +
     "</li>" +
-    '<li class="jubi-menu-val" onclick="window.askBot(\'Talk to a counsellor\')">' +
+    '<li class="jubi-menu-val" onclick="window.askBot(\'talkToAgent\')">' +
     "<p>Talk to a counsellor</p>" +
     "</li>" +
     "</ul>" +
