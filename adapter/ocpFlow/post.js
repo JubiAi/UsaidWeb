@@ -41,8 +41,8 @@ module.exports = {
 			// 	model.stage = '';
 			// } 
 			else {
-				console.log("-------------Rejectfor ocp -----------");
-				return reject(model);
+				model.stage = 'helpline';
+				return resolve(model);
 			}
 		});
 	},
