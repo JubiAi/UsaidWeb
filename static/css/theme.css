@@ -1367,13 +1367,8 @@
     list-style: none;
 }
 
-#jubi-chat-loader-app .dropdown-header ul li  {
-    /* text-align: left;
-    border-radius: 0;
-    width: 100%;
-    padding: 0px 10px;
-    font-size: 13px;
-    margin: 0; */
+#jubi-chat-loader-app .dropdown-list  {
+   
     text-align: left;
     border-bottom: 1px solid #ccc;
     border-radius: 0;
