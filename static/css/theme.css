@@ -2642,6 +2642,9 @@
     font-size: 11px;
 }
 
+#jubi-chat-loader-app .sec_dropdown ul li a {
+    text-decoration: none;
+}
 
 .inputvoice {
     width: 17px;
