@@ -4451,12 +4451,12 @@
 @media(max-width:360px) {
     #jubi-chat-loader-app #jubi-unmuteVoice, #jubi-muteVoice
     {
-      margin: 0px 0px 0px -30px;
+      margin: 0px 0px 0px -22px;
       max-width: 30px;
     }
     #jubi-chat-loader-app .closeBotImg 
     {
-      margin-right: 12px;
+      margin-right: 10px;
       margin-top: -29px;
       width: 18px;
      }
@@ -4531,6 +4531,12 @@
     #jubi-chat-loader-app .jubi-bxinput textarea {
         width: 355px;
         }
+}
+
+@media (max-width: 360px){
+#jubi-chat-loader-app .jubi-bxinput textarea {
+    width: 250px;
+}
 }
 
 
