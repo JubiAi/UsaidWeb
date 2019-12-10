@@ -2467,23 +2467,6 @@
  
 }
 
-/* #jubi-chat-loader-app .jubi-bxinput textarea {
-    background: 0;
-    resize: none;
-    border: 0;
-    box-sizing: border-box;
-    margin: auto;
-    width: 100%;
-    height: auto;
-    font-size: 15px;
-    font-weight: 400;
-    text-indent: 0 !important;
-    text-indent: initial !important;
-    max-height: 26px;
-    padding: 0;
-    border-bottom: 0 solid #ccc
-} */
-
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
     background: 0;
@@ -4518,6 +4501,12 @@
     #jubi-chat-loader-app .jubi-bxinput textarea {
              width: 570px;
            }
+}
+
+@media (max-width: 1366px){
+ #jubi-chat-loader-app .jubi-bxinput textarea {
+    width: 530px;
+  }
 }
 
 
