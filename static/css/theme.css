@@ -1818,7 +1818,8 @@
     position: absolute;
     bottom: 84px;
     left: 0;
-    top: 80px;
+    /* top: 80px; */
+    top: 0px;
     right: 0
 }
 
