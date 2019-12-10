@@ -1560,7 +1560,7 @@
     resize: none;
     border: 0;
     box-sizing: border-box;
-    width: 100%;
+    width: 380px;
     height: auto;
     font-size: 15px;
     font-weight: 400;
@@ -4520,12 +4520,6 @@
            }
 }
 
-
-@media(max-width:1366px) {
-    #jubi-chat-loader-app .jubi-bxinput textarea {
-             width: 540px;
-           }
-}
 
 
 
