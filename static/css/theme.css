@@ -2490,7 +2490,7 @@
     resize: none;
     border: 0;
     box-sizing: border-box;
-    width: 535px;
+    /* width: 535px; */
     height: auto;
     font-size: 15px;
     font-weight: 400;
@@ -4382,7 +4382,7 @@
             resize: none;
             border: 0;
             box-sizing: border-box;
-            width: 100%;
+            /* width: 100%; */
             height: auto;
             font-size: 15px;
             font-weight: 400;
