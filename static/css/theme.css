@@ -2502,10 +2502,9 @@
     border: 1px solid #ccc;
     border-radius: 18px;
     margin-left: 48px;
-    margin-top: -32px;
+    margin-top: -37px;
     outline: none;
     float: left;
-    background: #f5f5f5;
     opacity: 0.6;
     box-shadow: 0px 2px 4px #c1c1c1;
 
@@ -2522,7 +2521,7 @@
     width: 19px;
     display: inline-block;
     float: left;
-    margin: 10px 0 0 10px;
+    margin: 8px 0 0px 10px;
 }
 
 #jubi-chat-loader-app .secMenucontent-widget {
@@ -2625,7 +2624,7 @@
     color: #fff;
     cursor: pointer;
     /* margin: 0 */
-    margin: 12px 12px 0 0;
+    margin: 7px 30px 0 0;
 }
 
 #jubi-chat-loader-app .jubi-sec_newFooter button:hover {
@@ -3895,7 +3894,6 @@
         margin-top: -32px;
         outline: none;
         float: left;
-        background: #f5f5f5;
         opacity: 0.6;
         box-shadow: 0px 2px 4px #c1c1c1;
     }
@@ -4333,7 +4331,6 @@
         margin-top: -32px;
         outline: none;
         float: left;
-        background: #f5f5f5;
         opacity: 0.6;
         box-shadow: 0px 2px 4px #c1c1c1;
     }
@@ -4394,10 +4391,9 @@
             border: 1px solid #ccc;
             border-radius: 18px;
             margin-left: 46px;
-            margin-top: -37px;
+            margin-top: -32px;
             outline: none;
             float: left;
-            background: #f5f5f5;
             opacity: 0.6;
             box-shadow: 0px 2px 4px #c1c1c1;
       }
@@ -4415,7 +4411,7 @@
         color: #fff;
         cursor: pointer;
         /* margin: 0; */
-        margin: 1px 25px 0 0;
+        margin: 7px 22px 0 0;
     }
 
     #jubi-chat-loader-app .pm-rightUserimg {
