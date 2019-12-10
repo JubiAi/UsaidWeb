@@ -95,7 +95,18 @@ module.exports = {
 		})
 	},
 
-
+	q4: (model) => {
+		return new Promise(async function (resolve, reject) {
+			if (model.data.toLowerCase().includes("call")) {
+				// await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
+				model.stage = 'helpline'
+			} else {
+				model.stage = 'mainmenu'
+			}
+			delete model.stage
+			resolve(model)
+		})
+	},
 
 
 };
