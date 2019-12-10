@@ -1837,7 +1837,8 @@
 #jubi-chat-loader-app .pm-sec_openview {
     width: 100%;
     position: relative;
-    height: 90vh
+    /* height: 90vh */
+    height: 100vh;
 }
 
 #jubi-chat-loader-app .pm-sec_chatbody {
