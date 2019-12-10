@@ -302,10 +302,10 @@
     text-decoration: none;
     transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s;
     background: #fff;
-    border-radius: 9px;
+    border-radius: 20px;
     border: 1px solid #136bb0;
     min-width: auto;
-    padding: 6px 13px;
+    padding: 8px 15px;
     transition: background 2s;
     -webkit-transition: background 2s
 }
