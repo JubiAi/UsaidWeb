@@ -243,11 +243,11 @@
     '<div class="headerLeftContent">' +
     '<div class="pm-titleheader">' +
     '<div class="headerlogoImg">' +
-    "<h3>I'm Khushi</h3>" +
+    "<h3>I'm Jubi</h3>" +
     '<span class="pm-headOnline">&nbsp;</span>' +
     "</div>" +
     "</div>" +
-    "<p>Your trusted guide for all things sexual health!</p>" +
+    "<p>About Us</p>" +
     "</div>" +
     '<div class="headerRightContent">' +
     '<aside class="jubi-muteUnmuteVoice"> ' +
@@ -327,6 +327,12 @@
     "</li>" +
     '<li class="jubi-menu-val" onclick="window.askBot(\'talkToAgent\')">' +
     "<p>Talk to a counsellor</p>" +
+    "</li>" +
+    "<li>" +
+    '<a href="https://buymecondom.com">' +
+    "<p>Buy Condoms</p>" +
+    "</a>" +
+    // "<p>Buy Condoms</p>" +
     "</li>" +
     "</ul>" +
     "</section>" +
