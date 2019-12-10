@@ -1350,7 +1350,7 @@
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
     width: 36px;
-    margin-top: 14px;
+    margin-top: 0px;
 }   
 #jubi-chat-loader-app #jubi-unmuteVoice, #jubi-muteVoice {
     cursor: pointer;
