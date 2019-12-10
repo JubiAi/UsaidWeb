@@ -1331,7 +1331,7 @@
     background: #75fe7a;
     border-radius: 50%;
     display: inline-block;
-    left: 135px;
+    left: 105px;
     top: 13px;
     position: absolute;
    
@@ -1652,6 +1652,7 @@
     float: left;
     width: auto;
     width: 108px;
+    text-align: left;
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 {
