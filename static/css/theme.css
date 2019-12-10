@@ -4527,7 +4527,7 @@
            }
 }
 
-@media(max-width:1366px) {
+@media(max-width:1440px) {
     #jubi-chat-loader-app .jubi-bxinput textarea {
              width: 570px;
            }
