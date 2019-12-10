@@ -4297,7 +4297,7 @@
     #jubi-chat-loader-app .voicePulse {
         width: 69%
     }
-    #jubi-chat-loader-app .jubi-bxinput textarea {
+    /* #jubi-chat-loader-app .jubi-bxinput textarea {
         background: 0;
         resize: none;
         border: 0;
@@ -4318,7 +4318,7 @@
         float: left;
         opacity: 0.6;
         box-shadow: 0px 2px 4px #c1c1c1;
-    }
+    } */
     #jubi-chat-loader-app .jubi-sec_newFooter button {
         float: right;
         width: 25px;
