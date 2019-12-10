@@ -183,6 +183,147 @@ module.exports = {
     });
   },
 
+
+
+
+
+
+
+
+  talkToAgent: (data) => {
+    console.log("+_+_+_+_+_+_+_+_+_+_")
+    console.log(data.tags.userSays == "talk to a counsellor ☎")
+    return new Promise(function (resolve) {
+      if (data.tags.userSays.toLowerCase() == "talk to a counsellor") {
+        data.reply = {
+          type: "button",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊',
+          next: {
+            data: [ //changes done
+              {
+                type: 'url',
+                data: 'http://www.buymecondom.com/',
+                text: 'Buy them chupkese?'
+              },
+              {
+                data: 'More questions...',
+                text: 'More questions...'
+              }
+            ]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays == "📞 a counsellor") {
+        data.reply = {
+          type: "button",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> or |break|You can click on the button below to continue our conversation 😊',
+          next: {
+            data: [ //changes done
+              {
+                data: 'How to get ECPs?',
+                text: 'How to get ECPs?'
+              }
+            ]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays == "talk to counsellor") {
+        data.reply = {
+          type: "button",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|What would you like to do next?',
+          next: {
+            data: [{ //changes done
+                data: 'Main menu',
+                text: 'Main menu'
+              },
+              {
+                type: 'url',
+                data: 'http://www.buymecondom.com/',
+                text: 'Purchase condoms'
+              }
+            ]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays == "☎️") {
+        data.reply = {
+          type: "quickReply", //changes done
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊',
+          next: {
+            data: [{
+              data: 'Keep chatting',
+              text: 'Keep chatting'
+            }]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays == "🤙 a counsellor") {
+        data.reply = { //changes done
+          type: "quickReply",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊', //changes done
+          next: {
+            data: [{
+              data: 'Carry on chatting',
+              text: 'Carry on chatting'
+            }]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays.toLowerCase() == "Talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor...") {
+        console.log("-------------")
+        data.reply = { //changes done
+          type: "button",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>',
+          next: {
+            data: [{
+              data: 'Go to the main menu',
+              text: 'Go to the main menu'
+            }]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays == "call a counsellor📞") {
+        data.reply = {
+          type: "button",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|Get information on the next steps after unprotected sex from the main menu below.',
+          next: {
+            data: [{ //changes done
+                data: 'Go to the main menu',
+                text: 'Go to the main menu'
+              },
+              {
+                type: 'url',
+                data: 'http://www.buymecondom.com/',
+                text: 'Purchase condoms'
+              }
+            ]
+          }
+        }
+        return resolve(data)
+      } else if (data.tags.userSays == "Speak to a counsellor") {
+        data.reply = { //changes done
+          type: "text",
+          text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>'
+        }
+        return resolve(data)
+      }
+    })
+  },
+
+
+
+
+
+
+
+  //-------------------------------------------------------------------------------------------------------------------//
+
+
+
+
+
+
+
   // city :(data) =>{
   // 	data.reply={
   // 		type : "quickReply",
