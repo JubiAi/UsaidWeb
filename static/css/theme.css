@@ -4504,6 +4504,13 @@
     #jubi-chat-loader-app .pm-sec_newHeader p {
         font-size: 15px;
     }
+    #jubi-chat-loader-app .headerLeftContent {
+        width: 80%;
+        float: left;
+    }
+    #jubi-chat-loader-app .headerRightContent {
+        margin: 10px 11px 0 0;
+    }
 
 }
 
