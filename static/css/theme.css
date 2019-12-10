@@ -1376,7 +1376,7 @@
 
 #jubi-chat-loader-app .dropdown-header {
     /* width: auto; */
-    max-width: 180px;
+    max-width: 160px;
     padding: 0px;
     max-height: fit-content;
     background: #fff;
@@ -1384,10 +1384,10 @@
     font-size: 15px;
     position: absolute;
     top: 50px;
-    right: 30px;
+    right: 20px;
     box-sizing: border-box;
-    border: 1px solid;
     border-radius: 6px;
+    border: 1px solid #ccc;
     box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.35);
     display: none;
 }
@@ -2566,7 +2566,7 @@
     position: absolute;
     bottom: 53px;
     left: 21px;
-    width: 189px;
+    width: 170px;
     margin-bottom: 0!important;
     z-index: 2;
     display: none;
