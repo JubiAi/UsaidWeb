@@ -328,6 +328,12 @@
     '<li class="jubi-menu-val" onclick="window.askBot(\'talkToAgent\')">' +
     "<p>Talk to a counsellor</p>" +
     "</li>" +
+    "<li>" +
+    '<a href="https://buymecondom.com">' +
+    "<p>Buy Condoms</p>" +
+    "</a>" +
+    // "<p>Buy Condoms</p>" +
+    "</li>" +
     "</ul>" +
     "</section>" +
     '<div class="trianglearrow">' +
