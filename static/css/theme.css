@@ -2505,6 +2505,7 @@
     display: inline-block;
     float: left;
     margin: 8px 0 0px 10px;
+    cursor: pointer;
 }
 
 #jubi-chat-loader-app .secMenucontent-widget {
