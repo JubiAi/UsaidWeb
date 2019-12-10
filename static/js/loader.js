@@ -269,7 +269,10 @@
     " <p>Learn More</p>" +
     "</li>" +
     "<li>" +
+    '<a href="https://buymecondom.com">' +
     "<p>Buy Condoms</p>" +
+    '</a>' +
+  // "<p>Buy Condoms</p>" +
     "</li>" +
     "</ul>" +
     " </div>" +
