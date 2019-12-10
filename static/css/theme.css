@@ -4486,10 +4486,20 @@
     #jubi-chat-loader-app .pm-sec_newHeader p {
            font-size: 12px;
          }
-         #jubi-chat-loader-app .pm-titleheader h3 {
-            font-size: 20px;
-                    }
-    #jubi-chat-loader-app .pm-sec_newHeader p {
-                        font-size: 15px;
-                    }
+    #jubi-chat-loader-app .pm-titleheader h3 
+    {
+     font-size: 20px;
+      }
+    #jubi-chat-loader-app .pm-sec_newHeader p 
+    {
+      font-size: 15px;
+     }
+
+}
+
+@media(max-width:1707px) {
+    #jubi-chat-loader-app .jubi-bxinput textarea 
+    {
+       width: 105%;
+    }
 }
