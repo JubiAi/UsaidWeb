@@ -267,6 +267,24 @@ module.exports = {
     });
   },
 
+  helpline: (data) => {
+    return new Promise((resolve, reject) => {
+      data.reply = {
+        type: "button",
+        text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊',
+        next: {
+          data: [{
+            data: "startflow",
+            text: "Learn More"
+          }]
+        }
+      }
+      return resolve(data)
+    })
+  },
+
+
+
 
 
   q4: model => {
