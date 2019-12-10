@@ -4515,6 +4515,12 @@
      }
    }
 
+   @media (max-width: 767px){
+    #jubi-chat-loader-app .jubi-bxinput textarea {
+       width: 250px;
+     }
+}
+
 
 
 
