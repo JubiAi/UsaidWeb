@@ -1414,7 +1414,7 @@
         /* color: #000;
         margin: 10px; */
     margin: 6px 0 4px 10px;
-    color: #4c4c4c;
+    color: #888;
     font-weight: 700;
     font-size: 11px;
     }
@@ -2606,7 +2606,7 @@
     font-size: 12px;
     font-weight: 700;
     padding: 10px;
-    color: #888;
+    color: #4c4c4c;
     text-transform: uppercase;
 }
 
@@ -2635,7 +2635,7 @@
     font-weight: 700;
     font-size: 13px; */
     margin: 6px 0 4px 10px;
-    COLOR: #4c4c4c;
+    COLOR: #888;
     font-weight: 700;
     font-size: 11px;
 }
