@@ -1,3 +1,8 @@
+body{
+    overflow-x: hidden;
+}
+
+
 #jubi-chat-loader-app .pm-sec_calliframe iframe {
     box-sizing: border-box;
     width: 100% !important;
@@ -599,7 +604,7 @@
 
 #jubi-chat-loader-app .pm-bxslidebtn a,
 #jubi-chat-loader-app .pm-sliderContent p {
-    font-size: 12px;
+    font-size: 10px;
     font-weight: bold;
     width: 100%;
     color: #fff;
@@ -1316,37 +1321,52 @@
 }
 
 #jubi-chat-loader-app .pm-headOnline {
-    /* margin: 5px 0 0 8px;
-    width: 6px;
-    height: 6px;
+     margin: 5px 0px 0 0px;
+    width: 8px;
+    height: 8px;
     background: #75fe7a;
     border-radius: 50%;
     display: inline-block;
-    left: 117px;
-    top: 9px;
-    position: absolute; */
-    margin: 5px 0px 0 0px;
-    width: 6px;
-    height: 6px;
-    background: #75fe7a;
-    border-radius: 50%;
-    display: inline-block;
-    left: 105px;
-    top: 22px;
+    left: 145px;
+    top: 16px;
     position: absolute;
    
 }
+/* #jubi-chat-loader-app .us p{
+    text-decoration: none !important;
+    color: #006aff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #006aff;
+    padding: 8px 15px;
+    float: right;
+} */
+
 #jubi-chat-loader-app .headerLeftContent {
-    width: 85%;
+    width: 360px;
     float: left;
 }
 #jubi-chat-loader-app .headerRightContent {
-    /* width: 43px;
-    float: right; */
-    width: 67px;
+    width: 100px;
     float: right;
-    margin: 6px 0px 0 0px;  
-     /* display: none; */
+    margin: 8px 20px 0 0;
+    }
+
+#jubi-chat-loader-app .headerRightContent .us{
+    width: 88px;
+    color: #006aff;
+    font-size: 12px;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px 18px;
+    font-weight: 500;
+    outline: none;
+    box-shadow: 0px 2px 4px #034aaf;
+
 }
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
@@ -1622,14 +1642,12 @@
 }
 
 #jubi-chat-loader-app .pm-sec_newHeader p {
+    float: left;
     color: #fff;
     font-size: 16px;
-    width: 100%;
-    /* float: left;
-    text-align: left; */
-    text-align: right;
-    margin-top: 12px;
-    margin-left: 20px;
+    width: 450px;
+    text-align: left;
+    margin: 0;
 }
 
 #jubi-chat-loader-app .pm-sec_newHeader {
@@ -1658,14 +1676,16 @@
     width: auto;
     width: 108px;
     text-align: left;
-    margin-top: 10px;
+    margin: 0;
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 650;
     margin: 0;
+    width: 115px;
 }
+
 
 #jubi-chat-loader-app .pm-titleheader h3 img {
     margin: auto;

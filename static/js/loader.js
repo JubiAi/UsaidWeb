@@ -243,20 +243,21 @@
     '<div class="headerLeftContent">' +
     '<div class="pm-titleheader">' +
     '<div class="headerlogoImg">' +
-    "<h3>I'm Jubi</h3>" +
+    "<h3>Hi, I'm Jubi</h3>" +
     '<span class="pm-headOnline">&nbsp;</span>' +
     "</div>" +
     "</div>" +
-    "<p>About Us</p>" +
+    "<p>Your Trusted Guide on All Things Sexual Health</p>" +
     "</div>" +
     '<div class="headerRightContent">' +
-    '<aside class="jubi-muteUnmuteVoice"> ' +
-    '<div id="jubi-unmuteVoice" style="display: block;">' +
-    '<img src="https://khushi.jubi.ai/images/unmute.png">' +
-    '</div><div id="jubi-muteVoice" style="display: none;">' +
-    '<img src="https://khushi.jubi.ai/images/mute.png">' +
-    "</div>" +
-    "</aside>" +
+    '<p class="us">About Us</p>' +
+    // '<aside class="jubi-muteUnmuteVoice"> ' +
+    // '<div id="jubi-unmuteVoice" style="display: block;">' +
+    // '<img src="https://khushi.jubi.ai/images/unmute.png">' +
+    // '</div><div id="jubi-muteVoice" style="display: none;">' +
+    // '<img src="https://khushi.jubi.ai/images/mute.png">' +
+    // "</div>" +
+    // "</aside>" +
     '<div class="closeBotImg" id="closeBotImg">' +
     '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">' +
     "</div>" +
