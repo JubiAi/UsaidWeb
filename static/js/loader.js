@@ -243,11 +243,12 @@
     '<div class="headerLeftContent">' +
     '<div class="pm-titleheader">' +
     '<div class="headerlogoImg">' +
-    "<h3>I'm Jubi</h3>" +
+    "<h3>Hi, I'm Jubi</h3>" +
     '<span class="pm-headOnline">&nbsp;</span>' +
     "</div>" +
     "</div>" +
-    "<p>About Us</p>" +
+    // '<p class="health"></p>' +
+    "<p>Your Trusted Guide on All Things Sexual Health</p>" +
     "</div>" +
     '<div class="headerRightContent">' +
     '<aside class="jubi-muteUnmuteVoice"> ' +
