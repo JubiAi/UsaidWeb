@@ -4613,18 +4613,16 @@ body{
  #jubi-chat-loader-app .jubi-bxinput textarea {
     width: 530px;
   }
-  #jubi-chat-loader-app .jubi-bxinput {
-    width: 580px;
-   }
+  
   #jubi-chat-loader-app .datasendButtons {
     right: 10px;
   }
 }
 
 @media (max-width: 1024px){
-    #jubi-chat-loader-app .jubi-bxinput {
-        width: 420px;
-    }
+    /* #jubi-chat-loader-app .jubi-bxinput textarea {
+       width: 380px;
+     } */
 }
 
    @media (max-width: 767px){
