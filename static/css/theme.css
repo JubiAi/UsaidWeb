@@ -4674,4 +4674,10 @@ body{
 #jubi-chat-loader-app .jubi-bxinput textarea {
     margin-left: -12px;
 }
+#jubi-chat-loader-app .jubi-bxinput textarea {
+    width: 220px;
+}
+#jubi-chat-loader-app .jubi-bxinput {
+    width: 280px;
+}
 }
