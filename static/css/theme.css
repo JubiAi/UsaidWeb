@@ -4611,7 +4611,7 @@ body{
 
 @media (max-width: 1366px){
  #jubi-chat-loader-app .jubi-bxinput textarea {
-    width: 530px;
+    width:450px;
   }
   
   #jubi-chat-loader-app .datasendButtons {
