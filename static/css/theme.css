@@ -4655,7 +4655,21 @@ body{
         width: 390px;
         
     }
-       
+    #jubi-chat-loader-app .pm-titleheader h3 {
+        font-size: 20px;
+    }
+
+    #jubi-chat-loader-app .pm-headOnline {
+        position: absolute;
+        left: 125px;
+        top: 10px;
+            }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+                font-size: 15px;
+            }
+     #jubi-chat-loader-app .headerRightContent {
+                margin: -29px 0px 0 0;
+            }       
 }
 
 @media (max-width: 360px){
