@@ -4613,8 +4613,10 @@ body{
  #jubi-chat-loader-app .jubi-bxinput textarea {
     width:450px;
   }
-  
-  #jubi-chat-loader-app .datasendButtons {
+  #jubi-chat-loader-app .jubi-bxinput {
+    width: 580px;
+   }
+    #jubi-chat-loader-app .datasendButtons {
     right: 10px;
   }
 }
