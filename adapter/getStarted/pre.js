@@ -46,7 +46,7 @@ module.exports = {
 			console.log(data + "-----------------")
 			data.reply = {
 				type: 'generic',
-				text: "Main Menu",
+				text: "Let's start off, then! |break|You can type your question below or select a topic from the given options to learn more!",
 				next: {
 					data: [{
 							image: flatpills,
