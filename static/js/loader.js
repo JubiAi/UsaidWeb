@@ -357,10 +357,10 @@
     // "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
     '<div id="jubi-unmuteVoice">' +
-    '<img src="https://khushi.jubi.ai/images/unmute.png">' +
+    '<img src="https://parramato.com/bot-view/images/unmute.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
-    '<img src="https://khushi.jubi.ai/images/mute.png">' +
+    '<img src="https://parramato.com/bot-view/images/mute.png">' +
     "</div>" +
     "</aside>" +
     '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
