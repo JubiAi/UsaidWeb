@@ -2548,7 +2548,7 @@ body{
         padding: 0px 0 0px 6px;
         background: 0;
         margin: -23px 0 0 0; */
-        width: 580px;
+        width:850px;
         padding: 0px 0 0px 6px;
         background: 0;
         margin: -5px 0 0 20px;
@@ -4589,6 +4589,7 @@ body{
 @media(max-width:1920px) {
     #jubi-chat-loader-app .jubi-bxinputs {
         width: 850px;
+    }
 } 
 @media(max-width:1600px) {
     /* #jubi-chat-loader-app .jubi-bxinput textarea {
