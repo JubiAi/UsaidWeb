@@ -342,6 +342,7 @@
     "</div>" +
     "</section>" +
     '<div class="jubi-bxinput" id="jubi-bxinput">' +
+    '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
     '<div class="voice-buttons" id="voice-buttons">' +
     '<div class="voiceIcon" id="button-play-ws">' +
     '<img src="./images/voice.png" class="img-fluid">' +
@@ -355,10 +356,7 @@
     '<div class="stop-recording">Listening...</div>' +
     "</div>" +
     "</div>" +
-    // '<div class="inputvoice">' +
-    // '<img src="./images/voice.png" class="img-responsive"></img>' +
-    // "</div>" +
-    '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
+    // '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
     "</div>" +
     '<div class="datasendButtons">' +
     '<div class="sendIcon" id="button-send">' +
