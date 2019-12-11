@@ -250,7 +250,7 @@
     "<p>Your Trusted Guide on All Things Sexual Health</p>" +
     "</div>" +
     '<div class="headerRightContent">' +
-    "<p>About Us</p>" +
+    '<p class="us">About Us</p>' +
     // '<aside class="jubi-muteUnmuteVoice"> ' +
     // '<div id="jubi-unmuteVoice" style="display: block;">' +
     // '<img src="https://khushi.jubi.ai/images/unmute.png">' +
