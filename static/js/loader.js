@@ -247,8 +247,8 @@
     '<span class="pm-headOnline">&nbsp;</span>' +
     "</div>" +
     "</div>" +
-    '<p class="health">About Us</p>' +
-    "<p>Your Trusted Guide on All Things Sexual Health</p>" +
+    // '<p class="us">About Us</p>' +
+    '<p class="health">Your Trusted Guide on All Things Sexual Health</p>' +
     "</div>" +
     '<div class="headerRightContent">' +
     '<aside class="jubi-muteUnmuteVoice"> ' +
