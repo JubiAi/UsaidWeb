@@ -4648,9 +4648,9 @@ body{
 }
 
 @media (max-width: 360px){
-/* #jubi-chat-loader-app .jubi-bxinput textarea {
+#jubi-chat-loader-app .jubi-bxinput textarea {
     width: 250px;
-} */
+}
 #jubi-chat-loader-app .headerRightContent {
     margin: 45px 0px 0 0;
 }
