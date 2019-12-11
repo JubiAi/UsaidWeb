@@ -1372,8 +1372,8 @@ body{
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
     width: 36px;
-    margin-top: 0px;
-    margin-left: 25px;
+    margin-top: 7px;
+    margin-left: 0px;
 }   
 #jubi-chat-loader-app #jubi-unmuteVoice, #jubi-muteVoice {
     cursor: pointer;
@@ -2594,7 +2594,7 @@ body{
     resize: none;
     border: 0;
     box-sizing: border-box;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     padding: 12px;
     margin-left: 0px;
@@ -4611,7 +4611,7 @@ body{
 
 @media (max-width: 1366px){
  #jubi-chat-loader-app .jubi-bxinput textarea {
-    width: 545px;
+    width: 530px;
   }
   #jubi-chat-loader-app .datasendButtons {
     right: 10px;

@@ -364,19 +364,19 @@
     "</div>" +
     "</aside>" +
     '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
-    '<div class="voice-buttons" id="voice-buttons">' +
-    '<div class="voiceIcon" id="button-play-ws">' +
-    '<img src="./images/voice.png" class="img-fluid">' +
-    "</div>" +
-    '<div class="voicePulse" id="button-stop-ws">' +
-    '<div class="sk-three-bounce">' +
-    '<div class="sk-child sk-bounce1"></div>' +
-    '<div class="sk-child sk-bounce2"></div>' +
-    '<div class="sk-child sk-bounce3"></div>' +
-    "</div>" +
-    '<div class="stop-recording">Listening...</div>' +
-    "</div>" +
-    "</div>" +
+    // '<div class="voice-buttons" id="voice-buttons">' +
+    // '<div class="voiceIcon" id="button-play-ws">' +
+    // '<img src="./images/voice.png" class="img-fluid">' +
+    // "</div>" +
+    // '<div class="voicePulse" id="button-stop-ws">' +
+    // '<div class="sk-three-bounce">' +
+    // '<div class="sk-child sk-bounce1"></div>' +
+    // '<div class="sk-child sk-bounce2"></div>' +
+    // '<div class="sk-child sk-bounce3"></div>' +
+    // "</div>" +
+    // '<div class="stop-recording">Listening...</div>' +
+    // "</div>" +
+    // "</div>" +
     "</div>" +
     '<div class="datasendButtons">' +
     '<div class="sendIcon" id="button-send">' +
