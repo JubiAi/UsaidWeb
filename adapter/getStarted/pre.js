@@ -77,7 +77,7 @@ module.exports = {
 						},
 						{
 							image: ecp,
-							title: "Looking for ECP",
+							title: "Had Unprotected Sex?|break| Know what to do now",
 							buttons: [{
 								type: "text",
 								text: "SELECT",
@@ -86,7 +86,7 @@ module.exports = {
 						},
 						{
 							image: condom,
-							title: "Looking for Condom",
+							title: "Condoms: Your Best Freinds?|break| Learn more about the all-rounder contraceptive",
 							buttons: [{
 								type: "text",
 								text: "SELECT",
@@ -95,7 +95,7 @@ module.exports = {
 						},
 						{
 							image: body,
-							title: "Know about your Body",
+							title: "How does my body work?|break|Your body is a wonderland. Learn more about it",
 							buttons: [{
 								type: "text",
 								text: "SELECT",
