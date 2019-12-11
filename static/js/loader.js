@@ -247,7 +247,7 @@
     '<span class="pm-headOnline">&nbsp;</span>' +
     "</div>" +
     "</div>" +
-    // '<p class="health"></p>' +
+    '<p class="health">About Us</p>' +
     "<p>Your Trusted Guide on All Things Sexual Health</p>" +
     "</div>" +
     '<div class="headerRightContent">' +

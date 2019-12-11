@@ -1327,6 +1327,19 @@
     position: absolute;
    
 }
+#jubi-chat-loader-app .health p{
+    text-decoration: none !important;
+    color: #006aff;
+    font-size: 13px;
+    text-decoration: none;
+    transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid #006aff;
+    padding: 8px 15px;
+    float: right;
+}
+
 #jubi-chat-loader-app .headerLeftContent {
     width: 85%;
     float: left;
@@ -1656,7 +1669,7 @@
     margin: 0;
     width: 115px;
 }
-}
+
 
 #jubi-chat-loader-app .pm-titleheader h3 img {
     margin: auto;
