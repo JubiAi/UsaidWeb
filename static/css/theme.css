@@ -1356,29 +1356,13 @@ body{
 }
 
 #jubi-chat-loader-app .headerRightContent .us{
-    /* text-align: right;
-    width: 50px;
-    text-decoration: none !important;
-    color: #006aff;
-    font-size: 13px;
-    text-decoration: none;
-    transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s;
-    background: #fff;
-    border-radius: 20px;
-    border: 1px solid #006aff;
-    padding: 8px 15px;
-    float: right; */
-    text-align: right;
-    width: 100px;
-    text-decoration: none !important;
+    width: 88px;
     color: #006aff;
     font-size: 12px;
     text-decoration: none;
     background: #fff;
     border-radius: 20px;
-    border: 1px solid #006aff;
-    padding: 5px 23px;
-    float: right;
+    padding: 5px 18px;
     font-weight: 500;
     outline: none;
 }
