@@ -1353,7 +1353,7 @@ body{
     width: 100px;
     float: right;
     margin: 8px 20px 0 0;
-}
+    }
 
 #jubi-chat-loader-app .headerRightContent .us{
     width: 88px;
@@ -1365,6 +1365,8 @@ body{
     padding: 5px 18px;
     font-weight: 500;
     outline: none;
+    box-shadow: 0px 2px 4px #034aaf;
+
 }
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
