@@ -4640,6 +4640,9 @@ body{
      #jubi-chat-loader-app .pm-sec_openview {
         height: 93vh;
     }
+    #jubi-chat-loader-app .headerRightContent {
+                margin: 15px 6px 0 0;
+    }
 }
 
 
@@ -4692,5 +4695,11 @@ body{
 }
 #jubi-chat-loader-app .jubi-bxinput {
     width: 280px;
+}
+#jubi-chat-loader-app .headerRightContent {
+    margin: -52px -7px 0 0px;
+}
+#jubi-chat-loader-app .pm-sec_newHeader p {
+     width: 230px;
 }
 }
