@@ -1352,6 +1352,12 @@
     margin: 6px 0px 0 0px;  
      /* display: none; */
 }
+
+#jubi-chat-loader-app .headerRightContent p{
+    text-align: right;
+    width: 50px;
+    float: right;
+}
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
     width: 36px;
