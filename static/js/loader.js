@@ -250,13 +250,14 @@
     "<p>Your Trusted Guide on All Things Sexual Health</p>" +
     "</div>" +
     '<div class="headerRightContent">' +
-    '<aside class="jubi-muteUnmuteVoice"> ' +
-    '<div id="jubi-unmuteVoice" style="display: block;">' +
-    '<img src="https://khushi.jubi.ai/images/unmute.png">' +
-    '</div><div id="jubi-muteVoice" style="display: none;">' +
-    '<img src="https://khushi.jubi.ai/images/mute.png">' +
-    "</div>" +
-    "</aside>" +
+    "<p>About Us</p>" +
+    // '<aside class="jubi-muteUnmuteVoice"> ' +
+    // '<div id="jubi-unmuteVoice" style="display: block;">' +
+    // '<img src="https://khushi.jubi.ai/images/unmute.png">' +
+    // '</div><div id="jubi-muteVoice" style="display: none;">' +
+    // '<img src="https://khushi.jubi.ai/images/mute.png">' +
+    // "</div>" +
+    // "</aside>" +
     '<div class="closeBotImg" id="closeBotImg">' +
     '<img src="https://khushi.jubi.ai/images/close.png" class="img-responsive">' +
     "</div>" +
