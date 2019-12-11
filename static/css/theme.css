@@ -1,3 +1,8 @@
+body{
+    overflow-x: hidden;
+}
+
+
 #jubi-chat-loader-app .pm-sec_calliframe iframe {
     box-sizing: border-box;
     width: 100% !important;
