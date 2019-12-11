@@ -7,7 +7,7 @@ module.exports = {
     return new Promise(function (resolve) {
       model.reply = {
         type: "quickReply",
-        text: "And the best part about IUCD’s is that you can change your mind about them anytime! A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD’s.",
+        text: "And the best part about IUCD’s is that you can change your mind about them anytime! A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD.",
         next: {
           data: [{
             data: "Tell me more about how they work?",
@@ -53,7 +53,7 @@ module.exports = {
 
             {
               data: "iucd",
-              text: "Tell me more about IUCD’s"
+              text: "Tell me more about IUCD  "
             }
           ]
         }
@@ -69,11 +69,11 @@ module.exports = {
     return new Promise(function (resolve) {
       model.reply = {
         type: "quickReply",
-        text: "Well IUCD’S come in two forms. Copper and Hormonal IUCD’s. |break|The copper IUCD works by bringing about a chemical change in the uterus. |break|This prevents pregnancy by damaging the sperm and egg before they can meet.",
+        text: "Well IUCD come in two forms. Copper and Hormonal IUCD. |break|The copper IUCD works by bringing about a chemical change in the uterus. |break|This prevents pregnancy by damaging the sperm and egg before they can meet.",
         next: {
           data: [{
-            data: "And what about hormonal IUCD’s",
-            text: "And what about hormonal IUCD’s"
+            data: "And what about hormonal IUCD",
+            text: "And what about hormonal IUCD"
           }]
         }
       };
@@ -91,8 +91,8 @@ module.exports = {
         text: "They work by releasing small amounts of hormones that prevent the sperm from fertilizing the egg.",
         next: {
           data: [{
-            data: "Are there any risks of using IUCD’s?",
-            text: "Are there any risks of using IUCD’s?"
+            data: "Are there any risks of using IUCD?",
+            text: "Are there any risks of using IUCD?"
           }]
         }
       };
@@ -102,13 +102,6 @@ module.exports = {
       return resolve(model);
     });
   },
-
-
-
-
-
-
-
 
   ocpintro: data => {
     return new Promise((resolve, reject) => {
@@ -220,8 +213,6 @@ module.exports = {
     });
   },
 
-
-
   final: model => {
     return new Promise(function (resolve) {
       console.log("========================================================");
@@ -230,7 +221,7 @@ module.exports = {
         console.log("++++++false++++++++");
         model.reply = {
           type: "quickReply",
-          text: "That's a myth. You see, IUCD’s usage does not affect breast milk adversely. Hence it's completely safe for a breastfeeding mother.Wow! You’ve learned a lot today. For more help with contraceptives, you can get in touch with our counselors.Got a query? you can type it in the text box below.Or you can continue with another topic by clicking on main menu!",
+          text: "That's a myth. You see, IUCD usage does not affect breast milk adversely. Hence it's completely safe for a breastfeeding mother.Wow! You’ve learned a lot today. For more help with contraceptives, you can get in touch with our counselors.Got a query? you can type it in the text box below.Or you can continue with another topic by clicking on main menu!",
           next: {
             data: [{
                 data: "Main Menu",
@@ -247,7 +238,7 @@ module.exports = {
       } else {
         model.reply = {
           type: "quickReply",
-          text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.I’m sure you have learned a lot about IUCDs by now. If you still have questions you can type it in the text box. You can also get in touch with our counselors.Or you can continue with another topic by clicking on main menu!",
+          text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.I’m sure you have learned a lot about IUCD by now. If you still have questions you can type it in the text box. You can also get in touch with our counselors.Or you can continue with another topic by clicking on main menu!",
           next: {
             data: [{
                 data: "Main Menu",
@@ -283,10 +274,6 @@ module.exports = {
     })
   },
 
-
-
-
-
   q4: model => {
     return new Promise(function (resolve) {
       console.log("========================================================");
@@ -295,7 +282,7 @@ module.exports = {
         console.log("++++++false++++++++");
         model.reply = {
           type: "quickReply",
-          text: "That's a myth. You see, IUCD’s usage does not affect breast milk adversely. Hence it's completely safe for a breastfeeding mother.|break| Wow! You’ve learned a lot today. For more help with contraceptives, you can get in touch with our counselors.Got a query? you can type it in the text box below.",
+          text: "That's a myth. You see, IUCD usage does not affect breast milk adversely. Hence it's completely safe for a breastfeeding mother.|break| Wow! You’ve learned a lot today. For more help with contraceptives, you can get in touch with our counselors.Got a query? you can type it in the text box below.",
         };
         //delete model.tags.answer1
       } else if (model.tags.answer3 == true) {
