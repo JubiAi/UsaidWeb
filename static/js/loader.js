@@ -358,7 +358,7 @@
     // '<div class="inputvoice">' +
     // '<img src="./images/voice.png" class="img-responsive"></img>' +
     // "</div>" +
-    '<textarea id="jubi-answerBottom" placeholder="Type a message here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
+    '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
     "</div>" +
     '<div class="datasendButtons">' +
     '<div class="sendIcon" id="button-send">' +
