@@ -2548,7 +2548,6 @@ body{
         padding: 0px 0 0px 6px;
         background: 0;
         margin: -23px 0 0 0; */
-
         width: 580px;
         padding: 0px 0 0px 6px;
         background: 0;
@@ -4464,7 +4463,6 @@ body{
             resize: none;
             border: 0;
             box-sizing: border-box;
-            /* width: 100%; */
             height: auto;
             font-size: 15px;
             font-weight: 400;
