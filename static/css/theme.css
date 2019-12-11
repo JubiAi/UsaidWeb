@@ -1345,7 +1345,7 @@
     float: right; */
     width: 67px;
     float: right;
-    margin: 8px 0px 0 0px;  
+    margin: 6px 0px 0 0px;  
      /* display: none; */
 }
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
@@ -1628,7 +1628,7 @@
     /* float: left;
     text-align: left; */
     text-align: right;
-    margin-top: 14px;
+    margin-top: 12px;
     margin-left: 20px;
 }
 
