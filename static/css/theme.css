@@ -4587,10 +4587,9 @@ body{
 }
 
 @media(max-width:1920px) {
-    /* #jubi-chat-loader-app .jubi-bxinput textarea {
-               width: 815px;
-           }
-} */
+    #jubi-chat-loader-app .jubi-bxinputs {
+        width: 850px;
+} 
 @media(max-width:1600px) {
     /* #jubi-chat-loader-app .jubi-bxinput textarea {
         width: 650px;
