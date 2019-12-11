@@ -4652,16 +4652,15 @@ body{
     }
 
 @media (max-width: 480px){
-    /* #jubi-chat-loader-app .jubi-bxinput textarea {
-        width: 355px;
-        } */
+    #jubi-chat-loader-app .jubi-bxinput {
+        width: 390px;
+        
+    }
        
 }
 
 @media (max-width: 360px){
-#jubi-chat-loader-app .jubi-bxinput textarea {
-    width: 250px;
-}
+
 #jubi-chat-loader-app .headerRightContent {
     margin: 45px 0px 0 0;
 }
@@ -4669,9 +4668,10 @@ body{
             width: 75%;
             float: left;
         }
+#jubi-chat-loader-app .jubi-muteUnmuteVoice {
+    margin-top: 40px;
 }
-
-
-
-
-
+#jubi-chat-loader-app .jubi-bxinput textarea {
+    margin-left: -12px;
+}
+}
