@@ -4610,12 +4610,8 @@ body{
 }
 
 @media (max-width: 1366px){
- #jubi-chat-loader-app .jubi-bxinput textarea {
-    width: 530px;
-  }
-  #jubi-chat-loader-app .datasendButtons {
-    right: 10px;
-  }
+ 
+  
 }
 
 @media (max-width: 1024px){
