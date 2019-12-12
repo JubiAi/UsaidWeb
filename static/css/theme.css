@@ -292,24 +292,24 @@ body{
 #jubi-chat-loader-app .pm-bxCheckOPtion ul li p:hover,
 .bxCheckOPtionPersist ul li p:hover {
     box-shadow: 1px 1px 9px 0 rgba(76, 76, 76, 0.55);
-    background: #136bb0;
+    background:#0771e3;
     color: #fff;
     border: 1px solid #fff;
     cursor: pointer;
-    border: 3px solid #136bb0
+    border: 3px solid #0771e3
 }
 
 #jubi-chat-loader-app .pm-bxCheckOPtion ul li a,
 .pm-bxCheckOPtionPersist ul li a {
     display: inline-block;
     text-decoration: none !important;
-    color: #136bb0;
+    color: #0771e3;
     font-size: 14px;
     text-decoration: none;
     transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s;
     background: #fff;
     border-radius: 20px;
-    border: 1px solid #136bb0;
+    border: 1px solid #0771e3;
     min-width: auto;
     padding: 8px 15px;
     transition: background 2s;
@@ -321,7 +321,7 @@ body{
     color: #fff;
     border: 1px solid transparent;
     opacity: 1;
-    background: #136bb0
+    background: #0771e3s
 }
 
 #jubi-chat-loader-app .pm-bxText {
@@ -1117,7 +1117,7 @@ body{
     position: relative;
     margin-left: 57px;
     display: inline-block;
-    background: #006aff;
+    background: #0771e3;
     padding: 14px 25px 2px;
     border-radius: 32px;
     border: 1px solid #e0e0e0;
