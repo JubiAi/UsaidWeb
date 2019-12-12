@@ -2851,7 +2851,11 @@ body{
 }
 
 #jubi-chat-loader-app .voice-buttons {
-    margin: auto
+    position: absolute;
+    top: 4px;
+    right: 54px;
+    margin: auto;
+    display: nones;
 }
 
 #jubi-chat-loader-app .keyboard-icon .fa {
