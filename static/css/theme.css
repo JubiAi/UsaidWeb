@@ -620,18 +620,20 @@ body{
     text-decoration: none;
 }
 #jubi-chat-loader-app .pm-sliderContent p {
-    background: none;
-    text-transform: uppercase;
-    box-shadow: #d7dcdb 0 0px 0px 0;
-    border-radius: 0px;
-    text-transform: none;
-    min-height: 59px;
-    margin: 0 0 1px;
-    color: #383838;
-    max-height: 58px;
-    overflow: hidden;
-    padding: 8px 10px 0;
-    font-size: 14px;
+        background: none;
+        text-transform: uppercase;
+        box-shadow: #d7dcdb 0 0px 0px 0;
+        border-radius: 0px;
+        text-transform: none;
+        min-height: 59px;
+        margin: 0 0 1px;
+        color: #383838;
+        max-height: 67px;
+        overflow: hidden;
+        padding: 8px 10px 0;
+        font-size: 13px;
+        font-weight: normal;
+    
 }
 
 
