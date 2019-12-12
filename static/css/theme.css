@@ -4685,10 +4685,11 @@ body{
     width: 280px;
 }
 #jubi-chat-loader-app .headerRightContent {
-    margin: -52px -7px 0 0px;
+    margin: -45px -7px 0 0px;
 }
 #jubi-chat-loader-app .pm-sec_newHeader p {
      width: 230px;
+     line-height: 1.2;
 }
 #jubi-chat-loader-app .voiceIcon {
    margin: 5px 0px 0 18px;
