@@ -357,10 +357,10 @@
     // "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
     '<div id="jubi-unmuteVoice">' +
-    '<img src="./images/unmute(1).png">' +
+    '<img src="./images/unmute1.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
-    '<img src="img src="./images/mute(1).png">' +
+    '<img src="img src="./images/mute1.png">' +
     "</div>" +
     "</aside>" +
     '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
