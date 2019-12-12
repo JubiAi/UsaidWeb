@@ -1107,8 +1107,7 @@ body{
 #jubi-chat-loader-app .pm-bxRightchat {
     float: right;
     width: 100%;
-    margin: 0 0 25px;
-    bottom: 0px;
+    margin: 0 0 15px;    
 }
 
 #jubi-chat-loader-app .pm-rightInput {
@@ -4134,7 +4133,7 @@ body{
     }
 
     #jubi-chat-loader-app .pm-rightInput {
-        margin-right: 10px
+        margin-right: 10px;
     }
 
     #jubi-chat-loader-app .pm-rightInput p {
