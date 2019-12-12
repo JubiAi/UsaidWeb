@@ -620,30 +620,24 @@ body{
     text-decoration: none;
 }
 #jubi-chat-loader-app .pm-sliderContent p {
-    color: #000;
     background: none;
     text-transform: uppercase;
     box-shadow: #d7dcdb 0 0px 0px 0;
     border-radius: 0px;
     text-transform: none;
+    min-height: 59px;
+    margin: 0 0 1px;
+    color: #383838;
+    max-height: 58px;
+    overflow: hidden;
+    padding: 8px 10px 0;
+    font-size: 14px;
 }
 
 
 #jubi-chat-loader-app .pm-bxslidebtn {
     text-align: center;
     margin-bottom: 10px;
-}
-
-
-
-#jubi-chat-loader-app .pm-sliderContent p {
-    min-height: 59px;
-    margin: 0 0 1px;
-    color: #383838;
-    max-height: 63px;
-    overflow: hidden;
-    padding: 8px 10px 0;
-    text
 }
 
 
