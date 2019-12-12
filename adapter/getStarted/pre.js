@@ -39,6 +39,15 @@ module.exports = {
 		})
 	},
 
+	undereage: (data) => {
+		return new Promise((resolve, reject) => {
+			data.reply = {
+				type: 'text',
+				text: 'According to our terms and conditions, you must be over 15 years to access Jubi. Read more here <a href="https://development.jubi.ai/usaidWeb/termsOfService.html">https://development.jubi.ai/usaidWeb/termsOfService.html</a>',
+			}
+			return resolve(data)
+		})
+	},
 
 	carousalOne: (data) => {
 		return new Promise((resolve, reject) => {
