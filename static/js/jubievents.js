@@ -23,8 +23,9 @@ $(document).ready(function() {
     $(".dropdown-header").toggle();
   });
   $("#jubi-answerBottom").click(function() {
-    $(".voiceIcon").hide();
+    // $(".voiceIcon").hide();
     $(".jubi-sec_newFooter button").show();
+    $(".voice-buttons").hide();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     $(".jubi-sec_newFooter button").hide();
