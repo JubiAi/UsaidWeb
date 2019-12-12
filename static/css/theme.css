@@ -4225,16 +4225,7 @@ body{
     #jubi-chat-loader-app .bxinput {
         padding: 0 7px
     }
-
-    #jubi-chat-loader-app .jubi-bxinput {
-              float: left;
-        width: 82%;
-        padding: 0px 0 0px 6px;
-        margin-top: -20px;
-        background: 0;
-    }
-
-
+    
     #jubi-chat-loader-app .bxCheckOPtion ul li a,
     #jubi-chat-loader-app .bxCheckOPtionPersist ul li a {
         font-size: 13px
