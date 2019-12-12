@@ -22,4 +22,16 @@ $(document).ready(function() {
   $(".closeBotImg").click(function() {
     $(".dropdown-header").toggle();
   });
+  $("#jubi-answerBottom").click(function() {
+    $(".voiceIcon").hide();
+    $("#jubi-bottomClick").show();
+    $(".voice-buttons").hide();
+  });
+  $("body").on("focusout", "#jubi-answerBottom", function() {
+    $("#jubi-bottomClick").hide();
+    $(".voiceIcon").show();
+  });
+  $(".voiceIcon").click(function() {
+    // $(".voice-buttons").show();
+  });
 });
