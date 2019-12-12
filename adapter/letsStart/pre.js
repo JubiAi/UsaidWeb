@@ -226,7 +226,7 @@ module.exports = {
                     next: {
                         data: [ //changes done
                             {
-                                data: 'How to get ECPs?',
+                                data: 'ecptoget',
                                 text: 'How to get ECPs?'
                             }
                         ]
