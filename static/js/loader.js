@@ -360,7 +360,7 @@
     '<img src="./images/unmute1.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
-    '<img src="img src="./images/mute1.png">' +
+    '<img src="./images/mute1.png">' +
     "</div>" +
     "</aside>" +
     '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
