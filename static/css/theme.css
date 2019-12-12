@@ -425,7 +425,8 @@ body{
 #jubi-chat-loader-app .pm-bxLeftchat {
     margin-bottom:5px;
     float: left;
-    width: 100%
+    /* width: 100% */
+    width: 85%
 }
 
 #jubi-chat-loader-app .pm-bxRightchat .input-lg {
@@ -1899,7 +1900,8 @@ body{
 #jubi-chat-loader-app .pm-bxChatbox {
     width: 100%;
     float: left;
-    padding: 6px 0 0;
+    /* padding: 6px 0 0; */
+    padding: 6px 17px 0 18px;
     background: 0;
     justify-content: flex-end
 }
@@ -4649,4 +4651,9 @@ body{
 #jubi-chat-loader-app .voiceIcon {
    margin: 5px 0px 0 18px;
 }
+#jubi-chat-loader-app .pm-bxChatbox {
+    
+    padding: 6px 5px 0 7px;    
+}
+
 }
