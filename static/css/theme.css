@@ -4069,10 +4069,8 @@ body{
     }
 
     #jubi-chat-loader-app .pm-bxCheckOPtionPersist ul {
-        /* margin: 15px 0 */
-        margin: 5px 0px;
-
-    }
+        margin: 10px 0
+        }
 
     #jubi-chat-loader-app .pm-bxCheckOPtionPersist ul li {
         margin: 1px 1px;
