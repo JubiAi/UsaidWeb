@@ -4359,7 +4359,7 @@ body{
         
         margin: 10px 2px 0 0px;
     }
-    #jubi-chat-loader-app.voiceContent p {
+    .voiceContent p {
         font-size: 14px;
         padding: 4px;
     }
