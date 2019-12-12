@@ -382,7 +382,7 @@
     '<div class="sk-child sk-bounce3">' +
     "</div>" +
     "</div>" +
-    '<div class="stop-recording">Listening...</div>' +
+    // '<div class="stop-recording">Listening...</div>' +
     "</div>" +
     "</div>" +
     "</div>" +
