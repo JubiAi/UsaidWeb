@@ -4412,8 +4412,10 @@ body{
     }
 
     #jubi-chat-loader-app .voiceIcon {
-        width: 15px;
-        margin: 27px 0 0 12px;
+       
+            width: 23px;
+            margin: 5px 0px 0 0px;
+      
     }
 
     #jubi-chat-loader-app .voicePulse {
@@ -4425,7 +4427,7 @@ body{
         width: 25px;
         height: 25px;
         background: #0062cc;
-        padding: 5px 5px 5px 7px;
+        /* padding: 5px 5px 5px 7px; */
         border-radius: 50%;
         border: 0;
         text-align: center;
@@ -4648,6 +4650,10 @@ body{
     #jubi-chat-loader-app .headerRightContent {
                 margin: 15px 6px 0 0;
     }
+    #jubi-chat-loader-app .jubi-sec_newFooter button {
+        padding: 0px 5px 5px 5px;
+    }
+
 }
 
 
