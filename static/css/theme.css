@@ -4183,9 +4183,9 @@ body{
         min-height: auto
     }
 
-    #jubi-chat-loader-app .pm-slideImage {
+    /* #jubi-chat-loader-app .pm-slideImage {
         min-height: 200px
-    }
+    } */
 
     #jubi-chat-loader-app #pm-bottom {
         width: 100%
