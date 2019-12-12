@@ -28,7 +28,7 @@ $(document).ready(function() {
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     console.log("focusout");
-    $("#voice-buttons").show();
+    $(".voiceIcon").hide();
     // $("#jubi-secMenucontent").hide(200);
   });
 });
