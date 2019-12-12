@@ -32,5 +32,6 @@ $(document).ready(function() {
   });
   $(".voiceIcon").click(function() {
     $(".voice-buttons").show();
+    $(".voiceIcon").show();
   });
 });
