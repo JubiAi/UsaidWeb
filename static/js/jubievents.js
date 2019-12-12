@@ -23,12 +23,13 @@ $(document).ready(function() {
     $(".dropdown-header").toggle();
   });
   $("#jubi-answerBottom").click(function() {
-    // $(".voiceIcon").hide();
+    $(".voiceIcon").hide();
     $(".jubi-sec_newFooter button").show();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     console.log("focusout");
-    $(".voiceIcon").hide();
+    $(".jubi-sec_newFooter button").hide();
+    $(".voiceIcon").show();
     // $("#jubi-secMenucontent").hide(200);
   });
 });
