@@ -4547,6 +4547,7 @@ body{
 
 @media (max-width: 1024px){
     #jubi-chat-loader-app .jubi-bxinput {
+        width: 85%;
     }
     
     #jubi-chat-loader-app .headerRightContent {
