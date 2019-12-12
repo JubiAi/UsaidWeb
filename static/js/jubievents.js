@@ -22,13 +22,13 @@ $(document).ready(function() {
   $(".closeBotImg").click(function() {
     $(".dropdown-header").toggle();
   });
-  // $("#jubi-answerBottom").click(function() {
-  //   $(".voiceIcon").hide();
-  //   $(".jubi-sec_newFooter button").show();
-  // });
+  $("#jubi-answerBottom").click(function() {
+    // $(".voiceIcon").hide();
+    $(".jubi-sec_newFooter button").show();
+  });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     console.log("focusout");
-    $("#voice-buttons").hide();
-    $("#jubi-secMenucontent").hide(200);
+    $("#voice-buttons").show();
+    // $("#jubi-secMenucontent").hide(200);
   });
 });
