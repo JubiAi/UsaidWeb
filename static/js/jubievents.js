@@ -25,11 +25,13 @@ $(document).ready(function() {
   $("#jubi-answerBottom").click(function() {
     $(".voiceIcon").hide();
     $(".jubi-sec_newFooter button").show();
+    $(".voice-buttons").hide();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
-    console.log("focusout");
     $(".jubi-sec_newFooter button").hide();
     $(".voiceIcon").show();
-    // $("#jubi-secMenucontent").hide(200);
+  });
+  $(".voiceIcon").click(function() {
+    $(".voice-buttons").show();
   });
 });
