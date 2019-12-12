@@ -24,6 +24,7 @@ $(document).ready(function() {
   });
   $("#jubi-answerBottom").click(function() {
     $(".voiceIcon").hide();
+    $("#voice-buttons").hide();
     $("#jubi-bottomClick").show();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
