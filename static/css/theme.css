@@ -4392,6 +4392,9 @@ body{
           
             margin: 5px 0px 0 12px;
         }
+        #jubi-chat-loader-app .jubi-bxinput {
+            width: 86%;
+        }
     }
 
 @media (max-width: 480px){
