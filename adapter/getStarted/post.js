@@ -18,7 +18,7 @@ module.exports = {
 				console.log("I am under 15")
 				data.tags.rejected = true
 				data.tags.accepted = false
-				data.stage = "disclaimer"
+				data.stage = "underage"
 			}
 			console.log("+++++++++++++")
 			console.log(data.tags)

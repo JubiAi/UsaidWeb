@@ -257,15 +257,9 @@ module.exports = {
                     text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|What would you like to do next?',
                     next: {
                         data: [{ //changes done
-                                data: 'Main menu',
-                                text: 'Main menu'
-                            },
-                            {
-                                type: 'url',
-                                data: 'http://www.buymecondom.com/',
-                                text: 'Purchase condoms'
-                            }
-                        ]
+                            data: 'Main menu',
+                            text: 'Main menu'
+                        }]
                     }
                 }
                 return resolve(data)
