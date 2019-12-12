@@ -10,7 +10,7 @@ module.exports = {
         text: "Don’t let anybody pressure you into having sex. (Even if you are committed /married)",
         next: {
           data: [{
-            data: "2nd",
+            data: "second",
             text: "And 2nd?"
           }]
         }
