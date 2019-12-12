@@ -2710,10 +2710,10 @@ body{
 
 #jubi-chat-loader-app .jubi-sec_newFooter button {
     /* float: right; */
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     background:#00a2fe;
-    padding: 0px 5px 4px 6px;
+    padding: 0px 5px;
     border-radius: 50%;
     border: 0;
     text-align: center;
