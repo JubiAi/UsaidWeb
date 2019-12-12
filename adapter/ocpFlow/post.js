@@ -81,7 +81,7 @@ module.exports = {
 
 	q3: (model) => {
 		return new Promise(async function (resolve, reject) {
-			if (model.data.toLowerCase().includes("myth")) {
+			if (model.data.toLowerCase().includes("not")) {
 				// await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
 				model.tags.answer3 = false
 			} else if (model.data.toLowerCase().includes("true")) {
