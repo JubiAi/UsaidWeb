@@ -4308,8 +4308,15 @@ body{
 }
  
 
-@media(max-width:1920px) {
-    
+@media(min-width:1920px) {
+    #jubi-chat-loader-app .jubi-model {
+        margin-top: 220px;
+        margin-left: -40px;
+    }
+    #jubi-chat-loader-app .jubi-model img {
+        width: 100%;
+    }
+
 } 
 @media(max-width:1600px) {
 }
