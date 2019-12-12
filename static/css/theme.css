@@ -4426,7 +4426,8 @@ body{
             float: left;
         }
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
-    margin-top: 40px;
+    margin-top: 8px;
+    width: 34px;
 }
 #jubi-chat-loader-app .jubi-bxinput textarea {
     margin-left: -12px;
@@ -4450,6 +4451,10 @@ body{
 #jubi-chat-loader-app .pm-bxChatbox {
     
     padding: 6px 5px 0 7px;    
+}
+
+#jubi-bottomClick{
+    margin: 4px 24px 0 0;
 }
 
 }
