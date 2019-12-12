@@ -10,9 +10,14 @@ module.exports = {
         text: "ECPs are easily available! You can buy them from medical stores without a doctor's prescription.|break| You can even get them from government facilities, free of cost!",
         next: {
           data: [{
-            data: "ecpquizone",
-            text: "Tell me more"
-          }]
+              data: "ecptoget",
+              text: "How to get ECPs?"
+            },
+            {
+              data: "📞 a counsellor",
+              text: "📞 a counsellor"
+            }
+          ]
         }
       };
       //delete model.tags.answer1
