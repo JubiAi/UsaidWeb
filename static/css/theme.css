@@ -2710,8 +2710,8 @@ body{
 
 #jubi-chat-loader-app .jubi-sec_newFooter button {
     /* float: right; */
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background:#00a2fe;
     padding: 0px 5px 4px 6px;
     border-radius: 50%;
@@ -4570,8 +4570,8 @@ body{
         margin: -36px 0 0 50px;
     }
     #jubi-chat-loader-app .jubi-bxinput textarea {
-        width: 310px;
-    }
+        width: 539px
+        }
     #jubi-chat-loader-app .headerRightContent {
         
         margin: 10px 2px 0 0px;
