@@ -56,7 +56,7 @@ module.exports = {
         console.log("++++++false++++++++");
         model.reply = {
           type: "quickReply",
-          text: "This is actually a myth, my friend! You see, Oral contraceptive pills (OCPs) are only temporary forms of birth control. Within 1 to 3 months of stopping the pills, a woman’s fertility returns. |break|Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
+          text: "This is actually a myth, my friend! You see, Oral contraceptive pills (OCPs) are only temporary forms of birth control. Within 1 to 3 months of stopping the pills, a woman’s fertility returns.|break| Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
           next: {
             data: [{
                 data: "A myth",

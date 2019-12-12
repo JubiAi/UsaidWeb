@@ -7,7 +7,7 @@ module.exports = {
     return new Promise(function (resolve) {
       model.reply = {
         type: "quickReply",
-        text: "And the best part about IUCD’s is that you can change your mind about them anytime! A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD.",
+        text: "And the best part about IUCD is that you can change your mind about them anytime! A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD.",
         next: {
           data: [{
             data: "Tell me more about how they work?",
@@ -238,7 +238,7 @@ module.exports = {
       } else {
         model.reply = {
           type: "quickReply",
-          text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.I’m sure you have learned a lot about IUCD by now. If you still have questions you can type it in the text box. You can also get in touch with our counselors.Or you can continue with another topic by clicking on main menu!",
+          text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely. I’m sure you have learned a lot about IUCD by now. If you still have questions you can type it in the text box. You can also get in touch with our counselors. Or you can continue with another topic by clicking on main menu!",
           next: {
             data: [{
                 data: "Main Menu",
