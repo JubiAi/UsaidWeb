@@ -357,10 +357,10 @@
     // "</div>" +
     '<aside class="jubi-muteUnmuteVoice">' +
     '<div id="jubi-unmuteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/unmute.png">' +
+    '<img src="./images/unmute1.png">' +
     "</div>" +
     '<div id="jubi-muteVoice">' +
-    '<img src="https://parramato.com/bot-view/images/mute.png">' +
+    '<img src="img src="./images/mute1.png">' +
     "</div>" +
     "</aside>" +
     '<textarea id="jubi-answerBottom" placeholder="Type a question here..." style="resize:none;overflow:hidden;" autofocus></textarea> ' +
@@ -378,28 +378,29 @@
     // "</div>" +
     // "</div>" +
     "</div>" +
-    '<div class="datasendButtons">' +
-    '<div class="sendIcon" id="button-send">' +
-    '<button id="jubi-bottomClick" type="submit" onclick="return false;">' +
-    '<img src="https://parramato.com/bot-view/images/icon_send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
-    '<img src="https://parramato.com/bot-view/images/icon_send.png" id="jubi-redSend" class="img-responsive" style="display: none;">' +
-    "</button>" +
-    "</div>" +
-    '<div class="uploadbox" onclick="postimagePadd()">' +
-    "<label>" +
-    '<div class="inputfile">' +
-    '<img src="https://parramato.com/bot-view/images/attachment.png" class="img-responsive">' +
-    '<input class="jubi-file-upload" type="file" name="fileName" >' +
-    "</div>" +
-    '<div class="button-section" style="display:none">' +
-    '<button type="submit">Submit</button>' +
-    "</div>" +
-    "</label>" +
-    "</div>" +
-    '<div class="keyboard-icon" id="keyboard-icon" >' +
-    '<i class="fa fa-keyboard-o" aria-hidden="true"></i>' +
-    "</div>" +
-    "</div>" +
+    // '<div class="datasendButtons">' +
+    // '<div class="sendIcon" id="button-send">' +
+    // '<button id="jubi-bottomClick" type="submit" onclick="return false;">' +
+    // '<img src="https://parramato.com/bot-view/images/icon_send.png" id="jubi-graySend" class="img-responsive" style="display: block;">' +
+    // '<img src="https://parramato.com/bot-view/images/icon_send.png" id="jubi-redSend" class="img-responsive" style="display: none;">' +
+    // "</button>" +
+    // "</div>" +
+    '<div class="datasendButtons"><div class="sendIcon" id="button-send" style="display: block;"><button id="jubi-bottomClick" type="submit" onclick="clickSendButton();return false;" style=""><img src="./images/send.png" id="jubi-graySend" class="img-responsive"></button><div class="voiceIcon button-play-ws-right" id="button-play-ws" style="display: none;"><img src="./images/voice.png" class="img-fluid"></div></div><div class="uploadbox" style="display:none;"><label><div class="inputfile" style="display: block;"><img src="https://parramato.com/bot-view/JubiMoney_788585788275/dev/images/attachment.png" class="img-responsive" style=""><input class="jubi-file-upload" type="file" name="fileName"></div><div class="button-section" style="display:none"><button type="submit">Submit</button></div></label></div><div class="keyboard-icon" id="keyboard-icon" style="display:none;"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div></div>' +
+    // '<div class="uploadbox" onclick="postimagePadd()">' +
+    // "<label>" +
+    // '<div class="inputfile">' +
+    // '<img src="https://parramato.com/bot-view/images/attachment.png" class="img-responsive">' +
+    // '<input class="jubi-file-upload" type="file" name="fileName" >' +
+    // "</div>" +
+    // '<div class="button-section" style="display:none">' +
+    // '<button type="submit">Submit</button>' +
+    // "</div>" +
+    // "</label>" +
+    // "</div>" +
+    // '<div class="keyboard-icon" id="keyboard-icon" >' +
+    // '<i class="fa fa-keyboard-o" aria-hidden="true"></i>' +
+    // "</div>" +
+    // "</div>" +
     "</section>" +
     "</section>" +
     "</section>";
