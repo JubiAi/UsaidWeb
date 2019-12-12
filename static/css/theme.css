@@ -4359,7 +4359,20 @@ body{
         
         margin: 10px 2px 0 0px;
     }
-  
+    #jubi-chat-loader-app.voiceContent p {
+        font-size: 14px;
+        padding: 4px;
+    }
+    #jubi-chat-loader-app .voice-inputcontent {
+        width: 330px;
+    }
+    #jubi-chat-loader-app .jubi-model img {
+        width: 79%;
+    }
+    .nbPoints {
+       bottom: 5px;
+        right: 10px;
+    }
 }
 
    @media (max-width: 767px){
