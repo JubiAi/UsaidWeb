@@ -23,7 +23,7 @@ $(document).ready(function() {
     $(".dropdown-header").toggle();
   });
   $("#jubi-answerBottom").focus(function() {
-    $(".voiceIcon").css("display", "none");
-    $(".jubi-sec_newFooter button").css("display", "inline");
+    $(".voiceIcon").css("display", "inline");
+    // $(".jubi-sec_newFooter button").show();
   });
 });
