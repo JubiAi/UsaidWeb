@@ -4203,7 +4203,7 @@ body{
 
     #jubi-chat-loader-app .datasendButtons {
         width: 63px;
-        right: 10px;
+        right: 3px;
         top: 13px
     }
 
@@ -4380,7 +4380,7 @@ body{
         top: 15px;
     }
     #jubi-chat-loader-app .jubi-bxinput {
-        width: 85%;
+        width: 90%;
     }
 
   }
