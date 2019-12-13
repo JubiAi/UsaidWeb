@@ -4439,6 +4439,9 @@ body{
        bottom: 5px;
         right: 10px;
     }
+    #jubi-chat-loader-app .jubi-sec_newFooter button{
+        margin: 7px 0px 0 0;
+    }
 }
 
    @media (max-width: 768px){
