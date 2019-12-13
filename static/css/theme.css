@@ -4523,3 +4523,19 @@ body{
 }
 
 } */
+
+@media (max-width: 360px) {
+#jubi-chat-loader-app .pm-sec_openview {
+       height: 93vh;
+}
+#jubi-chat-loader-app .headerLeftContent {
+    margin-top: -8px;
+}
+#jubi-chat-loader-app .pm-headOnline {
+    left: 123px;
+    top: 6px;
+}
+#jubi-chat-loader-app .headerRightContent {
+    top: 20px;
+}
+}
