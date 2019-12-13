@@ -300,7 +300,21 @@ module.exports = {
                     }
                 }
                 return resolve(data)
-            } else if (data.tags.userSays == "call a counsellor📞") {
+            }
+             else if (data.tags.userSays.toLowerCase() == "Talk to a counsellor" || data.tags.userSays.toLowerCase() == "talk to a counsellor" || data.tags.userSays.toLowerCase().includes("talk to a counsellor")) {
+                console.log("-------------")
+                data.reply = { //changes done
+                    type: "button",
+                    text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>',
+                    next: {
+                        data: [{
+                            data: 'Go to the main menu',
+                            text: 'Go to the main menu'
+                        }]
+                    }
+                }
+                return resolve(data)
+            }else if (data.tags.userSays == "call a counsellor📞") {
                 data.reply = {
                     type: "button",
                     text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|Get information on the next steps after unprotected sex from the main menu below.',
