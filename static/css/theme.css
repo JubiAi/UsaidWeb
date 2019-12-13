@@ -2214,11 +2214,11 @@ body{
     line-height: 1px;
 }
 #jubi-chat-loader-app .owl-carousel .owl-nav .owl-prev span{
-    margin-right: 1px;
+    margin-right: 2px;
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav .owl-next span {
-    margin-right: 0px;
+    margin-left: 1px;
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav button span:hover {
