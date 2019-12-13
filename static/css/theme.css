@@ -4310,11 +4310,52 @@ body{
 
 @media(min-width:1920px) {
     #jubi-chat-loader-app .jubi-model {
-        margin-top: 220px;
+        margin-top: 0px;
         margin-left: -40px;
     }
     #jubi-chat-loader-app .jubi-model img {
-        width: 100%;
+        width: 713px;
+    }
+    #jubi-chat-loader-app .jubi-message-header {
+        margin-top: 30px;
+    }
+    #jubi-chat-loader-app .jubi-message-header img {
+        width: 280px;
+    }
+    .voice-inputcontent {
+        background: #fff;
+        padding: 30px 30px;
+        border-radius: 50px;
+        box-shadow: 0 4px 2px 0 #ccc;
+        width: 580px;
+        max-width: 100%;
+        float: right;
+        margin: 50px -164px 0 0px;
+    }
+    .voiceContent p {
+        margin: 0;
+        color: #505050;
+        font-size: 29px;
+    }
+    .voice-icon {
+        float: right;
+        max-width: 22px;
+    }
+    .nbPoints {
+        bottom: 25px;
+        right: -200px;
+    }
+    .nbIcons {
+        max-width: 37px;
+        margin: 0 auto 7px;
+    }
+    .nbPoints ul li p {
+        margin: 0;
+       font-size: 19px;
+    }
+    .voice-icon {
+        float: right;
+        max-width: 22px;
     }
 
 } 
