@@ -4537,5 +4537,9 @@ body{
 }
 #jubi-chat-loader-app .headerRightContent {
     top: 20px;
+    right: 0px;
+}
+#jubi-chat-loader-app .pm-sec_newHeader {
+    height: 72px;
 }
 }
