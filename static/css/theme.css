@@ -3901,7 +3901,7 @@ body{
              Responsive
 ==================================== */
 
-@media(max-width:767px) {
+@media(max-width:768px) {
     .pm-secCloseMsg {
         bottom: 106px
     }
@@ -4436,7 +4436,7 @@ body{
     }
 }
 
-   @media (max-width: 767px){
+   @media (max-width: 768px){
      #jubi-chat-loader-app .pm-sec_openview {
         height: 93vh;
     }
