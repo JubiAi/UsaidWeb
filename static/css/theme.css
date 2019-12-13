@@ -4524,12 +4524,13 @@ body{
 #jubi-chat-loader-app .jubi-bxinput {
     width: 280px;
 }
-/* #jubi-chat-loader-app .headerRightContent {
-    margin: -38px -7px 0 0px
-} */
+#jubi-chat-loader-app .headerRightContent {
+    top: 22px;
+    right: 8px;
+}
 #jubi-chat-loader-app .pm-sec_newHeader p {
      width: 230px;
-     line-height: 1.2;
+     /* line-height: 1.2; */
 }
 #jubi-chat-loader-app .voiceIcon {
    margin: 5px 0px 0 18px;
