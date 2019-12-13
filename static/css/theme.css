@@ -4543,7 +4543,7 @@ body{
 
 }
 
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
 
   
 #jubi-chat-loader-app .headerLeftContent {
@@ -4561,5 +4561,8 @@ body{
     width: 250px;
     margin: -5px 0 0 14px;
 }
-
+#jubi-chat-loader-app .pm-sec_openview {
+    height: 0vh;
 }
+
+} */
