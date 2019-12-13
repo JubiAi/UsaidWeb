@@ -2872,7 +2872,7 @@ body{
 }
 
 #jubi-chat-loader-app #jubi-recording-text {
-    position: absolute;
+    /* position: absolute;
     bottom: 85px;
     right: 8%;
     max-width: 70%;
@@ -2883,7 +2883,7 @@ body{
     box-shadow: 0 2px 4px 0 #ccc;
     padding: 10px 11px;
     border-radius: 5px;
-    display: none
+    display: none */
 }
 
 #jubi-chat-loader-app #jubi-recording-text p {
