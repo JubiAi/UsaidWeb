@@ -4484,9 +4484,20 @@ body{
     } 
 }
 
-@media (max-width: 360px){
-
-
+@media (max-width: 375px){
+    #jubi-chat-loader-app .pm-titleheader h3 {
+        font-size: 18px;
+    }
+    #jubi-chat-loader-app .pm-headOnline {
+        left: 125px;
+        top: 14px;
+    }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+        font-size: 15px;
+    }
+    #jubi-chat-loader-app .jubi-bxinput {
+        width: 80%;
+    }
 }
 
 /* @media (max-width: 360px) {
