@@ -4522,14 +4522,3 @@ body{
 }
 }
 
-@media(min-width:1367px) {
-    #jubi-chat-loader-app .jubi-model {
-        margin-left: -40px;
-    }
-    #jubi-chat-loader-app .jubi-model img {
-        width: 78%;
-    }
-    .voice-inputcontent {
-        width: 445px;
-    }
-}
