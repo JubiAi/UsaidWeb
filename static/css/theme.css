@@ -4372,7 +4372,7 @@ body{
     #jubi-chat-loader-app .datasendButtons {
     right: 10px;
   }
-  #jubi-chat-loader-app .jubi-model img {
+  /* #jubi-chat-loader-app .jubi-model img {
     width: 80%;
 }
 #jubi-chat-loader-app .jubi-model {
@@ -4384,7 +4384,7 @@ body{
 }
 #jubi-chat-loader-app #jubisecmain {
     position: relative;
-}
+} */
 }
 
 @media (max-width: 1125px){
