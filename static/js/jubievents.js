@@ -24,14 +24,12 @@ $(document).ready(function() {
   });
   $("#jubi-answerBottom").click(function() {
     $(".voiceIcon").hide();
-    $(".jubi-sec_newFooter button").show();
-    $(".voice-buttons").hide();
+    $("#voice-buttons").hide();
+    $("#jubi-bottomClick").show();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
-    $(".jubi-sec_newFooter button").hide();
+    $("#jubi-bottomClick").hide();
     $(".voiceIcon").show();
-  });
-  $(".voiceIcon").click(function() {
-    $(".voice-buttons").show();
+    $("#voice-buttons").show();
   });
 });
