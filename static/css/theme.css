@@ -2552,9 +2552,7 @@ body{
 }
 
 #jubi-chat-loader-app .jubi-bxinput {
-    
-       
-        width:89%;
+         width:89%;
         padding: 0px 0 0px 6px;
         background: 0;
         margin: -5px 0 0 20px;
@@ -2593,9 +2591,9 @@ body{
     width: 84%;
 }
 
-#jubi-chat-loader-app .jubi-bxinput textarea::placeholder {
+/* #jubi-chat-loader-app .jubi-bxinput textarea::placeholder {
     color: rgba(165, 162, 162, 0.459)
-  }
+  } */
 
 
 
