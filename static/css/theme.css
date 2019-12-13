@@ -4473,8 +4473,15 @@ body{
     }
 
 @media (max-width: 480px){
-    
-    
+    #jubi-chat-loader-app .pm-sec_newHeader {
+        height: 90px;
+    }
+    #jubi-chat-loader-app .pm-sec_newHeader p {
+        width: 260px;
+    }
+    #jubi-chat-loader-app .headerRightContent {
+        top: 30px;
+    } 
 }
 
 @media (max-width: 360px){
