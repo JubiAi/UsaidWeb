@@ -4445,24 +4445,16 @@ body{
 }
 
    @media (max-width: 768px){
-     /* #jubi-chat-loader-app .pm-sec_openview {
-        height: 93vh;
-    } */
-    /* #jubi-chat-loader-app .headerRightContent {
-                margin: 15px 6px 0 0;
-    } */
+     
     #jubi-chat-loader-app .jubi-sec_newFooter button {
         padding: 0px 5px 5px 5px;
     }
-    /* #jubi-chat-loader-app .headerLeftContent {
-         margin-top: 5px;
-    } */
-    /* #jubi-chat-loader-app .pm-headOnline {
-        left: 123px;
-        top: 15px;
-    } */
+    
     #jubi-chat-loader-app .jubi-bxinput {
         width: 90%;
+    }
+    #jubi-chat-loader-app .jubi-sec_newFooter button {
+        margin: 13px 37px 0 0;
     }
 
   }
