@@ -314,6 +314,19 @@ module.exports = {
                     }
                 }
                 return resolve(data)
+            }else if (data.tags.userSays.toLowerCase() == "restart") {
+                console.log("-------------")
+                data.reply = { //changes done
+                    type: "button",
+                    text: 'You can type your query below or Click on the below button to continue to main menu',
+                    next: {
+                        data: [{
+                            data: 'Go to the main menu',
+                            text: 'Go to the main menu'
+                        }]
+                    }
+                }
+                return resolve(data)
             }else if (data.tags.userSays == "call a counsellor📞") {
                 data.reply = {
                     type: "button",
