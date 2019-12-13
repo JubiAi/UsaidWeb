@@ -2207,13 +2207,17 @@ body{
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav button span {
-    /* margin-top: -5px;
-    display: block */
     margin-top: -2px;
     display: block;
     font-size: 30px;
     color: #fff;
     line-height: 1px;
+}
+#jubi-chat-loader-app .owl-carousel .owl-nav .owl-prev span{
+    margin-right: 1px;
+}
+
+#jubi-chat-loader-app .owl-carousel .owl-nav .owl-next span {
     margin-right: 0px;
 }
 
@@ -2591,7 +2595,7 @@ body{
     font-weight: 400;
     padding: 0 12px;
     margin-left: 0px;
-    margin-top: 11px;
+    margin-top: 13px;
     outline: none;
     float: left;
     opacity: 0.6;
@@ -2872,7 +2876,7 @@ body{
 }
 
 #jubi-chat-loader-app #jubi-recording-text {
-    position: absolute;
+    /* position: absolute;
     bottom: 85px;
     right: 8%;
     max-width: 70%;
@@ -2883,7 +2887,7 @@ body{
     box-shadow: 0 2px 4px 0 #ccc;
     padding: 10px 11px;
     border-radius: 5px;
-    display: none
+    display: none */
 }
 
 #jubi-chat-loader-app #jubi-recording-text p {
