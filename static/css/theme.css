@@ -2213,13 +2213,12 @@ body{
     color: #fff;
     line-height: 1px;
 }
-#jubi-chat-loader-app .owl-carousel .owl-nav .owl-prev {
+#jubi-chat-loader-app .owl-carousel .owl-nav .owl-prev span{
     margin-right: 1px;
 }
 
-#jubi-chat-loader-app .owl-carousel .owl-nav button.owl-next {
+#jubi-chat-loader-app .owl-carousel .owl-nav .owl-next span {
     margin-right: 0px;
-
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav button span:hover {
