@@ -1069,16 +1069,18 @@ body{
 }
 
 #jubi-chat-loader-app .pm-leftUserimg {
-    width: 45px;
-    height: 43px;
+    top: auto;
+    bottom: 13px;
     position: absolute;
     overflow: hidden;
     left: 3px;
     top: 1px;
-    /* border-radius: 50%; */
-    background: #fff;
+    float: left;
     padding: 0;
-    /* box-shadow: 0 2px 4px 0 #b9b9b9 */
+    width: 32px;
+    height: 32px;
+    border: solid 1px #b9b9b9;
+    background-color: #fff;
 }
 
 #jubi-chat-loader-app .pm-leftUserimg img {
@@ -1885,20 +1887,9 @@ body{
     top: 70px;
     right: 0
 }
-
-
-
-
-
-
-
-
-
 #jubi-chat-loader-app .pm-bxChatbox {
     width: 100%;
     float: left;
-    /* padding: 6px 0 0; */
-    padding: 6px 17px 0 18px;
     background: 0;
     justify-content: flex-end
 }
@@ -3548,6 +3539,9 @@ body{
     color: #afafaf;
     margin: 0;
 }
+#jubi-chat-loader-app .pm-rightInput .jubi-msgReplyTime h5 {
+    color: #8ec4ff;
+}
 
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
@@ -3887,6 +3881,9 @@ body{
 ==================================== */
 
 @media(max-width:768px) {
+    #jubi-chat-loader-app .pm-bxLeftchat {
+        width: 92%;
+    }
     .pm-secCloseMsg {
         bottom: 106px
     }
@@ -3919,7 +3916,7 @@ body{
     }
 
     #jubi-chat-loader-app .pm-leftInput {
-        margin-left: 57px
+        margin-left: 40px;
     }
 
     #jubi-chat-loader-app .pm-leftInput_new {
@@ -4036,7 +4033,7 @@ body{
     }
 
     #jubi-chat-loader-app .pm-logo {
-        margin-left: 10px
+        margin-left: 0px
     }
 
     #jubi-chat-loader-app header {
