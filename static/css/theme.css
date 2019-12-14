@@ -306,14 +306,14 @@ body{
     color: #0771e3;
     font-size: 14px;
     text-decoration: none;
-    transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s;
+    /* transition: transform .5s cubic-bezier(0.68, 0.01, 0.245, 1.13)0s; */
     background: #fff;
     border-radius: 20px;
     border: 1px solid #0771e3;
     min-width: auto;
     padding: 8px 15px;
-    transition: background 2s;
-    -webkit-transition: background 2s
+    /* transition: background 2s; */
+    /* -webkit-transition: background 2s */
 }
 
 #jubi-chat-loader-app .pm-bxCheckOPtionPersist ul li a:hover,
