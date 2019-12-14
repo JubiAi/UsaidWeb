@@ -2424,7 +2424,7 @@ body{
     text-align: center;
     top: 50px;
     left: 0;
-    right: 0;
+    right: 0; 
     text-align: center;
     padding: 50px 0 0 0
 }
@@ -4416,13 +4416,13 @@ body{
 
 @media (max-width: 480px){
     #jubi-chat-loader-app .pm-sec_newHeader {
-        height: 78px;
+        height: 78px;padding: 12px 1px 0 12px;
     }
     #jubi-chat-loader-app .pm-sec_newHeader p {
         width: 100%;
     }
     #jubi-chat-loader-app .headerRightContent {
-        top: 25px;
+        top: 25px;width: 75px;
     } 
 }
 
