@@ -1671,24 +1671,17 @@ body{
 
 #jubi-chat-loader-app .pm-titleheader {
     float: left;
-    width: auto;
-    width: 108px;
+    width: 100%;
     text-align: left;
     margin: 0;
 }
 
 #jubi-chat-loader-app .pm-titleheader h3 {
-    /* font-size: 22px;
-    font-weight: 650;
-    margin: 0;
-    width: 115px; */
     font-size: 20px;
     font-weight: bold;
     margin: 0;
     width: 115px;
 }
-
-
 #jubi-chat-loader-app .pm-titleheader h3 img {
     margin: auto;
     max-width: 110px
