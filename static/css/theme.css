@@ -4422,7 +4422,7 @@ body{
         width: 76%;
     }
     #jubi-chat-loader-app .headerRightContent {
-        top: 25px;width: 75px;
+        top: 25px;width: 75px;right: 6px;
     } 
 }
 
