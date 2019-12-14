@@ -1069,8 +1069,8 @@ body{
 }
 
 #jubi-chat-loader-app .pm-leftUserimg {
-    top: auto;
-    bottom: 13px;
+    top: 3px;
+    bottom: auto;
     position: absolute;
     overflow: hidden;
     left: 3px;
