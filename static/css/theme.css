@@ -2207,7 +2207,7 @@ body{
 }
 
 #jubi-chat-loader-app .owl-carousel .owl-nav button span {
-    margin-top: -12px;
+    margin-top: -14px;
     display: block;
     font-size: 30px;
     color: #ccc;
@@ -2229,7 +2229,7 @@ body{
     left: -9px;
     margin: 0;
     margin: 0;
-    background: #007bff !important;
+    background: #007bffb8 !important;
     outline: none;
     cursor: pointer;
 }
@@ -2237,7 +2237,7 @@ body{
 #jubi-chat-loader-app .owl-carousel .owl-nav button.owl-next {
     right: -9px;
     margin: 0;
-    background: #007bff !important;
+    background: #007bffb8 !important;
     outline: none;
     cursor: pointer;
 }
