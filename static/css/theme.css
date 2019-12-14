@@ -3926,7 +3926,7 @@ body{
     }
 
     #jubi-chat-loader-app .pm-bxCheckOPtion ul {
-        margin: 15px 0
+        margin: 0;
     }
 
     #jubi-chat-loader-app .pm-bxCheckOPtion ul li {
