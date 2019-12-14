@@ -4252,12 +4252,10 @@ body{
         margin: 3px 45px 0 0;
     }
     #jubi-chat-loader-app .pm-sec_newHeader p {
-        font-size: 16px;
-        
+        font-size: 14px;width: 81%;
     }
 
 }
- 
 
 @media(min-width:1920px) {
     #jubi-chat-loader-app .jubi-model {
