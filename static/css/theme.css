@@ -4485,7 +4485,7 @@ body{
 }
 } */
 
-@media (max-width: 400px){
+@media (max-width: 414px){
     #jubi-chat-loader-app .pm-sec_openview {
         height: 100vh;
     }
