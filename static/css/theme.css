@@ -4451,21 +4451,26 @@ body{
 
 @media (max-width: 360px) {
 #jubi-chat-loader-app .pm-sec_openview {
-       height: 100vh;
+       height: 93vh;
 }
 #jubi-chat-loader-app .headerLeftContent {
-    margin-top: -4px;
+    margin-top: -8px;
 }
 #jubi-chat-loader-app .pm-headOnline {
-    left: 116px;
-    top: 9px;
+    left: 123px;
+    top: 6px;
 }
 #jubi-chat-loader-app .headerRightContent {
-    top: 21px;
-    right: 10px;
+    top: 20px;
+    right: 0px;
 }
 #jubi-chat-loader-app .pm-sec_newHeader {
     height: 72px;
 }
 }
 
+@media (max-width: 380px){
+#jubi-chat-loader-app .pm-sec_openview {
+    height: 100vh;
+}
+}
