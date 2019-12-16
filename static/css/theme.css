@@ -4449,14 +4449,16 @@ body{
         font-size: 18px;
     }
     #jubi-chat-loader-app .pm-headOnline {
-        left: 125px;
-        top: 14px;
-    }
+        left: 116px;
+          }
     #jubi-chat-loader-app .pm-sec_newHeader p {
         font-size: 15px;
     }
     #jubi-chat-loader-app .jubi-bxinput {
         width: 80%;
+    }
+    #jubi-chat-loader-app .headerLeftContent {
+        margin: 0px 0 0 0;
     }
 }
 
