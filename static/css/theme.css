@@ -4451,18 +4451,18 @@ body{
 
 @media (max-width: 360px) {
 #jubi-chat-loader-app .pm-sec_openview {
-       height: 93vh;
+       height: 100vh;
 }
 #jubi-chat-loader-app .headerLeftContent {
-    margin-top: -8px;
+    margin-top: -4px;
 }
 #jubi-chat-loader-app .pm-headOnline {
-    left: 123px;
-    top: 6px;
+    left: 116px;
+    top: 9px;
 }
 #jubi-chat-loader-app .headerRightContent {
-    top: 20px;
-    right: 0px;
+    top: 21px;
+    right: 10px;
 }
 #jubi-chat-loader-app .pm-sec_newHeader {
     height: 72px;
