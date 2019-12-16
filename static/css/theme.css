@@ -4473,4 +4473,14 @@ body{
 #jubi-chat-loader-app .pm-sec_openview {
     height: 100vh;
 }
+#jubi-chat-loader-app .headerLeftContent {
+   margin: -4px 0 0 0;
+}
+#jubi-chat-loader-app .pm-headOnline {
+    left: 125px;
+    top: 11px;
+}
+#jubi-chat-loader-app .headerRightContent {
+    right: 10px;
+}
 }
