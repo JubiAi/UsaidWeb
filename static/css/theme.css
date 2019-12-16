@@ -4468,11 +4468,10 @@ body{
        height: 93vh;
 }
 #jubi-chat-loader-app .headerLeftContent {
-    margin-top: -8px;
+    margin-top: -4px;
 }
 #jubi-chat-loader-app .pm-headOnline {
-    left: 123px;
-    top: 6px;
+    top: 8px;
 }
 #jubi-chat-loader-app .headerRightContent {
     top: 21px;
