@@ -4469,8 +4469,8 @@ body{
 }
 }
 
-/* @media (max-width: 380px){
+@media (max-width: 380px){
 #jubi-chat-loader-app .pm-sec_openview {
     height: 100vh;
 }
-} */
+}
