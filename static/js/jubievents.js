@@ -38,5 +38,7 @@ $(document).ready(function() {
     console.log("test");
     //code here
     $("#button-play-ws").css("display", "none");
-  } else $("#button-play-ws").css("display", "block");
+  } else {
+    $("#button-play-ws").css("display", "block");
+  }
 });
