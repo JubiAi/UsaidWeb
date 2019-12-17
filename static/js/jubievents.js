@@ -70,9 +70,9 @@ $(document).ready(function() {
       "" == t &&
         (document.getElementById("jubi-answerBottom").style.height = "26px"),
       (document.getElementById("jubi-bxinput").style.height =
-        n < 53 ? "53px" : n + "px"),
+        n < 65 ? "65px" : n + "px"),
       "" == t &&
-        (document.getElementById("jubi-bxinput").style.height = "53px"),
+        (document.getElementById("jubi-bxinput").style.height = "65px"),
       (document.getElementById("jubi-textInput").style.height =
         n < 85 ? "85px" : n + "px"),
       "" == t &&
