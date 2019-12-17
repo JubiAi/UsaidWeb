@@ -61,12 +61,9 @@ $(document).ready(function() {
   } else {
     console.log("msg");
   }
-
-  // textarea = document.querySelector("#jubi-answerBottom");
-  // textarea.addEventListener("input", autoResize, false);
-
-  // function autoResize() {
-  //   this.style.height = "auto";
-  //   this.style.height = this.scrollHeight + "px";
-  // }
+  $("body").on("keydown", "#jubi-answerBottom", function(e) {
+    var t = $("#jubi-answerBottom").val(),
+        n = document.getElementById("jubi-answerBottom").scrollHeight;
+    console.log("textareaheightnow: " + n), document.getElementById("jubi-answerBottom").style.height = n < 26 ? "26px" : n + "px", "" == t && (document.getElementById("jubi-answerBottom").style.height = "26px"), $("#button-send").show(), $("#button-send").css("display", "block !important"), $("#button-send").css("display", "block")
+})
 });
