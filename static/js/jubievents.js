@@ -34,7 +34,7 @@ $(document).ready(function() {
   });
 
   // let testExp = new RegExp("iPhone|iPad|", "i");
-  let testExp = new RegExp("iPhone|" + "BlackBerry|", "i");
+  let testExp = new RegExp("iPhone|", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
     //code here
