@@ -26,11 +26,17 @@ $(document).ready(function() {
     $(".voiceIcon").hide();
     $("#voice-buttons").hide();
     $("#jubi-bottomClick").show();
+    $("#jubi-bottomClick").attr("style", "display: block !important");
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     $("#jubi-bottomClick").hide();
     $(".voiceIcon").show();
     $("#voice-buttons").show();
+  });
+  $("#jubi-bottomClick").click(function() {
+    // $("#jubi-bxinput").show();
+    $("#button-send").show();
+    $(".voiceIcon").remove();
   });
 
   let testExp = new RegExp("iPhone|iPad", "i");
