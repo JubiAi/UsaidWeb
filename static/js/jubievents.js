@@ -74,7 +74,7 @@ $(document).ready(function() {
       "" == t &&
         (document.getElementById("jubi-bxinput").style.height = "53px"),
       (document.getElementById("jubi-textInput").style.height =
-        n < 78 ? "85px" : n + "px"),
+        n < 85 ? "85px" : n + "px"),
       "" == t &&
         (document.getElementById("jubi-textInput").style.height = "85px"),
       $("#button-send").show(),
