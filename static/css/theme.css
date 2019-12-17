@@ -1618,11 +1618,12 @@ body{
     border: 0;
     box-sizing: border-box;
     width: 535px;
-    height: auto;
+    /* height: auto; */
     font-size: 15px;
     font-weight: 400;
     text-indent: 0 !important;
     text-indent: initial !important;
+    min-height: 26px;
     max-height: 115px;
     padding: 0;
     border-bottom: 0 solid #ccc
@@ -2545,6 +2546,7 @@ body{
 
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
+    min-width: 26px;
     max-height: 115px;
     background: 0;
     resize: none;
