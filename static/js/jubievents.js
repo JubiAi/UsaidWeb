@@ -43,6 +43,10 @@ $(document).ready(function() {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
     });
+    $("body").on("focusout", "#jubi-answerBottom", function() {
+      $("#button-play-ws").hide();
+      $("#voice-buttons").hide();
+    });
   } else {
     console.log("msg");
   }
