@@ -34,13 +34,14 @@ $(document).ready(function() {
   });
 
   // let testExp = new RegExp("iPhone|iPad|", "i");
-  let testExp = new RegExp("iPhone|", "i");
+  let testExp = new RegExp("Android|" + "BlackBerry|" + "IEMobile|Mobile", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
     //code here
-    $("#button-play-ws").css("display", "none");
+    $("#button-play-ws").css("display", "block");
   } else {
     console.log("msg");
+    $("#button-play-ws").css("display", "none");
   }
 });
 
