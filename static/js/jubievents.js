@@ -33,7 +33,7 @@ $(document).ready(function() {
     $("#voice-buttons").show();
   });
 
-  let testExp = new RegExp("iPhone|Mobile", "i");
+  let testExp = new RegExp("iPhone|Mobile" + "iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
     $("#button-play-ws").hide();
