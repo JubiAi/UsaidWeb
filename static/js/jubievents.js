@@ -40,7 +40,7 @@ $(document).ready(function() {
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
     $("#jubi-answerBottom").click(function() {
-      $(".voiceIcon").hide();
+      $("#button-play-ws").hide();
       $("#voice-buttons").hide();
     });
   } else {
