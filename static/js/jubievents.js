@@ -43,6 +43,7 @@ $(document).ready(function() {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
+      $("#jubi-bottomClick").attr("display", "block !important;");
     });
     $("body").on("focusout", "#jubi-answerBottom", function() {
       $("#button-play-ws").hide();
