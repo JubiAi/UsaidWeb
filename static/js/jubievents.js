@@ -38,7 +38,7 @@ $(document).ready(function() {
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
     //code here
-    $("#button-play-ws").css("display", "block");
+    // $("#button-play-ws").css("display", "block");
   } else {
     console.log("msg");
     $("#button-play-ws").css("display", "none");
