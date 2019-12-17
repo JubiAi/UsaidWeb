@@ -2555,7 +2555,7 @@ body{
     font-size: 16px;
     font-weight: 400;
     padding: 0 12px;
-    margin-left: 0px;
+    margin-left: 25px;
     margin-top: 13px;
     outline: none;
     float: left;
@@ -3544,6 +3544,7 @@ body{
     width: 36px;
     display: flex;
     /* display: none; */
+    position: fixed;
 }
 
 #jubi-chat-loader-app #jubi-muteVoice {
