@@ -52,10 +52,8 @@ $(document).ready(function() {
     });
     $("#jubi-bottomClick").click(function() {
       $("#jubi-bxinput").show();
-    });
-    $("#jubi-bottomClick").click(function() {
-      $("#jubi-bxinput").show();
       $("#button-send").show();
+      $("#button-play-ws").hide();
     });
   } else {
     console.log("msg");
