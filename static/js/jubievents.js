@@ -40,23 +40,17 @@ $(document).ready(function() {
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
     $("#jubi-answerBottom").click(function() {
-      $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
       $("#jubi-bottomClick").attr("style", "display: block !important");
     });
     $("body").on("focusout", "#jubi-answerBottom", function() {
-      $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
     });
     $("#jubi-bottomClick").click(function() {
       $("#jubi-bxinput").show();
       $("#button-send").show();
-      $("#button-play-ws").hide();
-    });
-    $("#button-send").click(function() {
-      $("#button-play-ws").hide();
     });
   } else {
     console.log("msg");
