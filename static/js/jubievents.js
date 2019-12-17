@@ -63,7 +63,14 @@ $(document).ready(function() {
   }
   $("body").on("keydown", "#jubi-answerBottom", function(e) {
     var t = $("#jubi-answerBottom").val(),
-        n = document.getElementById("jubi-answerBottom").scrollHeight;
-    console.log("textareaheightnow: " + n), document.getElementById("jubi-answerBottom").style.height = n < 26 ? "26px" : n + "px", "" == t && (document.getElementById("jubi-answerBottom").style.height = "26px"), $("#button-send").show(), $("#button-send").css("display", "block !important"), $("#button-send").css("display", "block")
-})
+      n = document.getElementById("jubi-answerBottom").scrollHeight;
+    console.log("textareaheightnow: " + n),
+      (document.getElementById("jubi-answerBottom").style.height =
+        n < 26 ? "26px" : n + "px"),
+      "" == t &&
+        (document.getElementById("jubi-answerBottom").style.height = "26px"),
+      $("#button-send").show(),
+      $("#button-send").css("display", "block !important"),
+      $("#button-send").css("display", "block");
+  });
 });
