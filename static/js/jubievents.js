@@ -55,6 +55,9 @@ $(document).ready(function() {
       $("#button-send").show();
       $("#button-play-ws").hide();
     });
+    $("#button-send").click(function() {
+      $("#button-play-ws").hide();
+    });
   } else {
     console.log("msg");
   }
