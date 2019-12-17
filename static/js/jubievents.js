@@ -36,7 +36,7 @@ $(document).ready(function() {
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
-    $("#button-play-ws").hide();
+    $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
     $("#jubi-answerBottom").click(function() {
