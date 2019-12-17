@@ -33,13 +33,15 @@ $(document).ready(function() {
     $("#voice-buttons").show();
   });
 
-  let testExp = new RegExp("iPhone|Mobile" + "iPad|Mobile", "i");
+  let testExp = new RegExp("iPhone|Mobile", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
     $("#button-play-ws").hide();
     $(".jubi-muteUnmuteVoice").hide();
   } else {
     console.log("msg");
+    $("#button-play-ws").show();
+    $(".jubi-muteUnmuteVoice").show();
   }
 });
 
