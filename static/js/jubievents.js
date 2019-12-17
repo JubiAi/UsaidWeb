@@ -38,11 +38,8 @@ $(document).ready(function() {
     console.log("test");
     $("#button-play-ws").hide();
     $(".jubi-muteUnmuteVoice").hide();
+    $("#jubi-bottomClick").show();
   } else {
     console.log("msg");
-    // $("#button-play-ws").show();
-    // $(".jubi-muteUnmuteVoice").show();
   }
 });
-
-// let testExp = new RegExp('Android|iPhone|iPad|' + 'BlackBerry|' + 'IEMobile|Mobile', 'i');
