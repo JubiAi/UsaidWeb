@@ -33,7 +33,11 @@ $(document).ready(function() {
     $("#voice-buttons").show();
   });
 
-  let testExp = new RegExp("iPhone|iPad|", "i");
+  // let testExp = new RegExp("iPhone|iPad|", "i");
+  let testExp = new RegExp(
+    "Android|iPhone|iPad|" + "BlackBerry|" + "IEMobile|Mobile",
+    "i"
+  );
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
     //code here
@@ -42,3 +46,5 @@ $(document).ready(function() {
     console.log("msg");
   }
 });
+
+// let testExp = new RegExp('Android|iPhone|iPad|' + 'BlackBerry|' + 'IEMobile|Mobile', 'i');
