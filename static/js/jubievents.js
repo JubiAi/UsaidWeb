@@ -42,7 +42,7 @@ $(document).ready(function() {
     $("#jubi-answerBottom").click(function() {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
-      // $("#jubi-bottomClick").show();
+      $("#jubi-bottomClick").show();
       $("#jubi-bottomClick").attr("style", "display: block !important");
     });
     $("body").on("focusout", "#jubi-answerBottom", function() {
