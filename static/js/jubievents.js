@@ -40,19 +40,19 @@ $(document).ready(function() {
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
     $("#jubi-answerBottom").click(function() {
-      $("#button-play-ws").hide();
+      $(".voiceIcon").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
       $("#jubi-bottomClick").attr("style", "display: block !important");
     });
     $("body").on("focusout", "#jubi-answerBottom", function() {
-      $("#button-play-ws").hide();
+      $(".voiceIcon").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
     });
-    // $("#jubi-bottomClick").click(function() {
-    //   $("#jubi-bottomClick").show();
-    // });
+    $("#jubi-bottomClick").click(function() {
+      $("#jubi-bottomClick").show();
+    });
   } else {
     console.log("msg");
   }
