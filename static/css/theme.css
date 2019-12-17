@@ -1623,7 +1623,7 @@ body{
     font-weight: 400;
     text-indent: 0 !important;
     text-indent: initial !important;
-    min-height: 26px;
+    height: 26px;
     max-height: 115px;
     padding: 0;
     border-bottom: 0 solid #ccc
@@ -2506,7 +2506,7 @@ body{
     background: #fff;
     height: auto;
     float: left;
-    min-height: 78px;
+    height: 78px;
     max-height: 120px;
     left: 0;
     bottom: 0;
@@ -2528,12 +2528,12 @@ body{
     background: 0;
     margin: -5px 0 0 20px;
     box-sizing: border-box;
-    height: auto;
+    /* height: auto; */
     font-size: 15px;
     font-weight: 400;
     text-indent: 0 !important;
     text-indent: initial !important;
-    min-height: 53px;
+    height: 53px;
     max-height: 79px;
     border-bottom: 0 solid #ccc;
     border: 1px solid #f2f2f2;
@@ -2546,7 +2546,7 @@ body{
 
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
-    min-height: 26px;
+    height: 26px;
     max-height: 115px;
     background: 0;
     resize: none;

@@ -66,7 +66,8 @@ $(document).ready(function() {
       n = document.getElementById("jubi-answerBottom").scrollHeight;
     console.log("textareaheightnow: " + n),
       (document.getElementById("jubi-answerBottom").style.height =
-        n < 26 ? "26px" : n + "px"),"" == t &&
+        n < 26 ? "26px" : n + "px"),
+      "" == t &&
         (document.getElementById("jubi-answerBottom").style.height = "26px"),
       $("#button-send").show(),
       $("#button-send").css("display", "block !important"),
