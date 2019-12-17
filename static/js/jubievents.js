@@ -40,16 +40,16 @@ $(document).ready(function() {
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
     $("#jubi-answerBottom").click(function() {
-      $(".voiceIcon").hide();
+      $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
       $("#jubi-bottomClick").attr("style", "display: block !important");
     });
-    // $("body").on("focusout", "#jubi-answerBottom", function() {
-    //   $(".voiceIcon").hide();
-    //   $("#voice-buttons").hide();
-    //   $("#jubi-bottomClick").show();
-    // });
+    $("body").on("focusout", "#jubi-answerBottom", function() {
+      $("#button-play-ws").hide();
+      $("#voice-buttons").hide();
+      $("#jubi-bottomClick").show();
+    });
   } else {
     console.log("msg");
   }
