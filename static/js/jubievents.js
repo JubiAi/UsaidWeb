@@ -39,6 +39,10 @@ $(document).ready(function() {
     $("#button-play-ws").hide();
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
+    $("#jubi-answerBottom").click(function() {
+      $(".voiceIcon").hide();
+      $("#voice-buttons").hide();
+    });
   } else {
     console.log("msg");
   }
