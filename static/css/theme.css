@@ -2546,7 +2546,7 @@ body{
 
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
-    min-width: 26px;
+    min-height: 26px;
     max-height: 115px;
     background: 0;
     resize: none;
@@ -3555,7 +3555,7 @@ body{
     /* cursor: pointer;
     width: 100%;
     text-align: center;
-    margin : -6px 0px 0px -45px; */
+    margin : -6px 0px 0px -45px; */1
     cursor: pointer;
     width: 100%;
     text-align: center;
