@@ -41,7 +41,6 @@ $(document).ready(function() {
     $("#button-play-ws").css("display", "none");
   } else {
     console.log("msg");
-    $("#button-play-ws").css("display", "block");
   }
 });
 
