@@ -33,12 +33,11 @@ $(document).ready(function() {
     $("#voice-buttons").show();
   });
 
-  // let testExp = new RegExp("iPhone|iPad|", "i");
-  let testExp = new RegExp("iPhone|iPad|Mobile", "i");
+  let testExp = new RegExp("iPhone|Mobile", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
-    //code here
-    $("#button-play-ws").css("display", "none");
+    // $("#button-play-ws").css("display", "none");
+    $("#button-play-ws").hide();
   } else {
     console.log("msg");
   }
