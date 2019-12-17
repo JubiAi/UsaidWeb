@@ -50,9 +50,6 @@ $(document).ready(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
     });
-    $("#jubi-bottomClick").click(function() {
-      $("#jubi-bottomClick").show();
-    });
   } else {
     console.log("msg");
   }
