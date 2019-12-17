@@ -4484,6 +4484,9 @@ body{
 #jubi-chat-loader-app .pm-sec_newHeader {
     height: 72px;
 }
+#jubi-chat-loader-app .jubi-bxinput textarea {
+     width: 75%;
+}
 }
 
 /* @media (max-width: 380px){
