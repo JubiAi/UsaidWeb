@@ -73,6 +73,10 @@ $(document).ready(function() {
         n < 53 ? "53px" : n + "px"),
       "" == t &&
         (document.getElementById("jubi-bxinput").style.height = "53px"),
+      (document.getElementById("jubi-textInput").style.height =
+        n < 78 ? "78px" : n + "px"),
+      "" == t &&
+        (document.getElementById("jubi-textInput").style.height = "78px"),
       $("#button-send").show(),
       $("#button-send").css("display", "block !important"),
       $("#button-send").css("display", "block");
