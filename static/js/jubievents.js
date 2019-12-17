@@ -39,6 +39,6 @@ $(document).ready(function() {
     //code here
     $("#button-play-ws").css("display", "none");
   } else {
-    $("#button-play-ws").css("display", "block");
+    console.log("msg");
   }
 });
