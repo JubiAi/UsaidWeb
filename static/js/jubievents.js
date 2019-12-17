@@ -44,14 +44,14 @@ $(document).ready(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
     });
-    $("body").on("focusout", "#jubi-answerBottom", function() {
-      $("#button-play-ws").hide();
-      $("#voice-buttons").hide();
-      $("#jubi-bottomClick").show();
-    });
-    $("#jubi-bottomClick").click(function() {
-      $("#jubi-bottomClick").show();
-    });
+    // $("body").on("focusout", "#jubi-answerBottom", function() {
+    //   $("#button-play-ws").hide();
+    //   $("#voice-buttons").hide();
+    //   $("#jubi-bottomClick").show();
+    // });
+    // $("#jubi-bottomClick").click(function() {
+    //   $("#jubi-bottomClick").show();
+    // });
   } else {
     console.log("msg");
   }
