@@ -50,7 +50,16 @@ $(document).ready(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
     });
+    $("#jubi-bottomClick").click(function() {
+      $("#jubi-bxinput").show();
+    });
+    $("#jubi-bottomClick").click(function() {
+      $("#jubi-bxinput").show();
+      $("#button-send").show();
+    });
   } else {
     console.log("msg");
   }
 });
+
+// button - send;
