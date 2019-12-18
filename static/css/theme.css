@@ -4420,7 +4420,7 @@ body{
         height: 78px;padding: 12px 1px 0 12px;
     }
     #jubi-chat-loader-app .pm-sec_newHeader p {
-        width: 76%;
+        width: 75%;
     }
     #jubi-chat-loader-app .headerRightContent {
         top: 25px;width: 75px;right: 6px;
@@ -4445,7 +4445,7 @@ body{
     }
     #jubi-chat-loader-app .headerRightContent {
         top: 25px;
-        right: 10px;
+        right: 13px;
     }
  }
 
@@ -4488,20 +4488,3 @@ body{
      width: 75%;
 }
 }
-
-/* @media (max-width: 380px){
-#jubi-chat-loader-app .pm-sec_openview {
-    height: 100vh;
-}
-#jubi-chat-loader-app .headerLeftContent {
-   margin: -4px 0 0 0;
-}
-#jubi-chat-loader-app .pm-headOnline {
-    left: 125px;
-    top: 11px;
-}
-#jubi-chat-loader-app .headerRightContent {
-    right: 10px;
-}
-} */
-
