@@ -4373,6 +4373,9 @@ body{
 }
 
 @media (max-width: 1024px){
+    #jubi-chat-loader-app .pm-sec_openview {
+            height: 88vh;
+     }
     .voiceContent p {
         font-size: 14px;
         padding: 4px;
