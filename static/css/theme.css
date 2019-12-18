@@ -4470,7 +4470,7 @@ body{
 
 @media (max-width: 360px) {
 #jubi-chat-loader-app .pm-sec_openview {
-       height: 93vh;
+       height: 88vh;
 }
 #jubi-chat-loader-app .headerLeftContent {
     margin-top: -4px;
