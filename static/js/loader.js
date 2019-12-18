@@ -320,7 +320,7 @@
     "</div>" +
     "<h3>Menu</h3>" +
     "<ul>" +
-    '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel\')">' +
+    '<li class="jubi-menu-val" onclick="window.askBot(\'Restart\')">' +
     "<p>Restart</p>" +
     "</li>" +
     '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel\')">' +
