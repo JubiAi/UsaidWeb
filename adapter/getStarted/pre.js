@@ -162,7 +162,7 @@ module.exports = {
 			
 			resolve(data)
 		})
-	}
+	},
 
 
 
