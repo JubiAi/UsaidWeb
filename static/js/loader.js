@@ -328,7 +328,7 @@
     '<li class="jubi-menu-val" onclick="window.askBot(\'Cancel\')">' +
     "<p>Cancel</p>" +
     "</li>" +
-    '<li class="jubi-menu-val" onclick="window.askBot(\'talk to a counsellor\')">' +
+    '<li class="jubi-menu-val" onclick="window.askBot(\'helpline\')">' +
     "<p>Talk to a counsellor</p>" +
     "</li>" +
     "<li>" +
