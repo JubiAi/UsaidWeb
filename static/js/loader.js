@@ -250,7 +250,9 @@
     "<p>Your Trusted Guide on All Things Sexual Health</p>" +
     "</div>" +
     '<div class="headerRightContent">' +
+    '<a href="https://www.shopsplusproject.org/where-we-work/asiamiddle-east/india" target="_blank">' +
     '<p class="us">About Us</p>' +
+    "</a>" +
     // '<aside class="jubi-muteUnmuteVoice"> ' +
     // '<div id="jubi-unmuteVoice" style="display: block;">' +
     // '<img src="https://khushi.jubi.ai/images/unmute.png">' +
