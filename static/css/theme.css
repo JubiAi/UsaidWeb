@@ -4374,7 +4374,7 @@ body{
 
 @media (max-width: 1024px){
     #jubi-chat-loader-app .pm-sec_openview {
-            height: 86vh;
+            height: 87vh;
      }
     .voiceContent p {
         font-size: 14px;
@@ -4397,7 +4397,7 @@ body{
 
    @media (max-width: 768px){
     #jubi-chat-loader-app .pm-sec_openview {
-        height: 86vh;
+        height: 87vh;
       }
     #jubi-chat-loader-app .jubi-sec_newFooter button {
         padding: 0px 5px 5px 5px;
