@@ -1667,6 +1667,7 @@ body{
     z-index: 999999;
     background: #0771e3;
     min-height: 72px;
+    display: none;
 }
 
 #jubi-chat-loader-app .pm-titleheader {
