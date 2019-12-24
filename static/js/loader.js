@@ -145,8 +145,8 @@
     socket:
       "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
-    nluComponent:
-      "https://unpkg.com/compromise@latest/builds/compromise.min.js",
+    //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
+    nluComponent:"https://bot.jubi.ai/cdn/compromise.min.js",
     bundle:
       "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
     script:
