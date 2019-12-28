@@ -43,12 +43,12 @@ $(document).ready(function() {
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
   });
-  $("#jubi-textInput").click(function() {
-    $("#jubi-bottomClick").hide();
-  });
-  // $(".inputmenu").click(function() {
+  // $("#jubi-textInput").click(function() {
   //   $("#jubi-bottomClick").hide();
   // });
+  $(".inputmenu").click(function() {
+    $("#jubi-bottomClick").hide();
+  });
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
