@@ -41,6 +41,7 @@ $(document).ready(function() {
   $("#jubi-bottomClick").click(function() {
     $(".voiceIcon").show();
     $("#voice-buttons").show();
+    $("#button-send").show();
   });
 
   let testExp = new RegExp("iPhone|iPad", "i");
