@@ -28,11 +28,11 @@ $(document).ready(function() {
     $("#jubi-bottomClick").show();
     $("#jubi-bottomClick").attr("style", "display: block !important");
   });
-  $("body").on("focusout", "#jubi-answerBottom", function() {
-    $("#jubi-bottomClick").hide();
-    $(".voiceIcon").show();
-    $("#voice-buttons").show();
-  });
+  // $("body").on("focusout", "#jubi-answerBottom", function() {
+  //   $("#jubi-bottomClick").hide();
+  //   $(".voiceIcon").show();
+  //   $("#voice-buttons").show();
+  // });
   $("#jubi-bottomClick").click(function() {
     // $("#jubi-bxinput").show();
     $("#button-send").show();
