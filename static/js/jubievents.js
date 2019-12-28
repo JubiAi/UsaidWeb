@@ -46,9 +46,9 @@ $(document).ready(function() {
   $("#jubi-textInput").click(function() {
     $("#jubi-bottomClick").hide();
   });
-  $(".inputmenu").click(function() {
-    $("#jubi-bottomClick").hide();
-  });
+  // $(".inputmenu").click(function() {
+  //   $("#jubi-bottomClick").hide();
+  // });
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
