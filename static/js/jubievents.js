@@ -34,16 +34,14 @@ $(document).ready(function() {
     $("#voice-buttons").show();
   });
   $("#jubi-bottomClick").click(function() {
-    // $("#jubi-bxinput").show();
-    // $("#button-send").show();
-    // $(".voiceIcon").remove();
-  });
-  $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
     $(".voiceIcon").show();
     $("#voice-buttons").show();
     $("#button-send").show();
+  });
+  $("#pm-data").click(function() {
+    $("#jubi-bottomClick").hide();
   });
 
   let testExp = new RegExp("iPhone|iPad", "i");
