@@ -1,19 +1,17 @@
 var request = require('request')
 var sendExternalMessage = require('../../external.js')
 
-module.exports={
+module.exports = {
 
-	q1 : (data) =>{
-		return new Promise( async function(resolve,reject){
-			if(data.data.toLowerCase() == "that should be okay"){
+	q1: (data) => {
+		return new Promise(async function (resolve, reject) {
+			if (data.data.toLowerCase() == "that should be okay") {
 				// await sendExternalMessage(data, 'Incorrect! Condoms are made for one-time use only. |break|After each session, a fresh one must be used')
 				data.tags.answer = false
-			}
-			else if(data.data.toLowerCase() == "no, that wont work"){
+			} else if (data.data.toLowerCase() == "no, that wont work") {
 				// await sendExternalMessage(data, 'So, condoms are made for one-time use only. |break|After each session, a fresh one must be used')
 				data.tags.answer = true
-			}
-			else {
+			} else {
 				reject(data)
 			}
 			delete data.stage
@@ -21,17 +19,15 @@ module.exports={
 		})
 	},
 
-	q2 : (data) =>{
-		return new Promise( async function(resolve,reject){
-			if(data.data.toLowerCase() == "yes. thats true"){
+	q2: (data) => {
+		return new Promise(async function (resolve, reject) {
+			if (data.data.toLowerCase() == "yes. thats true") {
 				// await sendExternalMessage(data, 'Actually, that’s a myth. |break|Condoms do not have any such effects on men.')
 				data.tags.answer = false
-			}
-			else if(data.data.toLowerCase() == "no, thats a myth"){
+			} else if (data.data.toLowerCase() == "no, thats a myth") {
 				// await sendExternalMessage(data, 'Correct! |break|Condoms do not have any such effects on men. |break|This is just a myth.')
 				data.tags.answer = true
-			}
-			else {
+			} else {
 				reject(data)
 			}
 			delete data.stage
@@ -39,13 +35,25 @@ module.exports={
 		})
 	},
 
-	q3 : (data) =>{
-		return new Promise( async function(resolve,reject){
-			if(data.data.toLowerCase() == "there is no use" || data.data.toLowerCase() == "its important"){
+	q3: (data) => {
+		return new Promise(async function (resolve, reject) {
+			if (data.data.toLowerCase() == "there is no use" || data.data.toLowerCase() == "its important") {
 				await sendExternalMessage(data, 'Actually, most contraceptives do not provide protection against STIs. |break|Only condoms can provide all-round protection!')
 				console.log("++++++++++")
+			} else {
+				reject(data)
 			}
-			else {
+			delete data.stage
+			resolve(data)
+		})
+	},
+
+	q4: (data) => {
+		return new Promise(async function (resolve, reject) {
+			if (data.data.toLowerCase() == "yes" || data.data.toLowerCase() == "no") {
+				//await sendExternalMessage(data, 'Actually, most contraceptives do not provide protection against STIs. |break|Only condoms can provide all-round protection!')
+				console.log("++++++++++")
+			} else {
 				reject(data)
 			}
 			delete data.stage
