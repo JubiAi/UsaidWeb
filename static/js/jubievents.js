@@ -39,6 +39,7 @@ $(document).ready(function() {
     // $(".voiceIcon").remove();
   });
   $("#jubi-bottomClick").click(function() {
+    $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
     $(".voiceIcon").show();
     $("#voice-buttons").show();
