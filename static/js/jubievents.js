@@ -30,14 +30,13 @@ $(document).ready(function() {
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     // $("#jubi-bottomClick").hide();
-    $("#button-send").hide();
     $(".voiceIcon").show();
     $("#voice-buttons").show();
   });
   $("#jubi-bottomClick").click(function() {
-    $("#jubi-bxinput").show();
+    // $("#jubi-bxinput").show();
     // $("#button-send").show();
-    $(".voiceIcon").remove();
+    // $(".voiceIcon").remove();
   });
   $("#jubi-bottomClick").click(function() {
     $(".voiceIcon").show();
