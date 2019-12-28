@@ -35,7 +35,7 @@ $(document).ready(function() {
   });
   $("#jubi-bottomClick").click(function() {
     // $("#jubi-bxinput").show();
-    $("#button-send").show();
+    // $("#button-send").show();
     $(".voiceIcon").remove();
   });
 
