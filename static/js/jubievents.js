@@ -30,8 +30,8 @@ $(document).ready(function() {
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
     // $("#jubi-bottomClick").hide();
-    // $(".voiceIcon").show();
-    // $("#voice-buttons").show();
+    $(".voiceIcon").show();
+    $("#voice-buttons").show();
   });
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
@@ -43,9 +43,6 @@ $(document).ready(function() {
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
   });
-  // $("#jubi-textInput").click(function() {
-  //   $("#jubi-bottomClick").hide();
-  // });
   $(".inputmenu").click(function() {
     $("#jubi-bottomClick").hide();
   });
