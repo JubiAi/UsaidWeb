@@ -38,6 +38,10 @@ $(document).ready(function() {
     // $("#button-send").show();
     $(".voiceIcon").remove();
   });
+  $("#button-send").click(function() {
+    $(".voiceIcon").show();
+    $("#voice-buttons").show();
+  });
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
