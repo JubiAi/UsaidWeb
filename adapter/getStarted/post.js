@@ -49,6 +49,7 @@ module.exports = {
 			if (data.data.toLowerCase().includes("i")) {
 				console.log("I agree")
 				data.tags.rejected = false
+				console.log("----------------------------")
 				data.stage = "carousalone"
 				return resolve(data)
 			} else {
