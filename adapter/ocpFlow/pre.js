@@ -146,7 +146,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       data.reply = {
         type: "button",
-        text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊',
+        text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a>between 9 AM and 5PM OR |break|You can click on the button below to continue our conversation 😊',
         next: {
           data: [{
             data: "startflow",
