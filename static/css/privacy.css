@@ -42,6 +42,10 @@ body {
   color: #333b6c;
 }
 
+.copyright {
+  border-top: 2px solid grey;
+  height: 30vh;
+}
 .copyright img {
   width: 14px;
 }
