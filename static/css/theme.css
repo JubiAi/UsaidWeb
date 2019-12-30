@@ -3628,7 +3628,7 @@ body{
 #jubi-textInput,
 #rightpanel,
 #jubi-textInput {
-    display: none
+    /* display: none */
 }
 
 #jubi-chat-loader-app .jubi-message h1,
