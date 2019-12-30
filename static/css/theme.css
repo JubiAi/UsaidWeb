@@ -1122,7 +1122,8 @@ body{
     position: relative;
     margin-left: 0;
     display: inline-block;
-    background: #0771e3;
+    /* background: #0771e3; */
+    background: #006aff;
     padding: 12px 25px 4px;
     border-radius: 32px;
     border: 1px solid #e0e0e0;
@@ -1891,7 +1892,8 @@ body{
 #jubi-chat-loader-app .pm-leftInput {
     margin-left: 48px;
     display: inline-block;
-    background: #eaeaea;
+    /* background: #eaeaea; */
+    background: #eee;
     padding: 10px 25px 2px;
     border-radius: 32px;
     border: 1px solid #e0e0e0;
