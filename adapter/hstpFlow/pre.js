@@ -42,25 +42,30 @@ module.exports = {
     });
   },
   hstphow: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("---------------------------HSTPHOW-----------------");
-      model.reply = {
-        type: "quickReply",
-        text: "Healthy Timing and Spacing of Pregnancy (HTSP) is all about the safety and health of the mother and the child.",
-        next: {
-          data: [{
-            data: "how so",
-            text: "How so? "
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+      if (model.data.toLowerCase.includes("htsp")) {
+        model.reply = {
+          type: "quickReply",
+          text: "Healthy Timing and Spacing of Pregnancy (HTSP) is all about the safety and health of the mother and the child.",
+          next: {
+            data: [{
+              data: "how so",
+              text: "How so? "
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model);
+      }
+
     });
   },
 
   time: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("---------------------------Time-----------------");
       model.reply = {
         type: "quickReply",
@@ -78,7 +83,7 @@ module.exports = {
   },
 
   mother: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("---------------------------Mother-----------------");
       model.reply = {
         type: "quickReply",
@@ -99,7 +104,7 @@ module.exports = {
   },
 
   q1: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log(
         "------------------------------------------------------q1----------------------"
       );
@@ -124,7 +129,7 @@ module.exports = {
   },
 
   q2: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answern1);
       if (model.tags.answern1 == false) {
