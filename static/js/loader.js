@@ -63,6 +63,16 @@
     }
   }
 
+  (function() {
+    window.jubiChatEventListener = function(event) {
+      if (event.type == "process") {
+        console.log("Event----------->>>>>>>>");
+        console.log(event);
+        // $(".inputArea").hide();
+      }
+    };
+  });
+
   function isMyScriptLoaded(url) {
     var scripts = document.getElementsByTagName("script");
     for (var i = scripts.length; i--; ) {
@@ -146,7 +156,7 @@
       "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
     //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
-    nluComponent:"https://bot.jubi.ai/cdn/compromise.min.js",
+    nluComponent: "https://bot.jubi.ai/cdn/compromise.min.js",
     bundle:
       "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
     script:
