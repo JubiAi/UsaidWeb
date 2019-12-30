@@ -6,6 +6,19 @@ var request = require('request')
 
 module.exports = {
 
+	start: (data) => {
+		return new Promise(function (resolve, reject) {
+			console.log(data.data)
+			if (data.data.toLowerCase().includes("yes")) {
+				console.log("First stage")
+				return resolve(data)
+			} else {
+				return reject(data)
+			}
+		})
+	},
+
+
 	conAge: (data) => {
 		return new Promise(function (resolve, reject) {
 			console.log(data.data.toLowerCase())
