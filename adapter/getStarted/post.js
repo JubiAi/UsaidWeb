@@ -12,6 +12,7 @@ module.exports = {
 			if (data.data.toLowerCase().includes("yes")) {
 				console.log("First stage")
 				console.log(data)
+				delete data.stage
 				return resolve(data)
 			} else {
 				return reject(data)
@@ -44,13 +45,16 @@ module.exports = {
 	disclaimer: (data) => {
 		return new Promise(function (resolve, reject) {
 			console.log(data.data)
-			if (data.data.toLowerCase() == "i agree") {
+			//if (data.data.toLowerCase() == "i agree")
+			if (data.data.toLowerCase().includes("i")) {
 				console.log("I agree")
 				data.stage = "carousalone"
+				return resolve(data)
 			} else {
 				console.log("Disagree")
 				data.tags.rejected = true
 				data.stage = "disclaimer"
+				return resolve(data)
 			}
 			return resolve(data)
 		})
