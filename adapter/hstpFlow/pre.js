@@ -43,8 +43,8 @@ module.exports = {
   },
   hstphow: model => {
     return new Promise(function (resolve, reject) {
-      console.log("---------------------------HSTPHOW-----------------");
-      if (model.data.toLowerCase.includes("htsp")) {
+      if (model) {
+        console.log("---------------------------HSTPHOW-----------------");
         model.reply = {
           type: "quickReply",
           text: "Healthy Timing and Spacing of Pregnancy (HTSP) is all about the safety and health of the mother and the child.",
@@ -58,11 +58,12 @@ module.exports = {
         console.log(model.reply);
         return resolve(model);
       } else {
-        return reject(model);
+        return reject(model)
       }
 
     });
   },
+
 
   time: model => {
     return new Promise(function (resolve, reject) {
