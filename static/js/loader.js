@@ -157,8 +157,8 @@
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
     //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
     nluComponent: "https://bot.jubi.ai/cdn/compromise.min.js",
-    // bundle:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
-    bundle:"https://development.jubi.ai/usaidWeb/js/bundle.test.js",
+    bundle:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
+    // bundle:"https://development.jubi.ai/usaidWeb/js/bundle.test.js",
     script:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
     // script:
     //   "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
