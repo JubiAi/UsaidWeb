@@ -12,6 +12,7 @@ module.exports = {
 			if (data.data.toLowerCase().includes("yes")) {
 				console.log("First stage")
 				console.log(data)
+				delete data.stage
 				return resolve(data)
 			} else {
 				return reject(data)
