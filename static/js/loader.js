@@ -64,13 +64,12 @@
   }
 
   // (function() {
-  //   window.jubiChatEventListener = function(event) {
-  //     console.log("Event----------->>>>>>>>");
-  //     if (event.type == "process") {
-  //       console.log(event);
-  //       $(".inputArea").hide();
-  //     }
-  //   };
+    window.jubiChatEventListener = function(event) {
+      if (event.type == "process") {
+        console.log("process----------->>>>>>>>");
+        // $("#jubi-textInput").hide();
+      }
+    };
   // });
 
   function isMyScriptLoaded(url) {
