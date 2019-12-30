@@ -48,10 +48,12 @@ module.exports = {
 			if (data.data.toLowerCase() == "i agree") {
 				console.log("I agree")
 				data.stage = "carousalone"
+				return resolve(data)
 			} else {
 				console.log("Disagree")
 				data.tags.rejected = true
 				data.stage = "disclaimer"
+				return resolve(data)
 			}
 			return resolve(data)
 		})
