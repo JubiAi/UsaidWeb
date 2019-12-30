@@ -63,12 +63,11 @@
 
   // (function() {
   window.jubiChatEventListener = function (event) {
+    console.log(event)
     if (event.type == "process" || event.input.text == "Yes, let us start!") {
-      // console.log("if process----------->>>>>>>>");
-      console.log(event);
       $("#jubi-textInput").hide();
-    } else {
-      // console.log("else process----------->>>>>>>>");
+    } 
+    else {
       $("#jubi-textInput").show();
     }
   };
