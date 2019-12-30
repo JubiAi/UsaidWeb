@@ -149,22 +149,17 @@
     pmTheme: "./css/theme.css"
   });
   loadJs({
-    crypt:
-      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js",
+    crypt:"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js",
     jQuery: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
-    bootstrap:
-      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
-    carousel:
-      "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js",
-    socket:
-      "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
+    bootstrap:"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
+    carousel:"https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js",
+    socket:"https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
     //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
     nluComponent: "https://bot.jubi.ai/cdn/compromise.min.js",
-    bundle:
-      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
-    script:
-      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
+    // bundle:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
+    bundle:"https://development.jubi.ai/usaidWeb/js/bundle.test.js",
+    script:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
     // script:
     //   "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
     jubievents: "./js/jubievents.js"
