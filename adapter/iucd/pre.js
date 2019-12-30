@@ -4,63 +4,78 @@ var request = require("request");
 
 module.exports = {
   remove: model => {
-    return new Promise(function (resolve) {
-      model.reply = {
-        type: "quickReply",
-        text: "And the best part about IUCD is that you can change your mind about them anytime! A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD.",
-        next: {
-          data: [{
-            data: "Tell me more about how they work?",
-            text: "Tell me more about how they work?"
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+    return new Promise(function (resolve, reject) {
+      if (model) {
+        model.reply = {
+          type: "quickReply",
+          text: "And the best part about IUCD is that you can change your mind about them anytime! A Doctor can get them removed for you whenever you decide so. Also, your ability to have babies (fertility) returns immediately after you remove your IUCD.",
+          next: {
+            data: [{
+              data: "Tell me more about how they work?",
+              text: "Tell me more about how they work?"
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
   ut: model => {
-    return new Promise(function (resolve) {
-      model.reply = {
-        type: "quickReply",
-        text: " So, an IUCD is placed in your uterus by a doctor. There it does its job of preventing pregnancies day in and day out!",
-        next: {
-          data: [{
-            data: "inside my uterus",
-            text: "Inside my uterus! 😨 Does it hurt?"
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+    return new Promise(function (resolve, reject) {
+      if (model) {
+        model.reply = {
+          type: "quickReply",
+          text: " So, an IUCD is placed in your uterus by a doctor. There it does its job of preventing pregnancies day in and day out!",
+          next: {
+            data: [{
+              data: "inside my uterus",
+              text: "Inside my uterus! 😨 Does it hurt?"
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
   manage: model => {
-    return new Promise(function (resolve) {
-      model.reply = {
-        type: "quickReply",
-        text: "It's different for different women. But yes, many do experience pain.|break| But the pain can be managed in a lot of ways!For most women resting for a short while after, helps.",
-        next: {
-          data: [{
-              data: "worried",
-              text: " Still worried? Talk to a counsellor"
-            },
+    return new Promise(function (resolve, reject) {
+      if (model) {
+        model.reply = {
+          type: "quickReply",
+          text: "It's different for different women. But yes, many do experience pain.|break| But the pain can be managed in a lot of ways!For most women resting for a short while after, helps.",
+          next: {
+            data: [{
+                data: "worried",
+                text: " Still worried? Talk to a counsellor"
+              },
 
-            {
-              data: "iucd",
-              text: "Tell me more about IUCD  "
-            }
-          ]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+              {
+                data: "iucd",
+                text: "Tell me more about IUCD  "
+              }
+            ]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+
+      } else {
+        return reject(model)
+      }
     });
   },
 
   hiucd: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       model.reply = {
         type: "quickReply",
         text: "Well IUCD come in two forms. Copper and Hormonal IUCD. |break|The copper IUCD works by bringing about a chemical change in the uterus. |break|This prevents pregnancy by damaging the sperm and egg before they can meet.",
@@ -77,7 +92,7 @@ module.exports = {
   },
 
   risk: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       model.reply = {
         type: "quickReply",
         text: "They work by releasing small amounts of hormones that prevent the sperm from fertilizing the egg.",
@@ -114,7 +129,7 @@ module.exports = {
   },
 
   q2: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answer1);
       if (model.tags.answer1 == false) {
@@ -157,7 +172,7 @@ module.exports = {
   },
 
   q3: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answer1);
       if (model.tags.answer2 == false) {
@@ -200,7 +215,7 @@ module.exports = {
   },
 
   final: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answer3);
       if (model.tags.total == 3) {
@@ -259,7 +274,7 @@ module.exports = {
   },
 
   q4: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answer3);
       if (model.tags.total == 3) {

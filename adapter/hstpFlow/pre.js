@@ -193,7 +193,7 @@ module.exports = {
   },
 
   q3: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answern2);
       if (model.tags.answern2 == false) {
@@ -213,6 +213,8 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
       } else if (model.tags.answern2 == true) {
         model.reply = {
           type: "quickReply",
@@ -229,9 +231,13 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
       }
-      console.log(model.reply);
-      return resolve(model);
+      // console.log(model.reply);
+      // return resolve(model);
     });
   }
 };
