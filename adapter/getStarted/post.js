@@ -48,6 +48,7 @@ module.exports = {
 			//if (data.data.toLowerCase() == "i agree")
 			if (data.data.toLowerCase().includes("i")) {
 				console.log("I agree")
+				data.tags.rejected = false
 				data.stage = "carousalone"
 				return resolve(data)
 			} else {
