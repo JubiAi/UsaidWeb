@@ -11,6 +11,7 @@ module.exports = {
 			console.log(data.data)
 			if (data.data.toLowerCase().includes("yes")) {
 				console.log("First stage")
+				console.log(data)
 				return resolve(data)
 			} else {
 				return reject(data)
