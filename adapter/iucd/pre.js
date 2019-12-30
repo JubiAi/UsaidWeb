@@ -76,35 +76,45 @@ module.exports = {
 
   hiucd: model => {
     return new Promise(function (resolve, reject) {
-      model.reply = {
-        type: "quickReply",
-        text: "Well IUCD come in two forms. Copper and Hormonal IUCD. |break|The copper IUCD works by bringing about a chemical change in the uterus. |break|This prevents pregnancy by damaging the sperm and egg before they can meet.",
-        next: {
-          data: [{
-            data: "And what about hormonal IUCD",
-            text: "And what about hormonal IUCD"
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+      if (model) {
+        model.reply = {
+          type: "quickReply",
+          text: "Well IUCD come in two forms. Copper and Hormonal IUCD. |break|The copper IUCD works by bringing about a chemical change in the uterus. |break|This prevents pregnancy by damaging the sperm and egg before they can meet.",
+          next: {
+            data: [{
+              data: "And what about hormonal IUCD",
+              text: "And what about hormonal IUCD"
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
   risk: model => {
     return new Promise(function (resolve, reject) {
-      model.reply = {
-        type: "quickReply",
-        text: "They work by releasing small amounts of hormones that prevent the sperm from fertilizing the egg.",
-        next: {
-          data: [{
-            data: "Are there any risks of using IUCD?",
-            text: "Are there any risks of using IUCD?"
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+      if (model) {
+        model.reply = {
+          type: "quickReply",
+          text: "They work by releasing small amounts of hormones that prevent the sperm from fertilizing the egg.",
+          next: {
+            data: [{
+              data: "Are there any risks of using IUCD?",
+              text: "Are there any risks of using IUCD?"
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
@@ -259,17 +269,22 @@ module.exports = {
 
   helpline: data => {
     return new Promise((resolve, reject) => {
-      data.reply = {
-        type: "button",
-        text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a> between 9 AM and 5PM OR |break|You can click on the button below to continue our conversation 😊',
-        next: {
-          data: [{
-            data: "startflow",
-            text: "Learn More"
-          }]
-        }
-      };
-      return resolve(data);
+      if (data) {
+        data.reply = {
+          type: "button",
+          text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a> between 9 AM and 5PM OR |break|You can click on the button below to continue our conversation 😊',
+          next: {
+            data: [{
+              data: "startflow",
+              text: "Learn More"
+            }]
+          }
+        };
+        return resolve(data);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 

@@ -25,24 +25,29 @@ module.exports = {
 
   q1: model => {
     return new Promise(function (resolve) {
-      console.log("========================================================");
-      model.reply = {
-        type: "quickReply",
-        text: "Alright! I will share a few statements and you will have to tell me if it is a myth or a fact. Let’s start.|break|Here’s your first one!|break|OCPs affect women’s fertility (ability to have children)",
-        next: {
-          data: [{
-              data: "This is a myth",
-              text: "This is a myth"
-            },
-            {
-              data: "Its a fact",
-              text: "It is a fact"
-            }
-          ]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+      if (model) {
+        console.log("========================================================");
+        model.reply = {
+          type: "quickReply",
+          text: "Alright! I will share a few statements and you will have to tell me if it is a myth or a fact. Let’s start.|break|Here’s your first one!|break|OCPs affect women’s fertility (ability to have children)",
+          next: {
+            data: [{
+                data: "This is a myth",
+                text: "This is a myth"
+              },
+              {
+                data: "Its a fact",
+                text: "It is a fact"
+              }
+            ]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
@@ -67,6 +72,8 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
       } else if (model.tags.answer1 == true) {
         model.reply = {
           type: "quickReply",
@@ -83,9 +90,13 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
       }
-      console.log(model.reply);
-      return resolve(model);
+      // console.log(model.reply);
+      // return resolve(model);
     });
   },
 
@@ -110,6 +121,8 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
       } else if (model.tags.answer2 == true) {
         model.reply = {
           type: "quickReply",
@@ -126,30 +139,37 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
       }
-      console.log(model.reply);
-      return resolve(model);
     });
   },
 
   helpline: (data) => {
     return new Promise((resolve, reject) => {
-      data.reply = {
-        type: "button",
-        text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a> between 9 AM and 5PM OR |break|You can click on the button below to continue our conversation 😊',
-        next: {
-          data: [{
-            data: "startflow",
-            text: "Learn More"
-          }]
+      if (data) {
+        data.reply = {
+          type: "button",
+          text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a> between 9 AM and 5PM OR |break|You can click on the button below to continue our conversation 😊',
+          next: {
+            data: [{
+              data: "startflow",
+              text: "Learn More"
+            }]
+          }
         }
+        return resolve(data)
+      } else {
+        return reject(data)
       }
-      return resolve(data)
+
     })
   },
 
   q4: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answer3);
       if (model.tags.answer3 == false) {
@@ -169,6 +189,8 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
       } else if (model.tags.answer3 == true) {
         model.reply = {
           type: "quickReply",
@@ -185,9 +207,11 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
       }
-      console.log(model.reply);
-      return resolve(model);
     });
   },
 
@@ -201,7 +225,7 @@ module.exports = {
   talkToAgent: (data) => {
     console.log("+_+_+_+_+_+_+_+_+_+_")
     console.log(data.tags.userSays == "talk to a counsellor ☎")
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       if (data.tags.userSays.toLowerCase() == "talk to a counsellor") {
         data.reply = {
           type: "button",
@@ -311,6 +335,8 @@ module.exports = {
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>'
         }
         return resolve(data)
+      } else {
+        return reject(data)
       }
     })
   },
