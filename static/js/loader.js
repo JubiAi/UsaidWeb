@@ -65,7 +65,7 @@
 
   // (function() {
     window.jubiChatEventListener = function(event) {
-      if (event.type == "process") {
+      if (event.type == "process"  || event.input.text == "Yes, let us start!") {
         console.log("if process----------->>>>>>>>");
         console.log(event);
         $("#jubi-textInput").hide();
