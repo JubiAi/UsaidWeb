@@ -65,8 +65,8 @@
 
   (function() {
     window.jubiChatEventListener = function(event) {
+      console.log("Event----------->>>>>>>>");
       if (event.type == "process") {
-        console.log("Event----------->>>>>>>>");
         console.log(event);
         // $(".inputArea").hide();
       }
