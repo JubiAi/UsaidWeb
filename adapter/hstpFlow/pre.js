@@ -4,7 +4,7 @@ var request = require("request");
 
 module.exports = {
   hstp: model => {
-    return new Promise(function (resolve) {
+    return new Promise(function (resolve, reject) {
       console.log("========================================================");
       console.log(model.tags.answer1);
       if (model.tags.answer1 == false) {
@@ -19,6 +19,8 @@ module.exports = {
             }]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
       } else if (model.tags.answer1 == true) {
         model.reply = {
           type: "quickReply",
@@ -30,9 +32,13 @@ module.exports = {
             }]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
       }
-      console.log(model.reply);
-      return resolve(model);
+      // console.log(model.reply);
+      // return resolve(model);
     });
   },
   hstphow: model => {
