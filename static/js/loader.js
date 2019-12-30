@@ -70,10 +70,10 @@
         console.log(event);
         $("#jubi-textInput").hide();
       }
-      // else {
-      //   console.log("else process----------->>>>>>>>");
-      //   $("#jubi-textInput").show();
-      // }
+      else {
+        console.log("else process----------->>>>>>>>");
+        $("#jubi-textInput").show();
+      }
     };
   // });
 
