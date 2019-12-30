@@ -19,7 +19,7 @@ body {
 }
 
 .heading {
-  background-image: linear-gradient(to top, #176bdf, #488ae8, #7eaff4);
+  background-image: linear-gradient(to bottom, #176bdf, #488ae8, #7eaff4);
   height: 45vh;
   padding: 0px;
   color: #fff;

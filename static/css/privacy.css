@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+}
+
+.main {
+  font-family: sans-serif;
+  display: flex;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.heading img {
+  width: 150px;
+  margin-left: 120px;
+}
+
+.heading {
+  background-image: linear-gradient(to bottom, #176bdf, #488ae8, #7eaff4);
+  height: 45vh;
+  padding: 0px;
+  color: #fff;
+}
+
+.terms {
+  text-align: center;
+  font-size: 24px;
+  padding-top: 50px;
+  margin-top: 0;
+}
+
+.text {
+  width: 80%;
+  margin-left: 120px;
+  margin-top: 70px;
+}
+
+.text h3 {
+  color: #333b6c;
+}
