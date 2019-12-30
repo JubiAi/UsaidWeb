@@ -328,7 +328,7 @@ module.exports = {
             } else if (data.tags.userSays == "call a counsellor📞") {
                 data.reply = {
                     type: "button",
-                    text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|Get information on the next steps after unprotected sex from the main menu below.',
+                    text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a> between 9 AM and 5PM OR |break|Get information on the next steps after unprotected sex from the main menu below.',
                     next: {
                         data: [{ //changes done
                                 data: 'Go to the main menu',
@@ -346,7 +346,7 @@ module.exports = {
             } else if (data.tags.userSays == "Speak to a counsellor") {
                 data.reply = { //changes done
                     type: "text",
-                    text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>'
+                    text: 'Call us at <a href="tel:1-800-258-0001">1-800-258-0001</a> between 9AM and 5PM '
                 }
                 return resolve(data)
             }
