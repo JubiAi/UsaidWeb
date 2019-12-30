@@ -1,10 +1,10 @@
 "use strict";
-(function() {
+(function () {
   function load(x, s) {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       //console.log("file-loading");
 
-      s.onload = s.onreadystatechange = function() {
+      s.onload = s.onreadystatechange = function () {
         var r = false;
 
         if (!r && (!this.readyState || this.readyState == "complete")) {
@@ -14,7 +14,7 @@
         }
       };
 
-      s.onerror = function(e) {
+      s.onerror = function (e) {
         //console.log("file-loading failed");
         return reject(e);
       };
@@ -30,9 +30,7 @@
     var x = document.getElementsByTagName("head")[0];
     try {
       for (
-        var _iterator = Object.keys(jsUrls)[Symbol.iterator](), _step;
-        !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
-        _iteratorNormalCompletion = true
+        var _iterator = Object.keys(jsUrls)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true
       ) {
         var key = _step.value;
 
@@ -64,22 +62,21 @@
   }
 
   // (function() {
-    window.jubiChatEventListener = function(event) {
-      if (event.type == "process"  || event.input.text == "Yes, let us start!") {
-        // console.log("if process----------->>>>>>>>");
-        console.log(event);
-        $("#jubi-textInput").hide();
-      }
-      else {
-        // console.log("else process----------->>>>>>>>");
-        $("#jubi-textInput").show();
-      }
-    };
+  window.jubiChatEventListener = function (event) {
+    if (event.type == "process" || event.input.text == "Yes, let us start!") {
+      // console.log("if process----------->>>>>>>>");
+      console.log(event);
+      $("#jubi-textInput").hide();
+    } else {
+      // console.log("else process----------->>>>>>>>");
+      $("#jubi-textInput").show();
+    }
+  };
   // });
 
   function isMyScriptLoaded(url) {
     var scripts = document.getElementsByTagName("script");
-    for (var i = scripts.length; i--; ) {
+    for (var i = scripts.length; i--;) {
       if (scripts[i].src == url) return true;
     }
     return false;
@@ -87,7 +84,7 @@
 
   function isMyCssLoaded(url) {
     var scripts = document.getElementsByTagName("link");
-    for (var i = scripts.length; i--; ) {
+    for (var i = scripts.length; i--;) {
       if (scripts[i].src == url) return true;
     }
     return false;
@@ -99,9 +96,7 @@
 
     try {
       for (
-        var _iterator2 = Object.keys(cssUrls)[Symbol.iterator](), _step2;
-        !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done);
-        _iteratorNormalCompletion2 = true
+        var _iterator2 = Object.keys(cssUrls)[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true
       ) {
         var key = _step2.value;
 
@@ -135,30 +130,25 @@
     }
   }
   loadCss({
-    bootstrapFont:
-      "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
-    muliFont:
-      "https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
-    owl:
-      "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css",
-    bootstrap:
-      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
-    owlTheme:
-      "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
+    bootstrapFont: "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
+    muliFont: "https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
+    owl: "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css",
+    bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
+    owlTheme: "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
     // pmTheme: "https://parramato.com/bot-view/Alpha Version_586886576888/dev/css/theme.css"
     pmTheme: "./css/theme.css"
   });
   loadJs({
-    crypt:"https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js",
+    crypt: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js",
     jQuery: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
-    bootstrap:"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
-    carousel:"https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js",
-    socket:"https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
+    bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
+    carousel: "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js",
+    socket: "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
     //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
     nluComponent: "https://bot.jubi.ai/cdn/compromise.min.js",
     // bundle:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.js",
-    bundle:"https://development.jubi.ai/usaidWeb/js/bundle.test.js",
+    bundle: "https://development.jubi.ai/usaidWeb/js/bundle.test.js",
     // script:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
     // script:
     //   "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
@@ -169,12 +159,9 @@
       images: {
         logo: "https://parramato.com/bot-view/images/logo.png",
         sendIcon: "https://parramato.com/bot-view/images/icon_send.png",
-        sendIconActive:
-          "https://parramato.com/bot-view/images/iconRed_send.png",
-        sendIconInPage:
-          "https://parramato.com/bot-view/images/icon_send_in_page.png",
-        loaderBotChat:
-          "https://parramato.com/bot-view/images/response-loading.gif",
+        sendIconActive: "https://parramato.com/bot-view/images/iconRed_send.png",
+        sendIconInPage: "https://parramato.com/bot-view/images/icon_send_in_page.png",
+        loaderBotChat: "https://parramato.com/bot-view/images/response-loading.gif",
         userIcon: "https://parramato.com/bot-view/images/user.png",
         // "botIcon": "https://parramato.com/bot-view/images/boticon.png",
         botIcon: "./images/unicorn.png",
@@ -183,8 +170,7 @@
         voiceIcon: "https://parramato.com/bot-view/images/voice.png",
         closeWebView: "https://parramato.com/bot-view/images/closeWebView.png",
         attachment: "https://parramato.com/bot-view/images/attachment.png",
-        permissionIcon:
-          "https://parramato.com/bot-view/images/parrot_loader.gif",
+        permissionIcon: "https://parramato.com/bot-view/images/parrot_loader.gif",
         muteIcon: "https://parramato.com/bot-view/images/mute.png",
         unmuteIcon: "https://parramato.com/bot-view/images/unmute.png"
       }
