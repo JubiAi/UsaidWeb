@@ -46,6 +46,11 @@ $(document).ready(function() {
   $(".inputmenu").click(function() {
     $("#jubi-bottomClick").hide();
   });
+  $("#jubi-answerBottom").on("keypress", function(e) {
+    if (e.which == 13) {
+      $("#jubi-bottomClick").hide();
+    }
+  });
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
