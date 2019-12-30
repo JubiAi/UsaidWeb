@@ -6,6 +6,19 @@ var request = require("request");
 
 module.exports = {
 
+	enter: model => {
+		return new Promise(function (resolve, reject) {
+			console.log(model.data + "----------------------");
+			if (model.data.toLowerCase().includes("how")) {
+				delete model.stage;
+				return resolve(model);
+			} else {
+				return reject(model);
+			}
+		});
+	},
+
+
 	sti: model => {
 		return new Promise(function (resolve, reject) {
 			console.log(model.data + "----------------------");
