@@ -50,7 +50,7 @@ module.exports = {
 				console.log("I agree")
 				data.tags.rejected = false
 				console.log("----------------------------")
-				data.stage = "carousalone"
+				data.stage = "carousalOne"
 				return resolve(data)
 			} else {
 				console.log("Disagree")
