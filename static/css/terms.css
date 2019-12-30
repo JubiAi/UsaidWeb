@@ -36,8 +36,27 @@ body {
   width: 80%;
   margin-left: 120px;
   margin-top: 70px;
+  margin-bottom: 80px;
 }
 
 .text h3 {
   color: #333b6c;
+}
+
+.copyright {
+  border-top: 1px solid grey;
+  height: 20vh;
+}
+
+.copyright div {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.copyright img {
+  width: 14px;
+}
+
+.copyright p {
+  display: inline;
 }
