@@ -16,6 +16,7 @@ body {
 .heading img {
   width: 150px;
   margin-left: 120px;
+  margin-top: 10px;
 }
 
 .heading {
@@ -44,7 +45,7 @@ body {
 }
 
 .copyright {
-  border-top: 1px solid grey;
+  border-top: 1px solid #d8d8d8;
   height: 20vh;
 }
 
@@ -59,4 +60,6 @@ body {
 
 .copyright p {
   display: inline;
+  font-size: 13px;
+  color: grey;
 }
