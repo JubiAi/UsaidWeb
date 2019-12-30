@@ -67,65 +67,79 @@ module.exports = {
 
   time: model => {
     return new Promise(function (resolve, reject) {
-      console.log("---------------------------Time-----------------");
-      model.reply = {
-        type: "quickReply",
-        text: "Did you know that 18-34 is the healthiest and the most fertile period in a woman's life? |break|Smart couples ensure that their kids are born during this period because it reduces the risk of complications. |break|Similarly, it’s wise to keep a gap of 3-5 years between your first and second child.",
-        next: {
-          data: [{
-            data: "Is that correct",
-            text: "Is that correct "
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+      if (model) {
+        console.log("---------------------------Time-----------------");
+        model.reply = {
+          type: "quickReply",
+          text: "Did you know that 18-34 is the healthiest and the most fertile period in a woman's life? |break|Smart couples ensure that their kids are born during this period because it reduces the risk of complications. |break|Similarly, it’s wise to keep a gap of 3-5 years between your first and second child.",
+          next: {
+            data: [{
+              data: "Is that correct",
+              text: "Is that correct "
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
   mother: model => {
     return new Promise(function (resolve, reject) {
-      console.log("---------------------------Mother-----------------");
-      model.reply = {
-        type: "quickReply",
-        text: "Yes! This time helps the mother to rest and regain her health while the first child gets all the love and attention he/she requires from mummy. ❤️ |break|${image::" +
-          model.tags.motherchild_image +
-          "}" +
-          "Now, how about a myth buster to learn more about HTSP ?",
-        next: {
-          data: [{
-            data: "Lets start",
-            text: "Let us start"
-          }]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+      if (model) {
+        console.log("---------------------------Mother-----------------");
+        model.reply = {
+          type: "quickReply",
+          text: "Yes! This time helps the mother to rest and regain her health while the first child gets all the love and attention he/she requires from mummy. ❤️ |break|${image::" +
+            model.tags.motherchild_image +
+            "}" +
+            "Now, how about a myth buster to learn more about HTSP ?",
+          next: {
+            data: [{
+              data: "Lets start",
+              text: "Let us start"
+            }]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
   q1: model => {
     return new Promise(function (resolve, reject) {
       console.log(
-        "------------------------------------------------------q1----------------------"
-      );
-      model.reply = {
-        type: "quickReply",
-        text: "Here’s the first one...IUCD is the best method of spacing!",
-        next: {
-          data: [{
-              data: "correct",
-              text: "Correct"
-            },
-            {
-              data: "False",
-              text: "False"
-            }
-          ]
-        }
-      };
-      console.log(model.reply);
-      return resolve(model);
+        "------------------------------------------------------q1----------------------");
+      if (model) {
+        model.reply = {
+          type: "quickReply",
+          text: "Here’s the first one...IUCD is the best method of spacing!",
+          next: {
+            data: [{
+                data: "correct",
+                text: "Correct"
+              },
+              {
+                data: "False",
+                text: "False"
+              }
+            ]
+          }
+        };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
+      }
+
     });
   },
 
@@ -150,6 +164,8 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
       } else if (model.tags.answern1 == true) {
         model.reply = {
           type: "quickReply",
@@ -166,9 +182,13 @@ module.exports = {
             ]
           }
         };
+        console.log(model.reply);
+        return resolve(model);
+      } else {
+        return reject(model)
       }
-      console.log(model.reply);
-      return resolve(model);
+      // console.log(model.reply);
+      // return resolve(model);
     });
   },
 
