@@ -191,7 +191,7 @@ module.exports = {
 								text: "Terms of Service"
 							},
 							{
-								data: 'I agree',
+								data: 'i',
 								text: 'I agree'
 							}
 						]
