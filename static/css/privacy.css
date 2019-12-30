@@ -41,3 +41,11 @@ body {
 .text h3 {
   color: #333b6c;
 }
+
+.copyright img {
+  width: 14px;
+}
+
+.copyright p {
+  display: inline;
+}
