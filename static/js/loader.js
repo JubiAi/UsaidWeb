@@ -66,9 +66,14 @@
   // (function() {
     window.jubiChatEventListener = function(event) {
       if (event.type == "process") {
-        console.log("process----------->>>>>>>>");
-        // $("#jubi-textInput").hide();
+        console.log("if process----------->>>>>>>>");
+        console.log(event);
+        $("#jubi-textInput").hide();
       }
+      // else {
+      //   console.log("else process----------->>>>>>>>");
+      //   $("#jubi-textInput").show();
+      // }
     };
   // });
 
