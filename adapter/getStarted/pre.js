@@ -49,7 +49,7 @@ module.exports = {
 	// 	})
 	// },
 
-	carousalOne: (data) => {
+	carousalone: (data) => {
 		return new Promise((resolve, reject) => {
 			console.log(data)
 			console.log(data + "-----------------")
