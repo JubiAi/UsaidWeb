@@ -6,7 +6,7 @@ var request = require("request");
 
 module.exports = {
   maternity: model => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log(model.data);
       if (model.data.toLowerCase().includes("4 weeks")) {
         model.tags.answer1 = true;
@@ -21,7 +21,7 @@ module.exports = {
   },
 
   hstp: model => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log(model.data);
       if (model.data.toLowerCase().includes("htsp")) {
         model.tags.happyfamily_image =
@@ -36,7 +36,7 @@ module.exports = {
   },
 
   hstphow: model => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log(model.data);
       if (model.data.toLowerCase().includes("how")) {
         model.tags.happyfamily_image =
@@ -51,7 +51,7 @@ module.exports = {
   },
 
   time: model => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log(model.data);
       if (model.data.toLowerCase().includes("correct")) {
         model.tags.motherchild_image =
@@ -66,7 +66,7 @@ module.exports = {
   },
 
   mother: model => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log(model.data);
       if (model.data.toLowerCase().includes("start")) {
         delete model.stage;
@@ -79,7 +79,7 @@ module.exports = {
   },
 
   ocp: model => {
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       console.log(model.data);
       if (model.data.toLowerCase().includes("game")) {
         delete model.stage;
@@ -96,12 +96,10 @@ module.exports = {
   },
 
   q1: model => {
-    return new Promise(async function(resolve, reject) {
+    return new Promise(async function (resolve, reject) {
       if (model.data.toLowerCase().includes("correct")) {
-        // await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
         model.tags.answern1 = false;
       } else if (model.data.toLowerCase().includes("false")) {
-        // await sendExternalMessage(data, 'You’re right, ECPs don’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies, They do not cause abortion.')
         model.tags.answern1 = true;
       } else {
         reject(model);
@@ -111,12 +109,10 @@ module.exports = {
     });
   },
   q2: model => {
-    return new Promise(async function(resolve, reject) {
+    return new Promise(async function (resolve, reject) {
       if (model.data.toLowerCase().includes("not correct")) {
-        // await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
         model.tags.answern2 = false;
       } else if (model.data.toLowerCase().includes("correct")) {
-        // await sendExternalMessage(data, 'You’re right, ECPs don’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies, They do not cause abortion.')
         model.tags.answern2 = true;
       } else {
         reject(model);
@@ -127,12 +123,10 @@ module.exports = {
   },
 
   q3: model => {
-    return new Promise(async function(resolve, reject) {
+    return new Promise(async function (resolve, reject) {
       if (model.data.toLowerCase().includes("not")) {
-        // await sendExternalMessage(data, 'That’s a myth, So, ECPs won’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies,They do not cause abortion.')
         model.tags.answer3 = false;
       } else if (model.data.toLowerCase().includes("true")) {
-        // await sendExternalMessage(data, 'You’re right, ECPs don’t work after conception (when the sperm fertilizes the egg),They are designed only to prevent pregnancies, They do not cause abortion.')
         model.tags.answer3 = true;
       } else {
         reject(model);
@@ -140,53 +134,6 @@ module.exports = {
       delete model.stage;
       resolve(model);
     });
-  },
-
-  city: data => {
-    console.log(data.data);
-    return new Promise(function(resolve, reject) {
-      if (
-        stringSimilarity.findBestMatch(toTitleCase(data.data), cities).bestMatch
-          .rating == 1
-      ) {
-        data.tags.cityMatches = undefined;
-        data.tags.city = toTitleCase(data.data);
-        delete data.stage;
-        resolve(data);
-      } else {
-        data.tags.cityMatches = sort(toTitleCase(data.data), cities);
-        resolve(data);
-      }
-    });
-    return data;
   }
-};
 
-function toTitleCase(str) {
-  str = str.toLowerCase().split(" ");
-  let final = [];
-  for (let word of str) {
-    final.push(word.charAt(0).toUpperCase() + word.slice(1));
-  }
-  return final.join(" ");
-}
-
-function sort(inp, data) {
-  console.log(data.length);
-  matches = stringSimilarity.findBestMatch(inp, data);
-  arr = [];
-  rating = 0.3;
-  matches.ratings = matches.ratings.sort(sortBy("-rating"));
-  console.log(matches);
-  while (matches.ratings.length > 9) {
-    matches.ratings.forEach(function(match) {
-      if (match.rating > rating) {
-        arr.push(match);
-      }
-    });
-    matches.ratings = arr;
-    arr = [];
-    rating += 0.01;
-  }
-  return matches.ratings;
 }

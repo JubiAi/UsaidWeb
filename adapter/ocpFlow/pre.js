@@ -41,8 +41,6 @@ module.exports = {
           ]
         }
       };
-      //delete model.tags.answer1
-
       console.log(model.reply);
       return resolve(model);
     });
@@ -56,7 +54,6 @@ module.exports = {
         console.log("++++++false++++++++");
         model.reply = {
           type: "quickReply",
-          //text: "This is actually a myth, my friend! You see, Oral contraceptive pills (OCPs) are only temporary forms of birth control. Within 1 to 3 months of stopping the pills, a woman’s fertility returns.|break| Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
           text: "Correct! Oral contraceptive pills (OCPs) are temporary forms of birth control. Once a woman stops taking the pill, within 1 to 3 months her fertility returns.|break|Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
           next: {
             data: [{
@@ -70,11 +67,9 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       } else if (model.tags.answer1 == true) {
         model.reply = {
           type: "quickReply",
-          //text: "Correct! Oral contraceptive pills (OCPs) are temporary forms of birth control. Once a woman stops taking the pill, within 1 to 3 months her fertility returns.|break|Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
           text: "This is actually a myth, my friend! You see, Oral contraceptive pills (OCPs) are only temporary forms of birth control. Within 1 to 3 months of stopping the pills, a woman’s fertility returns.|break| Next one, if you get pregnant when you are using these pills, your babies can have birth defects.",
           next: {
             data: [{
@@ -88,7 +83,6 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       }
       console.log(model.reply);
       return resolve(model);
@@ -104,7 +98,6 @@ module.exports = {
         model.reply = {
           type: "quickReply",
           text: "True! Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be born with birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
-          //    text: "Oh! That’s actually a myth. Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be bornwith birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
           next: {
             data: [{
                 data: "not",
@@ -117,11 +110,9 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       } else if (model.tags.answer2 == true) {
         model.reply = {
           type: "quickReply",
-          // text: "True! Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be born with birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
           text: "Oh! That’s actually a myth. Even if a woman accidentally takes an OCP when she is pregnant, the baby will not be bornwith birth defects. OCPs do not harm the fetus or the baby. |break|Lastly, Any kind of OCP is not safe for breastfeeding mothers.",
           next: {
             data: [{
@@ -135,7 +126,6 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       }
       console.log(model.reply);
       return resolve(model);
@@ -166,7 +156,6 @@ module.exports = {
         console.log("++++++false++++++++");
         model.reply = {
           type: "quickReply",
-          // text: "Uh-oh, Wrong answer! Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely. Done! I’m sure you’ve learnt something new.To learn more click on the button below. You can also type in your query in the text box below!",
           text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.",
           next: {
             data: [{
@@ -180,11 +169,9 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       } else if (model.tags.answer3 == true) {
         model.reply = {
           type: "quickReply",
-          //text: "Correct! So, Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely.",
           text: "Uh-oh, Wrong answer! Non-hormonal and Progesterone (a certain type of hormone) only pills can be safely used by breastfeeding mothers! They don’t affect the breast milk adversely. Done! I’m sure you’ve learnt something new.To learn more click on the button below. You can also type in your query in the text box below!",
           next: {
             data: [{
@@ -198,7 +185,6 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       }
       console.log(model.reply);
       return resolve(model);
@@ -221,8 +207,7 @@ module.exports = {
           type: "button",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊',
           next: {
-            data: [ //changes done
-              {
+            data: [{
                 type: 'url',
                 data: 'http://www.buymecondom.com/',
                 text: 'Buy them chupkese?'
@@ -240,12 +225,10 @@ module.exports = {
           type: "button",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> or |break|You can click on the button below to continue our conversation 😊',
           next: {
-            data: [ //changes done
-              {
-                data: 'How to get ECPs?',
-                text: 'How to get ECPs?'
-              }
-            ]
+            data: [{
+              data: 'How to get ECPs?',
+              text: 'How to get ECPs?'
+            }]
           }
         }
         return resolve(data)
@@ -254,7 +237,7 @@ module.exports = {
           type: "button",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|What would you like to do next?',
           next: {
-            data: [{ //changes done
+            data: [{
                 data: 'Main menu',
                 text: 'Main menu'
               },
@@ -269,7 +252,7 @@ module.exports = {
         return resolve(data)
       } else if (data.tags.userSays == "☎️") {
         data.reply = {
-          type: "quickReply", //changes done
+          type: "quickReply",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊',
           next: {
             data: [{
@@ -280,7 +263,7 @@ module.exports = {
         }
         return resolve(data)
       } else if (data.tags.userSays == "🤙 a counsellor") {
-        data.reply = { //changes done
+        data.reply = {
           type: "quickReply",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|You can click on the button below to continue our conversation 😊', //changes done
           next: {
@@ -293,7 +276,7 @@ module.exports = {
         return resolve(data)
       } else if (data.tags.userSays.toLowerCase() == "Talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor ☎" || data.tags.userSays.toLowerCase() == "talk to a counsellor...") {
         console.log("-------------")
-        data.reply = { //changes done
+        data.reply = {
           type: "button",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>',
           next: {
@@ -309,7 +292,7 @@ module.exports = {
           type: "button",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|Get information on the next steps after unprotected sex from the main menu below.',
           next: {
-            data: [{ //changes done
+            data: [{
                 data: 'Go to the main menu',
                 text: 'Go to the main menu'
               },
@@ -323,7 +306,7 @@ module.exports = {
         }
         return resolve(data)
       } else if (data.tags.userSays == "Speak to a counsellor") {
-        data.reply = { //changes done
+        data.reply = {
           type: "text",
           text: '<a href="tel:1-800-258-0001">1-800-258-0001</a>'
         }

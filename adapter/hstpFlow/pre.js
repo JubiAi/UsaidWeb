@@ -66,8 +66,6 @@ module.exports = {
           }]
         }
       };
-      //delete model.tags.answer1
-
       console.log(model.reply);
       return resolve(model);
     });
@@ -183,7 +181,6 @@ module.exports = {
             ]
           }
         };
-        //delete model.tags.answer1
       } else if (model.tags.answern2 == true) {
         model.reply = {
           type: "quickReply",
