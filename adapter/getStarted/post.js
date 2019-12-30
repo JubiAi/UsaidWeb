@@ -45,7 +45,8 @@ module.exports = {
 	disclaimer: (data) => {
 		return new Promise(function (resolve, reject) {
 			console.log(data.data)
-			if (data.data.toLowerCase() == "i agree") {
+			//if (data.data.toLowerCase() == "i agree")
+			if (data.data.toLowerCase().includes("i")) {
 				console.log("I agree")
 				data.stage = "carousalone"
 				return resolve(data)
