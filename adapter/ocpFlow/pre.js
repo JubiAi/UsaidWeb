@@ -17,7 +17,6 @@ module.exports={
                     ]
                 }
             };
-            return resolve(model);
         } 
         else if (model.tags.answer1 == true) {
             model.reply = {
