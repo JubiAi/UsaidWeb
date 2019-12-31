@@ -99,7 +99,7 @@ body {
 
 @media (max-width: 560px) {
   .heading img {
-    margin-left: 50px;
+    margin-left: 25px;
     width: 110px;
   }
   .text {
@@ -125,10 +125,6 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .heading img {
-    margin-left: 35px;
-    width: 110px;
-  }
   .text {
     width: 87%;
     margin-left: 25px;
