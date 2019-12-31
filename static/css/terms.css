@@ -122,6 +122,9 @@ body {
   .policy {
     color: black;
   }
+  .text h3 {
+    margin-block-start: 1em;
+  }
 }
 
 @media (max-width: 480px) {
@@ -143,5 +146,8 @@ body {
   }
   .policy {
     color: black;
+  }
+  .text h3 {
+    margin-block-start: 1em;
   }
 }
