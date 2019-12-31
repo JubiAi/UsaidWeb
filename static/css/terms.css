@@ -63,3 +63,33 @@ body {
   font-size: 13px;
   color: grey;
 }
+
+@media (max-width: 768px) {
+  .heading {
+    height: 30vh;
+  }
+  .heading img {
+    margin-left: 290px;
+  }
+  .terms {
+    padding-top: 45px;
+  }
+  .text {
+    margin-left: 75px;
+  }
+  .copyright {
+    height: 10vh;
+  }
+  .copyright div {
+    padding: 20px 120px 20px 120px;
+  }
+}
+
+@media (max-width: 560px) {
+  .heading img {
+    margin-left: 185px;
+  }
+  .text {
+    margin-left: 50px;
+  }
+}
