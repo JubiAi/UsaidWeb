@@ -158,7 +158,7 @@ module.exports = {
 								text: "Terms of Service"
 							},
 							{
-								data: 'main menu',
+								data: 'main carousal',
 								text: 'I agree'
 							}
 						]
