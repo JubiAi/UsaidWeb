@@ -54,6 +54,7 @@ body {
   font-weight: bold;
   font-size: 16px;
   color: black;
+  padding-top: 10px;
 }
 .copyright {
   border-top: 1px solid #d8d8d8;
@@ -114,6 +115,9 @@ body {
   .terms {
     font-size: 25px;
   }
+  .policy {
+    color: black;
+  }
 }
 
 @media (max-width: 480px) {
@@ -132,5 +136,8 @@ body {
   }
   .terms {
     font-size: 25px;
+  }
+  .policy {
+    color: black;
   }
 }
