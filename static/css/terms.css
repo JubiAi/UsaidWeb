@@ -50,6 +50,10 @@ body {
   color: #444444;
 }
 
+.text li {
+  color: #444444;
+}
+
 .policy {
   font-weight: bold;
   font-size: 16px;
