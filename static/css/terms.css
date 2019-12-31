@@ -41,7 +41,13 @@ body {
 }
 
 .text h3 {
-  color: #333b6c;
+  /* color: #333b6c; */
+  color: #333b69;
+  margin-block-start: 2em;
+}
+
+.text p {
+  color: #444444;
 }
 
 .copyright {
