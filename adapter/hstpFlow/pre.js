@@ -1,5 +1,6 @@
 module.exports={
     hstp: model => {
+        console.log(model)
         if (model.tags.answer == false) {
             model.reply = {
                 type: "quickReply",
@@ -8,7 +9,7 @@ module.exports={
                     data: [
                         {
                             data: "HTSP",
-                            text: "What is HTSP? "
+                            text: "What is HTSP?"
                         }
                     ]
                 }
@@ -22,7 +23,7 @@ module.exports={
                     data: [
                         {
                             data: "HTSP",
-                            text: "What is HTSP? "
+                            text: "What is HTSP?"
                         }
                     ]
                 }
