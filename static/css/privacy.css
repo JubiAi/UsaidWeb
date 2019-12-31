@@ -142,3 +142,15 @@ body {
     color: black;
   }
 }
+
+@media (max-width: 375px) {
+  .heading {
+    height: 18vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .heading {
+    height: 21vh;
+  }
+}
