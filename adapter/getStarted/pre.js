@@ -39,16 +39,6 @@ module.exports = {
 		})
 	},
 
-	// undereage: (data) => {
-	// 	return new Promise((resolve, reject) => {
-	// 		data.reply = {
-	// 			type: 'text',
-	// 			text: 'According to our terms and conditions, you must be over 15 years to access Jubi. Read more here <a href="https://development.jubi.ai/usaidWeb/termsOfService.html">https://development.jubi.ai/usaidWeb/termsOfService.html</a>',
-	// 		}
-	// 		return resolve(data)
-	// 	})
-	// },
-
 	carousalOne: (data) => {
 		return new Promise((resolve, reject) => {
 			console.log(data)
@@ -118,26 +108,6 @@ module.exports = {
 		})
 	},
 
-
-
-	// city :(data) =>{
-	// 	data.reply={
-	// 		type : "quickReply",
-	// 		text: "Click on button below to enter location",
-	// 		next: {
-	// 			data : [
-	// 				{
-	// 					type : "location",
-	// 					data : "select",
-	// 					text : "select"
-	// 				}
-	// 			]
-	// 		}
-	// 	}
-	// 	return data
-	// },
-
-
 	underage: (data) => {
 		return new Promise(async function (resolve, reject) {
 			// delete data.tags.accepted
@@ -164,42 +134,37 @@ module.exports = {
 		})
 	},
 
-
-
-
-
 	disclaimer: (data) => {
-		return new Promise(async function (resolve, reject) {
-			if (data.tags.rejected == true && data.tags.accepted == false) {
-				delete data.tags.rejected
-				await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaidWeb/termsOfService.html')
-				data.stage = "conAge"
-			} else if (data.tags.accepted == true && data.tags.rejected == false) {
-				// delete data.tags.accepted
-				data.reply = {
-					type: "button",
-					text: "Great! Btw everything we discuss here is absolutely private. Take a look at your privacy policy and terms of service below to know more. |break|To agree please click on “I agree” below.",
-					next: {
-						data: [{
-								type: "url",
-								data: "https://development.jubi.ai/usaidWeb/policyPrivacy.html",
-								text: "Privacy Policy"
-							},
-							{
-								type: "url",
-								data: "https://development.jubi.ai/usaidWeb/termsOfService.html",
-								text: "Terms of Service"
-							},
-							{
-								data: 'i',
-								text: 'I agree'
-							}
-						]
-					}
+		if (data.tags.rejected == true && data.tags.accepted == false) {
+			delete data.tags.rejected
+			await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaidWeb/termsOfService.html')
+			data.stage = "conAge"
+		} 
+		else if (data.tags.accepted == true && data.tags.rejected == false) {
+			// delete data.tags.accepted
+			data.reply = {
+				type: "button",
+				text: "Great! Btw everything we discuss here is absolutely private. Take a look at your privacy policy and terms of service below to know more. |break|To agree please click on “I agree” below.",
+				next: {
+					data: [{
+							type: "url",
+							data: "https://development.jubi.ai/usaidWeb/policyPrivacy.html",
+							text: "Privacy Policy"
+						},
+						{
+							type: "url",
+							data: "https://development.jubi.ai/usaidWeb/termsOfService.html",
+							text: "Terms of Service"
+						},
+						{
+							data: 'main menu',
+							text: 'I agree'
+						}
+					]
 				}
-				delete data.stage
 			}
-			resolve(data)
-		})
+			delete data.stage
+		}
+		return data
 	}
 }

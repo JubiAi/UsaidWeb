@@ -5,61 +5,37 @@ var sendExternalMessage = require('../../external.js')
 var request = require('request')
 
 module.exports = {
-
 	start: (data) => {
-		return new Promise(function (resolve, reject) {
-			console.log(data.data)
-			if (data.data.toLowerCase().includes("yes")) {
-				console.log("First stage")
-				console.log(data)
-				delete data.stage
-				return resolve(data)
-			} else {
-				return reject(data)
-			}
-		})
+		if (data.data.toLowerCase().includes("yes")) {
+			delete data.stage
+		}
+		return data
 	},
 
-
 	conAge: (data) => {
-		return new Promise(function (resolve, reject) {
-			console.log(data.data.toLowerCase())
-			if (data.data.toLowerCase() == "i am over 15") {
-				console.log("I am over 15")
-				data.tags.accepted = true
-				data.tags.rejected = false
-				data.stage = "disclaimer"
-			} else {
-				console.log("I am under 15")
-				data.tags.rejected = true
-				data.tags.accepted = false
-				data.stage = "underage"
-			}
-			console.log("+++++++++++++")
-			console.log(data.tags)
-			console.log("+++++++++++++")
-			return resolve(data)
-		})
+		if (data.data.toLowerCase() == "i am over 15") {
+			data.tags.accepted = true
+			data.tags.rejected = false
+			data.stage = "disclaimer"
+		} 
+		else {
+			console.log("I am under 15")
+			data.tags.rejected = true
+			data.tags.accepted = false
+			data.stage = "underage"
+		}
+		return data
 	},
 
 	disclaimer: (data) => {
-		return new Promise(function (resolve, reject) {
-			console.log(data.data)
-			//if (data.data.toLowerCase() == "i agree")
-			if (data.data.toLowerCase().includes("i")) {
-				console.log("I agree")
-				data.tags.rejected = false
-				console.log("----------------------------")
-				data.stage = "carousalone"
-				return resolve(data)
-			} else {
-				console.log("Disagree")
-				data.tags.rejected = true
-				data.stage = "disclaimer"
-				return resolve(data)
-			}
-			return resolve(data)
-		})
+		if (data.data.toLowerCase().includes("i")) {
+			data.tags.rejected = false
+		} 
+		else {
+			data.tags.rejected = true
+			data.stage = "disclaimer"
+		}
+		return resolve(data)
 	},
 
 	ageStage: data => {
