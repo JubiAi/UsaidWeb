@@ -149,14 +149,8 @@ body {
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 320px) {
   .heading {
-    height: 21vh;
-  }
-}
-
-@media (max-width: 360px) {
-  .heading {
-    height: 21vh;
+    height: 24vh;
   }
 }
