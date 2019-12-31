@@ -78,7 +78,7 @@ body {
 
 @media (max-width: 768px) {
   .heading {
-    height: 25vh;
+    height: 22vh;
   }
   .heading img {
     margin-left: 70px;
@@ -104,8 +104,8 @@ body {
   }
   .text {
     margin-left: 50px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .text p {
     color: #444444;
@@ -128,8 +128,8 @@ body {
   }
   .text {
     margin-left: 35px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .text p {
     color: #444444;
