@@ -92,9 +92,19 @@ body {
 @media (max-width: 560px) {
   .heading img {
     margin-left: 50px;
+    width: 140px;
   }
   .text {
     margin-left: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .text p {
+    color: #444444;
+    font-size: 15px;
+  }
+  .terms {
+    font-size: 25px;
   }
 }
 
@@ -105,10 +115,4 @@ body {
   .text {
     margin-left: 40px;
   }
-}
-
-@media (max-width: 414px) {
-  /* .heading img {
-    margin-left: 125px;
-  } */
 }
