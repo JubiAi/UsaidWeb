@@ -63,7 +63,7 @@
   
   window.jubiChatEventListener = function (event) {
     console.log(event)
-    if (event.type == "process" && event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15')) {
+    if (event.type == "process" && (event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
       $("#jubi-textInput").hide();
     } 
     else {
