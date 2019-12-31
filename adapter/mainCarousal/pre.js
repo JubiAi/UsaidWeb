@@ -20,7 +20,7 @@ module.exports={
 							{
 								type: "text",
 								text: "SELECT",
-								data: "ocpQuiz"
+								data: "ocp"
 							}
 						]
 					},

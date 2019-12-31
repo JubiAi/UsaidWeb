@@ -1,35 +1,38 @@
 module.exports = {
 	q1: (model) => {
+		model.tags.answer = undefined
 		if (model.data.toLowerCase().includes("myth")) {
-			model.tags.answer1 = true
+			model.tags.answer = true
 			delete model.stage
 		} 
 		else if (model.data.toLowerCase().includes("fact")) {
-			model.tags.answer1 = false
+			model.tags.answer = false
 			delete model.stage
 		}
 		return model
 	},
 
 	q2: (model) => {
+		model.tags.answer = undefined
 		if (model.data.toLowerCase().includes("myth")) {
-			model.tags.answer2 = true
+			model.tags.answer = true
 			delete model.stage
 		} 
 		else if (model.data.toLowerCase().includes("true")) {
-			model.tags.answer2 = false
+			model.tags.answer = false
 			delete model.stage
 		}
 		return model
 	},
 
 	q3: (model) => {
+		model.tags.answer = undefined
 		if (model.data.toLowerCase().includes("not")) {
-			model.tags.answer3 = true
+			model.tags.answer = true
 			delete model.stage
 		} 
 		else if (model.data.toLowerCase().includes("true")) {
-			model.tags.answer3 = false
+			model.tags.answer = false
 			delete model.stage
 		}
 		return model
