@@ -31,7 +31,7 @@ module.exports={
 							{
 								type: "text",
 								text: "SELECT",
-								data: "hstpQuiz"
+								data: "hstpPreQuiz"
 							}
 						]
 					},
