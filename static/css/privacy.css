@@ -78,13 +78,13 @@ body {
 
 @media (max-width: 768px) {
   .heading {
-    height: 30vh;
+    height: 21vh;
   }
   .heading img {
     margin-left: 70px;
   }
   .terms {
-    padding-top: 45px;
+    padding-top: 25px;
   }
   .text {
     margin-left: 75px;
@@ -99,13 +99,37 @@ body {
 
 @media (max-width: 560px) {
   .heading img {
-    margin-left: 50px;
+    margin-left: 25px;
     width: 110px;
   }
   .text {
-    margin-left: 50px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+  }
+  .text p {
+    color: #444444;
+    font-size: 15px;
+    margin-block-start: 0.5em;
+  }
+  .terms {
+    font-size: 25px;
+  }
+  .policy {
+    color: black;
+  }
+  .text h3 {
+    margin-bottom: 12px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .text {
+    width: 87%;
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   .text p {
     color: #444444;
@@ -118,24 +142,19 @@ body {
     color: black;
   }
 }
-@media (max-width: 480px) {
-  .heading img {
-    margin-left: 35px;
-    width: 110px;
+
+@media (max-width: 375px) {
+  .heading {
+    height: 23vh;
   }
-  .text {
-    margin-left: 35px;
-    margin-top: 60px;
-    margin-bottom: 60px;
+}
+@media (max-width: 360px) {
+  .heading {
+    height: 24vh;
   }
-  .text p {
-    color: #444444;
-    font-size: 15px;
-  }
-  .terms {
-    font-size: 25px;
-  }
-  .policy {
-    color: black;
+}
+@media (max-width: 320px) {
+  .heading {
+    height: 24vh;
   }
 }
