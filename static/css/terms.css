@@ -148,7 +148,7 @@ body {
     color: black;
   }
 }
-
+/* 
 @media (max-width: 375px) {
   .heading {
     height: 18vh;
@@ -159,4 +159,4 @@ body {
   .heading {
     height: 21vh;
   }
-}
+} */

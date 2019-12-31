@@ -143,7 +143,7 @@ body {
   }
 }
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   .heading {
     height: 18vh;
   }
@@ -153,4 +153,4 @@ body {
   .heading {
     height: 21vh;
   }
-}
+} */
