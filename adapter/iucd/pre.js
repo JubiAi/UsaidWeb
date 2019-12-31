@@ -6,7 +6,7 @@ module.exports={
 			next : {
 				data : [
 					{
-						data : 'main menu',
+						data : 'main carousal',
 						text : 'Main Menu'
 					}
 				]
