@@ -69,7 +69,7 @@ body {
     height: 30vh;
   }
   .heading img {
-    margin-left: 290px;
+    margin-left: 70px;
   }
   .terms {
     padding-top: 45px;
@@ -81,32 +81,32 @@ body {
     height: 10vh;
   }
   .copyright div {
-    padding: 20px 120px 20px 120px;
+    padding: 20px 70px 20px 70px;
   }
 }
 
 @media (max-width: 560px) {
-  .heading img {
+  /* .heading img {
     margin-left: 185px;
-  }
+  } */
   .text {
     margin-left: 50px;
   }
 }
 
 @media (max-width: 560px) {
-  .heading img {
+  /* .heading img {
     margin-left: 185px;
-  }
+  } */
   .text {
     margin-left: 50px;
   }
 }
 
 @media (max-width: 480px) {
-  .heading img {
+  /* .heading img {
     margin-left: 145px;
-  }
+  } */
   .text {
     margin-left: 40px;
   }
