@@ -143,6 +143,11 @@ body {
   }
 }
 
+@media (max-width: 360px) {
+  .heading {
+    height: 23vh;
+  }
+}
 @media (max-width: 320px) {
   .heading {
     height: 24vh;
