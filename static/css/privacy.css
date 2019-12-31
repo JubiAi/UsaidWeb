@@ -142,3 +142,9 @@ body {
     color: black;
   }
 }
+
+@media (max-width: 320px) {
+  .heading {
+    height: 24vh;
+  }
+}
