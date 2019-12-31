@@ -35,7 +35,7 @@ module.exports = {
 			data.tags.rejected = true
 			data.stage = "disclaimer"
 		}
-		return resolve(data)
+		return data
 	},
 
 	ageStage: data => {
