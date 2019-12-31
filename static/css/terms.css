@@ -149,7 +149,19 @@ body {
   }
 }
 
+@media (max-width: 375px) {
+  .heading {
+    height: 22vh;
+  }
+}
+
 @media (max-width: 360px) {
+  .heading {
+    height: 24vh;
+  }
+}
+
+@media (max-width: 320px) {
   .heading {
     height: 24vh;
   }
