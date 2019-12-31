@@ -86,18 +86,9 @@ body {
 }
 
 @media (max-width: 560px) {
-  /* .heading img {
-    margin-left: 185px;
-  } */
-  .text {
+  .heading img {
     margin-left: 50px;
   }
-}
-
-@media (max-width: 560px) {
-  /* .heading img {
-    margin-left: 185px;
-  } */
   .text {
     margin-left: 50px;
   }

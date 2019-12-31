@@ -86,9 +86,9 @@ body {
 }
 
 @media (max-width: 560px) {
-  /* .heading img {
-    margin-left: 185px;
-  } */
+  .heading img {
+    margin-left: 50px;
+  }
   .text {
     margin-left: 50px;
   }
