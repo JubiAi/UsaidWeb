@@ -111,6 +111,7 @@ body {
   .text p {
     color: #444444;
     font-size: 15px;
+    margin-block-start: 0.5em;
   }
   .terms {
     font-size: 25px;
@@ -119,7 +120,7 @@ body {
     color: black;
   }
   .text h3 {
-    margin-block-start: 1em;
+    margin-block-start: 1.5em;
   }
 }
 @media (max-width: 480px) {
