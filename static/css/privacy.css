@@ -93,3 +93,12 @@ body {
     margin-left: 50px;
   }
 }
+
+@media (max-width: 480px) {
+  .heading img {
+    margin-left: 145px;
+  }
+  .text {
+    margin-left: 40px;
+  }
+}
