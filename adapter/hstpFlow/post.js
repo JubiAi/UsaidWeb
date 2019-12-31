@@ -1,5 +1,6 @@
 module.exports={
 	hstp: model => {
+		console.log(model.data)
     	if (model.data.toLowerCase().includes("4 weeks")) {
         	model.tags.answer = true;
 	        delete model.stage;
