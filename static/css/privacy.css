@@ -95,9 +95,9 @@ body {
 }
 
 @media (max-width: 480px) {
-  /* .heading img {
-    margin-left: 145px;
-  } */
+  .heading img {
+    margin-left: 35px;
+  }
   .text {
     margin-left: 40px;
   }
