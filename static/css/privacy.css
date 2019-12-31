@@ -78,7 +78,7 @@ body {
 
 @media (max-width: 768px) {
   .heading {
-    height: 22vh;
+    height: 21vh;
   }
   .heading img {
     margin-left: 70px;
