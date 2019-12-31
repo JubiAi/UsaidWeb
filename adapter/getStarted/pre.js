@@ -135,36 +135,38 @@ module.exports = {
 	},
 
 	disclaimer: (data) => {
-		if (data.tags.rejected == true && data.tags.accepted == false) {
-			delete data.tags.rejected
-			await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaidWeb/termsOfService.html')
-			data.stage = "conAge"
-		} 
-		else if (data.tags.accepted == true && data.tags.rejected == false) {
-			// delete data.tags.accepted
-			data.reply = {
-				type: "button",
-				text: "Great! Btw everything we discuss here is absolutely private. Take a look at your privacy policy and terms of service below to know more. |break|To agree please click on “I agree” below.",
-				next: {
-					data: [{
-							type: "url",
-							data: "https://development.jubi.ai/usaidWeb/policyPrivacy.html",
-							text: "Privacy Policy"
-						},
-						{
-							type: "url",
-							data: "https://development.jubi.ai/usaidWeb/termsOfService.html",
-							text: "Terms of Service"
-						},
-						{
-							data: 'main menu',
-							text: 'I agree'
-						}
-					]
+		return new Promise(async function (resolve, reject) {
+			if (data.tags.rejected == true && data.tags.accepted == false) {
+				delete data.tags.rejected
+				await sendExternalMessage(data, 'According to our terms and conditions, you must be over 15 years to access Khushi Live. Read more here https://development.jubi.ai/usaidWeb/termsOfService.html')
+				data.stage = "conAge"
+			} 
+			else if (data.tags.accepted == true && data.tags.rejected == false) {
+				// delete data.tags.accepted
+				data.reply = {
+					type: "button",
+					text: "Great! Btw everything we discuss here is absolutely private. Take a look at your privacy policy and terms of service below to know more. |break|To agree please click on “I agree” below.",
+					next: {
+						data: [{
+								type: "url",
+								data: "https://development.jubi.ai/usaidWeb/policyPrivacy.html",
+								text: "Privacy Policy"
+							},
+							{
+								type: "url",
+								data: "https://development.jubi.ai/usaidWeb/termsOfService.html",
+								text: "Terms of Service"
+							},
+							{
+								data: 'i',
+								text: 'I agree'
+							}
+						]
+					}
 				}
+				delete data.stage
 			}
-			delete data.stage
-		}
-		return data
+			resolve(data)
+		})
 	}
 }
