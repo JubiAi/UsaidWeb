@@ -71,8 +71,8 @@
       $("#jubi-textInput").show();
     }
 
-    console.log("event.output");
-    console.log(event.output);
+    console.log("event.output.text");
+    console.log(event.output.text);
 
 
     // else {
