@@ -67,14 +67,9 @@
       // if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
       // $("#jubi-textInput").hide();
     // } 
-    if ((event.output.text == 'I am over 15')) {
+    if ((event.input && event.input.text && (event.input.text == 'I am over 15'))) {
       $("#jubi-textInput").show();
     }
-
-    // if ((event.output.response.text == 'Let\'s start off, then!')) {
-    //   $("#jubi-textInput").show();
-    // }
-
     // else {
     //   $("#jubi-textInput").show();
     // }
