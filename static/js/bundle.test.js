@@ -3600,10 +3600,6 @@
 
                 function pushToChatStart(str) {
                     $(".pm-bxChat").append(str);
-                    // $(".pm-bxLeftchat:last-child").animate({ "opacity": "show", bottom: "10" }, 800);
-                    // $(".pm-bxRightchat:last-child").animate({ "opacity": "show", bottom: "10" }, 800);
-                    // $(".pm-bxCheckOPtionPersist:last-child").hide();
-                    // $(".pm-bxCheckOPtionPersist:last-child").animate({ "opacity": "show", bottom: "40" }, 800);
                 }
 
                 function pushToChat(str) {
@@ -3670,7 +3666,11 @@
                             }
                             if (data[i].text) {
                                 // //console.log(data[i].text)
-                                html += '<p>' + data[i].text.replaceAll("|br|", "<br/>") + '</p>';
+                                data[i].text = data[i].text.replaceAll("|break|", "\\n");
+                                data[i].text = data[i].text.replaceAll("|br|", "<br/>");
+                                html += '<p>' + data[i].text + '</p>';
+                                // html += '<p>' + data[i].text.replaceAll("|break|", "\\n") + '</p>';
+                                // response.text = response.text.replaceAll('|break|', '\\n');
                             }
                             html += '</div><div class="pm-bxslidebtn">';
                             for (let j = 0; j < data[i].buttons.length; j++) {
@@ -3846,11 +3846,6 @@
                         $(this).attr('id', 'owl-demo' + count);
                         $('#owl-demo' + count).owlCarousel({
                             items: 2,
-                            // singleItem:true,
-                            // itemsDesktop: [1000, 1], 
-                            // itemsDesktopSmall: [900, 1], 
-                            // itemsTablet: [700, 1], 
-                            // itemsMobile: [479, 1], 
                             navigation: true,
                             navigation: !0,
                             navigationText: ["&#8249", "&#8250"],
