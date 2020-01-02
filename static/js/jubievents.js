@@ -58,21 +58,24 @@ $(document).ready(function() {
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
-    $("#jubi-answerBottom").click(function() {
-      $("#voice-buttons").hide();
-      $("#jubi-bottomClick").show();
-      $("#jubi-bottomClick").attr("style", "display: block !important");
-    });
-    $("body").on("focusout", "#jubi-answerBottom", function() {
-      $("#voice-buttons").hide();
-      $("#jubi-bottomClick").show();
-      $("#button-send").show();
-    });
-    $("#jubi-bottomClick").click(function() {
-      $("#jubi-bxinput").show();
-      $("#button-send").show();
-      $("#jubi-bottomClick").show();
-    });
+    $("#voice-buttons").hide();
+    $("#button-send").show();
+
+    // $("#jubi-answerBottom").click(function() {
+    //   $("#voice-buttons").hide();
+    //   $("#jubi-bottomClick").show();
+    //   $("#jubi-bottomClick").attr("style", "display: block !important");
+    // });
+    // $("body").on("focusout", "#jubi-answerBottom", function() {
+    //   $("#voice-buttons").hide();
+    //   $("#jubi-bottomClick").show();
+    //   $("#button-send").show();
+    // });
+    // $("#jubi-bottomClick").click(function() {
+    //   $("#jubi-bxinput").show();
+    //   $("#button-send").show();
+    //   $("#jubi-bottomClick").show();
+    // });
   } else {
     console.log("msg");
   }
