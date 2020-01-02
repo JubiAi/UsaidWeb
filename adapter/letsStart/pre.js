@@ -352,8 +352,16 @@ module.exports = {
             }
             else{
                 data.reply = { //changes done
-                    type: "text",
+                    type: "quickReply",
                     text: 'Call us at <a href="tel:1-800-258-0001">18002580001</a> between 9AM and 5PM '
+                    next: {
+                        data: [
+                            { //changes done
+                                data: 'Main menu',
+                                text: 'Main menu'
+                            }
+                        ]
+                    }
                 }
                 return resolve(data)    
             }

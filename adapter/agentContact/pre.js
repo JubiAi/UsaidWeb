@@ -249,7 +249,7 @@ module.exports = {
                     }
                 }
                 return resolve(data)
-            } else if (data.tags.userSays == "talk to counsellor") {
+            } else if (data.tags.userSays.toLowerCase() == "talk to counsellor") {
                 data.reply = {
                     type: "button",
                     text: '<a href="tel:1-800-258-0001">1-800-258-0001</a> OR |break|What would you like to do next?',
