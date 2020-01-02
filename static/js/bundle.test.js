@@ -3661,9 +3661,7 @@
                                 data[i].text = data[i].text.replaceAll("|br|", "<br/>");
                                 html += '<p>' + data[i].text + '</p>';
 
-                                // html += '<p>' + data[i].text.replaceAll("|break|", "\\n") + '</p>';
-
-                                // response.text = response.text.replaceAll('|break|', '\\n');
+                                // html += '<p>' + data[i].text.replaceAll("|br|", "<br/>") + '</p>';
                             }
                             html += '</div><div class="pm-bxslidebtn">';
                             for (let j = 0; j < data[i].buttons.length; j++) {
