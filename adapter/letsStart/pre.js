@@ -232,19 +232,15 @@ module.exports = {
                     }
                 }
                 return resolve(data)
-            } else if (data.tags.userSays == "talk to counsellor") {
+            } else if (data.tags.userSays.toLowerCase() == "talk to counsellor") {
                 data.reply = {
                     type: "button",
                     text: 'Call us at <a href="tel:1-800-258-0001">18002580001</a> between 9 AM and 5PM or |break|What would you like to do next?',
                     next: {
-                        data: [{ //changes done
+                        data: [
+                            { //changes done
                                 data: 'Main menu',
                                 text: 'Main menu'
-                            },
-                            {
-                                type: 'url',
-                                data: 'http://www.buymecondom.com/',
-                                text: 'Purchase condoms'
                             }
                         ]
                     }
