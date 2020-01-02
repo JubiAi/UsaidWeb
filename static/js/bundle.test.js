@@ -3657,7 +3657,7 @@
                             }
                             if (data[i].text) {
                                 // //console.log(data[i].text)
-                                data[i].text = data[i].text.replaceAll("|break|", "\\n");
+                                data[i].text = data[i].text.replaceAll("|break|", "<br/>");
                                 data[i].text = data[i].text.replaceAll("|br|", "<br/>");
                                 html += '<p>' + data[i].text + '</p>';
 
