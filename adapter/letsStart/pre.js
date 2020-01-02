@@ -200,7 +200,25 @@ module.exports = {
         console.log("+_+_+_+_+_+_+_+_+_+_")
         console.log(data.tags.userSays == "talk to a counsellor ☎")
         return new Promise(function (resolve) {
-            if (data.tags.userSays.toLowerCase() == "talk to a counsellor") {
+            if(data.tags.userSays.toLowerCase() == 'talk to an iucd counsellor'){
+                data.reply = {
+                    type: "button",
+                    text: 'Call us at <a href="tel:1-800-258-0001">18002580001</a> between 9 AM and 5PM or |break|You can click on the button below to continue our conversation 😊',
+                    next: {
+                        data: [
+                            {
+                                data: 'main carousal',
+                                text: 'Main menu'
+                            },
+                            {
+                                data: 'continue with this chat',
+                                text: 'Continue with this chat'
+                            }
+                        ]
+                    }
+                }
+            }
+            else if (data.tags.userSays.toLowerCase() == "talk to a counsellor") {
                 data.reply = {
                     type: "button",
                     text: 'Call us at <a href="tel:1-800-258-0001">18002580001</a> between 9 AM and 5PM or |break|You can click on the button below to continue our conversation 😊',
