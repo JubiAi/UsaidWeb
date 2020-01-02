@@ -124,7 +124,7 @@ module.exports={
                             text: "Helpline"
                         },
                         {
-                            data: "startflow",
+                            data: "main carousal",
                             text: "Learn Something More"
                         }
                     ]
