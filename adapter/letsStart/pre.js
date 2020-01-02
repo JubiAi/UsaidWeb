@@ -217,6 +217,7 @@ module.exports = {
                         ]
                     }
                 }
+                return resolve(data)
             }
             else if (data.tags.userSays.toLowerCase() == "talk to a counsellor") {
                 data.reply = {
