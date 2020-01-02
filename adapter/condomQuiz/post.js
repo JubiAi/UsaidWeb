@@ -38,7 +38,7 @@ module.exports = {
 	q3: (data) => {
 		return new Promise(async function (resolve, reject) {
 			if (data.data.toLowerCase() == "there is no use" || data.data.toLowerCase() == "its important") {
-				await sendExternalMessage(data, 'Actually, most contraceptives do not provide protection against STIs. |break|Only condoms can provide all-round protection!')
+				// await sendExternalMessage(data, 'Actually, most contraceptives do not provide protection against STIs. |break|Only condoms can provide all-round protection!')
 				console.log("++++++++++")
 			} else {
 				reject(data)

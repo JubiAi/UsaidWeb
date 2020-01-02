@@ -70,7 +70,7 @@
     // if ((event.input && event.input.text && (event.input.text == 'I am over 15'))) {
     //   $("#jubi-textInput").show();
     // }
-    if ((event.output.text == "Let's start off, then! |break|You can type your question below or select a topic from the given options to learn more!")) {
+    if (event.output && event.output.text == "Let's start off, then! |break|You can type your question below or select a topic from the given options to learn more!") {
       $("#jubi-textInput").show();
     }
 
