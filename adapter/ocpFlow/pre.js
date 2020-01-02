@@ -37,7 +37,7 @@ module.exports={
                 }
             };
         }
-        model.tags.answer = undefined
+        // model.tags.answer = undefined
         return model
     },
     
@@ -80,7 +80,7 @@ module.exports={
                 }
             };
         }
-        model.tags.answer = undefined
+        // model.tags.answer = undefined
         return model
     },
     
@@ -123,7 +123,7 @@ module.exports={
                 }
             };
         }
-        model.tags.answer = undefined
+        // model.tags.answer = undefined
         return model
     }
 }
