@@ -55,16 +55,16 @@ $(document).ready(function() {
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
+    $("#button-send").show();
     $("#jubi-bottomClick").show();
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
-    $("#button-send").show();
     $("#voice-buttons").hide();
 
     $("#jubi-answerBottom").click(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
-      // $("#jubi-bottomClick").attr("style", "display: block !important");
+      $("#jubi-bottomClick").attr("style", "display: block !important");
     });
     $("body").on("focusout", "#jubi-answerBottom", function() {
       $("#voice-buttons").hide();
@@ -80,6 +80,12 @@ $(document).ready(function() {
       if (e.which == 13) {
         $("#jubi-bottomClick").show();
       }
+    });
+    $("#pm-data").click(function() {
+      $("#jubi-bottomClick").show();
+    });
+    $(".inputmenu").click(function() {
+      $("#jubi-bottomClick").show();
     });
   } else {
     console.log("msg");
