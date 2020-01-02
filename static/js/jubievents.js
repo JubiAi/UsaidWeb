@@ -55,6 +55,10 @@ $(document).ready(function() {
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
+    $(document).ready(function() {
+      $("#jubi-bottomClick").show();
+    });
+    $("#jubi-bottomClick").show();
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
@@ -66,10 +70,12 @@ $(document).ready(function() {
     $("body").on("focusout", "#jubi-answerBottom", function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
+      $("#button-send").show();
     });
     $("#jubi-bottomClick").click(function() {
       $("#jubi-bxinput").show();
       $("#button-send").show();
+      $("#jubi-bottomClick").show();
     });
   } else {
     console.log("msg");

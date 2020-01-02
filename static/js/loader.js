@@ -1,10 +1,10 @@
 "use strict";
-(function () {
+(function() {
   function load(x, s) {
-    return new Promise(function (resolve, reject) {
+    return new Promise(function(resolve, reject) {
       //console.log("file-loading");
 
-      s.onload = s.onreadystatechange = function () {
+      s.onload = s.onreadystatechange = function() {
         var r = false;
 
         if (!r && (!this.readyState || this.readyState == "complete")) {
@@ -14,7 +14,7 @@
         }
       };
 
-      s.onerror = function (e) {
+      s.onerror = function(e) {
         //console.log("file-loading failed");
         return reject(e);
       };
@@ -30,7 +30,9 @@
     var x = document.getElementsByTagName("head")[0];
     try {
       for (
-        var _iterator = Object.keys(jsUrls)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true
+        var _iterator = Object.keys(jsUrls)[Symbol.iterator](), _step;
+        !(_iteratorNormalCompletion = (_step = _iterator.next()).done);
+        _iteratorNormalCompletion = true
       ) {
         var key = _step.value;
 
@@ -60,17 +62,21 @@
       }
     }
   }
-  
-  window.jubiChatEventListener = function (event) {
+
+  window.jubiChatEventListener = function(event) {
     // console.log(event)
     // if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
-      // if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
-      // $("#jubi-textInput").hide();
-    // } 
+    // if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
+    // $("#jubi-textInput").hide();
+    // }
     // if ((event.input && event.input.text && (event.input.text == 'I am over 15'))) {
     //   $("#jubi-textInput").show();
     // }
-    if (event.output && event.output.text == "Let's start off, then! |break|You can type your question below or select a topic from the given options to learn more!") {
+    if (
+      event.output &&
+      event.output.text ==
+        "Let's start off, then! |break|You can type your question below or select a topic from the given options to learn more!"
+    ) {
       $("#jubi-textInput").show();
     }
 
@@ -82,11 +88,10 @@
     //   $("#jubi-textInput").show();
     // }
   };
-  
 
   function isMyScriptLoaded(url) {
     var scripts = document.getElementsByTagName("script");
-    for (var i = scripts.length; i--;) {
+    for (var i = scripts.length; i--; ) {
       if (scripts[i].src == url) return true;
     }
     return false;
@@ -94,7 +99,7 @@
 
   function isMyCssLoaded(url) {
     var scripts = document.getElementsByTagName("link");
-    for (var i = scripts.length; i--;) {
+    for (var i = scripts.length; i--; ) {
       if (scripts[i].src == url) return true;
     }
     return false;
@@ -106,7 +111,9 @@
 
     try {
       for (
-        var _iterator2 = Object.keys(cssUrls)[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true
+        var _iterator2 = Object.keys(cssUrls)[Symbol.iterator](), _step2;
+        !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done);
+        _iteratorNormalCompletion2 = true
       ) {
         var key = _step2.value;
 
@@ -140,24 +147,34 @@
     }
   }
   loadCss({
-    bootstrapFont: "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
-    muliFont: "https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
-    owl: "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css",
-    bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
-    owlTheme: "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
+    bootstrapFont:
+      "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css",
+    muliFont:
+      "https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
+    owl:
+      "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css",
+    bootstrap:
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",
+    owlTheme:
+      "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
     // pmTheme: "https://parramato.com/bot-view/Alpha Version_586886576888/dev/css/theme.css"
     pmTheme: "./css/theme.css"
   });
   loadJs({
-    crypt: "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js",
+    crypt:
+      "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js",
     jQuery: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js",
-    bootstrap: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
-    carousel: "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js",
-    socket: "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
+    bootstrap:
+      "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
+    carousel:
+      "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js",
+    socket:
+      "https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js",
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
     //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
     nluComponent: "https://bot.jubi.ai/cdn/compromise.min.js",
-    bundle:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.test.js",
+    bundle:
+      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.test.js",
     // bundle: "https://development.jubi.ai/usaidWeb/js/bundle.test.js",
     // script:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
     // jubievents: "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
@@ -168,9 +185,12 @@
       images: {
         logo: "https://parramato.com/bot-view/images/logo.png",
         sendIcon: "https://parramato.com/bot-view/images/icon_send.png",
-        sendIconActive: "https://parramato.com/bot-view/images/iconRed_send.png",
-        sendIconInPage: "https://parramato.com/bot-view/images/icon_send_in_page.png",
-        loaderBotChat: "https://parramato.com/bot-view/images/response-loading.gif",
+        sendIconActive:
+          "https://parramato.com/bot-view/images/iconRed_send.png",
+        sendIconInPage:
+          "https://parramato.com/bot-view/images/icon_send_in_page.png",
+        loaderBotChat:
+          "https://parramato.com/bot-view/images/response-loading.gif",
         userIcon: "https://parramato.com/bot-view/images/user.png",
         // "botIcon": "https://parramato.com/bot-view/images/boticon.png",
         botIcon: "./images/unicorn.png",
@@ -179,7 +199,8 @@
         voiceIcon: "https://parramato.com/bot-view/images/voice.png",
         closeWebView: "https://parramato.com/bot-view/images/closeWebView.png",
         attachment: "https://parramato.com/bot-view/images/attachment.png",
-        permissionIcon: "https://parramato.com/bot-view/images/parrot_loader.gif",
+        permissionIcon:
+          "https://parramato.com/bot-view/images/parrot_loader.gif",
         muteIcon: "https://parramato.com/bot-view/images/mute.png",
         unmuteIcon: "https://parramato.com/bot-view/images/unmute.png"
       }
@@ -371,7 +392,7 @@
     "</aside>" +
     '<textarea id="jubi-answerBottom" style="resize:none;overflow:hidden;" autofocus></textarea> ' +
     "</div>" +
-    '<div class="datasendButtons"><div class="sendIcon" id="button-send" style="display: block;"><button id="jubi-bottomClick" type="submit" onclick="clickSendButton();return false;" style="display: none;"><img src="./images/send.png" id="jubi-graySend" class="img-responsive"></button><div class="voiceIcon button-play-ws-right" id="button-play-ws" style=""><img src="./images/voice.png" class="img-fluid"></div><div class="voice-buttons" id="voice-buttons" style="display:block;"><div class="voicePulse" id="button-stop-ws" style="display: none;"><div class="sk-three-bounce"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div><div class="stop-recording">Listening...</div></div></div></div><div class="uploadbox" style="display:none;"><label><div class="inputfile" style="display: block;"><img src="https://parramato.com/bot-view/JubiMoney_788585788275/dev/images/attachment.png" class="img-responsive" style=""><input class="jubi-file-upload" type="file" name="fileName"></div><div class="button-section" style="display:none"><button type="submit" style="display: none;">Submit</button></div></label></div><div class="keyboard-icon" id="keyboard-icon" style="display:none;"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div></div>' +
+    '<div class="datasendButtons"><div class="sendIcon" id="button-send" style="display: block;"><button id="jubi-bottomClick" type="submit" onclick="clickSendButton();return false;" "><img src="./images/send.png" id="jubi-graySend" class="img-responsive"></button><div class="voiceIcon button-play-ws-right" id="button-play-ws" style=""><img src="./images/voice.png" class="img-fluid"></div><div class="voice-buttons" id="voice-buttons" style="display:block;"><div class="voicePulse" id="button-stop-ws" style="display: none;"><div class="sk-three-bounce"><div class="sk-child sk-bounce1"></div><div class="sk-child sk-bounce2"></div><div class="sk-child sk-bounce3"></div></div><div class="stop-recording">Listening...</div></div></div></div><div class="uploadbox" style="display:none;"><label><div class="inputfile" style="display: block;"><img src="https://parramato.com/bot-view/JubiMoney_788585788275/dev/images/attachment.png" class="img-responsive" style=""><input class="jubi-file-upload" type="file" name="fileName"></div><div class="button-section" style="display:none"><button type="submit" style="display: none;">Submit</button></div></label></div><div class="keyboard-icon" id="keyboard-icon" style="display:none;"><i class="fa fa-keyboard-o" aria-hidden="true"></i></div></div>' +
     "</section>" +
     "</section>" +
     "</section>";
