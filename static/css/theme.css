@@ -2522,7 +2522,8 @@ body{
     width: 100%;
     padding: 19px 0px 0px 19px;
     box-shadow: 0 2px 4px 0 #e2e2e2;
-    border: 1px solid #efefef
+    border: 1px solid #efefef;
+    display: none;
 }
 
 #jubi-chat-loader-app .jubi-bxinput {
