@@ -1,5 +1,6 @@
 module.exports={
     q2: model => {
+        console.log(model)
         if (model.tags.answer == true) {
             model.reply = {
                 type: "quickReply",
