@@ -113,7 +113,7 @@ module.exports = {
 			// delete data.tags.accepted
 			data.reply = {
 				type: "button",
-				text: "According to our terms and conditions, you must be over 15 years to access Jubi. Read more here https://development.jubi.ai/usaidWeb/termsOfService.html",
+				text: "According to our terms and conditions, you must be over 15 years to access Jubi. Read more by clicking on the options below.",
 				next: {
 					data: [{
 							type: "url",
