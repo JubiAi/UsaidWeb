@@ -344,6 +344,8 @@
             //------start------
             //------CODE------
 
+
+            
             let passphrase = 'ba76801c-44fe-3bb8-b384-76e03ce475d4';
             let passphraseTransit = 'dsajghdksa7fg8ow7eg32o874gf873gf8v7w8cyv387egf8ygsygyugjhgfdkuyuyuktfkuygwuyyugsdYGUYGgyjgblgUGIYGIGYE';
             let intents = {
@@ -400,6 +402,10 @@
             let attachmentUrl = 'https://parramato.com/bot-view/images/attachment.png'
             let integrityPassPhrase = 'hbu8b23478gbuy2bcfy2cbcihsdcgUGUYUuy2bcfy2cbcihsdcYBEBIW'
             let localSavePassPhrase = '8rhfuahiuHFIJUHAFIWEHFOw98ehfu9HFjhE234jbhJHbjhbfjebkfewfewjhEUHFUIAlpha Version_586886576888'
+
+
+
+
             //------CODE------
             //------end------
             //Setup
