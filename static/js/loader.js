@@ -63,10 +63,11 @@
   
   window.jubiChatEventListener = function (event) {
     console.log(event)
-    if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
-      $("#jubi-textInput").hide();
-    } 
-    else if ((event.input && event.input.text && (event.input.text == 'I am over 15'))) {
+    // if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
+      // if ((event.input && event.input.text && (event.input.text == "Yes, let us start!" || event.input.text == 'I am over 15' || event.input.text == 'I am under 15'))) {
+      // $("#jubi-textInput").hide();
+    // } 
+    if ((event.input.text == 'I am over 15')) {
       $("#jubi-textInput").show();
     }
     // else {
