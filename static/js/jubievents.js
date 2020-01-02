@@ -55,10 +55,6 @@ $(document).ready(function() {
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
-    $(document).ready(function() {
-      $("#jubi-bottomClick").show();
-    });
-    $("#jubi-bottomClick").show();
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
     $("#jubi-bottomClick").show();
