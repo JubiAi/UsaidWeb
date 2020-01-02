@@ -152,7 +152,7 @@ module.exports={
 	                next : {
 	                    data : [
 	                        {
-	                            data : 'cool!',
+	                            data : 'cool',
 	                            text : 'Cool!'
 	                        },
 	                        {
