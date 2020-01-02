@@ -55,7 +55,7 @@ $(document).ready(function() {
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
-    $("#button-send").show();
+    // $("#button-send").show();
     $("#jubi-bottomClick").show();
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
@@ -72,9 +72,10 @@ $(document).ready(function() {
       $("#button-send").show();
     });
     $("#jubi-bottomClick").click(function() {
+      $(".jubi-sec_newFooter button:hover").hide();
+      $("#jubi-bottomClick").show();
       $("#jubi-bxinput").show();
       $("#button-send").show();
-      $("#jubi-bottomClick").show();
     });
     $("#jubi-answerBottom").on("keypress", function(e) {
       if (e.which == 13) {
