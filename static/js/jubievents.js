@@ -55,7 +55,9 @@ $(document).ready(function() {
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
     console.log("test");
+    // $("#mainTable").css("height:88vh");
     // $("#button-send").show();
+    $("#jubi-chat-loader-app .pm-sec_openview").css({ height: "88vh" });
     $("#jubi-bottomClick").show();
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
@@ -72,7 +74,9 @@ $(document).ready(function() {
       $("#button-send").show();
     });
     $("#jubi-bottomClick").click(function() {
-      $(".jubi-sec_newFooter button:hover").hide();
+      // $(".jubi-sec_newFooter button:hover").css({
+      //   "background-color": "#00a2fe"
+      // });
       $("#jubi-bottomClick").show();
       $("#jubi-bxinput").show();
       $("#button-send").show();
