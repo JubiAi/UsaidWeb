@@ -2566,7 +2566,7 @@ body{
     /* opacity: 0.6; */
     text-decoration: none;
     width: 84%;
-    /* min-height: 26px; */
+    min-height: 26px;
 }
 
 #jubi-chat-loader-app .jubi-bxinput textarea::placeholder {
