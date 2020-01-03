@@ -2510,7 +2510,7 @@ body{
     height: auto;
     float: left;
     height: 78px;
-    max-height: 120px;
+    /* max-height: 120px; */
     left: 0;
     bottom: 0;
     position: absolute;
@@ -2520,7 +2520,7 @@ body{
     box-sizing: border-box;
     text-align: center;
     width: 100%;
-    padding: 19px 0px 0px 19px;
+    padding: 13px 0px 0px 19px;
     box-shadow: 0 2px 4px 0 #e2e2e2;
     border: 1px solid #efefef;
     display: none;
@@ -2530,7 +2530,7 @@ body{
     width: 89%;
     padding: 0px 0 0px 6px;
     background: 0;
-    margin: -5px 0 0 20px;
+    margin: 0px 0 0 20px;
     box-sizing: border-box;
     /* height: auto; */
     font-size: 15px;
@@ -2551,21 +2551,19 @@ body{
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
     height: 26px;
-    max-height: 115px;
     background: 0;
     resize: none;
     border: 0;
     box-sizing: border-box;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 13px;
     padding: 0 12px;
     margin-left: 25px;
     margin-top: 13px;
     outline: none;
     float: left;
-    /* opacity: 0.6; */
     text-decoration: none;
     width: 84%;
+    color: #0a0808;
 }
 
 #jubi-chat-loader-app .jubi-bxinput textarea::placeholder {
@@ -2685,7 +2683,8 @@ body{
     border-radius: 50%;
     border: 0;
     text-align: center;
-    position: relative;
+    position: absolute;
+    bottom: 1px;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -2711,6 +2710,8 @@ body{
     /* margin: auto; */
     margin: 10px 0 0 14px;
     cursor: pointer;
+    position: absolute;
+    bottom: 5px;
     -webkit-animation: fadein 1s ease-in alternate;
     -moz-animation: fadein 1s ease-in alternate;
     animation: fadein 1s ease-in alternate;
@@ -2724,9 +2725,10 @@ body{
 #jubi-chat-loader-app .datasendButtons {
     width: 73px;
     position: absolute;
-    right: 10px;
+    /* right: 10px; */
     right: 20px;
-    top: 19px
+    /* top: 19px */
+    bottom: 20px;
 }
 
 #jubi-chat-loader-app .voiceIcon img {
@@ -3548,7 +3550,8 @@ body{
     width: 36px;
     display: flex;
     /* display: none; */
-    position: fixed;
+    position: absolute;
+    bottom: 18px;
 }
 
 #jubi-chat-loader-app #jubi-muteVoice {
@@ -3560,7 +3563,7 @@ body{
     /* cursor: pointer;
     width: 100%;
     text-align: center;
-    margin : -6px 0px 0px -45px; */1
+    margin : -6px 0px 0px -45px; */
     cursor: pointer;
     width: 100%;
     text-align: center;
@@ -4448,8 +4451,8 @@ body{
         width: 80%;
     }
     #jubi-chat-loader-app .pm-sec_openview {
-        height: 88vh;
-        /* height: 94vh; */
+        /* height: 88vh; */
+        height: 94vh;
     }
     #jubi-chat-loader-app .headerLeftContent {
         margin: -3px 0 0 0;
