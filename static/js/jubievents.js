@@ -36,6 +36,7 @@ $(document).ready(function() {
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
+    $("jubi-bxinput").css({ height: "53px" });
     $(".voiceIcon").show();
     $("#voice-buttons").show();
     $("#button-send").show();
