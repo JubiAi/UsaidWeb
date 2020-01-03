@@ -64,6 +64,7 @@ $(document).ready(function() {
     // $("#mainTable").css("height:88vh");
     // $("#button-send").show();
     $("#jubi-chat-loader-app .pm-sec_openview").css({ height: "88vh" });
+    $("#jubi-answerBottom").css({ margin: "13px 0px 0px 15px" });
     $("#jubi-bottomClick").show();
     $("#button-play-ws").remove();
     $(".jubi-muteUnmuteVoice").hide();
