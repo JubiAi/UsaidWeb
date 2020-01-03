@@ -2538,7 +2538,7 @@ body{
     text-indent: 0 !important;
     text-indent: initial !important;
     height: 53px;
-    max-height: 79px;
+    max-height: 88px;
     border-bottom: 0 solid #ccc;
     border: 1px solid #f2f2f2;
     border-radius: 15px;
@@ -2556,7 +2556,7 @@ body{
     resize: none;
     border: 0;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     padding: 0 12px;
     margin-left: 25px;
@@ -2566,6 +2566,7 @@ body{
     /* opacity: 0.6; */
     text-decoration: none;
     width: 84%;
+    line-height: 17px;color: #525050;
 }
 
 #jubi-chat-loader-app .jubi-bxinput textarea::placeholder {
