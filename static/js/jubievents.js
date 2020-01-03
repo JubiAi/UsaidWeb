@@ -36,8 +36,11 @@ $(document).ready(function() {
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
-    $("#jubi-bxinput").css({ height: "53px" });
-    $("#jubi-answerBottom").css({ height: "26px" });
+    setTimeout(function() {
+      $("#jubi-bxinput").css({ height: "53px" });
+      $("#jubi-answerBottom").css({ height: "26px" });
+    }, 500);
+
     $(".voiceIcon").show();
     $("#voice-buttons").show();
     $("#button-send").show();
