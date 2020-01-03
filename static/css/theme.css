@@ -2550,14 +2550,14 @@ body{
 
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
-    height: 26px;
-    max-height: 115px;
+    /* height: 26px; */
+    /* max-height: 115px; */
     background: 0;
     resize: none;
     border: 0;
     box-sizing: border-box;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 14px;
+    /* font-weight: 400; */
     padding: 0 12px;
     margin-left: 25px;
     margin-top: 13px;
@@ -2566,6 +2566,7 @@ body{
     /* opacity: 0.6; */
     text-decoration: none;
     width: 84%;
+    min-height: 26px;
 }
 
 #jubi-chat-loader-app .jubi-bxinput textarea::placeholder {
