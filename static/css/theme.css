@@ -2686,7 +2686,8 @@ body{
     border-radius: 50%;
     border: 0;
     text-align: center;
-    position: relative;
+    position: absolute;
+    bottom: 10px;
     font-weight: bold;
     color: #fff;
     cursor: pointer;
@@ -2712,6 +2713,8 @@ body{
     /* margin: auto; */
     margin: 10px 0 0 14px;
     cursor: pointer;
+    position: absolute;
+    bottom: 8px;
     -webkit-animation: fadein 1s ease-in alternate;
     -moz-animation: fadein 1s ease-in alternate;
     animation: fadein 1s ease-in alternate;
@@ -3550,8 +3553,8 @@ body{
     width: 36px;
     display: flex;
     /* display: none; */
-    position: fixed;
-    bottom: 17px;
+    position: absolute;
+    bottom: 18px;
 }
 
 #jubi-chat-loader-app #jubi-muteVoice {
