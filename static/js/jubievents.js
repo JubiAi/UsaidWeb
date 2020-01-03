@@ -39,7 +39,7 @@ $(document).ready(function() {
     setTimeout(function() {
       $("#jubi-bxinput").css({ height: "53px" });
       $("#jubi-answerBottom").css({ height: "26px" });
-    }, 500);
+    }, 150);
 
     $(".voiceIcon").show();
     $("#voice-buttons").show();
