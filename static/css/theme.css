@@ -4463,6 +4463,9 @@ body{
         top: 25px;
         right: 13px;
     }
+    #jubi-chat-loader-app .jubi-bxinput textarea {
+        width: 82%;
+    }
  }
 
  @media (max-width: 375px){
