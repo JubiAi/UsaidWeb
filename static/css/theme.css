@@ -2725,9 +2725,10 @@ body{
 #jubi-chat-loader-app .datasendButtons {
     width: 73px;
     position: absolute;
-    right: 10px;
+    /* right: 10px; */
     right: 20px;
-    top: 19px
+    /* top: 19px */
+    bottom: 20px;
 }
 
 #jubi-chat-loader-app .voiceIcon img {
