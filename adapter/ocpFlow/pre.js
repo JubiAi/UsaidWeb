@@ -110,7 +110,7 @@ module.exports={
                     data: 
                     [
                         {
-                            data: "main topic",
+                            data: "main topics",
                             text: "Main Topics"
                         },
                         {
