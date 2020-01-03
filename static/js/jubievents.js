@@ -108,9 +108,9 @@ $(document).ready(function() {
       "" == t &&
         (document.getElementById("jubi-bxinput").style.height = "53px"),
       (document.getElementById("jubi-textInput").style.height =
-        n < 85 ? "85px" : n + "px"),
+        n < 90 ? "90px" : n + "px"),
       "" == t &&
-        (document.getElementById("jubi-textInput").style.height = "85px"),
+        (document.getElementById("jubi-textInput").style.height = "90px"),
       $("#button-send").show(),
       $("#button-send").css("display", "block !important"),
       $("#button-send").css("display", "block");
