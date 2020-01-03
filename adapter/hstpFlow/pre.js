@@ -106,7 +106,7 @@ module.exports={
                             text: "Helpline"
                         },
                         {
-                            data: "startflow",
+                            data: "main topics",
                             text: "Learn More"
                         }
                     ]
