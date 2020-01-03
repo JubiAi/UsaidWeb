@@ -2551,7 +2551,7 @@ body{
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
     height: 26px;
-    /* max-height: 115px; */
+    max-height: 115px;
     background: 0;
     resize: none;
     border: 0;
@@ -3551,6 +3551,7 @@ body{
     display: flex;
     /* display: none; */
     position: fixed;
+    bottom: 17px;
 }
 
 #jubi-chat-loader-app #jubi-muteVoice {
@@ -3562,7 +3563,7 @@ body{
     /* cursor: pointer;
     width: 100%;
     text-align: center;
-    margin : -6px 0px 0px -45px; */1
+    margin : -6px 0px 0px -45px; */
     cursor: pointer;
     width: 100%;
     text-align: center;
