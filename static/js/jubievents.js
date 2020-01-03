@@ -40,7 +40,7 @@ $(document).ready(function() {
       $("#jubi-textInput").css({ height: "78px" });
       $("#jubi-bxinput").css({ height: "53px" });
       $("#jubi-answerBottom").css({ height: "26px" });
-    }, 150);
+    }, 50);
 
     $(".voiceIcon").show();
     $("#voice-buttons").show();
