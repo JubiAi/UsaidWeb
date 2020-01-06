@@ -8,6 +8,10 @@ module.exports={
 					{
 						data : 'main carousal',
 						text : 'Main Menu'
+					},
+					{
+						data : 'talk to an iucd counsellor',
+						text : 'Talk to an IUCD counsellor'
 					}
 				]
 			}
