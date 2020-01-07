@@ -2511,7 +2511,7 @@ body{
     height: auto;
     float: left;
     height: 90px;
-    max-height: 110px;
+    max-height: 105px;
     left: 0;
     bottom: 0;
     position: absolute;
@@ -2539,7 +2539,7 @@ body{
     text-indent: 0 !important;
     text-indent: initial !important;
     height: 53px;
-    max-height: 70px;
+    max-height: 67px;
     border-bottom: 0 solid #ccc;
     border: 1px solid #f2f2f2;
     border-radius: 15px;

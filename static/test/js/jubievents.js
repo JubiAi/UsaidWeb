@@ -118,24 +118,8 @@ $(document).ready(function() {
         n < 90 ? "90px" : n + "px"),
       "" == t &&
         (document.getElementById("jubi-textInput").style.height = "93px");
-    // $("#button-send").show(),
-    // $("#button-send").css("display", "block !important"),
-    // $("#button-send").css("display", "block");
+    $("#button-send").show(),
+      $("#button-send").css("display", "block !important"),
+      $("#button-send").css("display", "block");
   });
-  // document.getElementById("jubi-answerBottom").addEventListener(
-  //   "keyup",
-  //   function() {
-  //     this.style.height = 0;
-  //     this.style.height = this.scrollHeight + "px";
-  //   },
-  //   false
-  // );
-  // document.getElementById("jubi-bxinput").addEventListener(
-  //   "keyup",
-  //   function() {
-  //     this.style.height = 0;
-  //     this.style.height = this.scrollHeight + "px";
-  //   },
-  //   false
-  // );
 });
