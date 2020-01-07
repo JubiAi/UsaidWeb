@@ -2710,7 +2710,7 @@ body{
 
 #jubi-chat-loader-app .voiceIcon {
     /* margin: auto; */
-    margin: 10px 0 0 14px;
+    margin: 0;
     cursor: pointer;
     -webkit-animation: fadein 1s ease-in alternate;
     -moz-animation: fadein 1s ease-in alternate;
@@ -2726,7 +2726,7 @@ body{
     width: 33px; 
     position: absolute;
     right: 20px;
-    bottom: 19px;
+    bottom: 25px;
 }
 
 #jubi-chat-loader-app .voiceIcon img {
@@ -3547,7 +3547,7 @@ body{
     float: left;
     width: 36px;
     position: absolute;
-    bottom: 0px;
+    bottom: 6px;
     left: 0px;
 }
 
