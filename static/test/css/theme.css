@@ -2539,7 +2539,7 @@ body{
     text-indent: 0 !important;
     text-indent: initial !important;
     height: 53px;
-    max-height: 68px;
+    max-height: 63px;
     border-bottom: 0 solid #ccc;
     border: 1px solid #f2f2f2;
     border-radius: 15px;
@@ -2570,7 +2570,7 @@ body{
     color: #525050; */ 
     /* padding-top: 12px; */
     height: 26px;
-    max-height: 41px;
+    max-height: 40px;
     background: 0;
     resize: none;
     border: 0;
