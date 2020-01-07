@@ -110,10 +110,10 @@ $(document).ready(function() {
         n < 26 ? "26px" : n + "px"),
       "" == t &&
         (document.getElementById("jubi-answerBottom").style.height = "26px"),
-      // (document.getElementById("jubi-bxinput").style.height =
-      //   n < 53 ? "53px" : n + "px"),
-      // "" == t &&
-      //   (document.getElementById("jubi-bxinput").style.height = "53px"),
+      (document.getElementById("jubi-bxinput").style.height =
+        n < 53 ? "53px" : n + "px"),
+      "" == t &&
+        (document.getElementById("jubi-bxinput").style.height = "53px"),
       // (document.getElementById("jubi-textInput").style.height =
       //   n < 93 ? "93px" : n + "px"),
       // "" == t &&
