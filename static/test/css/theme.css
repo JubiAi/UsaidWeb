@@ -2538,7 +2538,7 @@ body{
     font-weight: 400;
     text-indent: 0 !important;
     text-indent: initial !important;
-    height: 53px;
+    max-height: 53px;
     /* max-height: 79px; */
     border-bottom: 0 solid #ccc;
     border: 1px solid #f2f2f2;
