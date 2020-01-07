@@ -3548,7 +3548,7 @@ body{
     width: 36px;
     position: absolute;
     bottom: 6px;
-    left: 0px;
+    left: 5px;
 }
 
 #jubi-chat-loader-app #jubi-muteVoice {
@@ -4346,7 +4346,7 @@ body{
 
 @media (min-width: 1366px){
     #jubi-chat-loader-app .datasendButtons {
-    right: 30px;
+    right: 42px;
   }
   /* #jubi-chat-loader-app .jubi-model img {
     width: 80%;
