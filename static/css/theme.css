@@ -2530,7 +2530,7 @@ body{
 #jubi-chat-loader-app .jubi-bxinput {
     width: 89%;
     padding: 5px 6px;
-    background: #fff;
+    background: #CCC;
     margin: 0px 0 0 20px;
     box-sizing: border-box;
     /* height: auto; */
