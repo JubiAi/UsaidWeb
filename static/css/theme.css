@@ -2550,7 +2550,7 @@ body{
     position: relative;
  }
 
-#jubi-chat-loader-app .jubi-bxinput textarea {
+#jubi-chat-loader-app .jubi-bxinput textarea { 
     height: 26px;
     max-height: 115px;
     background: 0;
