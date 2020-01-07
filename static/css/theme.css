@@ -2546,7 +2546,8 @@ body{
     outline: none;
     float: left;
     box-shadow: 0px 2px 4px #e1e1e1;
-    overflow: hidden;position: relative;
+    /* overflow: hidden; */
+    position: relative;
  }
 
 #jubi-chat-loader-app .jubi-bxinput textarea {
