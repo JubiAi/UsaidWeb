@@ -117,10 +117,10 @@ $(document).ready(function() {
       (document.getElementById("jubi-textInput").style.height =
         n < 93 ? "93px" : n + "px"),
       "" == t &&
-        (document.getElementById("jubi-textInput").style.height = "93px"),
-      // $("#button-send").show(),
-      // $("#button-send").css("display", "block !important"),
-      // $("#button-send").css("display", "block");
+        (document.getElementById("jubi-textInput").style.height = "93px");
+    // $("#button-send").show(),
+    // $("#button-send").css("display", "block !important"),
+    // $("#button-send").css("display", "block");
   });
   // document.getElementById("jubi-answerBottom").addEventListener(
   //   "keyup",
