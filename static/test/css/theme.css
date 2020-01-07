@@ -2511,7 +2511,7 @@ body{
     height: auto;
     float: left;
     height: 93px;
-    /* max-height: 120px; */
+    max-height: 120px;
     left: 0;
     bottom: 0;
     position: absolute;
