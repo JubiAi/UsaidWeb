@@ -1,0 +1,160 @@
+body {
+  margin: 0px;
+}
+
+.main {
+  font-family: sans-serif;
+  display: flex;
+  max-width: 100%;
+  margin: 0px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.heading img {
+  width: 170px;
+  margin-left: 120px;
+  margin-top: 10px;
+}
+
+.heading {
+  background-image: linear-gradient(to bottom, #176bdf, #488ae8, #7eaff4);
+  height: 40vh;
+  padding: 0px;
+  color: #fff;
+}
+
+.terms {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 45px;
+  margin-top: 0;
+}
+
+.text {
+  width: 80%;
+  margin-left: 120px;
+  margin-top: 70px;
+  margin-bottom: 80px;
+}
+
+.text h3 {
+  color: #333b69;
+  margin-block-start: 2em;
+}
+
+.text p {
+  color: #444444;
+}
+
+.policy {
+  font-weight: bold;
+  font-size: 16px;
+  color: black;
+  padding-top: 10px;
+}
+.copyright {
+  border-top: 1px solid #d8d8d8;
+  height: 15vh;
+  display: none;
+}
+
+.copyright div {
+  text-align: center;
+  padding-top: 33px;
+}
+
+.copyright img {
+  width: 14px;
+}
+
+.copyright p {
+  display: inline;
+  font-size: 15px;
+  color: grey;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    height: 21vh;
+  }
+  .heading img {
+    margin-left: 70px;
+  }
+  .terms {
+    padding-top: 25px;
+  }
+  .text {
+    margin-left: 75px;
+  }
+  .copyright {
+    height: 10vh;
+  }
+  .copyright div {
+    padding: 20px 70px 20px 70px;
+  }
+}
+
+@media (max-width: 560px) {
+  .heading img {
+    margin-left: 25px;
+    width: 110px;
+  }
+  .text {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 25px;
+  }
+  .text p {
+    color: #444444;
+    font-size: 15px;
+    margin-block-start: 0.5em;
+  }
+  .terms {
+    font-size: 25px;
+  }
+  .policy {
+    color: black;
+  }
+  .text h3 {
+    margin-bottom: 12px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .text {
+    width: 87%;
+    margin-left: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .text p {
+    color: #444444;
+    font-size: 15px;
+  }
+  .terms {
+    font-size: 25px;
+  }
+  .policy {
+    color: black;
+  }
+}
+
+@media (max-width: 375px) {
+  .heading {
+    height: 23vh;
+  }
+}
+@media (max-width: 360px) {
+  .heading {
+    height: 24vh;
+  }
+}
+@media (max-width: 320px) {
+  .heading {
+    height: 24vh;
+  }
+}
