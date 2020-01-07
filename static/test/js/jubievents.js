@@ -115,7 +115,7 @@ $(document).ready(function() {
       "" == t &&
         (document.getElementById("jubi-bxinput").style.height = "53px"),
       (document.getElementById("jubi-textInput").style.height =
-        n < 93 ? "93px" : n + "px"),
+        n < 90 ? "90px" : n + "px"),
       "" == t &&
         (document.getElementById("jubi-textInput").style.height = "93px");
     // $("#button-send").show(),
