@@ -2725,7 +2725,6 @@ body{
 #jubi-chat-loader-app .datasendButtons {
     width: 33px; 
     position: absolute;
-    right: 10px;
     right: 20px;
     top: 19px
 }
@@ -4348,7 +4347,7 @@ body{
 
 @media (min-width: 1366px){
     #jubi-chat-loader-app .datasendButtons {
-    right: 10px;
+    right: 30px;
   }
   /* #jubi-chat-loader-app .jubi-model img {
     width: 80%;
