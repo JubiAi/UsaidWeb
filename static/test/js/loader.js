@@ -158,7 +158,7 @@
     owlTheme:
       "https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css",
     // pmTheme: "https://parramato.com/bot-view/Alpha Version_586886576888/dev/css/theme.css"
-    pmTheme: "./css/theme.css"
+    pmTheme: "./test/css/theme.css"
   });
   loadJs({
     crypt:
@@ -173,11 +173,12 @@
     responsiveVoice: "https://code.responsivevoice.org/responsivevoice.js",
     //nluComponent:"https://unpkg.com/compromise@latest/builds/compromise.min.js",
     nluComponent: "https://bot.jubi.ai/cdn/compromise.min.js",
-    bundle:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.test.js",
+    bundle:
+      "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/bundle.test.js",
     // bundle: "https://development.jubi.ai/usaidWeb/js/bundle.test.js",
     // script:"https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/script.js",
     // jubievents: "https://parramato.com/bot-view/Alpha Version_586886576888/dev/js/jubievents.js"
-    jubievents: "./js/jubievents.js"
+    jubievents: "./test/js/jubievents.js"
   });
   window.jubiModal = {
     static: {
