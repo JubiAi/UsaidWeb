@@ -1373,7 +1373,7 @@ body{
 #jubi-chat-loader-app .jubi-muteUnmuteVoice {
     float: left;
     width: 36px;
-    margin-top: 7px;
+    margin-top: 0px;
     margin-left: 0px;
 }   
 #jubi-chat-loader-app #jubi-unmuteVoice, #jubi-muteVoice {
