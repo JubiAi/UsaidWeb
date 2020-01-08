@@ -4408,6 +4408,9 @@ body{
     #jubi-chat-loader-app .jubi-sec_newFooter button{
         margin: 7px 0px 0 0;
     }
+    #jubi-chat-loader-app .datasendButtons {
+         right: 38px;
+    }
 }
 
    @media (max-width: 768px){
