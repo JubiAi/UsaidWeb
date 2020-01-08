@@ -103,9 +103,9 @@ $(document).ready(function() {
       $("#button-send").show();
     });
     $("#jubi-bottomClick").click(function() {
-      // $(".jubi-sec_newFooter button:hover").css({
-      //   "background-color": "#00a2fe"
-      // });
+      $(".jubi-sec_newFooter button:hover").css({
+        "background-color": "#00a2fe"
+      });
       $("#jubi-bottomClick").show();
       $("#jubi-bxinput").show();
       $("#button-send").show();
