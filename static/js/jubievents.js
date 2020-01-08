@@ -29,17 +29,20 @@ $(document).ready(function() {
     // $("#jubi-bottomClick").attr("style", "display: block !important");
   });
   $("#pm-data").click(function() {
+    console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
     $("#button-send").show();
   });
   $(".inputmenu").click(function() {
+    console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
     $("#button-send").show();
   });
 
   $("#pm-buttonlock").click(function() {
+    console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
     $("#button-send").show();
