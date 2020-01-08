@@ -35,16 +35,15 @@ $(document).ready(function() {
   });
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
-    $("#jubi-bxinput").show();
+    // $("#jubi-bxinput").show();
     setTimeout(function() {
       // $("#jubi-textInput").css({ height: "78px" });
       // $("#jubi-bxinput").css({ height: "53px" });
       $("#jubi-answerBottom").css({ height: "26px" });
     }, 50);
-
-    $(".voiceIcon").show();
+    // $(".voiceIcon").show();
     $("#voice-buttons").show();
-    // $("#button-send").show();
+    $("#button-send").show();
   });
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
