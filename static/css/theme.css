@@ -4389,7 +4389,7 @@ body{
     #jubi-chat-loader-app .pm-sec_openview {
             /* height: 87vh;
             height: 94vh; */
-            height: 100%;
+            height: 100vh;
      }
     .voiceContent p {
         font-size: 14px;
