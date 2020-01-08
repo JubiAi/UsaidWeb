@@ -2821,11 +2821,16 @@ body{
 }
 
 #jubi-chat-loader-app .voice-buttons {
-    position: absolute;
+    /* position: absolute;
     top: 4px;
     right: 30px;
+    margin: auto; */
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    bottom: 70px;
     margin: auto;
-    
+ 
 }
 
 #jubi-chat-loader-app .keyboard-icon .fa {
