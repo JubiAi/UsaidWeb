@@ -4257,7 +4257,7 @@ body{
     }
    
     #jubi-chat-loader-app .jubi-sec_newFooter button {
-        float: right;
+        /* float: right;
         width: 25px;
         height: 25px;
         background:#00a2fe;
@@ -4268,7 +4268,7 @@ body{
         font-weight: bold;
         color: #fff;
         cursor: pointer;
-        margin: 3px 45px 0 0;
+        margin: 3px 45px 0 0; */
     }
     #jubi-chat-loader-app .pm-sec_newHeader p {
         font-size: 14px;width: 81%;
