@@ -44,7 +44,7 @@ $(document).ready(function() {
 
     $(".voiceIcon").show();
     $("#voice-buttons").show();
-    $("#button-send").show();
+    // $("#button-send").show();
   });
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
@@ -104,16 +104,18 @@ $(document).ready(function() {
   }
   $("body").on("keydown", "#jubi-answerBottom", function(e) {
     var t = $("#jubi-answerBottom").val(),
-        n = document.getElementById("jubi-answerBottom").scrollHeight;
-        console.log("textareaheightnow: " + n),
-        (document.getElementById("jubi-answerBottom").style.height = n < 26 ? "26px" : n + "px"), "" == t &&
+      n = document.getElementById("jubi-answerBottom").scrollHeight;
+    console.log("textareaheightnow: " + n),
+      (document.getElementById("jubi-answerBottom").style.height =
+        n < 26 ? "26px" : n + "px"),
+      "" == t &&
         (document.getElementById("jubi-answerBottom").style.height = "26px"),
-        // (document.getElementById("jubi-bxinput").style.height = n < 53 ? "53px" : n + "px"), "" == t &&
-        // (document.getElementById("jubi-bxinput").style.height = "53px"),
-        // (document.getElementById("jubi-textInput").style.height = n < 93 ? "93px" : n + "px"), "" == t &&
-        // (document.getElementById("jubi-textInput").style.height = "93px"),
-        $("#button-send").show(),
-        $("#button-send").css("display", "block !important"),
-        $("#button-send").css("display", "block");
+      // (document.getElementById("jubi-bxinput").style.height = n < 53 ? "53px" : n + "px"), "" == t &&
+      // (document.getElementById("jubi-bxinput").style.height = "53px"),
+      // (document.getElementById("jubi-textInput").style.height = n < 93 ? "93px" : n + "px"), "" == t &&
+      // (document.getElementById("jubi-textInput").style.height = "93px"),
+      $("#button-send").show(),
+      $("#button-send").css("display", "block !important"),
+      $("#button-send").css("display", "block");
   });
 });
