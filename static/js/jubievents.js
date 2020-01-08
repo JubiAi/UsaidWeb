@@ -27,18 +27,16 @@ $(document).ready(function() {
   //   $("#voice-buttons").hide();
   //   $("#jubi-bottomClick").show();
   // });
-  // $("#pm-data").click(function() {
-  //   console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-  //   $("#jubi-bottomClick").hide();
-  //   $("#voice-buttons").show();
-  //   $("#button-play-ws").show();
-  // });
-  // $(".inputmenu").click(function() {
-  //   console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-  //   $("#jubi-bottomClick").hide();
-  //   $("#voice-buttons").show();
-  //   $("#button-play-ws").show();
-  // });
+  $("#pm-data").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-play-ws").show();
+  });
+  $(".inputmenu").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-play-ws").show();
+  });
 
   // $("body").on("focusout", "#jubi-answerBottom", function() {
   //   $("#jubi-bottomClick").hide();
@@ -68,9 +66,9 @@ $(document).ready(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
     } else {
+      $("#jubi-bottomClick").hide();
       $("#button-play-ws").show();
       $("#voice-buttons").show();
-      $("#jubi-bottomClick").hide();
     }
   });
 
