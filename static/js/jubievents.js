@@ -29,7 +29,7 @@ $(document).ready(function() {
     $("#jubi-bottomClick").attr("style", "display: block !important");
   });
   $("#jubi-bottomClick").click(function() {
-    // $("#jubi-bottomClick").hide();
+    $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
     $("#voice-buttons").show();
     $("#button-send").show();
@@ -41,9 +41,14 @@ $(document).ready(function() {
     // $(".voiceIcon").show();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
-    $("#jubi-bottomClick").hide();
+    // $("#jubi-bottomClick").hide();
     $("#button-play-ws").show();
     $("#voice-buttons").show();
+  });
+  $("body").on("focusin", "#jubi-answerBottom", function() {
+    $("#jubi-bottomClick").show();
+    $("#button-play-ws").hide();
+    $("#voice-buttons").hide();
   });
 
   $("#pm-data").click(function() {
