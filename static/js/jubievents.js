@@ -85,6 +85,13 @@ $(document).ready(function() {
     $(".jubi-muteUnmuteVoice").hide();
     $("#voice-buttons").hide();
 
+    $("#jubi-answerBottom").on("keyup keypress", function(e) {
+      if ($(this).val().length >= 1) {
+        $("#jubi-bottomClick").show();
+      } else {
+        $("#jubi-bottomClick").show();
+      }
+    });
     $("#jubi-answerBottom").click(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
