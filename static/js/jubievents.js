@@ -28,11 +28,11 @@ $(document).ready(function() {
     $("#jubi-bottomClick").show();
     // $("#jubi-bottomClick").attr("style", "display: block !important");
   });
-  // $("body").on("focusout", "#jubi-answerBottom", function() {
-  // $("#jubi-bottomClick").hide();
-  //   $(".voiceIcon").show();
-  //   $("#voice-buttons").show();
-  // });
+  $("body").on("focusout", "#jubi-answerBottom", function() {
+    // $("#jubi-bottomClick").hide();
+    $("#button-play-ws").show();
+    $("#voice-buttons").show();
+  });
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
@@ -47,13 +47,13 @@ $(document).ready(function() {
   });
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-send").show();
+    // $("#voice-buttons").show();
+    // $("#button-send").show();
   });
   $(".inputmenu").click(function() {
     $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-send").show();
+    // $("#voice-buttons").show();
+    // $("#button-send").show();
   });
   $("#jubi-answerBottom").on("keypress", function(e) {
     if (e.which == 13) {
