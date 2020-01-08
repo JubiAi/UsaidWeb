@@ -12,6 +12,7 @@ $(document).ready(function() {
 
   $(".jubi-menu-val").click(function() {
     $(".secMenucontent-widget").hide();
+    $("#button-play-ws").hide();
   });
   $(".pm-sec_chatbody").click(function() {
     $(".secMenucontent-widget").hide();
