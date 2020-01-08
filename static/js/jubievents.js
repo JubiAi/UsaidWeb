@@ -32,11 +32,11 @@ $(document).ready(function() {
   //   $("#voice-buttons").show();
   //   $("#button-play-ws").show();
   // });
-  // $(".inputmenu").click(function() {
-  //   $("#jubi-bottomClick").hide();
-  //   $("#voice-buttons").show();
-  //   $("#button-play-ws").show();
-  // });
+  $(".inputmenu").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-play-ws").show();
+  });
 
   // $("body").on("focusout", "#jubi-answerBottom", function() {
   //   $("#jubi-bottomClick").hide();
