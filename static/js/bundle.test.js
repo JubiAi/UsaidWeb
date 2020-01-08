@@ -2842,7 +2842,7 @@
                     $("#voice-buttons").hide();
                     $("#jubi-answerBottom").focus();
                     $("#button-stop-ws").hide();
-                    $("#button-play-ws").show();
+                    // $("#button-play-ws").show();
                     recordSemaphore = false;
                     wholeString = "";
                     clearSpeechText();
