@@ -4174,7 +4174,9 @@ body{
     #jubi-chat-loader-app .datasendButtons {
         width: 63px;
         right: 3px;
-        top: 18px
+        bottom: 50px;
+        float: right;
+        position: relative;
     }
 
     #jubi-chat-loader-app .leftPage {
@@ -4442,6 +4444,9 @@ body{
     }
     #jubi-chat-loader-app .jubi-sec_newFooter button {
         margin: 13px 37px 0 0;
+        /* position: fixed;
+        bottom: 19px;
+        right: 7px; */
     }
 
   }
