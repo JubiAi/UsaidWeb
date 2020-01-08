@@ -64,13 +64,13 @@ $(document).ready(function() {
 
   $("#jubi-answerBottom").click(function() {
     if ($("this").val() != "") {
-      $("#button-play-ws").show();
-      $("#voice-buttons").show();
-      $("#jubi-bottomClick").hide();
-    } else {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
+    } else {
+      $("#button-play-ws").show();
+      $("#voice-buttons").show();
+      $("#jubi-bottomClick").hide();
     }
   });
 
