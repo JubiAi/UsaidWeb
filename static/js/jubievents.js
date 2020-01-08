@@ -26,10 +26,10 @@ $(document).ready(function() {
     $("#button-play-ws").hide();
     $("#voice-buttons").hide();
     $("#jubi-bottomClick").show();
-    // $("#jubi-bottomClick").attr("style", "display: block !important");
+    $("#jubi-bottomClick").attr("style", "display: block !important");
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
-    // $("#jubi-bottomClick").hide();
+    $("#jubi-bottomClick").hide();
     $("#button-play-ws").show();
     $("#voice-buttons").show();
   });
