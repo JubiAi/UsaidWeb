@@ -2778,7 +2778,7 @@ body{
     border: 1px solid #eaeaea
 }
 
-#jubi-chat-loader-app .jubi-bottomClick img {
+#jubi-chat-loader-app .jubi-bottomClick  {
     display: none;
 }
 
