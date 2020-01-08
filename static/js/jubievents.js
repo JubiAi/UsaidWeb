@@ -32,22 +32,21 @@ $(document).ready(function() {
     console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
-    $("#button-send").show();
+    $("#button-play-ws").show();
   });
   $(".inputmenu").click(function() {
     console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
-    $("#button-send").show();
+    $("#button-play-ws").show();
   });
 
-  $("#pm-buttonlock").click(function() {
-    console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-send").show();
-  });
-
+  // $("#pm-buttonlock").click(function() {
+  //   console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+  //   $("#jubi-bottomClick").hide();
+  //   $("#voice-buttons").show();
+  //   $("#button-send").show();
+  // });
   // $("body").on("focusout", "#jubi-answerBottom", function() {
   //   $("#jubi-bottomClick").hide();
   //   $(".voiceIcon").show();
