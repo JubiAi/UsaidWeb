@@ -22,54 +22,55 @@ $(document).ready(function() {
   $(".closeBotImg").click(function() {
     $(".dropdown-header").toggle();
   });
-  $("#jubi-answerBottom").click(function() {
-    $("#button-play-ws").hide();
-    $("#voice-buttons").hide();
-    $("#jubi-bottomClick").show();
-    // $("#jubi-bottomClick").attr("style", "display: block !important");
-  });
-  $("#pm-data").click(function() {
-    console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-play-ws").show();
-  });
-  $(".inputmenu").click(function() {
-    console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
-    $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-play-ws").show();
-  });
-
-  // $("#pm-buttonlock").click(function() {
+  // $("#jubi-answerBottom").click(function() {
+  //   $("#button-play-ws").hide();
+  //   $("#voice-buttons").hide();
+  //   $("#jubi-bottomClick").show();
+  // });
+  // $("#pm-data").click(function() {
   //   console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
   //   $("#jubi-bottomClick").hide();
   //   $("#voice-buttons").show();
-  //   $("#button-send").show();
+  //   $("#button-play-ws").show();
   // });
+  // $(".inputmenu").click(function() {
+  //   console.log("msg>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+  //   $("#jubi-bottomClick").hide();
+  //   $("#voice-buttons").show();
+  //   $("#button-play-ws").show();
+  // });
+
   // $("body").on("focusout", "#jubi-answerBottom", function() {
   //   $("#jubi-bottomClick").hide();
   //   $(".voiceIcon").show();
   //   $("#voice-buttons").show();
   // });
-  $("#jubi-bottomClick").click(function() {
-    $("#jubi-bottomClick").hide();
-    $("#jubi-bxinput").show();
-    $("#voice-buttons").show();
-    $("#button-send").show();
-    setTimeout(function() {
-      // $("#jubi-textInput").css({ height: "78px" });
-      // $("#jubi-bxinput").css({ height: "53px" });
-      $("#jubi-answerBottom").css({ height: "26px" });
-    }, 50);
-    // $(".voiceIcon").show();
-  });
+  // $("#jubi-bottomClick").click(function() {
+  //   $("#jubi-bottomClick").hide();
+  //   $("#jubi-bxinput").show();
+  //   $("#voice-buttons").show();
+  //   $("#button-send").show();
+  //   setTimeout(function() {
+  //     $("#jubi-answerBottom").css({ height: "26px" });
+  //   }, 50);
+  // });
 
   $("#jubi-answerBottom").on("keypress", function(e) {
     if (e.which == 13) {
       $("#jubi-bottomClick").hide();
     }
   });
+  $("#jubi-bottomClick").attr("style", "display: block !important");
+
+  if ($("#jubi-answerBottom").is(":empty")) {
+    $("#jubi-bottomClick").hide();
+    $(".voiceIcon").show();
+    $("#voice-buttons").show();
+  } else {
+    $("#button-play-ws").hide();
+    $("#voice-buttons").hide();
+    $("#jubi-bottomClick").show();
+  }
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
