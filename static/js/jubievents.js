@@ -28,11 +28,6 @@ $(document).ready(function() {
     $("#jubi-bottomClick").show();
     $("#jubi-bottomClick").attr("style", "display: block !important");
   });
-  $("body").on("focusout", "#jubi-answerBottom", function() {
-    $("#jubi-bottomClick").hide();
-    $("#button-play-ws").show();
-    $("#voice-buttons").show();
-  });
   $("#jubi-bottomClick").click(function() {
     // $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
@@ -45,6 +40,12 @@ $(document).ready(function() {
     }, 50);
     // $(".voiceIcon").show();
   });
+  $("body").on("focusout", "#jubi-answerBottom", function() {
+    $("#jubi-bottomClick").hide();
+    $("#button-play-ws").show();
+    $("#voice-buttons").show();
+  });
+
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
     // $("#voice-buttons").show();
