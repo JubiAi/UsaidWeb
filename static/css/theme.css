@@ -4173,7 +4173,7 @@ body{
     #jubi-chat-loader-app .datasendButtons {
         width: 63px;
         right: 3px;
-        top: 13px
+        top: 18px
     }
 
     #jubi-chat-loader-app .leftPage {
@@ -4387,8 +4387,8 @@ body{
 
 @media (max-width: 1024px){
     #jubi-chat-loader-app .pm-sec_openview {
-            /* height: 87vh; */
-            height: 94vh;
+            height: 87vh;
+            /* height: 94vh; */
      }
     .voiceContent p {
         font-size: 14px;
