@@ -22,11 +22,11 @@ $(document).ready(function() {
   $(".closeBotImg").click(function() {
     $(".dropdown-header").toggle();
   });
-  $("#jubi-answerBottom").click(function() {
-    $("#button-play-ws").hide();
-    $("#voice-buttons").hide();
-    $("#jubi-bottomClick").show();
-  });
+  // $("#jubi-answerBottom").click(function() {
+  //   $("#button-play-ws").hide();
+  //   $("#voice-buttons").hide();
+  //   $("#jubi-bottomClick").show();
+  // });
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
