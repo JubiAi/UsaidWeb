@@ -2886,7 +2886,7 @@
 
                 function hideStop() {
                     $("#button-stop-ws").hide();
-                    $("#button-play-ws").show();
+                    // $("#button-play-ws").show();
                 }
 
                 function hidePlay() {
