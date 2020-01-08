@@ -22,11 +22,11 @@ $(document).ready(function() {
   $(".closeBotImg").click(function() {
     $(".dropdown-header").toggle();
   });
-  // $("#jubi-answerBottom").click(function() {
-  //   $("#button-play-ws").hide();
-  //   $("#voice-buttons").hide();
-  //   $("#jubi-bottomClick").show();
-  // });
+  $("#jubi-answerBottom").click(function() {
+    $("#button-play-ws").hide();
+    $("#voice-buttons").hide();
+    $("#jubi-bottomClick").show();
+  });
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
     $("#voice-buttons").show();
@@ -43,23 +43,6 @@ $(document).ready(function() {
   //   $(".voiceIcon").show();
   //   $("#voice-buttons").show();
   // });
-  // $("#jubi-bottomClick").click(function() {
-  //   $("#jubi-bottomClick").hide();
-  //   $("#jubi-bxinput").show();
-  //   $("#voice-buttons").show();
-  //   $("#button-send").show();
-  //   setTimeout(function() {
-  //     $("#jubi-answerBottom").css({ height: "26px" });
-  //   }, 50);
-  // });
-
-  $("#jubi-answerBottom").on("keypress", function(e) {
-    if (e.which == 13) {
-      $("#jubi-bottomClick").hide();
-    }
-  });
-  // $("#jubi-bottomClick").attr("style", "display: block !important");
-
   $("#jubi-answerBottom").click(function() {
     if ($("this").val() == "") {
       $("#jubi-bottomClick").hide();
@@ -71,6 +54,22 @@ $(document).ready(function() {
       $("#jubi-bottomClick").show();
     }
   });
+  $("#jubi-bottomClick").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#jubi-bxinput").show();
+    $("#voice-buttons").show();
+    $("#button-send").show();
+    setTimeout(function() {
+      $("#jubi-answerBottom").css({ height: "26px" });
+    }, 50);
+  });
+
+  $("#jubi-answerBottom").on("keypress", function(e) {
+    if (e.which == 13) {
+      $("#jubi-bottomClick").hide();
+    }
+  });
+  // $("#jubi-bottomClick").attr("style", "display: block !important");
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
