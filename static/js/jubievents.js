@@ -49,7 +49,7 @@ $(document).ready(function() {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
-      $(".jubi-menu-val").click(function() {
+      $("window.askBot('Restart')").click(function() {
         $("#button-play-ws").hide();
         $("#voice-buttons").hide();
       });
