@@ -28,6 +28,23 @@ $(document).ready(function() {
     $("#jubi-bottomClick").show();
     // $("#jubi-bottomClick").attr("style", "display: block !important");
   });
+  $("#pm-data").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-send").show();
+  });
+  $(".inputmenu").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-send").show();
+  });
+
+  $("#pm-buttonlock").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-send").show();
+  });
+
   // $("body").on("focusout", "#jubi-answerBottom", function() {
   // $("#jubi-bottomClick").hide();
   //   $(".voiceIcon").show();
@@ -44,22 +61,6 @@ $(document).ready(function() {
       $("#jubi-answerBottom").css({ height: "26px" });
     }, 50);
     // $(".voiceIcon").show();
-  });
-  $("#pm-data").click(function() {
-    $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-send").show();
-  });
-  $(".inputmenu").click(function() {
-    $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-send").show();
-  });
-
-  $("#pm-buttonlock").click(function() {
-    $("#jubi-bottomClick").hide();
-    $("#voice-buttons").show();
-    $("#button-send").show();
   });
 
   $("#jubi-answerBottom").on("keypress", function(e) {
