@@ -60,7 +60,6 @@ $(document).ready(function() {
     $("#jubi-bxinput").show();
     $("#voice-buttons").show();
     $("#button-play-ws").show();
-
     // $("#button-send").show();
     setTimeout(function() {
       $("#jubi-answerBottom").css({ height: "26px" });
