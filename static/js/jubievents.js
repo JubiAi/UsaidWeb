@@ -6,9 +6,9 @@ $(document).ready(function() {
   $(".closeBtn").click(function() {
     $(".secMenucontent-widget").hide();
   });
-  //   $(".inputmenu").click(function() {
-  //     $(".secMenucontent-widget").hide();
-  //   });
+  // $(".inputmenu").click(function() {
+  //   $(".secMenucontent-widget").hide();
+  // });
 
   $(".jubi-menu-val").click(function() {
     $(".secMenucontent-widget").hide();
@@ -60,7 +60,7 @@ $(document).ready(function() {
     $("#jubi-bxinput").show();
     $("#voice-buttons").show();
     $("#button-play-ws").show();
-    // $("#button-send").show();
+    $("#button-send").show();
     setTimeout(function() {
       $("#jubi-answerBottom").css({ height: "26px" });
     }, 50);
