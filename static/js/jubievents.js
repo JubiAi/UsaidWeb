@@ -43,15 +43,26 @@ $(document).ready(function() {
   //   $(".voiceIcon").show();
   //   $("#voice-buttons").show();
   // });
-  $("#jubi-answerBottom").click(function() {
-    if ($("this").val() == "") {
-      $("#jubi-bottomClick").hide();
-      $("#button-play-ws").show();
-      $("#voice-buttons").show();
-    } else {
+  // $("#jubi-answerBottom").click(function() {
+  //   if ($("this").val() == "") {
+  //     $("#jubi-bottomClick").hide();
+  //     $("#button-play-ws").show();
+  //     $("#voice-buttons").show();
+  //   } else {
+  //     $("#button-play-ws").hide();
+  //     $("#voice-buttons").hide();
+  //     $("#jubi-bottomClick").show();
+  //   }
+  // });
+  $("#jubi-answerBottom").on("keyup keypress", function(e) {
+    if ($(this).val().length >= 1) {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
+    } else {
+      $("#jubi-bottomClick").hide();
+      $("#button-play-ws").show();
+      $("#voice-buttons").show();
     }
   });
   $("#jubi-bottomClick").click(function() {
