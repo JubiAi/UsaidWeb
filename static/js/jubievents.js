@@ -29,12 +29,12 @@ $(document).ready(function() {
     // $("#jubi-bottomClick").attr("style", "display: block !important");
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
-    $("#jubi-bottomClick").hide();
+    // $("#jubi-bottomClick").hide();
     $("#button-play-ws").show();
     $("#voice-buttons").show();
   });
   $("#jubi-bottomClick").click(function() {
-    // $("#jubi-bottomClick").hide();
+    $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
     $("#voice-buttons").show();
     $("#button-send").show();
