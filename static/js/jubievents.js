@@ -31,12 +31,14 @@ $(document).ready(function() {
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
-    $("#voice-buttons").show();
-    $("#button-send").show();
+    // $("#voice-buttons").show();
+    // $("#button-send").show();
     setTimeout(function() {
       // $("#jubi-textInput").css({ height: "78px" });
       // $("#jubi-bxinput").css({ height: "53px" });
       $("#jubi-answerBottom").css({ height: "26px" });
+      $("#voice-buttons").show();
+      $("#button-send").show();
     }, 50);
     // $(".voiceIcon").show();
   });
@@ -45,22 +47,17 @@ $(document).ready(function() {
     $("#button-play-ws").show();
     $("#voice-buttons").show();
   });
-  $("body").on("focusin", "#jubi-answerBottom", function() {
-    $("#jubi-bottomClick").show();
-    $("#button-play-ws").hide();
-    $("#voice-buttons").hide();
-  });
 
-  $("#pm-data").click(function() {
-    $("#jubi-bottomClick").hide();
-    // $("#voice-buttons").show();
-    // $("#button-send").show();
-  });
-  $(".inputmenu").click(function() {
-    $("#jubi-bottomClick").hide();
-    // $("#voice-buttons").show();
-    // $("#button-send").show();
-  });
+  // $("#pm-data").click(function() {
+  //   $("#jubi-bottomClick").hide();
+  //   $("#voice-buttons").show();
+  //   $("#button-send").show();
+  // });
+  // $(".inputmenu").click(function() {
+  //   $("#jubi-bottomClick").hide();
+  //   $("#voice-buttons").show();
+  //   $("#button-send").show();
+  // });
   $("#jubi-answerBottom").on("keypress", function(e) {
     if (e.which == 13) {
       $("#jubi-bottomClick").hide();
