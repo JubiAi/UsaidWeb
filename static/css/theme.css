@@ -4269,6 +4269,20 @@ body{
         color: #fff;
         cursor: pointer;
         margin: 3px 45px 0 0; */
+        float: right; 
+    width: 25px;
+    height: 25px;
+    background: #00a2fe;
+    padding: 0px 5px;
+    border-radius: 50%;
+    border: 0;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    /* margin: 0; */
+    margin: 7px 30px 0 0;
     }
     #jubi-chat-loader-app .pm-sec_newHeader p {
         font-size: 14px;width: 81%;
@@ -4442,13 +4456,16 @@ body{
 
 @media (max-width: 480px){
     #jubi-chat-loader-app .pm-sec_newHeader {
-        height: 78px;padding: 12px 1px 0 12px;
+        height: 78px;
+        padding: 12px 1px 0 12px;
     }
     #jubi-chat-loader-app .pm-sec_newHeader p {
         width: 75%;
     }
     #jubi-chat-loader-app .headerRightContent {
-        top: 25px;width: 75px;right: 6px;
+        top: 25px;
+        width: 75px;
+        right: 6px;
     } 
 }
 
