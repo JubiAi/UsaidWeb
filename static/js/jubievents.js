@@ -61,14 +61,14 @@ $(document).ready(function() {
   // $("#jubi-bottomClick").attr("style", "display: block !important");
 
   $("#jubi-answerBottom").click(function() {
-    if ($("this").val() != "") {
-      $("#button-play-ws").hide();
-      $("#voice-buttons").hide();
-      $("#jubi-bottomClick").show();
-    } else {
+    if ($("this").val() == "") {
       $("#jubi-bottomClick").hide();
       $("#button-play-ws").show();
       $("#voice-buttons").show();
+    } else {
+      $("#button-play-ws").hide();
+      $("#voice-buttons").hide();
+      $("#jubi-bottomClick").show();
     }
   });
 
