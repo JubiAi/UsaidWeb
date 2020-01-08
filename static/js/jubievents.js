@@ -55,6 +55,13 @@ $(document).ready(function() {
     $("#voice-buttons").show();
     $("#button-send").show();
   });
+
+  $("#pm-buttonlock").click(function() {
+    $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-send").show();
+  });
+
   $("#jubi-answerBottom").on("keypress", function(e) {
     if (e.which == 13) {
       $("#jubi-bottomClick").hide();
