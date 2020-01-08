@@ -47,9 +47,13 @@ $(document).ready(function() {
   });
   $("#pm-data").click(function() {
     $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-send").show();
   });
   $(".inputmenu").click(function() {
     $("#jubi-bottomClick").hide();
+    $("#voice-buttons").show();
+    $("#button-send").show();
   });
   $("#jubi-answerBottom").on("keypress", function(e) {
     if (e.which == 13) {
