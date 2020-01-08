@@ -49,16 +49,16 @@ $(document).ready(function() {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
+
+      // $(".jubi-menu-val").click(function() {
+      //   $("#button-play-ws").hide();
+      //   $("#voice-buttons").hide();
+      // });
+    } else {
+      $("#jubi-bottomClick").hide();
+      $("#button-play-ws").show();
+      $("#voice-buttons").show();
     }
-    // $(".jubi-menu-val").click(function() {
-    //   $("#button-play-ws").hide();
-    //   $("#voice-buttons").hide();
-    // });
-    // } else {
-    //   $("#jubi-bottomClick").hide();
-    //   $("#button-play-ws").show();
-    //   $("#voice-buttons").show();
-    // }
   });
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
