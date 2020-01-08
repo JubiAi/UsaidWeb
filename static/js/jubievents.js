@@ -59,7 +59,7 @@ $(document).ready(function() {
       $("#button-play-ws").hide();
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
-      $(".sec_dropdown").click(function() {
+      $(".jubi-menu-val").click(function() {
         $("#button-play-ws").hide();
         $("#voice-buttons").hide();
       });
