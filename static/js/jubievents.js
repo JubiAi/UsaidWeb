@@ -50,10 +50,10 @@ $(document).ready(function() {
       $("#voice-buttons").hide();
       $("#jubi-bottomClick").show();
 
-      // $(".jubi-menu-val").click(function() {
-      //   $("#button-play-ws").hide();
-      //   $("#voice-buttons").hide();
-      // });
+      $("onclick").click(function() {
+        $("#button-play-ws").hide();
+        $("#voice-buttons").hide();
+      });
     } else {
       $("#jubi-bottomClick").hide();
       $("#button-play-ws").show();
