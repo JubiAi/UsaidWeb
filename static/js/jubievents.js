@@ -41,7 +41,7 @@ $(document).ready(function() {
     // $(".voiceIcon").show();
   });
   $("body").on("focusout", "#jubi-answerBottom", function() {
-    // $("#jubi-bottomClick").hide();
+    $("#jubi-bottomClick").hide();
     $("#button-play-ws").show();
     $("#voice-buttons").show();
   });
