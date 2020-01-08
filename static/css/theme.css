@@ -2567,7 +2567,8 @@ body{
     /* opacity: 0.6; */
     text-decoration: none;
     width: 84%;
-    line-height: 17px;color: #525050;max-height: 60px;
+    line-height: 17px;color: #525050;
+    max-height: 60px;
     overflow: auto;
 }
 
@@ -4408,9 +4409,9 @@ body{
     #jubi-chat-loader-app .jubi-sec_newFooter button{
         margin: 7px 0px 0 0;
     }
-    #jubi-chat-loader-app .datasendButtons {
+    /* #jubi-chat-loader-app .datasendButtons {
          right: 38px;
-    }
+    } */
 }
 
    @media (max-width: 768px){
