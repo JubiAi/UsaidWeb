@@ -60,17 +60,19 @@ $(document).ready(function() {
       $("#jubi-bottomClick").hide();
     }
   });
-  $("#jubi-bottomClick").attr("style", "display: block !important");
+  // $("#jubi-bottomClick").attr("style", "display: block !important");
 
-  if ($("#jubi-answerBottom").is(":empty")) {
-    $("#jubi-bottomClick").hide();
-    $(".voiceIcon").show();
-    $("#voice-buttons").show();
-  } else {
-    $("#button-play-ws").hide();
-    $("#voice-buttons").hide();
-    $("#jubi-bottomClick").show();
-  }
+  $("#jubi-answerBottom").click(function() {
+    if ($("this").val() != "") {
+      $("#button-play-ws").show();
+      $("#voice-buttons").show();
+      $("#jubi-bottomClick").hide();
+    } else {
+      $("#button-play-ws").hide();
+      $("#voice-buttons").hide();
+      $("#jubi-bottomClick").show();
+    }
+  });
 
   let testExp = new RegExp("iPhone|iPad", "i");
   if (testExp.test(navigator.userAgent)) {
