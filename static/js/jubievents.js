@@ -48,11 +48,11 @@ $(document).ready(function() {
     $("#button-send").show();
   });
 
-  // $("body").on("focusout", "#jubi-answerBottom", function() {
-  // $("#jubi-bottomClick").hide();
-  //   $(".voiceIcon").show();
-  //   $("#voice-buttons").show();
-  // });
+  $("body").on("focusout", "#jubi-answerBottom", function() {
+    $("#jubi-bottomClick").hide();
+    $(".voiceIcon").show();
+    $("#voice-buttons").show();
+  });
   $("#jubi-bottomClick").click(function() {
     $("#jubi-bottomClick").hide();
     $("#jubi-bxinput").show();
